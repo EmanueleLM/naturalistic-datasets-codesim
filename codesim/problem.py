@@ -1,4 +1,3 @@
-import itertools
 import json
 import os
 import random 
@@ -44,14 +43,15 @@ class StraightLine(Problem):
         self.idx = 0
         
     def generate_data(self, n_programs:int=1) -> dict:
-        for _ in range(n_programs):
-            self.idx += 1
-            syn, nat, gt = self.__accumulate()
-            self.data[self.idx] = {
+        for idx in range(self.idx+n_programs):
+            syn, nat, gt_syn, gt_nat = self.__accumulate()
+            self.data[idx] = {
                 'syn': syn,
                 'nat': nat,
-                'label': gt
+                'label-syn': gt_syn,
+                'label-nat': gt_nat
             }
+        self.idx += n_programs
             
     def to_file(self, suffix:str="") -> None:
         os.makedirs(self.basepath, exist_ok=True)
@@ -155,8 +155,12 @@ class StraightLine(Problem):
                 agents[v1][ob] += qt
                 prompt += f"Agent-{v1} buys {qt} obj-{ob}.\n"
             # print(program)
+            
+        # Generate the syn and naturalistic labels
+        gt_syn = agents
+        gt_nat = {ag: {f"obj-{k}":v for k,v in agents[ag].items()} for ag in agents}
 
-        return program, prompt, agents
+        return program, prompt, gt_syn, gt_nat
 
 class CriticalPath(Problem):
     def __init__(self, 
