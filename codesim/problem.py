@@ -1,3 +1,5 @@
+import json
+import os
 import random 
 import string 
 from abc import ABC, abstractmethod
@@ -5,6 +7,7 @@ from abc import ABC, abstractmethod
 class Problem(ABC):
     def __init__(self, name:str):
         self.name = name
+        self.basepath = "./data/"
         
     @abstractmethod
     def generate_data(self) -> dict:
@@ -16,25 +19,57 @@ class Problem(ABC):
 
 class StraightLine(Problem):
     def __init__(self, 
+                 n_ops:int, 
                  n_vars:int, 
-                 instances_per_var:int):
-        
-        super().__init__(name='StraightLine')
-        self.n_vars = self.n_agents = n_vars
-        self.instances_per_var = self.n_goods = instances_per_var
-
-    def generate_data(n:int, a:int, o:int) -> dict:
+                 n_instances:int):
         """
-        n:int, the number of operations returned
-        a:int, the number of agents
-        o:int, the number of unique objects each agent starts with
+        n_ops:int, the number of operations returned in a program
+        n_vars:int, the number of variables/agents
+        n_instances:int, the number of unique objects instantiated per-var/agent
+        """
+        super().__init__(name='StraightLine')
+        self.n_ops = n_ops
+        self.vars = n_vars
+        self.instances = n_instances
+        self.data = {}
+        self.idx = 0
+        self.basepath = self.basepath + "StraightLine/"
         
+    def reset(self, n_ops:int, n_vars:int, n_instances:int) -> None:
+        self.n_ops = n_ops
+        self.vars = n_vars
+        self.instances = n_instances
+        self.data = {}
+        self.idx = 0
+        
+    def generate_data(self, n_programs:int=1) -> dict:
+        for _ in range(n_programs):
+            self.idx += 1
+            syn, nat = self.__accumulate()
+            self.data[self.idx] = {
+                'syn': syn,
+                'nat': nat
+            }
+            
+    def to_file(self, suffix:str="") -> None:
+        os.makedirs(self.basepath, exist_ok=True)
+        filename = f"n_ops-{self.n_ops}_n_vars-{self.vars}_n_instances-{self.instances}"
+        filename += ".json" if suffix == "" else f"_{suffix}.json"
+        path = self.basepath + filename
+        try:
+            json.dump(self.data, open(path, 'w'), indent=4)
+        except Exception as e:
+            raise ValueError(e)
+
+    def __accumulate(self) -> dict:
+        """
         Returns a dictionary with the following keys:
         - 'syn': a straight line code
         - 'nat': the naturalistic version of 'syn'
         - 'gt_syn': all the ground truth labels for 'syn'
         - 'gt_nat': all the ground truth labels for 'nat'
         """
+        n = self.n_ops; a = self.vars; o = self.instances  # TODO: delete this line and make the code work
         assert n > 0 and isinstance(n, int)
         alphabet = string.ascii_lowercase
         agents = alphabet[:a]
@@ -120,9 +155,6 @@ class StraightLine(Problem):
             # print(program)
         
         return program, prompt
-    
-    def to_file(self) -> None:
-        pass
 
 class CriticalPath(Problem):
     def __init__(self, 
