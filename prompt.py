@@ -8,7 +8,7 @@ class System:
     ]
     
 @dataclass 
-class GoodExchange:
+class StraightLine:
     user_cot = """
 {problem}
 
@@ -21,7 +21,7 @@ For example, reply with <answer>1</answer> if the answer is 1.
     questions = ["What is the value of {varname} at the end of the computation?"]
     
 @dataclass 
-class ApproximateExchange:
+class CriticalPath:
     user_cot = """
 {problem}
 
@@ -33,7 +33,32 @@ Provide the values in the order they are given at the beginning.
 """
     
     questions = ["What is the number of {varnames} {agents} have the end of the computation?"]
+
+@dataclass 
+class ParallelPaths:
+    user_cot = """
+{problem}
+
+{question}
+
+TODO
+"""
     
+    questions = ["TODO"]
+    
+@dataclass 
+class Loops:
+    user_cot = """
+{problem}
+
+{question}
+
+TODO
+"""
+    
+    questions = ["TODO"]
+
+  
 @dataclass 
 class Sort:
     user_cot = """{name} has the following objects: {objects}.

@@ -1,31 +1,187 @@
 import random 
 import string 
+from abc import ABC, abstractmethod
 
-class GoodExchange(object):
-    def __init__(self, n_agents:int, n_goods:int):
-        self.n_agents = n_agents
-        self.n_goods = n_goods
+class Problem(ABC):
+    def __init__(self, name:str):
+        self.name = name
         
-        # An agent has a name (a letter from a to z) and a number of goods (from 0 to n_goods)
-        self.agents = {string.ascii_lowercase[i]: n_goods for i in range(self.n_agents)}
-    
-    # A straight line program is an exchange of goods    
-    def straight_line(self, n_instr:int) -> dict:
-        pass 
-    
-    # A smart execution is a good exchange where an agent's goods is modified sequentially and left unchanged
-    def smart_execution(self, n_instr:int) -> dict:
+    @abstractmethod
+    def generate_data(self) -> dict:
         pass
     
-    # An approximate exchange is an exchange where we are interested in all the goods of all the agents
-    def approximate_exchange(self, n_instr:int) -> dict:
+    @abstractmethod
+    def to_file(self) -> None:
+        pass
+
+class StraightLine(Problem):
+    def __init__(self, 
+                 n_vars:int, 
+                 instances_per_var:int):
+        
+        super().__init__(name='StraightLine')
+        self.n_vars = self.n_agents = n_vars
+        self.instances_per_var = self.n_goods = instances_per_var
+
+    def generate_data(n:int, a:int, o:int) -> dict:
+        """
+        n:int, the number of operations returned
+        a:int, the number of agents
+        o:int, the number of unique objects each agent starts with
+        
+        Returns a dictionary with the following keys:
+        - 'syn': a straight line code
+        - 'nat': the naturalistic version of 'syn'
+        - 'gt_syn': all the ground truth labels for 'syn'
+        - 'gt_nat': all the ground truth labels for 'nat'
+        """
+        assert n > 0 and isinstance(n, int)
+        alphabet = string.ascii_lowercase
+        agents = alphabet[:a]
+        
+        ops = ['@1-2-give-q@', '@1-buy-q@', '@1-lose-q@']
+        agents = {ag:{i:random.randint(0, 10) for i in range(o)} for ag in agents}
+        
+        prompt = f"There are {a} agents, {[ag for ag in agents]}. Each of them has {o} items, {[f'obj-{ob}' for ob in range(o)]}.\n"
+        prompt += "Here is the initial quantity of each object per agent.\n\n"
+        for ag in agents:
+            prompt += f"Agent-{ag} has "
+            for ob in range(o):
+                prompt += f"{agents[ag][ob]} obj-{ob}, "
+            prompt = prompt[:-2] + ".\n"
+        prompt += "\nHere's the list of potential interactions between agents.\n"
+        prompt += f"An agent can give a quantity of one their objects to another agent. In that case, they lose that quantity of that object and the other agent increases theirs'.\n"  # Trade
+        prompt += f"An agent can lose some or all of their objects. In that case, they lose that quantity of that object.\n"  # Lose
+        prompt += f"An agent can buy some quantity of an object. In that case, they increase the quantity of that object.\n"  # Buy
+        prompt += "Here's a list of real interactions between the agents. At the end of the interactions, I will ask you to tell me the exact quantity of an object a specific agent has.\n\n"
+        
+        program = ''
+        for ag in agents:
+            program += '; '.join([f'{ag}{i}={agents[ag][i]}' for i in range(o)]) + '\n'
+        
+        max_tradable = 5
+        for _ in range(n):
+            v1 = random.choice(list(agents.keys()))  # first agent
+            # print(f"A1: {v1}")
+            op = random.choice(ops)  # operation
+            if all([ai>0 for ai in agents[v1].values()]):  # must have something to give or lose, otherwise use buy
+                if op == '@1-2-give-q@':  # agent1 gives to agent2 quantity q of an object they have
+                    # print("Trade")
+                    set_agents = set(agents).difference(v1)
+                    v2 = random.choice(list(set_agents))  # chose another agent
+                    givable = [i for i in range(o) if agents[v1][i]>0] #  select an object v1 can give
+                    to_give = random.choice(givable)
+                    qt = random.randint(1, agents[v1][to_give])
+                    if qt == agents[v1][to_give]:
+                        program += f"{v2}{to_give} += {v1}{to_give}\n{v1}{to_give} -= {v1}{to_give}\n"
+                        agents[v1][to_give] -= qt
+                        agents[v2][to_give] += qt
+                        assert agents[v1][to_give] >= 0
+                        prompt += f"Agent-{v1} gives all their obj-{to_give} to agent-{v2}.\n"
+                    else: 
+                        program += f"{v2}{to_give} += {qt}\n{v1}{to_give} -= {qt}\n"
+                        agents[v1][to_give] -= qt
+                        agents[v2][to_give] += qt
+                        prompt += f"Agent-{v1} gives {qt} obj-{to_give} to agent-{v2}.\n"
+                        assert agents[v1][to_give] >= 0
+                elif op == '@1-buy-q@':  # agent1 buys things
+                    # print("Buy")
+                    ob = random.randint(0, o-1)
+                    qt = random.randint(1, max_tradable)
+                    program += f"{v1}{ob} += {qt}\n"
+                    agents[v1][ob] += qt
+                    prompt += f"Agent-{v1} buys {qt} obj-{ob}.\n"
+                else: # agent1 loses a quantity q of an object they have
+                    # print("Lose")
+                    # print("all", agents[v1])
+                    givable = [i for i in range(o) if agents[v1][i]>0] #  select an object v1 can give
+                    # print("givable", givable)
+                    to_give = random.choice(givable)
+                    qt = random.randint(1, agents[v1][to_give])
+                    # print("togive", to_give)
+                    # print("qt", qt)
+                    if qt == agents[v1][to_give]:
+                        program += f"{v1}{to_give} -= {v1}{to_give}\n" 
+                        agents[v1][to_give] -= qt  
+                        prompt += f"Agent-{v1} loses all their obj-{to_give}.\n"
+                        assert agents[v1][to_give] >= 0
+                    else:
+                        program += f"{v1}{to_give} -= {qt}\n"   
+                        agents[v1][to_give] -= qt
+                        prompt += f"Agent-{v1} loses {qt} obj-{to_give}.\n" 
+                        assert agents[v1][to_give] >= 0   
+            else:  # only option is for agent1 to buy things
+                # print("Buy-1")
+                ob = random.randint(0, o-1)
+                qt = random.randint(1, max_tradable)
+                program += f"{v1}{ob} += {qt}\n"
+                agents[v1][ob] += qt
+                prompt += f"Agent-{v1} buys {qt} obj-{ob}.\n"
+            # print(program)
+        
+        return program, prompt
+    
+    def to_file(self) -> None:
+        pass
+
+class CriticalPath(Problem):
+    def __init__(self, 
+                 n_vars:int, 
+                 instances_per_var:int, 
+                 len_critical_path:int):
+        
+        super().__init__(name='CriticalPath')
+        self.n_vars = self.n_agents = n_vars
+        self.instances_per_var = self.n_goods = instances_per_var
+        self.critical_path = len_critical_path
+        
+    def generate_data(n:int, a:int, o:int, cp:int) -> dict:
+        pass 
+        
+    def to_file(self) -> None:
+        pass
+
+class ParallelPaths(Problem):
+    def __init__(self, 
+                 n_vars:int, 
+                 instances_per_var:int, 
+                 range_critical_paths:int):
+        
+        super().__init__(name='ParallelPaths')
+        pass
+        
+    def generate_data(n:int, a:int, o:int, cp:int) -> dict:
+        pass 
+        
+    def to_file(self) -> None:
         pass
     
-class Sort(object):
-    def __init__(self, n_objects:int):
-        self.n_objects = n_objects
+class Loops(Problem):
+    def __init__(self, 
+                 n_vars:int, 
+                 instances_per_var:int, 
+                 range_critical_paths:int):
         
-    def sort_challenge(self) -> dict:
+        super().__init__(name='Loops')
+        pass
+
+    def generate_data(n:int, a:int, o:int, cp:int) -> dict:
         pass 
+        
+    def to_file(self) -> None:
+        pass
+    
+class Sort(Problem):
+    def __init__(self, 
+                 n_objects:int):
+        
+        super().__init__(name='Sort')
+        pass
+        
+    def generate_data(n:int, a:int, o:int, cp:int) -> dict:
+        pass 
+        
+    def to_file(self) -> None:
+        pass
     
         
