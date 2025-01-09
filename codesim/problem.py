@@ -35,10 +35,10 @@ class StraightLine(Problem):
         self.idx = 0
         self.basepath = self.basepath + "StraightLine/"
         
-    def reset(self, n_ops:int, n_vars:int, n_instances:int) -> None:
-        self.n_ops = n_ops
-        self.vars = n_vars
-        self.instances = n_instances
+    def reset(self, n_ops:int=None, n_vars:int=None, n_instances:int=None) -> None:
+        self.n_ops = (n_ops if n_ops is not None else self.n_ops)
+        self.vars = (n_vars if n_vars is not None else self.vars)
+        self.instances = (n_instances if n_instances is not None else self.instances)
         self.data = {}
         self.idx = 0
         
