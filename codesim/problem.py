@@ -1,3 +1,4 @@
+import itertools
 import json
 import os
 import random 
@@ -45,10 +46,11 @@ class StraightLine(Problem):
     def generate_data(self, n_programs:int=1) -> dict:
         for _ in range(n_programs):
             self.idx += 1
-            syn, nat = self.__accumulate()
+            syn, nat, gt = self.__accumulate()
             self.data[self.idx] = {
                 'syn': syn,
-                'nat': nat
+                'nat': nat,
+                'label': gt
             }
             
     def to_file(self, suffix:str="") -> None:
@@ -153,8 +155,8 @@ class StraightLine(Problem):
                 agents[v1][ob] += qt
                 prompt += f"Agent-{v1} buys {qt} obj-{ob}.\n"
             # print(program)
-        
-        return program, prompt
+
+        return program, prompt, agents
 
 class CriticalPath(Problem):
     def __init__(self, 
