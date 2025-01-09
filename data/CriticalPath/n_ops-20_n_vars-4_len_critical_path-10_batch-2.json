@@ -1,0 +1,122 @@
+{
+    "0": {
+        "syn": "a0=5; a1=-2; a2=7; a3=-7\na0 = a1\na0 = a1\na1 = a2\na0 -= a2\na0 = a1\na3 -= a2\na3 += a2\na2 = a3\na2 -= a3\na3 -= a2\na3 += a2\na3 += a2\na3 += a2\na3 += a3\na2 -= a3\na2 = a2\na1 = a2\na1 += a2\na0 -= a2\na0 += a0\n",
+        "label-syn": -14
+    },
+    "1": {
+        "syn": "a0=4; a1=8; a2=4; a3=-10\na1 += a2\na2 = a2\na2 += a3\na2 = a2\na3 = a3\na2 -= a3\na3 += a2\na3 = a2\na3 += a2\na3 += a3\na2 = a2\na2 = a2\na0 -= a1\na0 = a1\na0 = a0\na2 = a3\na1 += a1\na1 = a1\na2 += a1\na0 += a0\n",
+        "label-syn": 16
+    },
+    "2": {
+        "syn": "a0=-3; a1=7; a2=3; a3=-7\na0 = a1\na3 -= a2\na3 += a2\na3 = a3\na2 = a3\na2 -= a3\na2 -= a3\na3 += a3\na3 -= a2\na2 += a3\na2 = a3\na2 -= a3\na0 += a0\na0 = a3\na0 -= a3\na2 = a1\na0 += a3\na1 = a3\na2 += a3\na1 -= a2\n",
+        "label-syn": -21
+    },
+    "3": {
+        "syn": "a0=3; a1=7; a2=0; a3=10\na3 += a2\na3 = a2\na2 += a2\na3 = a2\na3 = a3\na2 = a2\na3 += a3\na3 = a3\na3 -= a2\na3 -= a2\na3 += a2\na2 = a1\na1 += a2\na1 -= a2\na2 -= a1\na1 = a3\na0 -= a2\na1 = a0\na1 += a0\na1 = a0\n",
+        "label-syn": 0
+    },
+    "4": {
+        "syn": "a0=0; a1=3; a2=8; a3=-10\na1 += a1\na1 = a1\na0 = a2\na1 = a3\na0 -= a1\na0 = a1\na2 = a2\na2 -= a3\na3 += a2\na3 = a3\na3 += a3\na3 -= a2\na2 = a3\na3 = a3\na3 = a2\na2 += a3\na3 = a3\na1 = a3\na0 = a2\na0 = a1\n",
+        "label-syn": -2
+    },
+    "5": {
+        "syn": "a0=-7; a1=6; a2=2; a3=-1\na0 = a3\na0 += a1\na0 -= a1\na1 = a2\na1 = a1\na1 = a1\na1 += a3\na1 = a2\na2 = a3\na2 -= a3\na3 += a3\na3 -= a2\na3 += a2\na3 -= a2\na3 += a3\na3 -= a2\na2 += a3\na2 -= a3\na3 += a3\na1 = a1\n",
+        "label-syn": -8
+    },
+    "6": {
+        "syn": "a0=4; a1=7; a2=2; a3=-9\na0 += a3\na1 -= a0\na1 -= a3\na1 += a0\na2 += a3\na2 -= a3\na3 += a2\na2 -= a3\na3 = a2\na2 += a2\na3 = a3\na3 = a3\na2 -= a3\na2 = a3\na2 += a2\na2 = a3\na2 = a0\na1 = a1\na2 -= a3\na2 -= a3\n",
+        "label-syn": 9
+    },
+    "7": {
+        "syn": "a0=-7; a1=2; a2=7; a3=0\na1 = a2\na2 = a3\na3 += a2\na3 = a3\na2 += a2\na2 -= a3\na3 += a2\na3 += a2\na3 += a2\na2 -= a3\na3 = a3\na3 += a2\na1 -= a0\na2 = a1\na1 -= a0\na0 += a2\na2 -= a3\na0 -= a2\na0 += a1\na0 -= a2\n",
+        "label-syn": 0
+    },
+    "8": {
+        "syn": "a0=-1; a1=1; a2=-7; a3=9\na1 += a0\na1 = a2\na0 -= a3\na1 = a0\na2 = a2\na3 = a3\na3 -= a2\na3 -= a2\na2 -= a3\na2 += a2\na3 -= a2\na3 -= a2\na3 = a2\na3 -= a2\na3 = a3\na1 = a0\na0 = a0\na1 -= a0\na2 += a1\na1 = a1\n",
+        "label-syn": 0
+    },
+    "9": {
+        "syn": "a0=7; a1=0; a2=6; a3=-8\na1 = a0\na1 = a2\na0 = a1\na0 += a0\na1 -= a2\na0 += a1\na0 = a3\na1 += a0\na0 += a1\na3 -= a2\na2 -= a3\na3 += a2\na3 += a2\na3 -= a2\na3 += a2\na2 += a3\na3 = a2\na2 = a3\na2 += a2\na3 -= a2\n",
+        "label-syn": -46
+    },
+    "10": {
+        "syn": "a0=9; a1=-8; a2=-9; a3=-7\na0 = a2\na3 += a3\na3 = a2\na3 -= a2\na3 -= a2\na3 = a3\na3 += a2\na2 += a2\na2 += a3\na2 -= a3\na2 += a2\na3 = a2\na1 += a1\na2 -= a3\na0 -= a1\na2 -= a3\na0 = a1\na0 -= a2\na0 += a0\na2 -= a0\n",
+        "label-syn": -36
+    },
+    "11": {
+        "syn": "a0=3; a1=-2; a2=-4; a3=1\na1 -= a0\na1 = a2\na0 -= a1\na1 += a0\na3 = a2\na2 = a2\na2 -= a3\na2 -= a3\na2 = a3\na2 += a2\na2 -= a3\na2 -= a3\na3 = a2\na3 = a2\na3 += a3\na0 = a2\na1 += a1\na2 += a1\na1 = a2\na1 = a0\n",
+        "label-syn": 0
+    },
+    "12": {
+        "syn": "a0=9; a1=-10; a2=-8; a3=2\na0 += a0\na1 -= a2\na1 -= a0\na1 += a3\na2 = a2\na3 = a2\na2 = a3\na3 += a2\na3 = a2\na2 += a2\na3 = a3\na2 = a3\na3 -= a2\na3 += a3\na2 += a3\na1 += a2\na0 += a1\na1 += a1\na0 = a0\na1 += a1\n",
+        "label-syn": 0
+    },
+    "13": {
+        "syn": "a0=-4; a1=-2; a2=2; a3=-4\na0 -= a2\na0 = a2\na1 -= a3\na0 = a3\na1 = a3\na2 = a2\na3 -= a2\na3 += a3\na2 = a3\na3 = a3\na3 = a2\na2 = a3\na3 -= a2\na3 += a3\na3 += a3\na3 -= a2\na0 = a0\na0 -= a2\na0 = a1\na0 = a3\n",
+        "label-syn": 12
+    },
+    "14": {
+        "syn": "a0=8; a1=-3; a2=7; a3=-1\na0 = a3\na1 -= a0\na0 += a0\na1 -= a0\na0 += a1\na0 -= a2\na0 = a1\na0 -= a1\na3 = a3\na3 -= a2\na3 += a2\na3 -= a2\na2 += a3\na2 += a3\na2 += a2\na3 += a3\na3 += a3\na2 += a3\na3 += a3\na0 += a3\n",
+        "label-syn": -64
+    },
+    "15": {
+        "syn": "a0=-2; a1=2; a2=5; a3=-5\na0 = a0\na1 -= a2\na0 = a0\na1 += a0\na1 = a0\na3 += a3\na3 = a2\na3 += a2\na3 += a2\na3 = a2\na3 -= a2\na2 = a3\na3 -= a2\na2 -= a3\na3 += a3\na2 -= a3\na0 = a0\na2 -= a0\na1 = a1\na0 += a3\n",
+        "label-syn": 0
+    },
+    "16": {
+        "syn": "a0=0; a1=-4; a2=5; a3=5\na0 -= a3\na3 += a3\na2 = a3\na3 = a3\na2 += a3\na3 = a2\na3 = a3\na2 += a3\na2 -= a3\na3 = a2\na2 = a3\na2 += a3\na1 -= a3\na1 += a2\na2 = a3\na2 -= a3\na2 += a2\na1 -= a3\na1 = a0\na2 += a0\n",
+        "label-syn": 20
+    },
+    "17": {
+        "syn": "a0=6; a1=-5; a2=-4; a3=6\na1 = a1\na0 -= a1\na2 += a2\na2 += a3\na3 += a3\na3 -= a2\na3 = a2\na3 -= a2\na3 += a2\na3 -= a2\na2 += a2\na3 -= a2\na2 = a2\na1 -= a3\na0 += a3\na0 = a3\na1 += a2\na2 = a2\na1 = a2\na1 -= a0\n",
+        "label-syn": 4
+    },
+    "18": {
+        "syn": "a0=10; a1=0; a2=-5; a3=-1\na1 += a0\na0 += a1\na2 = a2\na3 -= a2\na2 = a2\na3 += a2\na2 = a3\na2 = a2\na2 += a3\na3 += a2\na2 += a3\na2 -= a3\na3 += a3\na2 += a3\na0 -= a1\na1 = a1\na2 = a2\na2 = a3\na2 += a2\na1 += a0\n",
+        "label-syn": -6
+    },
+    "19": {
+        "syn": "a0=-6; a1=5; a2=-4; a3=-7\na0 = a2\na1 -= a0\na1 = a2\na0 = a0\na3 = a3\na2 -= a3\na3 -= a2\na2 = a3\na2 -= a3\na3 = a3\na3 -= a2\na3 += a2\na3 = a2\na2 += a3\na3 += a3\na0 += a2\na0 += a3\na1 -= a2\na2 = a2\na1 -= a2\n",
+        "label-syn": 0
+    },
+    "20": {
+        "syn": "a0=7; a1=7; a2=4; a3=3\na3 = a3\na3 += a3\na3 += a2\na2 = a2\na2 += a3\na3 -= a2\na3 = a3\na3 -= a2\na3 = a2\na3 -= a2\na2 -= a3\na2 -= a1\na2 += a0\na0 = a1\na2 = a2\na0 = a1\na1 += a2\na2 = a3\na1 = a2\na1 += a3\n",
+        "label-syn": 0
+    },
+    "21": {
+        "syn": "a0=-6; a1=4; a2=10; a3=-1\na1 += a1\na1 -= a0\na1 = a3\na1 -= a3\na0 += a1\na1 += a2\na0 += a2\na0 += a0\na2 += a2\na3 += a2\na3 = a2\na3 = a2\na2 = a3\na2 -= a3\na2 += a2\na2 -= a3\na2 -= a3\na3 -= a2\na3 += a2\na0 = a3\n",
+        "label-syn": 20
+    },
+    "22": {
+        "syn": "a0=7; a1=7; a2=-3; a3=7\na0 -= a1\na2 = a2\na3 = a3\na2 = a3\na2 -= a3\na3 += a3\na3 = a2\na2 += a2\na2 += a3\na2 -= a3\na2 = a2\na2 = a2\na0 = a3\na2 -= a1\na1 = a2\na0 -= a1\na1 -= a2\na0 += a1\na1 += a0\na0 = a3\n",
+        "label-syn": 0
+    },
+    "23": {
+        "syn": "a0=2; a1=8; a2=10; a3=-5\na1 = a1\na3 = a3\na2 += a2\na2 -= a3\na2 += a2\na3 -= a2\na3 -= a2\na2 = a2\na3 = a3\na3 -= a2\na2 = a2\na3 = a3\na2 += a0\na0 = a1\na1 += a1\na0 = a2\na0 += a3\na1 = a3\na0 = a3\na1 = a2\n",
+        "label-syn": -155
+    },
+    "24": {
+        "syn": "a0=-9; a1=-3; a2=-3; a3=0\na1 -= a3\na0 -= a3\na0 -= a3\na1 += a3\na0 += a1\na0 = a1\na2 += a2\na2 += a3\na3 += a2\na3 -= a2\na3 += a2\na3 = a3\na3 = a2\na3 = a3\na3 -= a2\na2 = a3\na2 += a3\na0 += a3\na1 += a2\na1 = a2\n",
+        "label-syn": 0
+    },
+    "25": {
+        "syn": "a0=-4; a1=0; a2=7; a3=-1\na1 -= a0\na1 += a3\na0 += a3\na1 = a0\na0 -= a3\na1 += a1\na1 += a2\na1 = a1\na2 -= a3\na2 = a2\na2 = a2\na2 = a2\na3 = a3\na3 -= a2\na2 = a3\na3 += a3\na2 += a3\na2 = a2\na2 += a2\na1 = a0\n",
+        "label-syn": -18
+    },
+    "26": {
+        "syn": "a0=-4; a1=7; a2=8; a3=-4\na1 += a0\na0 += a1\na0 = a1\na0 += a3\na0 += a2\na0 -= a1\na1 = a1\na1 += a2\na1 -= a3\na2 -= a3\na3 += a2\na3 -= a2\na2 -= a3\na3 = a2\na3 += a3\na3 -= a2\na2 = a3\na3 -= a2\na2 += a3\na3 = a2\n",
+        "label-syn": 16
+    },
+    "27": {
+        "syn": "a0=-4; a1=-3; a2=10; a3=-3\na0 -= a3\na1 -= a3\na0 = a3\na0 = a3\na1 -= a3\na3 += a3\na3 -= a2\na2 = a2\na3 = a2\na3 = a2\na3 = a3\na3 += a2\na2 -= a3\na2 -= a3\na3 -= a2\na3 -= a2\na2 += a2\na0 = a1\na2 += a3\na2 -= a1\n",
+        "label-syn": 80
+    },
+    "28": {
+        "syn": "a0=-1; a1=-7; a2=5; a3=8\na0 = a0\na0 = a3\na1 -= a3\na1 = a3\na1 = a0\na3 -= a2\na3 += a3\na3 -= a2\na2 = a2\na3 = a3\na3 -= a2\na2 = a3\na2 -= a3\na2 += a2\na3 += a3\na3 += a3\na0 = a2\na0 -= a3\na2 += a3\na1 -= a2\n",
+        "label-syn": -16
+    },
+    "29": {
+        "syn": "a0=-4; a1=4; a2=-1; a3=-5\na0 += a0\na0 -= a1\na2 += a2\na3 = a3\na3 -= a2\na2 = a3\na3 -= a2\na3 = a2\na2 -= a3\na2 = a2\na3 = a2\na2 += a3\na2 = a3\na1 += a1\na1 -= a0\na1 += a1\na1 += a3\na2 += a3\na0 -= a3\na2 -= a1\n",
+        "label-syn": 0
+    }
+}

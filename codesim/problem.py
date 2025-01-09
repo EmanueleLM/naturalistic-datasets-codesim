@@ -1,3 +1,4 @@
+import copy as cp
 import json
 import os
 import random 
@@ -164,20 +165,125 @@ class StraightLine(Problem):
 
 class CriticalPath(Problem):
     def __init__(self, 
+                 n_ops:int,
                  n_vars:int, 
-                 instances_per_var:int, 
                  len_critical_path:int):
-        
+        """
+        n_ops:int, the number of operations returned
+        n_vars:int, the number of variables declared in the code (%2==0 and >1)
+        len_critical_path:int, the length of the critical path of the last variable of the program
+        """
         super().__init__(name='CriticalPath')
-        self.n_vars = self.n_agents = n_vars
-        self.instances_per_var = self.n_goods = instances_per_var
+        assert n_vars > 1 and n_ops >= len_critical_path
+        self.n_ops = n_ops
+        self.vars = (n_vars if n_vars%2==0 else n_vars+1)  # must be even (and greater than 1)
         self.critical_path = len_critical_path
+        self.data = {}
+        self.idx = 0
+        self.basepath = self.basepath + "CriticalPath/"
         
-    def generate_data(n:int, a:int, o:int, cp:int) -> dict:
-        pass 
+    def generate_data(self, n_programs:int=1) -> dict:
+        for idx in range(self.idx+n_programs):
+            syn, gt_syn = self.__accumulate()
+            self.data[idx] = {
+                'syn': syn,
+                'label-syn': gt_syn
+            }
+        self.idx += n_programs
         
-    def to_file(self) -> None:
-        pass
+    def reset(self, n_ops:int=None, n_vars:int=None, len_critical_path:int=None) -> None:
+        self.n_ops = (n_ops if n_ops is not None else self.n_ops)
+        self.vars = (n_vars if n_vars is not None else self.vars)
+        self.critical_path = (len_critical_path if len_critical_path is not None else self.critical_path)
+        self.data = {}
+        self.idx = 0
+            
+    def to_file(self, suffix:str="") -> None:
+        os.makedirs(self.basepath, exist_ok=True)
+        filename = f"n_ops-{self.n_ops}_n_vars-{self.vars}_len_critical_path-{self.critical_path}"
+        filename += ".json" if suffix == "" else f"_{suffix}.json"
+        path = self.basepath + filename
+        try:
+            json.dump(self.data, open(path, 'w'), indent=4)
+        except Exception as e:
+            raise ValueError(e)
+    
+    def __accumulate(self) -> dict:
+        """
+        This function creates a program of length n and with v variables connected by simple binary operations.
+        The last variable is used only in portion of the program of length c, so that the program has a critical path for the last variable of length c.
+        """
+        n = self.n_ops; v = self.vars; c = self.critical_path  # TODO: delete this line and make the code work
+        assert n >= 0 and isinstance(n, int)
+        assert c <= n and isinstance(c, int)
+
+        ops = ['@1@ = @2@', '@1@ -= @2@', '@1@ += @2@']
+        variables = [f'a{i}' for i in range(v)]
+        v_ind = int(v//2)
+
+        program = ''
+        program = '; '.join([f'a{i}={random.randint(-10, 10)}' for i in range(v)]) + '\n'
+        # print(program)
+        if n!=c:
+            start_inj = random.choice([i for i in range(0, n-c)])
+        else:
+            start_inj = 0
+        end_inj = start_inj + c
+        # print(f"Critical path start:{start_inj}, end:{end_inj-1}")
+        for i in range(n):
+            op = random.choice(ops)
+            line = cp.deepcopy(op)
+            if i<start_inj:  # src is any independent variable
+                src = random.choice(variables)
+                if '-' in op:  # avoid operation ai -= ai 
+                    set_dst = (set(variables[:v_ind]) if isinstance(variables[:v_ind], list) else set([variables[:v_ind]]))
+                    dst = random.choice(list(set_dst - set([src])))
+                else:
+                    dst = random.choice(variables[:v_ind])
+
+            elif i>end_inj:  # src is any variable (except for the last one)
+                src = random.choice(variables)
+                if '-' in op:  # avoid operation ai -= ai 
+                    set_dst = (set(variables[:-1]) if isinstance(variables[:-1], list) else set([variables[:-1]]))
+                    dst = random.choice(list(set_dst - set([src])))
+                else:
+                    dst = random.choice(variables[:-1])
+
+            elif i==start_inj or i==end_inj-1:
+                src = random.choice(variables[v_ind:])
+                if '-' in op:  # avoid operation ai -= ai 
+                    set_dst = (set(variables[v_ind:]) if isinstance(variables[v_ind:], list) else set([variables[v_ind:]]))
+                    dst = random.choice(list(set_dst - set([src])))
+                else:
+                    dst = random.choice(variables[v_ind:])
+                
+            else:  # start_inj <= i <= end_inj:
+                if random.random() > 0.3:
+                    src =  random.choice(variables[v_ind:])
+                    if '-' in op:  # avoid operation ai -= ai 
+                        # print(src)
+                        # print(list(set(variables[v_ind:]) - set([src])))
+                        set_dst = (set(variables[v_ind:]) if isinstance(variables[v_ind:], list) else set([variables[v_ind:]]))
+                        dst = random.choice(list(set_dst - set([src])))
+                    else:
+                        dst = random.choice(variables[v_ind:])
+                else:
+                    dst = variables[-1]
+                    if '-' in op:  # avoid operation ai -= ai 
+                        set_src = (set(variables[v_ind:]) if isinstance(variables[v_ind:], list) else set([variables[v_ind:]]))
+                        src = random.choice(list(set_src - set([dst])))
+                    else:
+                        src = random.choice(variables[v_ind:])
+                
+            line = line.replace('@1@', dst).replace('@2@', src)
+            # print(f"{i}: {line}")
+            program += line + '\n'
+            
+        # Compute the ground truth
+        exec(program)
+        gt_syn = eval(variables[-1])
+        
+        return program, gt_syn
 
 class ParallelPaths(Problem):
     def __init__(self, 
