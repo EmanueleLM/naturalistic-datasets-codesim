@@ -40,8 +40,10 @@ class StraightLine(Problem):
         self.n_ops = (n_ops if n_ops is not None else self.n_ops)
         self.vars = (n_vars if n_vars is not None else self.vars)
         self.instances = (n_instances if n_instances is not None else self.instances)
+        self.__max_tradable = 10  # max value to add to a variable
         self.data = {}
         self.idx = 0
+        
         
     def generate_data(self, n_programs:int=1) -> dict:
         for idx in range(self.idx+n_programs):
@@ -97,7 +99,6 @@ class StraightLine(Problem):
         for ag in agents:
             program += '; '.join([f'{ag}{i}={agents[ag][i]}' for i in range(o)]) + '\n'
         
-        max_tradable = 5
         for _ in range(n):
             v1 = random.choice(list(agents.keys()))  # first agent
             # print(f"A1: {v1}")
@@ -125,7 +126,7 @@ class StraightLine(Problem):
                 elif op == '@1-buy-q@':  # agent1 buys things
                     # print("Buy")
                     ob = random.randint(0, o-1)
-                    qt = random.randint(1, max_tradable)
+                    qt = random.randint(1, self.__max_tradable)
                     program += f"{v1}{ob} += {qt}\n"
                     agents[v1][ob] += qt
                     prompt += f"Agent-{v1} buys {qt} obj-{ob}.\n"
@@ -151,7 +152,7 @@ class StraightLine(Problem):
             else:  # only option is for agent1 to buy things
                 # print("Buy-1")
                 ob = random.randint(0, o-1)
-                qt = random.randint(1, max_tradable)
+                qt = random.randint(1, self.__max_tradable)
                 program += f"{v1}{ob} += {qt}\n"
                 agents[v1][ob] += qt
                 prompt += f"Agent-{v1} buys {qt} obj-{ob}.\n"
@@ -176,7 +177,7 @@ class CriticalPath(Problem):
         super().__init__(name='CriticalPath')
         assert n_vars > 1 and n_ops >= len_critical_path
         self.n_ops = n_ops
-        self.vars = (n_vars if n_vars%2==0 else n_vars+1)  # must be even (and greater than 1)
+        self.vars = (n_vars if n_vars%2==0 else n_vars+1)  # must be even
         self.critical_path = len_critical_path
         self.data = {}
         self.idx = 0
@@ -184,10 +185,12 @@ class CriticalPath(Problem):
         
     def generate_data(self, n_programs:int=1) -> dict:
         for idx in range(self.idx+n_programs):
-            syn, gt_syn = self.__accumulate()
+            syn, nat, gt_syn = self.__accumulate()
             self.data[idx] = {
                 'syn': syn,
-                'label-syn': gt_syn
+                'nat': nat,
+                'label-syn': gt_syn,
+                # 'label-syn': gt_naty
             }
         self.idx += n_programs
         
@@ -217,9 +220,16 @@ class CriticalPath(Problem):
         assert n >= 0 and isinstance(n, int)
         assert c <= n and isinstance(c, int)
 
-        ops = ['@1@ = @2@', '@1@ -= @2@', '@1@ += @2@']
+        ops = ['@1@ -= @2@', '@1@ += @2@']
         variables = [f'a{i}' for i in range(v)]
         v_ind = int(v//2)
+        
+        prompt = f"There are {v} agents, {[f'a{i}' for i in range(v)]}. Each of them has either a credit which we represent as a negative amount of money other agents owe him, or a debit, i.e., a positive quantity of money he ows to the other agents. Here the amount of credit/debit each agent has: {'; '.join([f'a{i}={random.randint(-10, 10)}' for i in range(v)])}."
+        prompt += "\nHere's the list of potential interactions between agents.\n"
+        prompt += f"An agent can borrow money from another agent. In that case, the first agent increases his total amount while the other decreases it of the same quantity'.\n"  # borrow, +(var)
+        prompt += f"An agent can loan some of his money. In that case, the first agent decreases his total amount while the other increases it of the same quantity'.\n"  # loan, -(var)
+        prompt += f"An agent can increase his debit by buying things. In that case, he is the only one affected.\n"  # Buy, +(number)
+        prompt += "Here's a list of real interactions between the agents. At the end of the interactions, I will ask you to tell me the exact quantity of an object a specific agent has.\n\n"
 
         program = ''
         program = '; '.join([f'a{i}={random.randint(-10, 10)}' for i in range(v)]) + '\n'
@@ -274,6 +284,12 @@ class CriticalPath(Problem):
                         src = random.choice(list(set_src - set([dst])))
                     else:
                         src = random.choice(variables[v_ind:])
+                        
+            # Nat prompt 
+            if '-' in op:
+                prompt += f"{src} loans all his money to {dst}.\n"
+            else:
+                prompt += f"{src} borrows all the money {dst} has.\n"
                 
             line = line.replace('@1@', dst).replace('@2@', src)
             # print(f"{i}: {line}")
@@ -283,7 +299,7 @@ class CriticalPath(Problem):
         exec(program)
         gt_syn = eval(variables[-1])
         
-        return program, gt_syn
+        return program, prompt, gt_syn
 
 class ParallelPaths(Problem):
     def __init__(self, 
