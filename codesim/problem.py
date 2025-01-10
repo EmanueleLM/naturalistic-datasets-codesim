@@ -8,7 +8,6 @@ from abc import ABC, abstractmethod
 class Problem(ABC):
     def __init__(self, name:str):
         self.name = name
-        self.basepath = "./data/"
         
     @abstractmethod
     def generate_data(self) -> dict:
@@ -34,13 +33,13 @@ class StraightLine(Problem):
         self.instances = n_instances
         self.data = {}
         self.idx = 0
-        self.basepath = self.basepath + "StraightLine/"
+        self.max_tradable = 10  # max value to add to a variable
+        self.basepath = "./data/StraightLine/"
         
     def reset(self, n_ops:int=None, n_vars:int=None, n_instances:int=None) -> None:
         self.n_ops = (n_ops if n_ops is not None else self.n_ops)
         self.vars = (n_vars if n_vars is not None else self.vars)
         self.instances = (n_instances if n_instances is not None else self.instances)
-        self.__max_tradable = 10  # max value to add to a variable
         self.data = {}
         self.idx = 0
         
@@ -89,11 +88,13 @@ class StraightLine(Problem):
             for ob in range(o):
                 prompt += f"{agents[ag][ob]} obj-{ob}, "
             prompt = prompt[:-2] + ".\n"
-        prompt += "\nHere's the list of potential interactions between agents.\n"
-        prompt += f"An agent can give a quantity of one their objects to another agent. In that case, they lose that quantity of that object and the other agent increases theirs'.\n"  # Trade
-        prompt += f"An agent can lose some or all of their objects. In that case, they lose that quantity of that object.\n"  # Lose
-        prompt += f"An agent can buy some quantity of an object. In that case, they increase the quantity of that object.\n"  # Buy
-        prompt += "Here's a list of real interactions between the agents. At the end of the interactions, I will ask you to tell me the exact quantity of an object a specific agent has.\n\n"
+        prompt += """\nHere's the list of potential interactions between agents.
+An agent can give a quantity of one their objects to another agent. 
+In that case, they lose that quantity of that object and the other agent increases theirs'.
+An agent can lose some or all of their objects. In that case, they lose that quantity of that object.
+An agent can buy some quantity of an object. In that case, they increase the quantity of that object.
+Here's a list of interactions between the agents.
+"""
         
         program = ''
         for ag in agents:
@@ -126,7 +127,7 @@ class StraightLine(Problem):
                 elif op == '@1-buy-q@':  # agent1 buys things
                     # print("Buy")
                     ob = random.randint(0, o-1)
-                    qt = random.randint(1, self.__max_tradable)
+                    qt = random.randint(1, self.max_tradable)
                     program += f"{v1}{ob} += {qt}\n"
                     agents[v1][ob] += qt
                     prompt += f"Agent-{v1} buys {qt} obj-{ob}.\n"
@@ -152,7 +153,7 @@ class StraightLine(Problem):
             else:  # only option is for agent1 to buy things
                 # print("Buy-1")
                 ob = random.randint(0, o-1)
-                qt = random.randint(1, self.__max_tradable)
+                qt = random.randint(1, self.max_tradable)
                 program += f"{v1}{ob} += {qt}\n"
                 agents[v1][ob] += qt
                 prompt += f"Agent-{v1} buys {qt} obj-{ob}.\n"
@@ -181,7 +182,7 @@ class CriticalPath(Problem):
         self.critical_path = len_critical_path
         self.data = {}
         self.idx = 0
-        self.basepath = self.basepath + "CriticalPath/"
+        self.basepath = "./data/CriticalPath/"
         
     def generate_data(self, n_programs:int=1) -> dict:
         for idx in range(self.idx+n_programs):
@@ -224,12 +225,18 @@ class CriticalPath(Problem):
         variables = [f'a{i}' for i in range(v)]
         v_ind = int(v//2)
         
-        prompt = f"There are {v} agents, {[f'a{i}' for i in range(v)]}. Each of them has either a credit which we represent as a negative amount of money other agents owe him, or a debit, i.e., a positive quantity of money he ows to the other agents. Here the amount of credit/debit each agent has: {'; '.join([f'a{i}={random.randint(-10, 10)}' for i in range(v)])}."
-        prompt += "\nHere's the list of potential interactions between agents.\n"
-        prompt += f"An agent can borrow money from another agent. In that case, the first agent increases his total amount while the other decreases it of the same quantity'.\n"  # borrow, +(var)
-        prompt += f"An agent can loan some of his money. In that case, the first agent decreases his total amount while the other increases it of the same quantity'.\n"  # loan, -(var)
-        prompt += f"An agent can increase his debit by buying things. In that case, he is the only one affected.\n"  # Buy, +(number)
-        prompt += "Here's a list of real interactions between the agents. At the end of the interactions, I will ask you to tell me the exact quantity of an object a specific agent has.\n\n"
+        prompt = f"""There are {v} agents, {[f'a{i}' for i in range(v)]}. 
+Each of them has either a credit, which we represent as a negative amount of money other agents owe him,
+or a debit, i.e., a positive quantity of money he ows to the other agents. 
+Here is the amount of credit/debit each agent has: {'; '.join([f'a{i}={random.randint(-10, 10)}' for i in range(v)])}.
+Here's the list of potential interactions between agents.
+An agent can borrow money from another agent. 
+In that case, the first agent increases his total amount while the other decreases it of the same quantity.
+An agent can loan some of his money. 
+In that case, the first agent decreases his total amount while the other increases it of the same quantity.
+An agent can increase his debit by buying things. In that case, he is the only one affected.
+Here's a list of real interactions between the agents.
+"""
 
         program = ''
         program = '; '.join([f'a{i}={random.randint(-10, 10)}' for i in range(v)]) + '\n'
@@ -301,20 +308,17 @@ class CriticalPath(Problem):
         
         return program, prompt, gt_syn
 
-class ParallelPaths(Problem):
+class ParallelPaths(StraightLine):
     def __init__(self, 
+                 n_ops:int, 
                  n_vars:int, 
-                 instances_per_var:int, 
-                 range_critical_paths:int):
+                 n_instances:int):
         
-        super().__init__(name='ParallelPaths')
-        pass
+        super().__init__(n_ops, n_vars, n_instances)
+        self.name = "ParallelPaths"
+        self.basepath = "./data/ParallelPaths/"
         
-    def generate_data(n:int, a:int, o:int, cp:int) -> dict:
-        pass 
         
-    def to_file(self) -> None:
-        pass
     
 class Loops(Problem):
     def __init__(self, 
