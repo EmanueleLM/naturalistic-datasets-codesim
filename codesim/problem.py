@@ -190,7 +190,7 @@ class CriticalPath(Problem):
                 'syn': syn,
                 'nat': nat,
                 'label-syn': gt_syn,
-                # 'label-syn': gt_naty
+                'label-nat': gt_syn
             }
         self.idx += n_programs
         
@@ -297,7 +297,7 @@ class CriticalPath(Problem):
             
         # Compute the ground truth
         exec(program)
-        gt_syn = eval(variables[-1])
+        gt_syn = {variables[-1]: eval(variables[-1])}
         
         return program, prompt, gt_syn
 
