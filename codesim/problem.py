@@ -10,6 +10,10 @@ class Problem(ABC):
         self.name = name
         
     @abstractmethod
+    def reset(self) -> None:
+        pass
+        
+    @abstractmethod
     def generate_data(self) -> dict:
         pass
     
@@ -42,8 +46,7 @@ class StraightLine(Problem):
         self.instances = (n_instances if n_instances is not None else self.instances)
         self.data = {}
         self.idx = 0
-        
-        
+            
     def generate_data(self, n_programs:int=1) -> dict:
         for idx in range(self.idx+n_programs):
             syn, nat, gt_syn, gt_nat = self.__accumulate()
@@ -318,22 +321,78 @@ class ParallelPaths(StraightLine):
         self.name = "ParallelPaths"
         self.basepath = "./data/ParallelPaths/"
         
-        
-    
 class Loops(Problem):
     def __init__(self, 
-                 n_vars:int, 
-                 instances_per_var:int, 
-                 range_critical_paths:int):
+                 n_loops:int, 
+                 n_noisy_loops:int,
+                 min_loop:int=1,
+                 max_loop:int=10):
         
         super().__init__(name='Loops')
-        pass
-
-    def generate_data(n:int, a:int, o:int, cp:int) -> dict:
-        pass 
+        assert n_loops > n_noisy_loops >= 0
+        self.n_loops = n_loops
+        self.n_noisy_loops = n_noisy_loops
+        self.data = {}
+        self.idx = 0
+        self.basepath = "./data/Loops/"
+        self.min_loop = min_loop
+        self.max_loop = max_loop
         
-    def to_file(self) -> None:
-        pass
+    def reset(self, 
+              n_loops:int=None, 
+              n_noisy_loops:int=None, 
+              min_loop:int=None, 
+              max_loop:int=None) -> None:
+        self.n_loops = (n_loops if n_loops is not None else self.n_loops)
+        self.n_noisy_loops = (n_noisy_loops if n_noisy_loops is not None else self.n_noisy_loops)
+        self.min_loop = (min_loop if min_loop is not None else self.min_loop)
+        self.max_loop = (max_loop if max_loop is not None else self.max_loop)
+        self.data = {}
+        self.idx = 0
+        
+    def generate_data(self, n_programs:int=1) -> dict:
+        for idx in range(self.idx+n_programs):
+            syn, nat, gt_syn, gt_nat = self.__accumulate()
+            self.data[idx] = {
+                'syn': syn,
+                'nat': nat,
+                'label-syn': gt_syn,
+                'label-nat': gt_nat
+            }
+        self.idx += n_programs
+        
+    def to_file(self, suffix:str="") -> None:
+        os.makedirs(self.basepath, exist_ok=True)
+        filename = f"n_loops-{self.n_ops}_n_noisy_loops-{self.vars}_min_loop-{self.min_loop}_max_loop-{self.max_loop}"
+        filename += ".json" if suffix == "" else f"_{suffix}.json"
+        path = self.basepath + filename
+        try:
+            json.dump(self.data, open(path, 'w'), indent=4)
+        except Exception as e:
+            raise ValueError(e)
+
+    def generate_data(self, c:int, cn:int) -> dict:
+        c = self.n_loops; cn = self.n_noisy_loops
+        set_c = [i for i in range(c)]
+        set_nc = random.choice(set_c, cn)
+        loops = {i:(i not in set_nc) for i in range(c)}  # True, the loop is necessary for the ground truth
+        
+        program = '; '.join([f"n_{i}=0" for i in set_c]) + '\n'
+        n_tabs = 0
+        for _, is_necessary in loops.items():
+            tabs_decl = '\t'*(n_tabs)
+            tabs_body = '\t'*(n_tabs+1)
+            
+            program += tabs_decl + f"for _ in range({random.randint(self.min_loop, self.max_loop)}):\n"
+            program += tabs_body + f"n_{i} += 1\n"
+            
+            if is_necessary:
+                n_tabs += 1
+
+        
+        program += f"return sum({[f'n_{i}' for i in set_c]})"
+
+        return program
     
 class Sort(Problem):
     def __init__(self, 
