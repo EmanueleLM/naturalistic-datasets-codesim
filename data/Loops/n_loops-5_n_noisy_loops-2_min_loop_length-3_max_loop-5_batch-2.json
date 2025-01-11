@@ -1,182 +1,302 @@
 {
     "0": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\nfor _ in range(4):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_3, n_4])",
+        "nat": "Here's a situation.\nThere are 4 nobj-2 in obj-gen.\nThere are 4 obj-1 in obj-gen.\nThere are 5 nobj-0 in obj-1.\nThere are 4 obj-3 in obj-1.\nThere are 4 obj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_0, n_3, n_4])": 78
+            "sum([n_1, n_3, n_4])": 84
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 84
         }
     },
     "1": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\nfor _ in range(4):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_3, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_3])",
+        "nat": "Here's a situation.\nThere are 4 obj-0 in obj-gen.\nThere are 5 nobj-1 in obj-0.\nThere are 3 obj-2 in obj-0.\nThere are 3 obj-3 in obj-2.\nThere are 5 nobj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_1, n_3, n_4])": 100
+            "sum([n_0, n_2, n_3])": 52
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 52
         }
     },
     "2": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\t\tfor _ in range(5):\n\t\t\tn_2 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_3 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_2])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_3])",
+        "nat": "Here's a situation.\nThere are 5 obj-0 in obj-gen.\nThere are 4 nobj-1 in obj-0.\nThere are 3 obj-2 in obj-0.\nThere are 4 obj-3 in obj-2.\nThere are 3 nobj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_0, n_1, n_2])": 57
+            "sum([n_0, n_2, n_3])": 80
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 80
         }
     },
     "3": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\t\tfor _ in range(3):\n\t\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_3])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\nfor _ in range(4):\n\tn_1 += 1\nfor _ in range(3):\n\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_2, n_3, n_4])",
+        "nat": "Here's a situation.\nThere are 5 nobj-0 in obj-gen.\nThere are 4 nobj-1 in obj-gen.\nThere are 3 obj-2 in obj-gen.\nThere are 4 obj-3 in obj-2.\nThere are 5 obj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_0, n_1, n_3])": 125
+            "sum([n_2, n_3, n_4])": 75
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 75
         }
     },
     "4": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_3, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_4])",
+        "nat": "Here's a situation.\nThere are 3 obj-0 in obj-gen.\nThere are 5 nobj-3 in obj-0.\nThere are 4 obj-2 in obj-0.\nThere are 4 nobj-1 in obj-2.\nThere are 5 obj-4 in obj-2.\n",
         "label-syn": {
-            "sum([n_1, n_3, n_4])": 75
+            "sum([n_0, n_2, n_4])": 75
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 75
         }
     },
     "5": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\tfor _ in range(3):\n\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "nat": "Here's a situation.\nThere are 3 obj-0 in obj-gen.\nThere are 3 nobj-1 in obj-0.\nThere are 4 nobj-2 in obj-0.\nThere are 3 obj-3 in obj-0.\nThere are 3 obj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_0, n_3, n_4])": 85
+            "sum([n_0, n_3, n_4])": 39
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 39
         }
     },
     "6": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_3])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\t\tfor _ in range(4):\n\t\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_3])",
+        "nat": "Here's a situation.\nThere are 3 obj-0 in obj-gen.\nThere are 3 obj-1 in obj-0.\nThere are 4 nobj-2 in obj-1.\nThere are 4 obj-3 in obj-1.\nThere are 5 nobj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_1, n_2, n_3])": 39
+            "sum([n_0, n_1, n_3])": 48
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 48
         }
     },
     "7": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\nfor _ in range(3):\n\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_2, n_3, n_4])",
+        "nat": "Here's a situation.\nThere are 5 nobj-1 in obj-gen.\nThere are 5 nobj-0 in obj-gen.\nThere are 3 obj-2 in obj-gen.\nThere are 4 obj-3 in obj-2.\nThere are 3 obj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_0, n_2, n_4])": 75
+            "sum([n_2, n_3, n_4])": 51
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 51
         }
     },
     "8": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\t\tfor _ in range(5):\n\t\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\tfor _ in range(3):\n\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_3, n_4])",
+        "nat": "Here's a situation.\nThere are 3 nobj-0 in obj-gen.\nThere are 5 obj-1 in obj-gen.\nThere are 5 nobj-2 in obj-1.\nThere are 3 obj-3 in obj-1.\nThere are 5 obj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_0, n_1, n_4])": 57
+            "sum([n_1, n_3, n_4])": 95
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 95
         }
     },
     "9": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\t\tfor _ in range(3):\n\t\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\t\tfor _ in range(4):\n\t\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_4])",
+        "nat": "Here's a situation.\nThere are 4 obj-0 in obj-gen.\nThere are 4 obj-1 in obj-0.\nThere are 4 nobj-3 in obj-1.\nThere are 3 nobj-2 in obj-1.\nThere are 4 obj-4 in obj-1.\n",
         "label-syn": {
-            "sum([n_0, n_1, n_4])": 63
+            "sum([n_0, n_1, n_4])": 84
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 84
         }
     },
     "10": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\nfor _ in range(5):\n\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_2, n_3, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "nat": "Here's a situation.\nThere are 4 obj-0 in obj-gen.\nThere are 4 nobj-1 in obj-0.\nThere are 3 nobj-2 in obj-0.\nThere are 5 obj-3 in obj-0.\nThere are 4 obj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_2, n_3, n_4])": 155
+            "sum([n_0, n_3, n_4])": 104
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 104
         }
     },
     "11": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\t\tfor _ in range(5):\n\t\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_3])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_3])",
+        "nat": "Here's a situation.\nThere are 3 nobj-4 in obj-gen.\nThere are 3 obj-1 in obj-gen.\nThere are 4 obj-2 in obj-1.\nThere are 3 obj-3 in obj-2.\nThere are 3 nobj-0 in obj-3.\n",
         "label-syn": {
-            "sum([n_0, n_1, n_3])": 100
+            "sum([n_1, n_2, n_3])": 51
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 51
         }
     },
     "12": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(4):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_3, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\nfor _ in range(4):\n\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_2, n_3, n_4])",
+        "nat": "Here's a situation.\nThere are 3 nobj-1 in obj-gen.\nThere are 5 nobj-0 in obj-gen.\nThere are 4 obj-2 in obj-gen.\nThere are 4 obj-3 in obj-2.\nThere are 4 obj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_1, n_3, n_4])": 84
+            "sum([n_2, n_3, n_4])": 84
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 84
         }
     },
     "13": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_3])",
+        "nat": "Here's a situation.\nThere are 4 nobj-0 in obj-gen.\nThere are 3 obj-1 in obj-gen.\nThere are 4 obj-2 in obj-1.\nThere are 4 obj-3 in obj-2.\nThere are 5 nobj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_0, n_3, n_4])": 93
+            "sum([n_1, n_2, n_3])": 63
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 63
         }
     },
     "14": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\nfor _ in range(4):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_4])",
+        "nat": "Here's a situation.\nThere are 5 nobj-0 in obj-gen.\nThere are 4 obj-1 in obj-gen.\nThere are 5 obj-2 in obj-1.\nThere are 5 nobj-3 in obj-2.\nThere are 5 obj-4 in obj-2.\n",
         "label-syn": {
-            "sum([n_0, n_3, n_4])": 84
+            "sum([n_1, n_2, n_4])": 124
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 124
         }
     },
     "15": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_3])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "nat": "Here's a situation.\nThere are 3 obj-0 in obj-gen.\nThere are 4 nobj-2 in obj-0.\nThere are 5 nobj-1 in obj-0.\nThere are 5 obj-3 in obj-0.\nThere are 3 obj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_1, n_2, n_3])": 155
+            "sum([n_0, n_3, n_4])": 63
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 63
         }
     },
     "16": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\t\tfor _ in range(5):\n\t\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_3])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\t\tfor _ in range(3):\n\t\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_3])",
+        "nat": "Here's a situation.\nThere are 4 obj-0 in obj-gen.\nThere are 4 obj-1 in obj-0.\nThere are 3 nobj-4 in obj-1.\nThere are 3 obj-3 in obj-1.\nThere are 3 nobj-2 in obj-3.\n",
         "label-syn": {
             "sum([n_0, n_1, n_3])": 68
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 68
         }
     },
     "17": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\t\tfor _ in range(4):\n\t\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_4])",
+        "nat": "Here's a situation.\nThere are 4 obj-0 in obj-gen.\nThere are 4 obj-1 in obj-0.\nThere are 4 nobj-3 in obj-1.\nThere are 5 nobj-2 in obj-1.\nThere are 4 obj-4 in obj-1.\n",
         "label-syn": {
-            "sum([n_0, n_2, n_4])": 63
+            "sum([n_0, n_1, n_4])": 84
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 84
         }
     },
     "18": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_3])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_4])",
+        "nat": "Here's a situation.\nThere are 3 obj-0 in obj-gen.\nThere are 5 nobj-1 in obj-0.\nThere are 3 obj-2 in obj-0.\nThere are 5 nobj-3 in obj-2.\nThere are 4 obj-4 in obj-2.\n",
         "label-syn": {
-            "sum([n_0, n_2, n_3])": 130
+            "sum([n_0, n_2, n_4])": 48
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 48
         }
     },
     "19": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_3])",
+        "nat": "Here's a situation.\nThere are 4 obj-0 in obj-gen.\nThere are 5 nobj-4 in obj-0.\nThere are 3 obj-2 in obj-0.\nThere are 5 obj-3 in obj-2.\nThere are 5 nobj-1 in obj-3.\n",
         "label-syn": {
-            "sum([n_1, n_2, n_4])": 57
+            "sum([n_0, n_2, n_3])": 76
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 76
         }
     },
     "20": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(4):\n\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_3])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_3, n_4])",
+        "nat": "Here's a situation.\nThere are 3 nobj-2 in obj-gen.\nThere are 3 obj-1 in obj-gen.\nThere are 3 nobj-0 in obj-1.\nThere are 5 obj-3 in obj-1.\nThere are 3 obj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_1, n_2, n_3])": 52
+            "sum([n_1, n_3, n_4])": 63
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 63
         }
     },
     "21": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "nat": "Here's a situation.\nThere are 5 obj-0 in obj-gen.\nThere are 3 nobj-1 in obj-0.\nThere are 3 nobj-2 in obj-0.\nThere are 5 obj-3 in obj-0.\nThere are 4 obj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_1, n_2, n_4])": 95
+            "sum([n_0, n_3, n_4])": 130
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 130
         }
     },
     "22": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_4])",
+        "nat": "Here's a situation.\nThere are 3 obj-0 in obj-gen.\nThere are 4 nobj-1 in obj-0.\nThere are 3 obj-2 in obj-0.\nThere are 3 nobj-3 in obj-2.\nThere are 4 obj-4 in obj-2.\n",
         "label-syn": {
-            "sum([n_1, n_2, n_4])": 105
+            "sum([n_0, n_2, n_4])": 48
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 48
         }
     },
     "23": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\nfor _ in range(4):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_3, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_3])",
+        "nat": "Here's a situation.\nThere are 4 obj-0 in obj-gen.\nThere are 4 nobj-4 in obj-0.\nThere are 3 obj-2 in obj-0.\nThere are 5 obj-3 in obj-2.\nThere are 4 nobj-1 in obj-3.\n",
         "label-syn": {
-            "sum([n_1, n_3, n_4])": 68
+            "sum([n_0, n_2, n_3])": 76
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 76
         }
     },
     "24": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\t\tfor _ in range(5):\n\t\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_4])",
+        "nat": "Here's a situation.\nThere are 5 obj-0 in obj-gen.\nThere are 3 obj-1 in obj-0.\nThere are 5 nobj-3 in obj-1.\nThere are 5 nobj-2 in obj-1.\nThere are 4 obj-4 in obj-1.\n",
         "label-syn": {
-            "sum([n_1, n_2, n_4])": 51
+            "sum([n_0, n_1, n_4])": 80
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 80
         }
     },
     "25": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "nat": "Here's a situation.\nThere are 3 obj-0 in obj-gen.\nThere are 5 nobj-2 in obj-0.\nThere are 4 nobj-1 in obj-0.\nThere are 5 obj-3 in obj-0.\nThere are 3 obj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_0, n_3, n_4])": 124
+            "sum([n_0, n_3, n_4])": 63
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 63
         }
     },
     "26": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\t\tfor _ in range(3):\n\t\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_3])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_4])",
+        "nat": "Here's a situation.\nThere are 5 obj-0 in obj-gen.\nThere are 5 nobj-1 in obj-0.\nThere are 4 obj-2 in obj-0.\nThere are 3 nobj-3 in obj-2.\nThere are 3 obj-4 in obj-2.\n",
         "label-syn": {
-            "sum([n_0, n_1, n_3])": 63
+            "sum([n_0, n_2, n_4])": 85
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 85
         }
     },
     "27": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\t\tfor _ in range(5):\n\t\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_4])",
+        "nat": "Here's a situation.\nThere are 3 obj-0 in obj-gen.\nThere are 3 nobj-1 in obj-0.\nThere are 3 obj-2 in obj-0.\nThere are 5 nobj-3 in obj-2.\nThere are 3 obj-4 in obj-2.\n",
         "label-syn": {
-            "sum([n_0, n_1, n_4])": 63
+            "sum([n_0, n_2, n_4])": 39
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 39
         }
     },
     "28": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_4])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "nat": "Here's a situation.\nThere are 3 obj-0 in obj-gen.\nThere are 3 nobj-1 in obj-0.\nThere are 4 nobj-2 in obj-0.\nThere are 4 obj-3 in obj-0.\nThere are 3 obj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_0, n_2, n_4])": 51
+            "sum([n_0, n_3, n_4])": 51
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 51
         }
     },
     "29": {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_3])",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\nfor _ in range(4):\n\tn_2 += 1\n\tfor _ in range(3):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_2, n_3, n_4])",
+        "nat": "Here's a situation.\nThere are 4 nobj-0 in obj-gen.\nThere are 3 nobj-1 in obj-gen.\nThere are 4 obj-2 in obj-gen.\nThere are 3 obj-3 in obj-2.\nThere are 4 obj-4 in obj-3.\n",
         "label-syn": {
-            "sum([n_0, n_2, n_3])": 125
+            "sum([n_2, n_3, n_4])": 64
+        },
+        "label-nat": {
+            "obj-4 in obj-gen": 64
         }
     }
 }

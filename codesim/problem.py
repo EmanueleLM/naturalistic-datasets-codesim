@@ -352,12 +352,12 @@ class Loops(Problem):
         
     def generate_data(self, n_programs:int=1) -> dict:
         for idx in range(self.idx+n_programs):
-            syn, gt_syn = self.__accumulate()
+            syn, nat, gt_syn, gt_nat = self.__accumulate()
             self.data[idx] = {
                 'syn': syn,
-                # 'nat': nat,
+                'nat': nat,
                 'label-syn': gt_syn,
-                # 'label-nat': gt_nat
+                'label-nat': gt_nat
             }
         self.idx += n_programs
         
@@ -377,25 +377,38 @@ class Loops(Problem):
         set_nc = random.sample(set_c, cn)
         loops = {i:(i not in set_nc) for i in range(c)}  # True, the loop is necessary for the ground truth
         
+        # Naturalistic objects 
+        nat_objects = ["obj-gen"] + [f"obj-{i}" for i in set(set_c).difference(set_nc)]
+        nat_noisy_objects = [f"nobj-{i}" for i in set_nc]
+        ptr_nat, ptr_noisy_nat = 1, 0  # pointer to the first var in set_c and set_nc
+        prompt = f"Here's a situation.\n"
+        
         program = '; '.join([f"n_{i}=0" for i in set_c]) + '\n'
         n_tabs = 0
         for idx, is_necessary in loops.items():
             tabs_decl = '\t'*(n_tabs)
             tabs_body = '\t'*(n_tabs+1)
             
-            program += tabs_decl + f"for _ in range({random.randint(self.min_loop_length, self.max_loop_length)}):\n"
+            k = random.randint(self.min_loop_length, self.max_loop_length)
+            program += tabs_decl + f"for _ in range({k}):\n"
             program += tabs_body + f"n_{idx} += 1\n"
             
             if is_necessary:
                 n_tabs += 1
+                prompt += f"There are {k} {nat_objects[ptr_nat]} in {nat_objects[ptr_nat-1]}.\n"
+                ptr_nat += 1
+            else:
+                prompt += f"There are {k} {nat_noisy_objects[ptr_noisy_nat]} in {nat_objects[ptr_nat-1]}.\n"
+                ptr_noisy_nat += 1
         
         program += f"result = sum({[f'n_{i}' for i in set(set_c).difference(set_nc)]})".replace("'", "")
         
         # Generate the ground truth label
         exec(program)
         gt_syn = {f"sum({[f'n_{i}' for i in set(set_c).difference(set_nc)]})".replace("'", ""): eval("result")}
-
-        return program, gt_syn
+        gt_nat = {f"obj-{set_c[-1]} in obj-gen": eval("result")}
+        
+        return program, prompt, gt_syn, gt_nat
     
 class Sort(Problem):
     def __init__(self, 
