@@ -3,24 +3,40 @@ import json
 import os
 import random 
 import string 
+from pydantic.json import pydantic_encoder
 from abc import ABC, abstractmethod
 
+from .my_types import Sample
 class Problem(ABC):
     def __init__(self, name:str):
         self.name = name
+        self.data: list[Sample] = []
         
-    @abstractmethod
-    def reset(self) -> None:
-        pass
-        
-    @abstractmethod
-    def generate_data(self) -> dict:
-        pass
-    
+
     @abstractmethod
     def to_file(self) -> None:
         pass
 
+    @abstractmethod        
+    def _accumulate(self) -> Sample:
+        pass
+
+    def reset(self) -> None:
+        self.data = []
+
+    def generate_data(self, n_programs=1) -> dict:
+        for _ in range(n_programs):
+            new_sample = self._accumulate()
+            self.data.append(new_sample)
+
+    def dump_data_or_throw(self, path:str) -> None:
+        try:
+            with open(path, 'w') as f:
+                json.dump(self.data, f, indent=4, default=pydantic_encoder)
+        except Exception as e:
+            raise ValueError(e)
+
+    
 class StraightLine(Problem):
     def __init__(self, 
                  n_ops:int, 
@@ -35,40 +51,23 @@ class StraightLine(Problem):
         self.n_ops = n_ops
         self.vars = n_vars
         self.instances = n_instances
-        self.data = {}
-        self.idx = 0
         self.max_tradable = 10  # max value to add to a variable
         self.basepath = "./data/StraightLine/"
         
     def reset(self, n_ops:int=None, n_vars:int=None, n_instances:int=None) -> None:
+        super().reset()
         self.n_ops = (n_ops if n_ops is not None else self.n_ops)
         self.vars = (n_vars if n_vars is not None else self.vars)
         self.instances = (n_instances if n_instances is not None else self.instances)
-        self.data = {}
-        self.idx = 0
-            
-    def generate_data(self, n_programs:int=1) -> dict:
-        for idx in range(self.idx+n_programs):
-            syn, nat, gt_syn, gt_nat = self.__accumulate()
-            self.data[idx] = {
-                'syn': syn,
-                'nat': nat,
-                'label-syn': gt_syn,
-                'label-nat': gt_nat
-            }
-        self.idx += n_programs
             
     def to_file(self, suffix:str="") -> None:
         os.makedirs(self.basepath, exist_ok=True)
         filename = f"n_ops-{self.n_ops}_n_vars-{self.vars}_n_instances-{self.instances}"
         filename += ".json" if suffix == "" else f"_{suffix}.json"
         path = self.basepath + filename
-        try:
-            json.dump(self.data, open(path, 'w'), indent=4)
-        except Exception as e:
-            raise ValueError(e)
+        self.dump_data_or_throw(path)
 
-    def __accumulate(self) -> dict:
+    def _accumulate(self):
         """
         Returns a dictionary with the following keys:
         - 'syn': a straight line code
@@ -166,7 +165,7 @@ Here's a list of interactions between the agents.
         gt_syn = agents
         gt_nat = {ag: {f"obj-{k}":v for k,v in agents[ag].items()} for ag in agents}
 
-        return program, prompt, gt_syn, gt_nat
+        return Sample(syn=program, nat=prompt, label_syn=gt_syn, label_nat=gt_nat)
 
 class CriticalPath(Problem):
     def __init__(self, 
@@ -183,39 +182,33 @@ class CriticalPath(Problem):
         self.n_ops = n_ops
         self.vars = (n_vars if n_vars%2==0 else n_vars+1)  # must be even
         self.critical_path = len_critical_path
-        self.data = {}
-        self.idx = 0
         self.basepath = "./data/CriticalPath/"
         
     def generate_data(self, n_programs:int=1) -> dict:
         for idx in range(self.idx+n_programs):
-            syn, nat, gt_syn = self.__accumulate()
+            syn, nat, gt_syn, gt_nat = self._accumulate()
             self.data[idx] = {
                 'syn': syn,
                 'nat': nat,
                 'label-syn': gt_syn,
-                'label-nat': gt_syn
+                'label-nat': gt_nat
             }
         self.idx += n_programs
         
     def reset(self, n_ops:int=None, n_vars:int=None, len_critical_path:int=None) -> None:
+        super().reset()
         self.n_ops = (n_ops if n_ops is not None else self.n_ops)
         self.vars = (n_vars if n_vars is not None else self.vars)
         self.critical_path = (len_critical_path if len_critical_path is not None else self.critical_path)
-        self.data = {}
-        self.idx = 0
             
     def to_file(self, suffix:str="") -> None:
         os.makedirs(self.basepath, exist_ok=True)
         filename = f"n_ops-{self.n_ops}_n_vars-{self.vars}_len_critical_path-{self.critical_path}"
         filename += ".json" if suffix == "" else f"_{suffix}.json"
         path = self.basepath + filename
-        try:
-            json.dump(self.data, open(path, 'w'), indent=4)
-        except Exception as e:
-            raise ValueError(e)
+        self.dump_data_or_throw(path)
     
-    def __accumulate(self) -> dict:
+    def _accumulate(self):
         """
         This function creates a program of length n and with v variables connected by simple binary operations.
         The last variable is used only in portion of the program of length c, so that the program has a critical path for the last variable of length c.
@@ -309,7 +302,8 @@ Here's a list of real interactions between the agents.
         exec(program)
         gt_syn = {variables[-1]: eval(variables[-1])}
         
-        return program, prompt, gt_syn
+        sample = Sample(syn=program, nat=prompt, label_syn=gt_syn, label_nat=gt_syn)
+        return sample
 
 class ParallelPaths(StraightLine):
     def __init__(self, 
@@ -334,8 +328,6 @@ class Loops(Problem):
         self.n_noisy_loops = n_noisy_loops
         self.min_loop_length = min_loop_length
         self.max_loop_length = max_loop_length
-        self.data = {}
-        self.idx = 0
         self.basepath = "./data/Loops/"
         
     def reset(self, 
@@ -343,35 +335,21 @@ class Loops(Problem):
               n_noisy_loops:int=None, 
               min_loop_length:int=None, 
               max_loop_length:int=None) -> None:
+        super().reset()
         self.n_loops = (n_loops if n_loops is not None else self.n_loops)
         self.n_noisy_loops = (n_noisy_loops if n_noisy_loops is not None else self.n_noisy_loops)
         self.min_loop_length = (min_loop_length if min_loop_length is not None else self.min_loop_length)
         self.max_loop_length = (max_loop_length if max_loop_length is not None else self.max_loop_length)
-        self.data = {}
-        self.idx = 0
         
-    def generate_data(self, n_programs:int=1) -> dict:
-        for idx in range(self.idx+n_programs):
-            syn, nat, gt_syn, gt_nat = self.__accumulate()
-            self.data[idx] = {
-                'syn': syn,
-                'nat': nat,
-                'label-syn': gt_syn,
-                'label-nat': gt_nat
-            }
-        self.idx += n_programs
         
     def to_file(self, suffix:str="") -> None:
         os.makedirs(self.basepath, exist_ok=True)
         filename = f"n_loops-{self.n_loops}_n_noisy_loops-{self.n_noisy_loops}_min_loop_length-{self.min_loop_length}_max_loop-{self.max_loop_length}"
         filename += ".json" if suffix == "" else f"_{suffix}.json"
         path = self.basepath + filename
-        try:
-            json.dump(self.data, open(path, 'w'), indent=4)
-        except Exception as e:
-            raise ValueError(e)
+        self.dump_data_or_throw(path)
 
-    def __accumulate(self) -> dict:
+    def _accumulate(self):
         c = self.n_loops; cn = self.n_noisy_loops
         set_c = [i for i in range(c)]
         set_nc = random.sample(set_c, cn)
@@ -407,7 +385,9 @@ class Loops(Problem):
         gt_syn = {f"n_{set_c[-1]}": gt}
         gt_nat = {f"obj-{set_c[-1]} in obj-gen": gt}
         
-        return program, prompt, gt_syn, gt_nat
+
+        sample = Sample(syn=program, nat=prompt, label_syn=gt_syn, label_nat=gt_nat)
+        return sample
     
 class Sort(Problem):
     def __init__(self, 
@@ -418,38 +398,21 @@ class Sort(Problem):
         assert n_vars > 1
         self.n_vars = n_vars
         self.ascending = ascending
-        self.data = {}
-        self.idx = 0
         self.basepath = "./data/Sort/"
         
     def reset(self, n_vars:int=None, ascending:bool=None) -> None:
+        super().reset()
         self.n_ops = (n_vars if n_vars is not None else self.n_vars)
         self.ascending = (ascending if ascending is not None else self.ascending)
-        self.data = {}
-        self.idx = 0
-            
-    def generate_data(self, n_programs:int=1) -> dict:
-        for idx in range(self.idx+n_programs):
-            syn, nat, gt_syn, gt_nat = self.__accumulate()
-            self.data[idx] = {
-                'syn': syn,
-                'nat': nat,
-                'label-syn': gt_syn,
-                'label-nat': gt_nat
-            }
-        self.idx += n_programs
             
     def to_file(self, suffix:str="") -> None:
         os.makedirs(self.basepath, exist_ok=True)
         filename = f"n_vars-{self.n_vars}_ascending-{self.ascending}"
         filename += ".json" if suffix == "" else f"_{suffix}.json"
         path = self.basepath + filename
-        try:
-            json.dump(self.data, open(path, 'w'), indent=4)
-        except Exception as e:
-            raise ValueError(e)
+        self.dump_data_or_throw(path)
         
-    def __accumulate(self) -> dict:
+    def _accumulate(self):
         """
         Creates a list of n unique numbers and asks the position of the k-greatest/smallest.
         """
@@ -472,5 +435,6 @@ Sort them in {('ascending' if self.ascending else 'descending')} with the follow
                   'label': val2var[gt_syn['label']],
                   'ascending': self.ascending}
                   
-        return program, prompt, gt_syn, gt_nat
+        sample = Sample(syn=program, nat=prompt, label_syn=gt_syn, label_nat=gt_nat)
+        return sample
         

@@ -11,16 +11,11 @@ You should support 5 types of operations
 You also get the path of the dataset as an argument.
 """
 
-from pydantic import BaseModel, Field
 import json
 import argparse
-import utils
+from . import utils
 
-class Sample(BaseModel):
-    syn: str
-    nat: str
-    label_syn: dict =  Field(alias='label-syn')
-    label_nat: dict =  Field(alias='label-nat')
+from .my_types import Sample
 
 def main():
     parser = argparse.ArgumentParser(description="Start experiments for the CodeSimulation project.")
