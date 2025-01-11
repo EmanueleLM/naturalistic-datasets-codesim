@@ -1,939 +1,779 @@
 {
     "0": {
-        "syn": "a0=10; a1=6\nb0=6; b1=5\nc0=4; c1=2\nb1 += 4\na0 += 5\nb0 -= 5\nb0 -= b0\na1 += 7\na1 += 10\na1 += 1\nc1 -= 1\nb0 += 7\na1 += 7\nb1 -= 3\na1 -= 21\nb0 -= 6\nb0 += 5\na0 -= 5\na0 -= a0\na1 += 8\na0 += 6\na0 += 9\na0 += 5\nb0 += 9\nb1 += 7\nc1 += 7\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 10 obj-0, 6 obj-1.\nAgent-b has 6 obj-0, 5 obj-1.\nAgent-c has 4 obj-0, 2 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b buys 4 obj-1.\nAgent-b gives 5 obj-0 to agent-a.\nAgent-b loses all their obj-0.\nAgent-a buys 7 obj-1.\nAgent-a buys 10 obj-1.\nAgent-c gives 1 obj-1 to agent-a.\nAgent-b buys 7 obj-0.\nAgent-a buys 7 obj-1.\nAgent-b loses 3 obj-1.\nAgent-a loses 21 obj-1.\nAgent-b loses 6 obj-0.\nAgent-a gives 5 obj-0 to agent-b.\nAgent-a loses all their obj-0.\nAgent-a buys 8 obj-1.\nAgent-a buys 6 obj-0.\nAgent-a buys 9 obj-0.\nAgent-a buys 5 obj-0.\nAgent-b buys 9 obj-0.\nAgent-b buys 7 obj-1.\nAgent-c buys 7 obj-1.\n",
+        "syn": "a0=6; a1=5\nb0=3; b1=6\nc0=2; c1=1\na1 += c1\nc1 -= c1\na0 -= 3\nb1 += 4\nc0 += 1\na0 += 9\nc0 += 2\nb0 -= 2\nb0 += 11\na0 -= 11\nb0 += 3\nc1 += 1\na1 -= 1\nc1 += 4\na1 -= 4\nb0 += 5\nb1 += a1\na1 -= a1\nb1 += 7\na0 += 1\na1 += 4\nb0 += a0\na0 -= a0\nc0 += 2\nb0 -= 6\nb0 += 7\na1 += 7\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 6 obj-0, 5 obj-1.\nAgent-b has 3 obj-0, 6 obj-1.\nAgent-c has 2 obj-0, 1 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c gives all their obj-1 to agent-a.\nAgent-a loses 3 obj-0.\nAgent-b buys 4 obj-1.\nAgent-c buys 1 obj-0.\nAgent-a buys 9 obj-0.\nAgent-b gives 2 obj-0 to agent-c.\nAgent-a gives 11 obj-0 to agent-b.\nAgent-b buys 3 obj-0.\nAgent-a gives 1 obj-1 to agent-c.\nAgent-a gives 4 obj-1 to agent-c.\nAgent-b buys 5 obj-0.\nAgent-a gives all their obj-1 to agent-b.\nAgent-b buys 7 obj-1.\nAgent-a buys 1 obj-0.\nAgent-a buys 4 obj-1.\nAgent-a gives all their obj-0 to agent-b.\nAgent-c buys 2 obj-0.\nAgent-b loses 6 obj-0.\nAgent-b buys 7 obj-0.\nAgent-a buys 7 obj-1.\n",
         "label-syn": {
             "a": {
-                "0": 20,
-                "1": 18
+                "0": 0,
+                "1": 11
             },
             "b": {
-                "0": 15,
-                "1": 13
+                "0": 23,
+                "1": 18
             },
             "c": {
-                "0": 4,
-                "1": 8
+                "0": 7,
+                "1": 5
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 20,
-                "obj-1": 18
+                "obj-0": 0,
+                "obj-1": 11
             },
             "b": {
-                "obj-0": 15,
-                "obj-1": 13
+                "obj-0": 23,
+                "obj-1": 18
             },
             "c": {
-                "obj-0": 4,
-                "obj-1": 8
+                "obj-0": 7,
+                "obj-1": 5
             }
         }
     },
     "1": {
-        "syn": "a0=0; a1=1\nb0=4; b1=2\nc0=6; c1=0\na1 += 3\nb1 -= 1\na0 += 2\nb0 -= 2\nc0 += 1\na0 -= 1\nc1 += 5\nb1 += 10\na0 -= a0\nc1 -= 4\nc0 -= 1\nb0 += 2\nc1 -= c1\nc1 += 2\nb1 -= 2\na1 += 1\nb1 -= 1\nb0 -= 3\na0 += 8\na1 -= 3\nb1 += 5\nb0 -= b0\nc0 -= 2\na0 -= 6\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 0 obj-0, 1 obj-1.\nAgent-b has 4 obj-0, 2 obj-1.\nAgent-c has 6 obj-0, 0 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a buys 3 obj-1.\nAgent-b loses 1 obj-1.\nAgent-b gives 2 obj-0 to agent-a.\nAgent-a gives 1 obj-0 to agent-c.\nAgent-c buys 5 obj-1.\nAgent-b buys 10 obj-1.\nAgent-a loses all their obj-0.\nAgent-c loses 4 obj-1.\nAgent-c loses 1 obj-0.\nAgent-b buys 2 obj-0.\nAgent-c loses all their obj-1.\nAgent-b gives 2 obj-1 to agent-c.\nAgent-b gives 1 obj-1 to agent-a.\nAgent-b loses 3 obj-0.\nAgent-a buys 8 obj-0.\nAgent-a loses 3 obj-1.\nAgent-b buys 5 obj-1.\nAgent-b loses all their obj-0.\nAgent-c loses 2 obj-0.\nAgent-a loses 6 obj-0.\n",
+        "syn": "a0=8; a1=5\nb0=0; b1=1\nc0=3; c1=9\na1 += 6\nb0 += 3\na0 -= 3\nc1 += 5\nb1 += 3\na1 -= 3\nb1 -= b1\nb0 += 6\nb1 += 7\na1 -= 7\nb1 -= 4\nc0 += 1\na1 += b1\nb1 -= b1\nb1 += 4\na1 -= 2\nc1 -= 6\nc1 += 2\nb1 -= 2\nb0 += 5\nb1 -= 1\na1 -= 1\na0 += 5\nb0 -= 5\na1 += 4\nc0 += 10\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 8 obj-0, 5 obj-1.\nAgent-b has 0 obj-0, 1 obj-1.\nAgent-c has 3 obj-0, 9 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a buys 6 obj-1.\nAgent-a gives 3 obj-0 to agent-b.\nAgent-c buys 5 obj-1.\nAgent-a gives 3 obj-1 to agent-b.\nAgent-b loses all their obj-1.\nAgent-b buys 6 obj-0.\nAgent-a gives 7 obj-1 to agent-b.\nAgent-b loses 4 obj-1.\nAgent-c buys 1 obj-0.\nAgent-b gives all their obj-1 to agent-a.\nAgent-b buys 4 obj-1.\nAgent-a loses 2 obj-1.\nAgent-c loses 6 obj-1.\nAgent-b gives 2 obj-1 to agent-c.\nAgent-b buys 5 obj-0.\nAgent-b loses 1 obj-1.\nAgent-a loses 1 obj-1.\nAgent-b gives 5 obj-0 to agent-a.\nAgent-a buys 4 obj-1.\nAgent-c buys 10 obj-0.\n",
         "label-syn": {
             "a": {
-                "0": 2,
-                "1": 2
+                "0": 10,
+                "1": 5
             },
             "b": {
-                "0": 0,
-                "1": 13
+                "0": 9,
+                "1": 1
             },
             "c": {
-                "0": 4,
-                "1": 2
+                "0": 14,
+                "1": 10
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 2,
-                "obj-1": 2
+                "obj-0": 10,
+                "obj-1": 5
             },
             "b": {
-                "obj-0": 0,
-                "obj-1": 13
+                "obj-0": 9,
+                "obj-1": 1
             },
             "c": {
-                "obj-0": 4,
-                "obj-1": 2
+                "obj-0": 14,
+                "obj-1": 10
             }
         }
     },
     "2": {
-        "syn": "a0=2; a1=3\nb0=7; b1=3\nc0=2; c1=3\nb1 += 2\nc1 -= 2\nc0 -= 1\na1 -= a1\nb1 += c1\nc1 -= c1\nc0 += 5\nc1 += 5\na0 += 10\nb1 += 6\nc0 -= c0\na1 += 1\nc1 += 3\nc0 += 4\nb0 -= 4\na0 += 5\nb0 += 3\nb1 += 3\nc1 -= 3\nb0 += 16\na0 -= 16\nc1 -= 3\nc0 += a0\na0 -= a0\nc1 -= c1\nc1 += 2\nb1 -= 2\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 2 obj-0, 3 obj-1.\nAgent-b has 7 obj-0, 3 obj-1.\nAgent-c has 2 obj-0, 3 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c gives 2 obj-1 to agent-b.\nAgent-c loses 1 obj-0.\nAgent-a loses all their obj-1.\nAgent-c gives all their obj-1 to agent-b.\nAgent-c buys 5 obj-0.\nAgent-c buys 5 obj-1.\nAgent-a buys 10 obj-0.\nAgent-b buys 6 obj-1.\nAgent-c loses all their obj-0.\nAgent-a buys 1 obj-1.\nAgent-c buys 3 obj-1.\nAgent-b gives 4 obj-0 to agent-c.\nAgent-a buys 5 obj-0.\nAgent-b buys 3 obj-0.\nAgent-c gives 3 obj-1 to agent-b.\nAgent-a gives 16 obj-0 to agent-b.\nAgent-c loses 3 obj-1.\nAgent-a gives all their obj-0 to agent-c.\nAgent-c loses all their obj-1.\nAgent-b gives 2 obj-1 to agent-c.\n",
+        "syn": "a0=1; a1=2\nb0=9; b1=2\nc0=8; c1=7\na0 += 4\na0 += 7\nb0 -= 7\na0 += 2\nc0 -= 2\na0 -= 1\nb1 += 8\nc1 += 6\nb1 -= 6\nb1 -= 1\nb1 -= 1\nb1 += 8\nb0 += c0\nc0 -= c0\nc1 += 1\nb0 += 9\na1 -= 1\na1 += 5\nc0 += 9\nc0 += 10\nb1 += 3\nc1 -= 3\na1 += 1\na0 += 9\nc1 += 4\nb1 -= 4\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 1 obj-0, 2 obj-1.\nAgent-b has 9 obj-0, 2 obj-1.\nAgent-c has 8 obj-0, 7 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a buys 4 obj-0.\nAgent-b gives 7 obj-0 to agent-a.\nAgent-c gives 2 obj-0 to agent-a.\nAgent-a loses 1 obj-0.\nAgent-b buys 8 obj-1.\nAgent-b gives 6 obj-1 to agent-c.\nAgent-b loses 1 obj-1.\nAgent-b loses 1 obj-1.\nAgent-b buys 8 obj-1.\nAgent-c gives all their obj-0 to agent-b.\nAgent-c buys 1 obj-1.\nAgent-b buys 9 obj-0.\nAgent-a loses 1 obj-1.\nAgent-a buys 5 obj-1.\nAgent-c buys 9 obj-0.\nAgent-c buys 10 obj-0.\nAgent-c gives 3 obj-1 to agent-b.\nAgent-a buys 1 obj-1.\nAgent-a buys 9 obj-0.\nAgent-b gives 4 obj-1 to agent-c.\n",
         "label-syn": {
             "a": {
-                "0": 0,
-                "1": 1
+                "0": 22,
+                "1": 7
             },
             "b": {
-                "0": 22,
-                "1": 13
+                "0": 17,
+                "1": 9
             },
             "c": {
-                "0": 5,
-                "1": 2
+                "0": 19,
+                "1": 15
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 0,
-                "obj-1": 1
+                "obj-0": 22,
+                "obj-1": 7
             },
             "b": {
-                "obj-0": 22,
-                "obj-1": 13
+                "obj-0": 17,
+                "obj-1": 9
             },
             "c": {
-                "obj-0": 5,
-                "obj-1": 2
+                "obj-0": 19,
+                "obj-1": 15
             }
         }
     },
     "3": {
-        "syn": "a0=2; a1=10\nb0=0; b1=10\nc0=0; c1=8\na0 -= a0\na0 += 1\na1 -= 4\na1 -= 3\na1 += 4\nc1 += 9\nc0 += 2\nc0 += 2\na1 += 9\nb0 += 9\na0 -= a0\na1 += 5\nc1 -= 13\nc0 += 8\nb0 -= 8\nb0 -= b0\na1 += 3\nc1 -= 3\na0 += 4\nb1 += 17\na1 -= 17\nb1 += c1\nc1 -= c1\na1 -= 2\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 2 obj-0, 10 obj-1.\nAgent-b has 0 obj-0, 10 obj-1.\nAgent-c has 0 obj-0, 8 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a loses all their obj-0.\nAgent-a buys 1 obj-0.\nAgent-a loses 4 obj-1.\nAgent-a loses 3 obj-1.\nAgent-a buys 4 obj-1.\nAgent-c buys 9 obj-1.\nAgent-c buys 2 obj-0.\nAgent-c buys 2 obj-0.\nAgent-a buys 9 obj-1.\nAgent-b buys 9 obj-0.\nAgent-a loses all their obj-0.\nAgent-a buys 5 obj-1.\nAgent-c loses 13 obj-1.\nAgent-b gives 8 obj-0 to agent-c.\nAgent-b loses all their obj-0.\nAgent-c gives 3 obj-1 to agent-a.\nAgent-a buys 4 obj-0.\nAgent-a gives 17 obj-1 to agent-b.\nAgent-c gives all their obj-1 to agent-b.\nAgent-a loses 2 obj-1.\n",
+        "syn": "a0=2; a1=3\nb0=8; b1=5\nc0=5; c1=4\nc1 -= 3\nc1 -= c1\nc1 += 3\nb0 += a0\na0 -= a0\na0 += 3\nc0 += 1\na0 += 1\na0 -= 3\nb1 += 9\nb1 += 8\nc1 += 8\na0 += 2\na1 -= 2\nc1 -= 4\na1 -= a1\nc1 += 14\nb1 -= 14\nc1 -= 17\nb0 -= 9\nb0 -= b0\nb0 += 5\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 2 obj-0, 3 obj-1.\nAgent-b has 8 obj-0, 5 obj-1.\nAgent-c has 5 obj-0, 4 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c loses 3 obj-1.\nAgent-c loses all their obj-1.\nAgent-c buys 3 obj-1.\nAgent-a gives all their obj-0 to agent-b.\nAgent-a buys 3 obj-0.\nAgent-c buys 1 obj-0.\nAgent-a buys 1 obj-0.\nAgent-a loses 3 obj-0.\nAgent-b buys 9 obj-1.\nAgent-b buys 8 obj-1.\nAgent-c buys 8 obj-1.\nAgent-a buys 2 obj-0.\nAgent-a loses 2 obj-1.\nAgent-c loses 4 obj-1.\nAgent-a loses all their obj-1.\nAgent-b gives 14 obj-1 to agent-c.\nAgent-c loses 17 obj-1.\nAgent-b loses 9 obj-0.\nAgent-b loses all their obj-0.\nAgent-b buys 5 obj-0.\n",
         "label-syn": {
             "a": {
-                "0": 4,
-                "1": 5
+                "0": 3,
+                "1": 0
             },
             "b": {
-                "0": 0,
-                "1": 28
+                "0": 5,
+                "1": 8
             },
             "c": {
-                "0": 12,
-                "1": 0
+                "0": 6,
+                "1": 4
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 4,
-                "obj-1": 5
+                "obj-0": 3,
+                "obj-1": 0
             },
             "b": {
-                "obj-0": 0,
-                "obj-1": 28
+                "obj-0": 5,
+                "obj-1": 8
             },
             "c": {
-                "obj-0": 12,
-                "obj-1": 0
+                "obj-0": 6,
+                "obj-1": 4
             }
         }
     },
     "4": {
-        "syn": "a0=8; a1=1\nb0=9; b1=10\nc0=1; c1=7\nb1 -= 6\nb0 += 6\na0 -= 6\nc1 -= 6\nc1 -= c1\nc0 += 8\nb1 += a1\na1 -= a1\nb1 += 10\na0 += 9\nc0 += 7\na0 += 8\nb0 -= 8\na0 += 3\na0 += 7\na0 += 8\nc1 += 2\na0 += 9\nc1 += 5\nc1 += 2\nc0 += 1\nb0 -= 1\nc0 -= 4\na0 += 7\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 8 obj-0, 1 obj-1.\nAgent-b has 9 obj-0, 10 obj-1.\nAgent-c has 1 obj-0, 7 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b loses 6 obj-1.\nAgent-a gives 6 obj-0 to agent-b.\nAgent-c loses 6 obj-1.\nAgent-c loses all their obj-1.\nAgent-c buys 8 obj-0.\nAgent-a gives all their obj-1 to agent-b.\nAgent-b buys 10 obj-1.\nAgent-a buys 9 obj-0.\nAgent-c buys 7 obj-0.\nAgent-b gives 8 obj-0 to agent-a.\nAgent-a buys 3 obj-0.\nAgent-a buys 7 obj-0.\nAgent-a buys 8 obj-0.\nAgent-c buys 2 obj-1.\nAgent-a buys 9 obj-0.\nAgent-c buys 5 obj-1.\nAgent-c buys 2 obj-1.\nAgent-b gives 1 obj-0 to agent-c.\nAgent-c loses 4 obj-0.\nAgent-a buys 7 obj-0.\n",
+        "syn": "a0=8; a1=5\nb0=10; b1=2\nc0=1; c1=1\nb1 += 6\nb0 += 7\nb0 -= 15\nc0 += 6\na0 -= 6\na1 += 3\nc1 += 4\na1 -= 4\na0 += 1\nb0 -= 1\na0 -= 2\nb0 += a0\na0 -= a0\na1 += 6\nc0 += 5\na1 += 3\na0 += 1\nb1 += 5\na0 -= a0\na1 += 6\nc0 += 10\nb0 -= 1\na1 += 7\na1 += 2\nc1 -= 2\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 8 obj-0, 5 obj-1.\nAgent-b has 10 obj-0, 2 obj-1.\nAgent-c has 1 obj-0, 1 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b buys 6 obj-1.\nAgent-b buys 7 obj-0.\nAgent-b loses 15 obj-0.\nAgent-a gives 6 obj-0 to agent-c.\nAgent-a buys 3 obj-1.\nAgent-a gives 4 obj-1 to agent-c.\nAgent-b gives 1 obj-0 to agent-a.\nAgent-a loses 2 obj-0.\nAgent-a gives all their obj-0 to agent-b.\nAgent-a buys 6 obj-1.\nAgent-c buys 5 obj-0.\nAgent-a buys 3 obj-1.\nAgent-a buys 1 obj-0.\nAgent-b buys 5 obj-1.\nAgent-a loses all their obj-0.\nAgent-a buys 6 obj-1.\nAgent-c buys 10 obj-0.\nAgent-b loses 1 obj-0.\nAgent-a buys 7 obj-1.\nAgent-c gives 2 obj-1 to agent-a.\n",
         "label-syn": {
             "a": {
-                "0": 53,
-                "1": 0
+                "0": 0,
+                "1": 28
             },
             "b": {
-                "0": 6,
-                "1": 15
-            },
-            "c": {
-                "0": 13,
-                "1": 9
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 53,
-                "obj-1": 0
-            },
-            "b": {
-                "obj-0": 6,
-                "obj-1": 15
-            },
-            "c": {
-                "obj-0": 13,
-                "obj-1": 9
-            }
-        }
-    },
-    "5": {
-        "syn": "a0=8; a1=5\nb0=9; b1=5\nc0=7; c1=10\nb0 += 1\nc0 -= 1\nb0 += 7\na0 -= 7\nb0 += a0\na0 -= a0\na1 += 8\nb1 -= 1\na0 += 5\nc0 -= 5\nc0 += 4\na0 -= 4\na0 -= a0\na0 += 9\na1 -= 3\nc1 -= 3\na0 -= 1\nb1 += 8\nc1 += 2\nb1 -= 10\nb1 -= b1\nc1 += a1\na1 -= a1\na0 += 1\nc0 -= 1\nb0 += 3\nc0 -= 3\nb1 += 8\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 8 obj-0, 5 obj-1.\nAgent-b has 9 obj-0, 5 obj-1.\nAgent-c has 7 obj-0, 10 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c gives 1 obj-0 to agent-b.\nAgent-a gives 7 obj-0 to agent-b.\nAgent-a gives all their obj-0 to agent-b.\nAgent-a buys 8 obj-1.\nAgent-b loses 1 obj-1.\nAgent-c gives 5 obj-0 to agent-a.\nAgent-a gives 4 obj-0 to agent-c.\nAgent-a loses all their obj-0.\nAgent-a buys 9 obj-0.\nAgent-a loses 3 obj-1.\nAgent-c loses 3 obj-1.\nAgent-a loses 1 obj-0.\nAgent-b buys 8 obj-1.\nAgent-c buys 2 obj-1.\nAgent-b loses 10 obj-1.\nAgent-b loses all their obj-1.\nAgent-a gives all their obj-1 to agent-c.\nAgent-c gives 1 obj-0 to agent-a.\nAgent-c gives 3 obj-0 to agent-b.\nAgent-b buys 8 obj-1.\n",
-        "label-syn": {
-            "a": {
-                "0": 9,
-                "1": 0
-            },
-            "b": {
-                "0": 21,
-                "1": 8
-            },
-            "c": {
                 "0": 1,
-                "1": 19
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 9,
-                "obj-1": 0
-            },
-            "b": {
-                "obj-0": 21,
-                "obj-1": 8
+                "1": 13
             },
             "c": {
-                "obj-0": 1,
-                "obj-1": 19
-            }
-        }
-    },
-    "6": {
-        "syn": "a0=3; a1=4\nb0=8; b1=7\nc0=1; c1=6\na0 += 7\nb1 += 1\nc0 += 1\nb0 -= 1\nb0 -= 2\na0 -= a0\nc0 -= c0\nb1 += 1\na0 += 6\nc1 += 9\nb1 += 1\nc1 += 1\nb1 += 2\na1 -= 2\na0 -= 4\nc0 += 2\nb0 -= 2\nc1 -= 10\nc0 += 8\nc0 -= 2\nc1 += b1\nb1 -= b1\nb0 += 1\nc1 += 2\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 3 obj-0, 4 obj-1.\nAgent-b has 8 obj-0, 7 obj-1.\nAgent-c has 1 obj-0, 6 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a buys 7 obj-0.\nAgent-b buys 1 obj-1.\nAgent-b gives 1 obj-0 to agent-c.\nAgent-b loses 2 obj-0.\nAgent-a loses all their obj-0.\nAgent-c loses all their obj-0.\nAgent-b buys 1 obj-1.\nAgent-a buys 6 obj-0.\nAgent-c buys 9 obj-1.\nAgent-b buys 1 obj-1.\nAgent-c buys 1 obj-1.\nAgent-a gives 2 obj-1 to agent-b.\nAgent-a loses 4 obj-0.\nAgent-b gives 2 obj-0 to agent-c.\nAgent-c loses 10 obj-1.\nAgent-c buys 8 obj-0.\nAgent-c loses 2 obj-0.\nAgent-b gives all their obj-1 to agent-c.\nAgent-b buys 1 obj-0.\nAgent-c buys 2 obj-1.\n",
-        "label-syn": {
-            "a": {
-                "0": 2,
-                "1": 2
-            },
-            "b": {
-                "0": 4,
-                "1": 0
-            },
-            "c": {
-                "0": 8,
-                "1": 20
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 2,
-                "obj-1": 2
-            },
-            "b": {
-                "obj-0": 4,
-                "obj-1": 0
-            },
-            "c": {
-                "obj-0": 8,
-                "obj-1": 20
-            }
-        }
-    },
-    "7": {
-        "syn": "a0=10; a1=4\nb0=8; b1=0\nc0=2; c1=9\na0 += 6\nb1 += 6\nc0 -= c0\nb1 -= 4\nc1 += 4\nb0 -= 4\na1 += 9\nb1 += 11\na1 -= 11\nb1 -= 5\nc1 += 4\nc1 += 1\nb1 -= 1\na0 -= 15\na0 += 3\nb0 -= 3\na0 += 2\nb0 += 5\na0 -= 5\nc0 += 4\nb1 += 8\na1 += 4\nb0 += 7\nc0 += 10\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 10 obj-0, 4 obj-1.\nAgent-b has 8 obj-0, 0 obj-1.\nAgent-c has 2 obj-0, 9 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a buys 6 obj-0.\nAgent-b buys 6 obj-1.\nAgent-c loses all their obj-0.\nAgent-b loses 4 obj-1.\nAgent-c buys 4 obj-1.\nAgent-b loses 4 obj-0.\nAgent-a buys 9 obj-1.\nAgent-a gives 11 obj-1 to agent-b.\nAgent-b loses 5 obj-1.\nAgent-c buys 4 obj-1.\nAgent-b gives 1 obj-1 to agent-c.\nAgent-a loses 15 obj-0.\nAgent-b gives 3 obj-0 to agent-a.\nAgent-a buys 2 obj-0.\nAgent-a gives 5 obj-0 to agent-b.\nAgent-c buys 4 obj-0.\nAgent-b buys 8 obj-1.\nAgent-a buys 4 obj-1.\nAgent-b buys 7 obj-0.\nAgent-c buys 10 obj-0.\n",
-        "label-syn": {
-            "a": {
-                "0": 1,
-                "1": 6
-            },
-            "b": {
-                "0": 13,
-                "1": 15
-            },
-            "c": {
-                "0": 14,
-                "1": 18
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 1,
-                "obj-1": 6
-            },
-            "b": {
-                "obj-0": 13,
-                "obj-1": 15
-            },
-            "c": {
-                "obj-0": 14,
-                "obj-1": 18
-            }
-        }
-    },
-    "8": {
-        "syn": "a0=3; a1=5\nb0=0; b1=5\nc0=7; c1=10\nc0 += 4\nb1 += 3\na1 -= 3\na1 += 5\nb0 += 4\nb1 -= 7\na0 += 4\nc0 -= 4\na0 += 8\na1 -= 4\nb1 -= b1\nb1 += 6\nc1 -= 6\nc0 -= c0\na1 -= 2\nc0 += 7\nc1 += a1\na1 -= a1\nb1 -= 3\nb0 += 4\nb1 += 8\nb1 += 2\nc1 -= 2\nb1 -= 11\nb1 += 9\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 3 obj-0, 5 obj-1.\nAgent-b has 0 obj-0, 5 obj-1.\nAgent-c has 7 obj-0, 10 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c buys 4 obj-0.\nAgent-a gives 3 obj-1 to agent-b.\nAgent-a buys 5 obj-1.\nAgent-b buys 4 obj-0.\nAgent-b loses 7 obj-1.\nAgent-c gives 4 obj-0 to agent-a.\nAgent-a buys 8 obj-0.\nAgent-a loses 4 obj-1.\nAgent-b loses all their obj-1.\nAgent-c gives 6 obj-1 to agent-b.\nAgent-c loses all their obj-0.\nAgent-a loses 2 obj-1.\nAgent-c buys 7 obj-0.\nAgent-a gives all their obj-1 to agent-c.\nAgent-b loses 3 obj-1.\nAgent-b buys 4 obj-0.\nAgent-b buys 8 obj-1.\nAgent-c gives 2 obj-1 to agent-b.\nAgent-b loses 11 obj-1.\nAgent-b buys 9 obj-1.\n",
-        "label-syn": {
-            "a": {
-                "0": 15,
-                "1": 0
-            },
-            "b": {
-                "0": 8,
-                "1": 11
-            },
-            "c": {
-                "0": 7,
+                "0": 22,
                 "1": 3
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 15,
+                "obj-0": 0,
+                "obj-1": 28
+            },
+            "b": {
+                "obj-0": 1,
+                "obj-1": 13
+            },
+            "c": {
+                "obj-0": 22,
+                "obj-1": 3
+            }
+        }
+    },
+    "5": {
+        "syn": "a0=10; a1=3\nb0=5; b1=4\nc0=8; c1=7\nb0 -= 3\nc1 -= c1\nc1 += 8\nb1 += 2\na1 -= 2\nc0 -= 5\na0 += c0\nc0 -= c0\nc0 += b0\nb0 -= b0\nb1 += 1\nb0 += 5\nc0 -= 1\nc0 -= c0\na1 -= a1\nc1 += 4\nc1 += 1\nc0 += 3\na0 += 9\na1 += 1\nb0 += 9\nc1 += 2\na1 += 3\nb1 -= 3\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 10 obj-0, 3 obj-1.\nAgent-b has 5 obj-0, 4 obj-1.\nAgent-c has 8 obj-0, 7 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b loses 3 obj-0.\nAgent-c loses all their obj-1.\nAgent-c buys 8 obj-1.\nAgent-a gives 2 obj-1 to agent-b.\nAgent-c loses 5 obj-0.\nAgent-c gives all their obj-0 to agent-a.\nAgent-b gives all their obj-0 to agent-c.\nAgent-b buys 1 obj-1.\nAgent-b buys 5 obj-0.\nAgent-c loses 1 obj-0.\nAgent-c loses all their obj-0.\nAgent-a loses all their obj-1.\nAgent-c buys 4 obj-1.\nAgent-c buys 1 obj-1.\nAgent-c buys 3 obj-0.\nAgent-a buys 9 obj-0.\nAgent-a buys 1 obj-1.\nAgent-b buys 9 obj-0.\nAgent-c buys 2 obj-1.\nAgent-b gives 3 obj-1 to agent-a.\n",
+        "label-syn": {
+            "a": {
+                "0": 22,
+                "1": 4
+            },
+            "b": {
+                "0": 14,
+                "1": 4
+            },
+            "c": {
+                "0": 3,
+                "1": 15
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 22,
+                "obj-1": 4
+            },
+            "b": {
+                "obj-0": 14,
+                "obj-1": 4
+            },
+            "c": {
+                "obj-0": 3,
+                "obj-1": 15
+            }
+        }
+    },
+    "6": {
+        "syn": "a0=1; a1=5\nb0=3; b1=4\nc0=8; c1=7\na0 += b0\nb0 -= b0\nb1 += 5\nb0 += 3\nb1 += 3\na1 -= 3\na0 -= 2\nc1 += 3\nb0 += 7\nc0 -= 7\nc0 -= c0\nb0 += 1\na0 -= 1\nc0 += 8\nb1 += 3\nc1 -= 3\nc1 += a1\na1 -= a1\nc1 -= 8\nb0 += 6\nc0 -= 3\nb0 += 4\na1 += 9\nb1 += 2\nc0 -= c0\nc0 += 3\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 1 obj-0, 5 obj-1.\nAgent-b has 3 obj-0, 4 obj-1.\nAgent-c has 8 obj-0, 7 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b gives all their obj-0 to agent-a.\nAgent-b buys 5 obj-1.\nAgent-b buys 3 obj-0.\nAgent-a gives 3 obj-1 to agent-b.\nAgent-a loses 2 obj-0.\nAgent-c buys 3 obj-1.\nAgent-c gives 7 obj-0 to agent-b.\nAgent-c loses all their obj-0.\nAgent-a gives 1 obj-0 to agent-b.\nAgent-c buys 8 obj-0.\nAgent-c gives 3 obj-1 to agent-b.\nAgent-a gives all their obj-1 to agent-c.\nAgent-c loses 8 obj-1.\nAgent-b buys 6 obj-0.\nAgent-c loses 3 obj-0.\nAgent-b buys 4 obj-0.\nAgent-a buys 9 obj-1.\nAgent-b buys 2 obj-1.\nAgent-c loses all their obj-0.\nAgent-c buys 3 obj-0.\n",
+        "label-syn": {
+            "a": {
+                "0": 1,
+                "1": 9
+            },
+            "b": {
+                "0": 21,
+                "1": 17
+            },
+            "c": {
+                "0": 3,
+                "1": 1
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 1,
+                "obj-1": 9
+            },
+            "b": {
+                "obj-0": 21,
+                "obj-1": 17
+            },
+            "c": {
+                "obj-0": 3,
+                "obj-1": 1
+            }
+        }
+    },
+    "7": {
+        "syn": "a0=3; a1=5\nb0=8; b1=7\nc0=9; c1=0\na1 += 6\na0 += 4\nb0 -= 6\na0 += 8\nb1 += 1\na1 -= 1\nc0 += 6\nc1 += 10\nc1 += 5\na1 -= 5\nc0 += 2\na0 -= 2\nb1 -= 6\nb0 -= 1\nb0 += 5\nc0 -= 5\nc0 += 4\nb0 -= 4\na1 += 4\nc0 += 7\na0 += 8\nc0 -= 8\nb1 -= 1\na1 += 1\nb1 -= b1\na1 += 2\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 3 obj-0, 5 obj-1.\nAgent-b has 8 obj-0, 7 obj-1.\nAgent-c has 9 obj-0, 0 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a buys 6 obj-1.\nAgent-a buys 4 obj-0.\nAgent-b loses 6 obj-0.\nAgent-a buys 8 obj-0.\nAgent-a gives 1 obj-1 to agent-b.\nAgent-c buys 6 obj-0.\nAgent-c buys 10 obj-1.\nAgent-a gives 5 obj-1 to agent-c.\nAgent-a gives 2 obj-0 to agent-c.\nAgent-b loses 6 obj-1.\nAgent-b loses 1 obj-0.\nAgent-c gives 5 obj-0 to agent-b.\nAgent-b gives 4 obj-0 to agent-c.\nAgent-a buys 4 obj-1.\nAgent-c buys 7 obj-0.\nAgent-c gives 8 obj-0 to agent-a.\nAgent-b loses 1 obj-1.\nAgent-a buys 1 obj-1.\nAgent-b loses all their obj-1.\nAgent-a buys 2 obj-1.\n",
+        "label-syn": {
+            "a": {
+                "0": 21,
+                "1": 12
+            },
+            "b": {
+                "0": 2,
+                "1": 0
+            },
+            "c": {
+                "0": 15,
+                "1": 15
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 21,
+                "obj-1": 12
+            },
+            "b": {
+                "obj-0": 2,
                 "obj-1": 0
+            },
+            "c": {
+                "obj-0": 15,
+                "obj-1": 15
+            }
+        }
+    },
+    "8": {
+        "syn": "a0=0; a1=10\nb0=5; b1=2\nc0=5; c1=6\nc1 -= 2\na1 += b1\nb1 -= b1\nb1 += 7\nc0 += 8\nc1 += 1\nb1 -= 1\nb0 -= 1\nc1 -= c1\na1 += 1\nb1 -= 1\nc0 += 10\nc1 += 10\nc1 -= 8\nc1 -= 1\na1 += 7\nb1 += 1\na1 += c1\nc1 -= c1\nb0 += 3\nb0 += 1\nc1 += 3\nb1 -= 5\na0 += 5\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 0 obj-0, 10 obj-1.\nAgent-b has 5 obj-0, 2 obj-1.\nAgent-c has 5 obj-0, 6 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c loses 2 obj-1.\nAgent-b gives all their obj-1 to agent-a.\nAgent-b buys 7 obj-1.\nAgent-c buys 8 obj-0.\nAgent-b gives 1 obj-1 to agent-c.\nAgent-b loses 1 obj-0.\nAgent-c loses all their obj-1.\nAgent-b gives 1 obj-1 to agent-a.\nAgent-c buys 10 obj-0.\nAgent-c buys 10 obj-1.\nAgent-c loses 8 obj-1.\nAgent-c loses 1 obj-1.\nAgent-a buys 7 obj-1.\nAgent-b buys 1 obj-1.\nAgent-c gives all their obj-1 to agent-a.\nAgent-b buys 3 obj-0.\nAgent-b buys 1 obj-0.\nAgent-c buys 3 obj-1.\nAgent-b loses 5 obj-1.\nAgent-a buys 5 obj-0.\n",
+        "label-syn": {
+            "a": {
+                "0": 5,
+                "1": 21
+            },
+            "b": {
+                "0": 8,
+                "1": 1
+            },
+            "c": {
+                "0": 23,
+                "1": 3
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 5,
+                "obj-1": 21
             },
             "b": {
                 "obj-0": 8,
-                "obj-1": 11
+                "obj-1": 1
             },
             "c": {
-                "obj-0": 7,
+                "obj-0": 23,
                 "obj-1": 3
             }
         }
     },
     "9": {
-        "syn": "a0=6; a1=0\nb0=1; b1=6\nc0=4; c1=9\nc1 -= c1\na1 += 9\na1 -= 5\nc1 += 4\nb1 += 10\nc1 += 5\nb1 += 2\na1 -= 2\na0 += 2\nc0 -= 2\na0 += 10\nb1 += 8\na1 += 7\na1 += 4\nc1 -= 4\na1 -= 12\nc1 += 4\nc0 -= 1\nb1 += a1\na1 -= a1\na0 += 7\na1 += 4\na1 -= 3\nb1 -= 4\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 6 obj-0, 0 obj-1.\nAgent-b has 1 obj-0, 6 obj-1.\nAgent-c has 4 obj-0, 9 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c loses all their obj-1.\nAgent-a buys 9 obj-1.\nAgent-a loses 5 obj-1.\nAgent-c buys 4 obj-1.\nAgent-b buys 10 obj-1.\nAgent-c buys 5 obj-1.\nAgent-a gives 2 obj-1 to agent-b.\nAgent-c gives 2 obj-0 to agent-a.\nAgent-a buys 10 obj-0.\nAgent-b buys 8 obj-1.\nAgent-a buys 7 obj-1.\nAgent-c gives 4 obj-1 to agent-a.\nAgent-a loses 12 obj-1.\nAgent-c buys 4 obj-1.\nAgent-c loses 1 obj-0.\nAgent-a gives all their obj-1 to agent-b.\nAgent-a buys 7 obj-0.\nAgent-a buys 4 obj-1.\nAgent-a loses 3 obj-1.\nAgent-b loses 4 obj-1.\n",
+        "syn": "a0=9; a1=3\nb0=0; b1=7\nc0=0; c1=7\nb0 += 10\nc1 += 7\na1 += 1\nb0 += 9\nb0 -= 7\na1 += 4\nb1 -= 4\na1 -= 2\nb0 -= 8\nb1 += 5\na1 -= 5\na1 += 3\na0 -= 5\nc1 += 3\na1 -= 3\nc1 += 7\nb1 -= 7\nc0 += 7\nb1 -= b1\na1 -= a1\nc0 += 7\nb1 += 7\nc1 -= 3\na0 += 9\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 9 obj-0, 3 obj-1.\nAgent-b has 0 obj-0, 7 obj-1.\nAgent-c has 0 obj-0, 7 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b buys 10 obj-0.\nAgent-c buys 7 obj-1.\nAgent-a buys 1 obj-1.\nAgent-b buys 9 obj-0.\nAgent-b loses 7 obj-0.\nAgent-b gives 4 obj-1 to agent-a.\nAgent-a loses 2 obj-1.\nAgent-b loses 8 obj-0.\nAgent-a gives 5 obj-1 to agent-b.\nAgent-a buys 3 obj-1.\nAgent-a loses 5 obj-0.\nAgent-a gives 3 obj-1 to agent-c.\nAgent-b gives 7 obj-1 to agent-c.\nAgent-c buys 7 obj-0.\nAgent-b loses all their obj-1.\nAgent-a loses all their obj-1.\nAgent-c buys 7 obj-0.\nAgent-b buys 7 obj-1.\nAgent-c loses 3 obj-1.\nAgent-a buys 9 obj-0.\n",
         "label-syn": {
             "a": {
-                "0": 25,
-                "1": 1
+                "0": 13,
+                "1": 0
             },
             "b": {
-                "0": 1,
-                "1": 23
+                "0": 4,
+                "1": 7
             },
             "c": {
-                "0": 1,
-                "1": 9
+                "0": 14,
+                "1": 21
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 25,
-                "obj-1": 1
+                "obj-0": 13,
+                "obj-1": 0
             },
             "b": {
-                "obj-0": 1,
-                "obj-1": 23
+                "obj-0": 4,
+                "obj-1": 7
             },
             "c": {
-                "obj-0": 1,
-                "obj-1": 9
+                "obj-0": 14,
+                "obj-1": 21
             }
         }
     },
     "10": {
-        "syn": "a0=7; a1=2\nb0=1; b1=0\nc0=3; c1=4\nb0 += 6\nb1 += 10\na0 += 5\nb0 += 2\nc0 += 10\na0 -= 10\nc1 -= 2\na0 += 3\nb0 -= 3\nb1 += 9\nb1 += 8\nc0 += 9\nb0 += 1\na0 -= 1\na0 += 7\na0 -= 1\nc1 -= 1\nb1 += 7\nb0 += 3\nc0 -= 3\nb0 += 3\nc0 -= 3\nc1 += 1\nc1 -= c1\na0 -= 9\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 7 obj-0, 2 obj-1.\nAgent-b has 1 obj-0, 0 obj-1.\nAgent-c has 3 obj-0, 4 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b buys 6 obj-0.\nAgent-b buys 10 obj-1.\nAgent-a buys 5 obj-0.\nAgent-b buys 2 obj-0.\nAgent-a gives 10 obj-0 to agent-c.\nAgent-c loses 2 obj-1.\nAgent-b gives 3 obj-0 to agent-a.\nAgent-b buys 9 obj-1.\nAgent-b buys 8 obj-1.\nAgent-c buys 9 obj-0.\nAgent-a gives 1 obj-0 to agent-b.\nAgent-a buys 7 obj-0.\nAgent-a loses 1 obj-0.\nAgent-c loses 1 obj-1.\nAgent-b buys 7 obj-1.\nAgent-c gives 3 obj-0 to agent-b.\nAgent-c gives 3 obj-0 to agent-b.\nAgent-c buys 1 obj-1.\nAgent-c loses all their obj-1.\nAgent-a loses 9 obj-0.\n",
+        "syn": "a0=3; a1=2\nb0=2; b1=8\nc0=6; c1=9\nc1 += 7\nb1 -= 7\na0 -= 1\nc1 += 6\na0 += c0\nc0 -= c0\nc0 += 2\nb1 += 2\na1 += 16\nc1 -= 16\nc0 -= c0\nc0 += 6\na0 += 2\nc0 -= 2\nc0 += 1\nc0 += b0\nb0 -= b0\na1 -= a1\nc0 += 7\na0 += 8\nb1 += 8\nc1 -= c1\nc1 += 9\nc0 -= 3\na1 += 4\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 3 obj-0, 2 obj-1.\nAgent-b has 2 obj-0, 8 obj-1.\nAgent-c has 6 obj-0, 9 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b gives 7 obj-1 to agent-c.\nAgent-a loses 1 obj-0.\nAgent-c buys 6 obj-1.\nAgent-c gives all their obj-0 to agent-a.\nAgent-c buys 2 obj-0.\nAgent-b buys 2 obj-1.\nAgent-c gives 16 obj-1 to agent-a.\nAgent-c loses all their obj-0.\nAgent-c buys 6 obj-0.\nAgent-c gives 2 obj-0 to agent-a.\nAgent-c buys 1 obj-0.\nAgent-b gives all their obj-0 to agent-c.\nAgent-a loses all their obj-1.\nAgent-c buys 7 obj-0.\nAgent-a buys 8 obj-0.\nAgent-b buys 8 obj-1.\nAgent-c loses all their obj-1.\nAgent-c buys 9 obj-1.\nAgent-c loses 3 obj-0.\nAgent-a buys 4 obj-1.\n",
         "label-syn": {
             "a": {
-                "0": 1,
-                "1": 2
+                "0": 18,
+                "1": 4
             },
             "b": {
-                "0": 13,
-                "1": 34
+                "0": 0,
+                "1": 11
             },
             "c": {
-                "0": 16,
-                "1": 0
+                "0": 11,
+                "1": 9
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 1,
-                "obj-1": 2
+                "obj-0": 18,
+                "obj-1": 4
             },
             "b": {
-                "obj-0": 13,
-                "obj-1": 34
+                "obj-0": 0,
+                "obj-1": 11
             },
             "c": {
-                "obj-0": 16,
-                "obj-1": 0
+                "obj-0": 11,
+                "obj-1": 9
             }
         }
     },
     "11": {
-        "syn": "a0=5; a1=8\nb0=8; b1=4\nc0=10; c1=1\nc0 += 3\na0 -= 3\nc1 += 1\nb1 -= 1\na0 += 3\nb0 -= 3\nc0 += 9\nb0 += 1\na0 -= 4\nb0 += 8\nc0 -= 8\na1 -= 4\na1 += 5\nb0 -= 3\na0 += 1\nc0 -= 1\na0 -= 1\na1 += 2\na0 -= a0\na1 += 5\na0 += 9\nb1 -= 1\na1 += 9\nc0 -= 12\nc1 += 10\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 5 obj-0, 8 obj-1.\nAgent-b has 8 obj-0, 4 obj-1.\nAgent-c has 10 obj-0, 1 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a gives 3 obj-0 to agent-c.\nAgent-b gives 1 obj-1 to agent-c.\nAgent-b gives 3 obj-0 to agent-a.\nAgent-c buys 9 obj-0.\nAgent-b buys 1 obj-0.\nAgent-a loses 4 obj-0.\nAgent-c gives 8 obj-0 to agent-b.\nAgent-a loses 4 obj-1.\nAgent-a buys 5 obj-1.\nAgent-b loses 3 obj-0.\nAgent-c gives 1 obj-0 to agent-a.\nAgent-a loses 1 obj-0.\nAgent-a buys 2 obj-1.\nAgent-a loses all their obj-0.\nAgent-a buys 5 obj-1.\nAgent-a buys 9 obj-0.\nAgent-b loses 1 obj-1.\nAgent-a buys 9 obj-1.\nAgent-c loses 12 obj-0.\nAgent-c buys 10 obj-1.\n",
+        "syn": "a0=6; a1=8\nb0=9; b1=3\nc0=5; c1=9\nc0 -= 4\nc1 += b1\nb1 -= b1\na1 += 8\nc1 -= 2\nb1 += 4\nc1 += 10\na0 += c0\nc0 -= c0\na0 -= 3\na0 += 1\nb1 += 7\nb1 += 4\na1 -= 4\nc0 += 2\nb0 += c0\nc0 -= c0\nc0 += 4\nb1 -= 1\na1 += 10\nb1 -= 10\nb1 -= b1\nc1 += 7\nc1 -= c1\nb0 += 5\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 6 obj-0, 8 obj-1.\nAgent-b has 9 obj-0, 3 obj-1.\nAgent-c has 5 obj-0, 9 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c loses 4 obj-0.\nAgent-b gives all their obj-1 to agent-c.\nAgent-a buys 8 obj-1.\nAgent-c loses 2 obj-1.\nAgent-b buys 4 obj-1.\nAgent-c buys 10 obj-1.\nAgent-c gives all their obj-0 to agent-a.\nAgent-a loses 3 obj-0.\nAgent-a buys 1 obj-0.\nAgent-b buys 7 obj-1.\nAgent-a gives 4 obj-1 to agent-b.\nAgent-c buys 2 obj-0.\nAgent-c gives all their obj-0 to agent-b.\nAgent-c buys 4 obj-0.\nAgent-b loses 1 obj-1.\nAgent-b gives 10 obj-1 to agent-a.\nAgent-b loses all their obj-1.\nAgent-c buys 7 obj-1.\nAgent-c loses all their obj-1.\nAgent-b buys 5 obj-0.\n",
         "label-syn": {
             "a": {
-                "0": 9,
-                "1": 25
+                "0": 5,
+                "1": 22
             },
             "b": {
-                "0": 11,
-                "1": 2
+                "0": 16,
+                "1": 0
             },
             "c": {
-                "0": 1,
-                "1": 12
+                "0": 4,
+                "1": 0
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 9,
-                "obj-1": 25
+                "obj-0": 5,
+                "obj-1": 22
             },
             "b": {
-                "obj-0": 11,
-                "obj-1": 2
+                "obj-0": 16,
+                "obj-1": 0
             },
             "c": {
-                "obj-0": 1,
-                "obj-1": 12
+                "obj-0": 4,
+                "obj-1": 0
             }
         }
     },
     "12": {
-        "syn": "a0=7; a1=7\nb0=1; b1=0\nc0=2; c1=4\nb0 += 1\na0 -= 1\na1 -= a1\nb1 += 2\nb0 -= b0\na0 += 7\nb0 += c0\nc0 -= c0\na1 += 8\na1 += 3\nc1 += 2\na1 += 5\nb1 += 7\nc1 += 1\nc0 += 7\na0 += 1\nb0 -= 1\nb1 += 13\na1 -= 13\nb0 += 5\nb0 -= 4\na0 += 2\na1 += 19\nb1 -= 19\nb1 -= b1\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 7 obj-0, 7 obj-1.\nAgent-b has 1 obj-0, 0 obj-1.\nAgent-c has 2 obj-0, 4 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a gives 1 obj-0 to agent-b.\nAgent-a loses all their obj-1.\nAgent-b buys 2 obj-1.\nAgent-b loses all their obj-0.\nAgent-a buys 7 obj-0.\nAgent-c gives all their obj-0 to agent-b.\nAgent-a buys 8 obj-1.\nAgent-a buys 3 obj-1.\nAgent-c buys 2 obj-1.\nAgent-a buys 5 obj-1.\nAgent-b buys 7 obj-1.\nAgent-c buys 1 obj-1.\nAgent-c buys 7 obj-0.\nAgent-b gives 1 obj-0 to agent-a.\nAgent-a gives 13 obj-1 to agent-b.\nAgent-b buys 5 obj-0.\nAgent-b loses 4 obj-0.\nAgent-a buys 2 obj-0.\nAgent-b gives 19 obj-1 to agent-a.\nAgent-b loses all their obj-1.\n",
+        "syn": "a0=7; a1=4\nb0=1; b1=4\nc0=4; c1=8\na0 += 2\nc0 -= 2\na1 += 1\nb1 -= 1\nc0 -= 1\na0 += 7\nb0 -= b0\na1 += 1\nc1 -= 1\na1 -= 1\nc0 += 7\nb1 += 1\nc0 -= 5\nb1 += 6\nb0 += 3\nc0 -= c0\na0 += 9\na1 -= a1\na0 += 7\na0 += 6\nc1 += b1\nb1 -= b1\nc0 += 10\na0 += 1\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 7 obj-0, 4 obj-1.\nAgent-b has 1 obj-0, 4 obj-1.\nAgent-c has 4 obj-0, 8 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c gives 2 obj-0 to agent-a.\nAgent-b gives 1 obj-1 to agent-a.\nAgent-c loses 1 obj-0.\nAgent-a buys 7 obj-0.\nAgent-b loses all their obj-0.\nAgent-c gives 1 obj-1 to agent-a.\nAgent-a loses 1 obj-1.\nAgent-c buys 7 obj-0.\nAgent-b buys 1 obj-1.\nAgent-c loses 5 obj-0.\nAgent-b buys 6 obj-1.\nAgent-b buys 3 obj-0.\nAgent-c loses all their obj-0.\nAgent-a buys 9 obj-0.\nAgent-a loses all their obj-1.\nAgent-a buys 7 obj-0.\nAgent-a buys 6 obj-0.\nAgent-b gives all their obj-1 to agent-c.\nAgent-c buys 10 obj-0.\nAgent-a buys 1 obj-0.\n",
         "label-syn": {
             "a": {
-                "0": 16,
-                "1": 22
+                "0": 39,
+                "1": 0
             },
             "b": {
-                "0": 2,
+                "0": 3,
                 "1": 0
             },
             "c": {
-                "0": 7,
-                "1": 7
+                "0": 10,
+                "1": 17
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 16,
-                "obj-1": 22
+                "obj-0": 39,
+                "obj-1": 0
             },
             "b": {
-                "obj-0": 2,
+                "obj-0": 3,
                 "obj-1": 0
             },
             "c": {
-                "obj-0": 7,
-                "obj-1": 7
+                "obj-0": 10,
+                "obj-1": 17
             }
         }
     },
     "13": {
-        "syn": "a0=2; a1=6\nb0=2; b1=6\nc0=8; c1=3\nc1 -= 2\nc1 -= c1\na0 -= a0\nb0 += 9\nb0 -= 4\na1 += 5\na0 += 8\nb1 -= 5\nb1 += 8\nc1 += 8\nb1 -= 8\nb0 += 1\na0 -= 1\na0 -= a0\nc0 += 3\na0 += 9\nb1 -= b1\na1 -= 9\na1 += 4\na0 -= 1\nc1 += 1\na1 -= 1\nb1 += 10\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 2 obj-0, 6 obj-1.\nAgent-b has 2 obj-0, 6 obj-1.\nAgent-c has 8 obj-0, 3 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c loses 2 obj-1.\nAgent-c loses all their obj-1.\nAgent-a loses all their obj-0.\nAgent-b buys 9 obj-0.\nAgent-b loses 4 obj-0.\nAgent-a buys 5 obj-1.\nAgent-a buys 8 obj-0.\nAgent-b loses 5 obj-1.\nAgent-b buys 8 obj-1.\nAgent-b gives 8 obj-1 to agent-c.\nAgent-a gives 1 obj-0 to agent-b.\nAgent-a loses all their obj-0.\nAgent-c buys 3 obj-0.\nAgent-a buys 9 obj-0.\nAgent-b loses all their obj-1.\nAgent-a loses 9 obj-1.\nAgent-a buys 4 obj-1.\nAgent-a loses 1 obj-0.\nAgent-a gives 1 obj-1 to agent-c.\nAgent-b buys 10 obj-1.\n",
+        "syn": "a0=10; a1=6\nb0=1; b1=7\nc0=7; c1=3\nc0 -= 4\nb0 += 2\nb0 += 10\nc0 -= 1\nc1 -= 2\na0 += 8\na0 += 9\na1 += c1\nc1 -= c1\nc0 += 6\nc1 += 10\na1 -= 5\nc0 -= 1\nc0 += 6\na1 += 5\nb1 -= 5\nb1 += 5\na0 += 9\nb0 -= 9\na1 += 7\nc0 += 3\na0 += 6\nc0 -= 6\na0 += 3\nb0 -= 3\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 10 obj-0, 6 obj-1.\nAgent-b has 1 obj-0, 7 obj-1.\nAgent-c has 7 obj-0, 3 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c loses 4 obj-0.\nAgent-b buys 2 obj-0.\nAgent-b buys 10 obj-0.\nAgent-c loses 1 obj-0.\nAgent-c loses 2 obj-1.\nAgent-a buys 8 obj-0.\nAgent-a buys 9 obj-0.\nAgent-c gives all their obj-1 to agent-a.\nAgent-c buys 6 obj-0.\nAgent-c buys 10 obj-1.\nAgent-a loses 5 obj-1.\nAgent-c loses 1 obj-0.\nAgent-c buys 6 obj-0.\nAgent-b gives 5 obj-1 to agent-a.\nAgent-b buys 5 obj-1.\nAgent-b gives 9 obj-0 to agent-a.\nAgent-a buys 7 obj-1.\nAgent-c buys 3 obj-0.\nAgent-c gives 6 obj-0 to agent-a.\nAgent-b gives 3 obj-0 to agent-a.\n",
         "label-syn": {
             "a": {
-                "0": 8,
-                "1": 5
+                "0": 45,
+                "1": 14
             },
             "b": {
-                "0": 8,
-                "1": 10
+                "0": 1,
+                "1": 7
             },
             "c": {
-                "0": 11,
-                "1": 9
+                "0": 10,
+                "1": 10
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 8,
-                "obj-1": 5
+                "obj-0": 45,
+                "obj-1": 14
             },
             "b": {
-                "obj-0": 8,
-                "obj-1": 10
+                "obj-0": 1,
+                "obj-1": 7
             },
             "c": {
-                "obj-0": 11,
-                "obj-1": 9
+                "obj-0": 10,
+                "obj-1": 10
             }
         }
     },
     "14": {
-        "syn": "a0=8; a1=3\nb0=7; b1=8\nc0=1; c1=10\na1 -= 2\nb1 += 1\nc1 -= 1\na1 += 3\nc1 += 1\na1 -= 1\na0 += 3\nb0 -= 3\nc0 += 9\na0 -= 9\na1 += 10\nc1 += 5\nb1 -= 5\na1 += 6\nc1 -= 6\na1 -= 12\nc1 += 5\na0 += 7\nc0 -= 7\nb1 += 1\nc1 -= 1\na0 -= 8\nb1 += 4\na1 -= 4\na1 += 6\nc1 -= 6\na0 -= a0\nb1 += 3\nc1 -= 3\na0 += 7\na0 += 6\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 8 obj-0, 3 obj-1.\nAgent-b has 7 obj-0, 8 obj-1.\nAgent-c has 1 obj-0, 10 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a loses 2 obj-1.\nAgent-c gives 1 obj-1 to agent-b.\nAgent-a buys 3 obj-1.\nAgent-a gives 1 obj-1 to agent-c.\nAgent-b gives 3 obj-0 to agent-a.\nAgent-a gives 9 obj-0 to agent-c.\nAgent-a buys 10 obj-1.\nAgent-b gives 5 obj-1 to agent-c.\nAgent-c gives 6 obj-1 to agent-a.\nAgent-a loses 12 obj-1.\nAgent-c buys 5 obj-1.\nAgent-c gives 7 obj-0 to agent-a.\nAgent-c gives 1 obj-1 to agent-b.\nAgent-a loses 8 obj-0.\nAgent-a gives 4 obj-1 to agent-b.\nAgent-c gives 6 obj-1 to agent-a.\nAgent-a loses all their obj-0.\nAgent-c gives 3 obj-1 to agent-b.\nAgent-a buys 7 obj-0.\nAgent-a buys 6 obj-0.\n",
+        "syn": "a0=9; a1=7\nb0=7; b1=5\nc0=8; c1=9\na0 += 2\nc0 -= 2\na0 += 5\nb1 -= 3\nc0 -= 3\nc1 += 3\nc0 += 5\nb0 -= 5\nc0 -= 5\na1 += 9\na1 += 6\nc1 -= 6\nb1 += 6\nb1 += 20\na1 -= 20\nb0 -= 1\na1 += 3\nc1 -= 3\nc1 += 11\nb1 -= 11\nb0 += 5\na0 -= 5\nb1 += 1\na1 -= 1\nb0 += 1\nc0 -= 1\nc0 -= 1\nc1 -= 8\na1 += 4\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 9 obj-0, 7 obj-1.\nAgent-b has 7 obj-0, 5 obj-1.\nAgent-c has 8 obj-0, 9 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c gives 2 obj-0 to agent-a.\nAgent-a buys 5 obj-0.\nAgent-b loses 3 obj-1.\nAgent-c loses 3 obj-0.\nAgent-c buys 3 obj-1.\nAgent-b gives 5 obj-0 to agent-c.\nAgent-c loses 5 obj-0.\nAgent-a buys 9 obj-1.\nAgent-c gives 6 obj-1 to agent-a.\nAgent-b buys 6 obj-1.\nAgent-a gives 20 obj-1 to agent-b.\nAgent-b loses 1 obj-0.\nAgent-c gives 3 obj-1 to agent-a.\nAgent-b gives 11 obj-1 to agent-c.\nAgent-a gives 5 obj-0 to agent-b.\nAgent-a gives 1 obj-1 to agent-b.\nAgent-c gives 1 obj-0 to agent-b.\nAgent-c loses 1 obj-0.\nAgent-c loses 8 obj-1.\nAgent-a buys 4 obj-1.\n",
         "label-syn": {
             "a": {
-                "0": 13,
-                "1": 9
+                "0": 11,
+                "1": 8
             },
             "b": {
-                "0": 4,
-                "1": 12
+                "0": 7,
+                "1": 18
             },
             "c": {
-                "0": 3,
-                "1": 4
+                "0": 1,
+                "1": 6
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 13,
-                "obj-1": 9
+                "obj-0": 11,
+                "obj-1": 8
             },
             "b": {
-                "obj-0": 4,
-                "obj-1": 12
+                "obj-0": 7,
+                "obj-1": 18
             },
             "c": {
-                "obj-0": 3,
-                "obj-1": 4
+                "obj-0": 1,
+                "obj-1": 6
             }
         }
     },
     "15": {
-        "syn": "a0=2; a1=4\nb0=1; b1=5\nc0=2; c1=3\nb1 += a1\na1 -= a1\nc1 += 2\na0 += 2\nb0 += 3\nc1 += 6\na1 += 4\nb1 -= 4\na1 -= a1\na0 += 2\nc1 -= 5\nb1 += 5\nc1 -= 5\na1 += c1\nc1 -= c1\nb0 += 8\nc0 += 6\nb0 -= 7\na1 += 10\nb0 += 2\nb1 += 1\nb0 -= 6\na0 += 1\nc0 += 1\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 2 obj-0, 4 obj-1.\nAgent-b has 1 obj-0, 5 obj-1.\nAgent-c has 2 obj-0, 3 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a gives all their obj-1 to agent-b.\nAgent-c buys 2 obj-1.\nAgent-a buys 2 obj-0.\nAgent-b buys 3 obj-0.\nAgent-c buys 6 obj-1.\nAgent-b gives 4 obj-1 to agent-a.\nAgent-a loses all their obj-1.\nAgent-a buys 2 obj-0.\nAgent-c loses 5 obj-1.\nAgent-c gives 5 obj-1 to agent-b.\nAgent-c gives all their obj-1 to agent-a.\nAgent-b buys 8 obj-0.\nAgent-c buys 6 obj-0.\nAgent-b loses 7 obj-0.\nAgent-a buys 10 obj-1.\nAgent-b buys 2 obj-0.\nAgent-b buys 1 obj-1.\nAgent-b loses 6 obj-0.\nAgent-a buys 1 obj-0.\nAgent-c buys 1 obj-0.\n",
-        "label-syn": {
-            "a": {
-                "0": 7,
-                "1": 11
-            },
-            "b": {
-                "0": 1,
-                "1": 11
-            },
-            "c": {
-                "0": 9,
-                "1": 0
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 7,
-                "obj-1": 11
-            },
-            "b": {
-                "obj-0": 1,
-                "obj-1": 11
-            },
-            "c": {
-                "obj-0": 9,
-                "obj-1": 0
-            }
-        }
-    },
-    "16": {
-        "syn": "a0=9; a1=0\nb0=4; b1=10\nc0=4; c1=4\nb0 += 2\na0 += 8\na0 += 4\nc1 += 7\nb1 -= 4\na1 += 1\nb1 -= 1\nb1 += 2\nc1 += a1\na1 -= a1\nc0 -= 2\na0 += 6\na0 += 6\na1 += 6\nb0 += 10\na0 += 2\nb0 -= 2\na1 += 8\nc1 -= 8\na0 -= 20\nc1 += 4\nb0 += 2\na0 += 7\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 9 obj-0, 0 obj-1.\nAgent-b has 4 obj-0, 10 obj-1.\nAgent-c has 4 obj-0, 4 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b buys 2 obj-0.\nAgent-a buys 8 obj-0.\nAgent-a buys 4 obj-0.\nAgent-c buys 7 obj-1.\nAgent-b loses 4 obj-1.\nAgent-a buys 1 obj-1.\nAgent-b loses 1 obj-1.\nAgent-b buys 2 obj-1.\nAgent-a gives all their obj-1 to agent-c.\nAgent-c loses 2 obj-0.\nAgent-a buys 6 obj-0.\nAgent-a buys 6 obj-0.\nAgent-a buys 6 obj-1.\nAgent-b buys 10 obj-0.\nAgent-b gives 2 obj-0 to agent-a.\nAgent-c gives 8 obj-1 to agent-a.\nAgent-a loses 20 obj-0.\nAgent-c buys 4 obj-1.\nAgent-b buys 2 obj-0.\nAgent-a buys 7 obj-0.\n",
-        "label-syn": {
-            "a": {
-                "0": 22,
-                "1": 14
-            },
-            "b": {
-                "0": 16,
-                "1": 7
-            },
-            "c": {
-                "0": 2,
-                "1": 8
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 22,
-                "obj-1": 14
-            },
-            "b": {
-                "obj-0": 16,
-                "obj-1": 7
-            },
-            "c": {
-                "obj-0": 2,
-                "obj-1": 8
-            }
-        }
-    },
-    "17": {
-        "syn": "a0=3; a1=2\nb0=2; b1=3\nc0=3; c1=0\na1 += 6\nb0 -= 1\na0 -= 2\nc1 += 2\nb1 -= 2\na1 += 7\na1 += b1\nb1 -= b1\nb0 += 7\nc1 -= c1\nc0 += 3\nc0 += 7\nb1 += 5\nb0 -= 4\nc0 += a0\na0 -= a0\nc1 += 1\na0 += 5\nc1 -= c1\nc0 += a0\na0 -= a0\na0 += 1\nb1 += 6\nb0 += 9\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 3 obj-0, 2 obj-1.\nAgent-b has 2 obj-0, 3 obj-1.\nAgent-c has 3 obj-0, 0 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a buys 6 obj-1.\nAgent-b loses 1 obj-0.\nAgent-a loses 2 obj-0.\nAgent-b gives 2 obj-1 to agent-c.\nAgent-a buys 7 obj-1.\nAgent-b gives all their obj-1 to agent-a.\nAgent-b buys 7 obj-0.\nAgent-c loses all their obj-1.\nAgent-c buys 3 obj-0.\nAgent-c buys 7 obj-0.\nAgent-b buys 5 obj-1.\nAgent-b loses 4 obj-0.\nAgent-a gives all their obj-0 to agent-c.\nAgent-c buys 1 obj-1.\nAgent-a buys 5 obj-0.\nAgent-c loses all their obj-1.\nAgent-a gives all their obj-0 to agent-c.\nAgent-a buys 1 obj-0.\nAgent-b buys 6 obj-1.\nAgent-b buys 9 obj-0.\n",
-        "label-syn": {
-            "a": {
-                "0": 1,
-                "1": 16
-            },
-            "b": {
-                "0": 13,
-                "1": 11
-            },
-            "c": {
-                "0": 19,
-                "1": 0
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 1,
-                "obj-1": 16
-            },
-            "b": {
-                "obj-0": 13,
-                "obj-1": 11
-            },
-            "c": {
-                "obj-0": 19,
-                "obj-1": 0
-            }
-        }
-    },
-    "18": {
-        "syn": "a0=2; a1=10\nb0=7; b1=0\nc0=2; c1=0\na1 -= 6\nb0 += 8\na0 -= 1\nc1 += 9\nb1 += 3\na1 -= 3\nb0 += 1\na0 += c0\nc0 -= c0\nb1 += 7\na0 += 7\na1 += 3\nb1 -= 3\nb1 -= 4\nb0 -= 1\nc0 += 10\nb0 -= 10\nb0 += 5\nc0 -= 5\nb0 += c0\nc0 -= c0\nc1 += 3\na1 -= 3\nc0 += 8\nc0 += 8\nc0 += 8\nb0 -= 8\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 2 obj-0, 10 obj-1.\nAgent-b has 7 obj-0, 0 obj-1.\nAgent-c has 2 obj-0, 0 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a loses 6 obj-1.\nAgent-b buys 8 obj-0.\nAgent-a loses 1 obj-0.\nAgent-c buys 9 obj-1.\nAgent-a gives 3 obj-1 to agent-b.\nAgent-b buys 1 obj-0.\nAgent-c gives all their obj-0 to agent-a.\nAgent-b buys 7 obj-1.\nAgent-a buys 7 obj-0.\nAgent-b gives 3 obj-1 to agent-a.\nAgent-b loses 4 obj-1.\nAgent-b loses 1 obj-0.\nAgent-b gives 10 obj-0 to agent-c.\nAgent-b buys 5 obj-0.\nAgent-c loses 5 obj-0.\nAgent-c gives all their obj-0 to agent-b.\nAgent-a gives 3 obj-1 to agent-c.\nAgent-c buys 8 obj-0.\nAgent-c buys 8 obj-0.\nAgent-b gives 8 obj-0 to agent-c.\n",
-        "label-syn": {
-            "a": {
-                "0": 10,
-                "1": 1
-            },
-            "b": {
-                "0": 7,
-                "1": 3
-            },
-            "c": {
-                "0": 24,
-                "1": 12
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 10,
-                "obj-1": 1
-            },
-            "b": {
-                "obj-0": 7,
-                "obj-1": 3
-            },
-            "c": {
-                "obj-0": 24,
-                "obj-1": 12
-            }
-        }
-    },
-    "19": {
-        "syn": "a0=8; a1=2\nb0=8; b1=5\nc0=0; c1=6\nc0 += 4\na0 += 4\nc1 += 1\nc0 += 10\na0 -= 10\na1 += 9\nc1 += 9\na0 += b0\nb0 -= b0\na1 += 5\nb1 += 6\nc1 -= 7\nb1 += 7\nc0 += 2\nc0 += 8\na0 -= 8\nb1 += a1\na1 -= a1\nb0 += 7\nb0 -= b0\na1 += 2\nc1 += 6\na0 += 6\nc0 -= 5\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 8 obj-0, 2 obj-1.\nAgent-b has 8 obj-0, 5 obj-1.\nAgent-c has 0 obj-0, 6 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c buys 4 obj-0.\nAgent-a buys 4 obj-0.\nAgent-c buys 1 obj-1.\nAgent-a gives 10 obj-0 to agent-c.\nAgent-a buys 9 obj-1.\nAgent-c buys 9 obj-1.\nAgent-b gives all their obj-0 to agent-a.\nAgent-a buys 5 obj-1.\nAgent-b buys 6 obj-1.\nAgent-c loses 7 obj-1.\nAgent-b buys 7 obj-1.\nAgent-c buys 2 obj-0.\nAgent-a gives 8 obj-0 to agent-c.\nAgent-a gives all their obj-1 to agent-b.\nAgent-b buys 7 obj-0.\nAgent-b loses all their obj-0.\nAgent-a buys 2 obj-1.\nAgent-c buys 6 obj-1.\nAgent-a buys 6 obj-0.\nAgent-c loses 5 obj-0.\n",
-        "label-syn": {
-            "a": {
-                "0": 8,
-                "1": 2
-            },
-            "b": {
-                "0": 0,
-                "1": 34
-            },
-            "c": {
-                "0": 19,
-                "1": 15
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 8,
-                "obj-1": 2
-            },
-            "b": {
-                "obj-0": 0,
-                "obj-1": 34
-            },
-            "c": {
-                "obj-0": 19,
-                "obj-1": 15
-            }
-        }
-    },
-    "20": {
-        "syn": "a0=5; a1=9\nb0=4; b1=1\nc0=0; c1=10\nc1 += 6\nb1 += 4\nb0 += 8\nc0 += 5\nb0 -= 5\nc1 -= 4\na0 -= 1\nb0 += a0\na0 -= a0\na0 += 2\na0 -= a0\nc1 -= 9\nc1 += 8\na0 += 10\nc1 += 7\na1 -= 7\nc1 -= c1\nb1 -= 4\nc0 += 9\na1 += 10\na1 += b1\nb1 -= b1\nc0 += 8\nb1 += 6\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 5 obj-0, 9 obj-1.\nAgent-b has 4 obj-0, 1 obj-1.\nAgent-c has 0 obj-0, 10 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c buys 6 obj-1.\nAgent-b buys 4 obj-1.\nAgent-b buys 8 obj-0.\nAgent-b gives 5 obj-0 to agent-c.\nAgent-c loses 4 obj-1.\nAgent-a loses 1 obj-0.\nAgent-a gives all their obj-0 to agent-b.\nAgent-a buys 2 obj-0.\nAgent-a loses all their obj-0.\nAgent-c loses 9 obj-1.\nAgent-c buys 8 obj-1.\nAgent-a buys 10 obj-0.\nAgent-a gives 7 obj-1 to agent-c.\nAgent-c loses all their obj-1.\nAgent-b loses 4 obj-1.\nAgent-c buys 9 obj-0.\nAgent-a buys 10 obj-1.\nAgent-b gives all their obj-1 to agent-a.\nAgent-c buys 8 obj-0.\nAgent-b buys 6 obj-1.\n",
-        "label-syn": {
-            "a": {
-                "0": 10,
-                "1": 13
-            },
-            "b": {
-                "0": 11,
-                "1": 6
-            },
-            "c": {
-                "0": 22,
-                "1": 0
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 10,
-                "obj-1": 13
-            },
-            "b": {
-                "obj-0": 11,
-                "obj-1": 6
-            },
-            "c": {
-                "obj-0": 22,
-                "obj-1": 0
-            }
-        }
-    },
-    "21": {
-        "syn": "a0=2; a1=2\nb0=5; b1=4\nc0=3; c1=8\na0 += 1\nb0 -= 1\nb0 += 5\nb0 -= 5\nc1 += 2\na1 += 2\nb1 += 6\nc1 -= 6\nc1 += 6\nb0 += 7\na1 += 7\na0 += 6\nb0 -= 6\nc0 += 9\na1 -= 2\nc1 += b1\nb1 -= b1\nb1 += 7\nc0 += 3\na0 += 1\na1 -= 5\nb0 += 2\nc1 += 4\na0 -= 9\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 2 obj-0, 2 obj-1.\nAgent-b has 5 obj-0, 4 obj-1.\nAgent-c has 3 obj-0, 8 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b gives 1 obj-0 to agent-a.\nAgent-b buys 5 obj-0.\nAgent-b loses 5 obj-0.\nAgent-c buys 2 obj-1.\nAgent-a buys 2 obj-1.\nAgent-c gives 6 obj-1 to agent-b.\nAgent-c buys 6 obj-1.\nAgent-b buys 7 obj-0.\nAgent-a buys 7 obj-1.\nAgent-b gives 6 obj-0 to agent-a.\nAgent-c buys 9 obj-0.\nAgent-a loses 2 obj-1.\nAgent-b gives all their obj-1 to agent-c.\nAgent-b buys 7 obj-1.\nAgent-c buys 3 obj-0.\nAgent-a buys 1 obj-0.\nAgent-a loses 5 obj-1.\nAgent-b buys 2 obj-0.\nAgent-c buys 4 obj-1.\nAgent-a loses 9 obj-0.\n",
+        "syn": "a0=7; a1=8\nb0=8; b1=9\nc0=8; c1=6\na1 += 7\nc0 += 3\nb1 += 4\nc1 -= 4\nc1 -= c1\na0 -= 2\na1 += 2\nb1 -= 2\nb1 += 9\nc0 += 4\nb0 -= 4\na0 -= 2\nb0 += 3\nc0 += 6\nc0 += 1\nc0 += 2\na0 += 4\nb0 -= 4\nc0 += 2\na0 += 1\nb1 -= 15\nc1 += a1\na1 -= a1\na1 += 4\nb0 += 7\na0 -= 7\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 7 obj-0, 8 obj-1.\nAgent-b has 8 obj-0, 9 obj-1.\nAgent-c has 8 obj-0, 6 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a buys 7 obj-1.\nAgent-c buys 3 obj-0.\nAgent-c gives 4 obj-1 to agent-b.\nAgent-c loses all their obj-1.\nAgent-a loses 2 obj-0.\nAgent-b gives 2 obj-1 to agent-a.\nAgent-b buys 9 obj-1.\nAgent-b gives 4 obj-0 to agent-c.\nAgent-a loses 2 obj-0.\nAgent-b buys 3 obj-0.\nAgent-c buys 6 obj-0.\nAgent-c buys 1 obj-0.\nAgent-c buys 2 obj-0.\nAgent-b gives 4 obj-0 to agent-a.\nAgent-c buys 2 obj-0.\nAgent-a buys 1 obj-0.\nAgent-b loses 15 obj-1.\nAgent-a gives all their obj-1 to agent-c.\nAgent-a buys 4 obj-1.\nAgent-a gives 7 obj-0 to agent-b.\n",
         "label-syn": {
             "a": {
                 "0": 1,
                 "1": 4
             },
             "b": {
-                "0": 7,
-                "1": 7
+                "0": 10,
+                "1": 5
             },
             "c": {
-                "0": 15,
+                "0": 26,
+                "1": 17
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 1,
+                "obj-1": 4
+            },
+            "b": {
+                "obj-0": 10,
+                "obj-1": 5
+            },
+            "c": {
+                "obj-0": 26,
+                "obj-1": 17
+            }
+        }
+    },
+    "16": {
+        "syn": "a0=7; a1=9\nb0=7; b1=2\nc0=7; c1=2\nb1 += 3\na1 -= 3\na0 -= 5\na1 += 1\nc1 -= 1\na0 -= a0\nc1 += 2\nb1 -= 2\nc0 += 4\nb0 -= 4\nc0 -= 4\nc0 += 10\na1 += 2\nb1 -= 2\nc1 += 1\nb1 -= b1\na1 += 7\nc1 -= 3\na0 += 2\nb1 += 8\na1 += 8\na1 -= 12\na1 -= 11\nb0 -= b0\nb1 += c1\nc1 -= c1\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 7 obj-0, 9 obj-1.\nAgent-b has 7 obj-0, 2 obj-1.\nAgent-c has 7 obj-0, 2 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a gives 3 obj-1 to agent-b.\nAgent-a loses 5 obj-0.\nAgent-c gives 1 obj-1 to agent-a.\nAgent-a loses all their obj-0.\nAgent-b gives 2 obj-1 to agent-c.\nAgent-b gives 4 obj-0 to agent-c.\nAgent-c loses 4 obj-0.\nAgent-c buys 10 obj-0.\nAgent-b gives 2 obj-1 to agent-a.\nAgent-c buys 1 obj-1.\nAgent-b loses all their obj-1.\nAgent-a buys 7 obj-1.\nAgent-c loses 3 obj-1.\nAgent-a buys 2 obj-0.\nAgent-b buys 8 obj-1.\nAgent-a buys 8 obj-1.\nAgent-a loses 12 obj-1.\nAgent-a loses 11 obj-1.\nAgent-b loses all their obj-0.\nAgent-c gives all their obj-1 to agent-b.\n",
+        "label-syn": {
+            "a": {
+                "0": 2,
+                "1": 1
+            },
+            "b": {
+                "0": 0,
+                "1": 9
+            },
+            "c": {
+                "0": 17,
+                "1": 0
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 2,
+                "obj-1": 1
+            },
+            "b": {
+                "obj-0": 0,
+                "obj-1": 9
+            },
+            "c": {
+                "obj-0": 17,
+                "obj-1": 0
+            }
+        }
+    },
+    "17": {
+        "syn": "a0=1; a1=5\nb0=9; b1=10\nc0=10; c1=8\nb1 += 10\na1 += 3\nc0 += 5\na0 += 10\nc0 -= 10\nc0 += 10\na0 -= 10\nc0 += a0\na0 -= a0\nc1 -= c1\nc1 += 2\nb0 -= 6\nb0 += 15\nc0 -= 15\na0 += 4\nc1 -= c1\nc0 += 1\na0 -= 1\nc1 += 5\na1 -= a1\nc0 += 4\nb0 -= 4\nc1 += 19\nb1 -= 19\nb1 -= b1\nb1 += 1\nb0 += 6\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 1 obj-0, 5 obj-1.\nAgent-b has 9 obj-0, 10 obj-1.\nAgent-c has 10 obj-0, 8 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b buys 10 obj-1.\nAgent-a buys 3 obj-1.\nAgent-c buys 5 obj-0.\nAgent-c gives 10 obj-0 to agent-a.\nAgent-a gives 10 obj-0 to agent-c.\nAgent-a gives all their obj-0 to agent-c.\nAgent-c loses all their obj-1.\nAgent-c buys 2 obj-1.\nAgent-b loses 6 obj-0.\nAgent-c gives 15 obj-0 to agent-b.\nAgent-a buys 4 obj-0.\nAgent-c loses all their obj-1.\nAgent-a gives 1 obj-0 to agent-c.\nAgent-c buys 5 obj-1.\nAgent-a loses all their obj-1.\nAgent-b gives 4 obj-0 to agent-c.\nAgent-b gives 19 obj-1 to agent-c.\nAgent-b loses all their obj-1.\nAgent-b buys 1 obj-1.\nAgent-b buys 6 obj-0.\n",
+        "label-syn": {
+            "a": {
+                "0": 3,
+                "1": 0
+            },
+            "b": {
+                "0": 20,
+                "1": 1
+            },
+            "c": {
+                "0": 6,
                 "1": 24
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 1,
-                "obj-1": 4
+                "obj-0": 3,
+                "obj-1": 0
             },
             "b": {
-                "obj-0": 7,
-                "obj-1": 7
+                "obj-0": 20,
+                "obj-1": 1
             },
             "c": {
-                "obj-0": 15,
+                "obj-0": 6,
                 "obj-1": 24
             }
         }
     },
-    "22": {
-        "syn": "a0=4; a1=6\nb0=5; b1=10\nc0=10; c1=0\nb0 += 4\nc1 += 10\nb0 += a0\na0 -= a0\nc1 += 5\na0 += 5\nb1 += 7\na0 += 2\nb0 -= 2\na1 += 3\na1 += 4\nb1 -= 4\nb1 += 5\nb0 += 4\nc0 -= 4\nb1 -= 3\nb1 += 7\na1 += 3\nc1 -= 3\nc0 += 4\nb0 += 7\nc1 += 3\na1 -= 3\nb1 += 5\nc0 -= 5\na0 += 3\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 4 obj-0, 6 obj-1.\nAgent-b has 5 obj-0, 10 obj-1.\nAgent-c has 10 obj-0, 0 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b buys 4 obj-0.\nAgent-c buys 10 obj-1.\nAgent-a gives all their obj-0 to agent-b.\nAgent-c buys 5 obj-1.\nAgent-a buys 5 obj-0.\nAgent-b buys 7 obj-1.\nAgent-b gives 2 obj-0 to agent-a.\nAgent-a buys 3 obj-1.\nAgent-b gives 4 obj-1 to agent-a.\nAgent-b buys 5 obj-1.\nAgent-c gives 4 obj-0 to agent-b.\nAgent-b loses 3 obj-1.\nAgent-b buys 7 obj-1.\nAgent-c gives 3 obj-1 to agent-a.\nAgent-c buys 4 obj-0.\nAgent-b buys 7 obj-0.\nAgent-a gives 3 obj-1 to agent-c.\nAgent-b buys 5 obj-1.\nAgent-c loses 5 obj-0.\nAgent-a buys 3 obj-0.\n",
-        "label-syn": {
-            "a": {
-                "0": 10,
-                "1": 13
-            },
-            "b": {
-                "0": 22,
-                "1": 27
-            },
-            "c": {
-                "0": 5,
-                "1": 15
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 10,
-                "obj-1": 13
-            },
-            "b": {
-                "obj-0": 22,
-                "obj-1": 27
-            },
-            "c": {
-                "obj-0": 5,
-                "obj-1": 15
-            }
-        }
-    },
-    "23": {
-        "syn": "a0=7; a1=5\nb0=9; b1=1\nc0=5; c1=7\nc0 += 4\nc1 += 4\na1 += 10\nc1 -= 10\nb0 -= 4\nc0 += 4\nb0 -= 4\na0 -= 6\nc0 += b0\nb0 -= b0\nb1 += 5\na0 += 9\nb0 += 3\nb1 -= 1\nc1 += 3\nc0 -= 10\nb0 += 5\na0 -= 5\nc1 -= 1\na0 -= 3\nb1 -= 3\nc0 += 10\nb0 -= 3\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 7 obj-0, 5 obj-1.\nAgent-b has 9 obj-0, 1 obj-1.\nAgent-c has 5 obj-0, 7 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c buys 4 obj-0.\nAgent-c buys 4 obj-1.\nAgent-c gives 10 obj-1 to agent-a.\nAgent-b loses 4 obj-0.\nAgent-b gives 4 obj-0 to agent-c.\nAgent-a loses 6 obj-0.\nAgent-b gives all their obj-0 to agent-c.\nAgent-b buys 5 obj-1.\nAgent-a buys 9 obj-0.\nAgent-b buys 3 obj-0.\nAgent-b loses 1 obj-1.\nAgent-c buys 3 obj-1.\nAgent-c loses 10 obj-0.\nAgent-b buys 5 obj-0.\nAgent-a loses 5 obj-0.\nAgent-c loses 1 obj-1.\nAgent-a loses 3 obj-0.\nAgent-b loses 3 obj-1.\nAgent-c buys 10 obj-0.\nAgent-b loses 3 obj-0.\n",
-        "label-syn": {
-            "a": {
-                "0": 2,
-                "1": 15
-            },
-            "b": {
-                "0": 5,
-                "1": 2
-            },
-            "c": {
-                "0": 14,
-                "1": 3
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 2,
-                "obj-1": 15
-            },
-            "b": {
-                "obj-0": 5,
-                "obj-1": 2
-            },
-            "c": {
-                "obj-0": 14,
-                "obj-1": 3
-            }
-        }
-    },
-    "24": {
-        "syn": "a0=1; a1=3\nb0=6; b1=4\nc0=7; c1=1\nc0 += 1\na1 -= 2\nc0 += a0\na0 -= a0\nb0 -= 5\nc0 -= c0\nb0 -= b0\nc0 += 2\nb1 += c1\nc1 -= c1\na1 += 4\nc1 += 3\nc0 += 3\nb1 += 8\nb0 += 8\nb0 -= b0\nb1 += 10\na1 += 6\nc1 += 10\nb1 += 10\nc0 -= 1\nb0 += 9\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 1 obj-0, 3 obj-1.\nAgent-b has 6 obj-0, 4 obj-1.\nAgent-c has 7 obj-0, 1 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c buys 1 obj-0.\nAgent-a loses 2 obj-1.\nAgent-a gives all their obj-0 to agent-c.\nAgent-b loses 5 obj-0.\nAgent-c loses all their obj-0.\nAgent-b loses all their obj-0.\nAgent-c buys 2 obj-0.\nAgent-c gives all their obj-1 to agent-b.\nAgent-a buys 4 obj-1.\nAgent-c buys 3 obj-1.\nAgent-c buys 3 obj-0.\nAgent-b buys 8 obj-1.\nAgent-b buys 8 obj-0.\nAgent-b loses all their obj-0.\nAgent-b buys 10 obj-1.\nAgent-a buys 6 obj-1.\nAgent-c buys 10 obj-1.\nAgent-b buys 10 obj-1.\nAgent-c loses 1 obj-0.\nAgent-b buys 9 obj-0.\n",
-        "label-syn": {
-            "a": {
-                "0": 0,
-                "1": 11
-            },
-            "b": {
-                "0": 9,
-                "1": 33
-            },
-            "c": {
-                "0": 4,
-                "1": 13
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 0,
-                "obj-1": 11
-            },
-            "b": {
-                "obj-0": 9,
-                "obj-1": 33
-            },
-            "c": {
-                "obj-0": 4,
-                "obj-1": 13
-            }
-        }
-    },
-    "25": {
-        "syn": "a0=6; a1=8\nb0=2; b1=9\nc0=7; c1=4\nb1 += 9\nc0 -= 3\nb1 += 1\nc0 += 2\na0 -= 2\na1 += 9\nc1 += 6\na1 -= 6\nb0 += 1\nb0 += 5\nc1 += 7\nb0 += 6\nc1 += 11\nb1 -= 11\nb0 += 3\na0 -= 3\nb0 -= 11\nb1 += 9\nc0 += 7\nc1 -= 13\nb0 += 8\nb1 += 2\nc1 -= 2\nc1 += 3\na1 -= 3\nb1 += 2\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 6 obj-0, 8 obj-1.\nAgent-b has 2 obj-0, 9 obj-1.\nAgent-c has 7 obj-0, 4 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b buys 9 obj-1.\nAgent-c loses 3 obj-0.\nAgent-b buys 1 obj-1.\nAgent-a gives 2 obj-0 to agent-c.\nAgent-a buys 9 obj-1.\nAgent-a gives 6 obj-1 to agent-c.\nAgent-b buys 1 obj-0.\nAgent-b buys 5 obj-0.\nAgent-c buys 7 obj-1.\nAgent-b buys 6 obj-0.\nAgent-b gives 11 obj-1 to agent-c.\nAgent-a gives 3 obj-0 to agent-b.\nAgent-b loses 11 obj-0.\nAgent-b buys 9 obj-1.\nAgent-c buys 7 obj-0.\nAgent-c loses 13 obj-1.\nAgent-b buys 8 obj-0.\nAgent-c gives 2 obj-1 to agent-b.\nAgent-a gives 3 obj-1 to agent-c.\nAgent-b buys 2 obj-1.\n",
+    "18": {
+        "syn": "a0=9; a1=2\nb0=6; b1=5\nc0=9; c1=0\nc0 += 7\nb0 += 3\na0 -= 3\nc1 += 10\na0 -= 5\nc1 += 4\nb1 -= 4\nc0 -= 13\nc0 += 7\nc1 += 1\nc0 += 7\nb0 -= 7\nb1 -= b1\na1 -= 1\na1 += 5\nb1 += 2\na1 -= 2\nb0 -= 1\nc1 += 1\nb1 -= 1\nb0 -= b0\nb0 += 3\nc0 -= 3\nc1 -= 12\nb1 += 3\na1 -= 3\nc1 -= 3\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 9 obj-0, 2 obj-1.\nAgent-b has 6 obj-0, 5 obj-1.\nAgent-c has 9 obj-0, 0 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c buys 7 obj-0.\nAgent-a gives 3 obj-0 to agent-b.\nAgent-c buys 10 obj-1.\nAgent-a loses 5 obj-0.\nAgent-b gives 4 obj-1 to agent-c.\nAgent-c loses 13 obj-0.\nAgent-c buys 7 obj-0.\nAgent-c buys 1 obj-1.\nAgent-b gives 7 obj-0 to agent-c.\nAgent-b loses all their obj-1.\nAgent-a loses 1 obj-1.\nAgent-a buys 5 obj-1.\nAgent-a gives 2 obj-1 to agent-b.\nAgent-b loses 1 obj-0.\nAgent-b gives 1 obj-1 to agent-c.\nAgent-b loses all their obj-0.\nAgent-c gives 3 obj-0 to agent-b.\nAgent-c loses 12 obj-1.\nAgent-a gives 3 obj-1 to agent-b.\nAgent-c loses 3 obj-1.\n",
         "label-syn": {
             "a": {
                 "0": 1,
-                "1": 8
+                "1": 1
             },
             "b": {
-                "0": 14,
-                "1": 21
+                "0": 3,
+                "1": 4
             },
             "c": {
-                "0": 13,
-                "1": 16
+                "0": 14,
+                "1": 1
             }
         },
         "label-nat": {
             "a": {
                 "obj-0": 1,
-                "obj-1": 8
+                "obj-1": 1
             },
             "b": {
+                "obj-0": 3,
+                "obj-1": 4
+            },
+            "c": {
                 "obj-0": 14,
-                "obj-1": 21
-            },
-            "c": {
-                "obj-0": 13,
-                "obj-1": 16
+                "obj-1": 1
             }
         }
     },
-    "26": {
-        "syn": "a0=4; a1=5\nb0=8; b1=9\nc0=6; c1=6\nc0 += 2\nb0 -= 2\na1 += 9\na0 -= a0\nc0 -= 6\nc1 -= 3\na1 += 7\na0 += 1\nb0 -= 1\na1 += 8\nc1 -= c1\nc0 += 3\na0 -= a0\na0 += 6\na0 -= 3\nb0 -= 3\nb0 -= b0\nb1 += 3\nb0 += 8\na1 -= 8\nb1 -= 4\na0 += b0\nb0 -= b0\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 4 obj-0, 5 obj-1.\nAgent-b has 8 obj-0, 9 obj-1.\nAgent-c has 6 obj-0, 6 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b gives 2 obj-0 to agent-c.\nAgent-a buys 9 obj-1.\nAgent-a loses all their obj-0.\nAgent-c loses 6 obj-0.\nAgent-c loses 3 obj-1.\nAgent-a buys 7 obj-1.\nAgent-b gives 1 obj-0 to agent-a.\nAgent-a buys 8 obj-1.\nAgent-c loses all their obj-1.\nAgent-c buys 3 obj-0.\nAgent-a loses all their obj-0.\nAgent-a buys 6 obj-0.\nAgent-a loses 3 obj-0.\nAgent-b loses 3 obj-0.\nAgent-b loses all their obj-0.\nAgent-b buys 3 obj-1.\nAgent-b buys 8 obj-0.\nAgent-a loses 8 obj-1.\nAgent-b loses 4 obj-1.\nAgent-b gives all their obj-0 to agent-a.\n",
+    "19": {
+        "syn": "a0=6; a1=3\nb0=7; b1=0\nc0=9; c1=1\nc0 -= 4\nb1 += 2\na1 -= 2\nc1 += b1\nb1 -= b1\na1 -= a1\nc0 += 10\na1 += 8\na1 += c1\nc1 -= c1\nc0 += 5\na0 -= 5\nb1 += 4\nc0 += 10\nc1 += 9\nc0 -= 15\nc0 -= 7\nb0 += 5\nb1 += 5\na1 -= 5\na1 -= 5\nb0 += 8\na1 += 1\nb1 -= 1\na1 += 1\nc1 += 1\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 6 obj-0, 3 obj-1.\nAgent-b has 7 obj-0, 0 obj-1.\nAgent-c has 9 obj-0, 1 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c loses 4 obj-0.\nAgent-a gives 2 obj-1 to agent-b.\nAgent-b gives all their obj-1 to agent-c.\nAgent-a loses all their obj-1.\nAgent-c buys 10 obj-0.\nAgent-a buys 8 obj-1.\nAgent-c gives all their obj-1 to agent-a.\nAgent-a gives 5 obj-0 to agent-c.\nAgent-b buys 4 obj-1.\nAgent-c buys 10 obj-0.\nAgent-c buys 9 obj-1.\nAgent-c loses 15 obj-0.\nAgent-c loses 7 obj-0.\nAgent-b buys 5 obj-0.\nAgent-a gives 5 obj-1 to agent-b.\nAgent-a loses 5 obj-1.\nAgent-b buys 8 obj-0.\nAgent-b gives 1 obj-1 to agent-a.\nAgent-a buys 1 obj-1.\nAgent-c buys 1 obj-1.\n",
         "label-syn": {
             "a": {
-                "0": 11,
-                "1": 21
-            },
-            "b": {
-                "0": 0,
-                "1": 8
-            },
-            "c": {
-                "0": 5,
-                "1": 0
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 11,
-                "obj-1": 21
-            },
-            "b": {
-                "obj-0": 0,
-                "obj-1": 8
-            },
-            "c": {
-                "obj-0": 5,
-                "obj-1": 0
-            }
-        }
-    },
-    "27": {
-        "syn": "a0=0; a1=5\nb0=1; b1=8\nc0=9; c1=3\nb0 -= b0\na0 += 3\nc0 += 10\na0 += 3\nb1 += 1\nc0 += 1\na0 -= 1\nb0 += 7\nc1 -= c1\na0 -= 2\nc0 += 8\nc0 += 6\na1 -= a1\nb0 -= 1\nc0 += 10\nc0 += 8\nc0 += 9\nc0 += b0\nb0 -= b0\nc1 += 9\na1 += 3\nb1 += 10\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 0 obj-0, 5 obj-1.\nAgent-b has 1 obj-0, 8 obj-1.\nAgent-c has 9 obj-0, 3 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b loses all their obj-0.\nAgent-a buys 3 obj-0.\nAgent-c buys 10 obj-0.\nAgent-a buys 3 obj-0.\nAgent-b buys 1 obj-1.\nAgent-a gives 1 obj-0 to agent-c.\nAgent-b buys 7 obj-0.\nAgent-c loses all their obj-1.\nAgent-a loses 2 obj-0.\nAgent-c buys 8 obj-0.\nAgent-c buys 6 obj-0.\nAgent-a loses all their obj-1.\nAgent-b loses 1 obj-0.\nAgent-c buys 10 obj-0.\nAgent-c buys 8 obj-0.\nAgent-c buys 9 obj-0.\nAgent-b gives all their obj-0 to agent-c.\nAgent-c buys 9 obj-1.\nAgent-a buys 3 obj-1.\nAgent-b buys 10 obj-1.\n",
-        "label-syn": {
-            "a": {
-                "0": 3,
+                "0": 1,
                 "1": 3
             },
             "b": {
-                "0": 0,
-                "1": 19
-            },
-            "c": {
-                "0": 67,
-                "1": 9
-            }
-        },
-        "label-nat": {
-            "a": {
-                "obj-0": 3,
-                "obj-1": 3
-            },
-            "b": {
-                "obj-0": 0,
-                "obj-1": 19
-            },
-            "c": {
-                "obj-0": 67,
-                "obj-1": 9
-            }
-        }
-    },
-    "28": {
-        "syn": "a0=10; a1=5\nb0=9; b1=4\nc0=10; c1=9\nc0 += 1\na1 += 3\nc1 -= 3\nb0 += 8\nb0 -= 16\na1 -= 6\nc0 += 7\na1 += 5\na0 += 5\na0 += 8\nc0 -= 8\nb1 += 6\na1 -= 5\nc1 += a1\na1 -= a1\na0 += 7\na0 += 7\na0 += b0\nb0 -= b0\nb1 += 1\nc1 -= 1\nc0 += 1\nb0 += 1\nc1 += 3\nb1 -= 3\na1 += 4\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 10 obj-0, 5 obj-1.\nAgent-b has 9 obj-0, 4 obj-1.\nAgent-c has 10 obj-0, 9 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c buys 1 obj-0.\nAgent-c gives 3 obj-1 to agent-a.\nAgent-b buys 8 obj-0.\nAgent-b loses 16 obj-0.\nAgent-a loses 6 obj-1.\nAgent-c buys 7 obj-0.\nAgent-a buys 5 obj-1.\nAgent-a buys 5 obj-0.\nAgent-c gives 8 obj-0 to agent-a.\nAgent-b buys 6 obj-1.\nAgent-a loses 5 obj-1.\nAgent-a gives all their obj-1 to agent-c.\nAgent-a buys 7 obj-0.\nAgent-a buys 7 obj-0.\nAgent-b gives all their obj-0 to agent-a.\nAgent-c gives 1 obj-1 to agent-b.\nAgent-c buys 1 obj-0.\nAgent-b buys 1 obj-0.\nAgent-b gives 3 obj-1 to agent-c.\nAgent-a buys 4 obj-1.\n",
-        "label-syn": {
-            "a": {
-                "0": 38,
-                "1": 4
-            },
-            "b": {
-                "0": 1,
+                "0": 20,
                 "1": 8
             },
             "c": {
-                "0": 11,
+                "0": 8,
                 "1": 10
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 38,
-                "obj-1": 4
+                "obj-0": 1,
+                "obj-1": 3
             },
             "b": {
-                "obj-0": 1,
+                "obj-0": 20,
                 "obj-1": 8
             },
             "c": {
-                "obj-0": 11,
+                "obj-0": 8,
                 "obj-1": 10
             }
         }
     },
-    "29": {
-        "syn": "a0=10; a1=6\nb0=2; b1=7\nc0=2; c1=10\nc1 += 3\na1 -= 3\nc0 += b0\nb0 -= b0\na1 -= 1\na1 -= a1\na1 += 4\nb0 += 2\nb1 += 5\nc0 += b0\nb0 -= b0\na0 += 7\nb1 += 3\nc1 -= 3\nc1 += 1\na1 -= 1\nc1 -= 7\nb0 += 1\nc1 += 3\nc0 -= 4\nc1 -= 1\nc1 -= 5\na1 += c1\nc1 -= c1\nb0 += 6\na0 += 4\nb0 -= 4\n",
-        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 10 obj-0, 6 obj-1.\nAgent-b has 2 obj-0, 7 obj-1.\nAgent-c has 2 obj-0, 10 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a gives 3 obj-1 to agent-c.\nAgent-b gives all their obj-0 to agent-c.\nAgent-a loses 1 obj-1.\nAgent-a loses all their obj-1.\nAgent-a buys 4 obj-1.\nAgent-b buys 2 obj-0.\nAgent-b buys 5 obj-1.\nAgent-b gives all their obj-0 to agent-c.\nAgent-a buys 7 obj-0.\nAgent-c gives 3 obj-1 to agent-b.\nAgent-a gives 1 obj-1 to agent-c.\nAgent-c loses 7 obj-1.\nAgent-b buys 1 obj-0.\nAgent-c buys 3 obj-1.\nAgent-c loses 4 obj-0.\nAgent-c loses 1 obj-1.\nAgent-c loses 5 obj-1.\nAgent-c gives all their obj-1 to agent-a.\nAgent-b buys 6 obj-0.\nAgent-b gives 4 obj-0 to agent-a.\n",
+    "20": {
+        "syn": "a0=4; a1=2\nb0=3; b1=1\nc0=9; c1=10\nb1 -= b1\nb1 += 4\nb1 -= 2\nb1 += 2\na1 += 2\nb1 -= 2\nc0 += 9\nc1 += b1\nb1 -= b1\na0 -= 2\nb1 += 4\nc1 -= 9\na0 += 6\nc0 -= 6\nb1 += c1\nc1 -= c1\nc0 += 7\nc0 += 7\nc0 += 4\na1 += 10\nc0 += 1\nb0 -= 1\na0 += 1\nb0 -= 1\nc0 += 3\na1 += 1\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 4 obj-0, 2 obj-1.\nAgent-b has 3 obj-0, 1 obj-1.\nAgent-c has 9 obj-0, 10 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b loses all their obj-1.\nAgent-b buys 4 obj-1.\nAgent-b loses 2 obj-1.\nAgent-b buys 2 obj-1.\nAgent-b gives 2 obj-1 to agent-a.\nAgent-c buys 9 obj-0.\nAgent-b gives all their obj-1 to agent-c.\nAgent-a loses 2 obj-0.\nAgent-b buys 4 obj-1.\nAgent-c loses 9 obj-1.\nAgent-c gives 6 obj-0 to agent-a.\nAgent-c gives all their obj-1 to agent-b.\nAgent-c buys 7 obj-0.\nAgent-c buys 7 obj-0.\nAgent-c buys 4 obj-0.\nAgent-a buys 10 obj-1.\nAgent-b gives 1 obj-0 to agent-c.\nAgent-b gives 1 obj-0 to agent-a.\nAgent-c buys 3 obj-0.\nAgent-a buys 1 obj-1.\n",
         "label-syn": {
             "a": {
-                "0": 21,
-                "1": 4
+                "0": 9,
+                "1": 15
+            },
+            "b": {
+                "0": 1,
+                "1": 7
+            },
+            "c": {
+                "0": 34,
+                "1": 0
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 9,
+                "obj-1": 15
+            },
+            "b": {
+                "obj-0": 1,
+                "obj-1": 7
+            },
+            "c": {
+                "obj-0": 34,
+                "obj-1": 0
+            }
+        }
+    },
+    "21": {
+        "syn": "a0=7; a1=7\nb0=5; b1=9\nc0=5; c1=5\nc0 -= 2\nc0 += 4\nb0 -= 4\nb1 += 7\nc0 += 9\nb1 += 3\nc1 -= 3\na1 += 8\nb0 += 7\na0 += 13\nc0 -= 13\na0 += 2\nb0 += 4\na0 -= 13\na0 += 5\nb0 += 1\nc0 -= 1\nc1 += 10\na0 -= 4\nb1 += 10\nc1 -= 10\na0 += 12\nb0 -= 12\na1 += 7\nb1 += 10\nb0 += 1\nc0 -= 1\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 7 obj-0, 7 obj-1.\nAgent-b has 5 obj-0, 9 obj-1.\nAgent-c has 5 obj-0, 5 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c loses 2 obj-0.\nAgent-b gives 4 obj-0 to agent-c.\nAgent-b buys 7 obj-1.\nAgent-c buys 9 obj-0.\nAgent-c gives 3 obj-1 to agent-b.\nAgent-a buys 8 obj-1.\nAgent-b buys 7 obj-0.\nAgent-c gives 13 obj-0 to agent-a.\nAgent-a buys 2 obj-0.\nAgent-b buys 4 obj-0.\nAgent-a loses 13 obj-0.\nAgent-a buys 5 obj-0.\nAgent-c gives 1 obj-0 to agent-b.\nAgent-c buys 10 obj-1.\nAgent-a loses 4 obj-0.\nAgent-c gives 10 obj-1 to agent-b.\nAgent-b gives 12 obj-0 to agent-a.\nAgent-a buys 7 obj-1.\nAgent-b buys 10 obj-1.\nAgent-c gives 1 obj-0 to agent-b.\n",
+        "label-syn": {
+            "a": {
+                "0": 22,
+                "1": 22
+            },
+            "b": {
+                "0": 2,
+                "1": 39
+            },
+            "c": {
+                "0": 1,
+                "1": 2
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 22,
+                "obj-1": 22
+            },
+            "b": {
+                "obj-0": 2,
+                "obj-1": 39
+            },
+            "c": {
+                "obj-0": 1,
+                "obj-1": 2
+            }
+        }
+    },
+    "22": {
+        "syn": "a0=3; a1=4\nb0=8; b1=0\nc0=8; c1=2\nb0 += 4\nb1 += 1\na1 -= 1\nb0 += 5\nc0 += 1\nb0 -= 1\nc1 -= 1\nc0 += 5\nb1 -= b1\nb1 += 7\nc0 += 6\nb0 -= 6\nb1 += 8\nc1 += a1\na1 -= a1\nc1 += 9\nc0 += 1\na1 += 12\nb1 -= 12\nb0 += 6\nb0 -= 5\nb1 += 11\nc1 -= 11\nb0 += 16\nc0 -= 16\na0 -= 2\na0 -= a0\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 3 obj-0, 4 obj-1.\nAgent-b has 8 obj-0, 0 obj-1.\nAgent-c has 8 obj-0, 2 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b buys 4 obj-0.\nAgent-a gives 1 obj-1 to agent-b.\nAgent-b buys 5 obj-0.\nAgent-b gives 1 obj-0 to agent-c.\nAgent-c loses 1 obj-1.\nAgent-c buys 5 obj-0.\nAgent-b loses all their obj-1.\nAgent-b buys 7 obj-1.\nAgent-b gives 6 obj-0 to agent-c.\nAgent-b buys 8 obj-1.\nAgent-a gives all their obj-1 to agent-c.\nAgent-c buys 9 obj-1.\nAgent-c buys 1 obj-0.\nAgent-b gives 12 obj-1 to agent-a.\nAgent-b buys 6 obj-0.\nAgent-b loses 5 obj-0.\nAgent-c gives 11 obj-1 to agent-b.\nAgent-c gives 16 obj-0 to agent-b.\nAgent-a loses 2 obj-0.\nAgent-a loses all their obj-0.\n",
+        "label-syn": {
+            "a": {
+                "0": 0,
+                "1": 12
+            },
+            "b": {
+                "0": 27,
+                "1": 14
+            },
+            "c": {
+                "0": 5,
+                "1": 2
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 0,
+                "obj-1": 12
+            },
+            "b": {
+                "obj-0": 27,
+                "obj-1": 14
+            },
+            "c": {
+                "obj-0": 5,
+                "obj-1": 2
+            }
+        }
+    },
+    "23": {
+        "syn": "a0=7; a1=3\nb0=7; b1=8\nc0=2; c1=8\nc1 -= 6\nb1 += 1\na1 -= 1\nb1 += 1\nb1 -= 7\nc1 += 4\na1 += 2\nb1 -= 2\na0 += 3\na0 += 3\nb0 -= 3\nb1 += 8\nc1 += 2\na1 -= 2\nb0 -= 1\na1 -= a1\nc0 -= 1\na1 += 8\nc1 += 7\nc1 -= 8\na1 -= 4\na1 -= a1\nb1 -= 2\nc1 -= 6\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 7 obj-0, 3 obj-1.\nAgent-b has 7 obj-0, 8 obj-1.\nAgent-c has 2 obj-0, 8 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c loses 6 obj-1.\nAgent-a gives 1 obj-1 to agent-b.\nAgent-b buys 1 obj-1.\nAgent-b loses 7 obj-1.\nAgent-c buys 4 obj-1.\nAgent-b gives 2 obj-1 to agent-a.\nAgent-a buys 3 obj-0.\nAgent-b gives 3 obj-0 to agent-a.\nAgent-b buys 8 obj-1.\nAgent-a gives 2 obj-1 to agent-c.\nAgent-b loses 1 obj-0.\nAgent-a loses all their obj-1.\nAgent-c loses 1 obj-0.\nAgent-a buys 8 obj-1.\nAgent-c buys 7 obj-1.\nAgent-c loses 8 obj-1.\nAgent-a loses 4 obj-1.\nAgent-a loses all their obj-1.\nAgent-b loses 2 obj-1.\nAgent-c loses 6 obj-1.\n",
+        "label-syn": {
+            "a": {
+                "0": 13,
+                "1": 0
+            },
+            "b": {
+                "0": 3,
+                "1": 7
+            },
+            "c": {
+                "0": 1,
+                "1": 1
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 13,
+                "obj-1": 0
+            },
+            "b": {
+                "obj-0": 3,
+                "obj-1": 7
+            },
+            "c": {
+                "obj-0": 1,
+                "obj-1": 1
+            }
+        }
+    },
+    "24": {
+        "syn": "a0=10; a1=10\nb0=4; b1=3\nc0=5; c1=1\nb0 += 7\nb1 += 2\na1 -= 4\nb1 -= 4\na0 -= 6\na0 -= 1\nc1 += 3\nb0 += 7\nc1 += 5\na1 -= 5\nb1 += 8\na0 += 3\nc0 -= 3\na0 -= 2\na0 += 9\na0 -= 3\nb1 += 3\nc1 += b1\nb1 -= b1\nb1 += 8\nc1 += a1\na1 -= a1\na0 += 15\nb0 -= 15\nb1 += 7\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 10 obj-0, 10 obj-1.\nAgent-b has 4 obj-0, 3 obj-1.\nAgent-c has 5 obj-0, 1 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b buys 7 obj-0.\nAgent-b buys 2 obj-1.\nAgent-a loses 4 obj-1.\nAgent-b loses 4 obj-1.\nAgent-a loses 6 obj-0.\nAgent-a loses 1 obj-0.\nAgent-c buys 3 obj-1.\nAgent-b buys 7 obj-0.\nAgent-a gives 5 obj-1 to agent-c.\nAgent-b buys 8 obj-1.\nAgent-c gives 3 obj-0 to agent-a.\nAgent-a loses 2 obj-0.\nAgent-a buys 9 obj-0.\nAgent-a loses 3 obj-0.\nAgent-b buys 3 obj-1.\nAgent-b gives all their obj-1 to agent-c.\nAgent-b buys 8 obj-1.\nAgent-a gives all their obj-1 to agent-c.\nAgent-b gives 15 obj-0 to agent-a.\nAgent-b buys 7 obj-1.\n",
+        "label-syn": {
+            "a": {
+                "0": 25,
+                "1": 0
             },
             "b": {
                 "0": 3,
@@ -941,13 +781,13 @@
             },
             "c": {
                 "0": 2,
-                "1": 0
+                "1": 22
             }
         },
         "label-nat": {
             "a": {
-                "obj-0": 21,
-                "obj-1": 4
+                "obj-0": 25,
+                "obj-1": 0
             },
             "b": {
                 "obj-0": 3,
@@ -955,7 +795,167 @@
             },
             "c": {
                 "obj-0": 2,
+                "obj-1": 22
+            }
+        }
+    },
+    "25": {
+        "syn": "a0=5; a1=7\nb0=0; b1=6\nc0=10; c1=9\na1 -= 1\na0 += 9\nc0 -= 9\nb1 += 3\nb1 += a1\na1 -= a1\na0 += 9\nb1 += 4\na1 += 5\nb1 += 8\nc1 -= 8\nc1 -= c1\na0 += 5\na1 += 6\nc1 += 9\na0 += 4\nc1 += a1\na1 -= a1\na1 += 10\na1 -= 3\nb0 += 2\na0 -= 2\nc1 -= 2\na0 -= 16\nc0 += 10\na0 -= 10\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 5 obj-0, 7 obj-1.\nAgent-b has 0 obj-0, 6 obj-1.\nAgent-c has 10 obj-0, 9 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-a loses 1 obj-1.\nAgent-c gives 9 obj-0 to agent-a.\nAgent-b buys 3 obj-1.\nAgent-a gives all their obj-1 to agent-b.\nAgent-a buys 9 obj-0.\nAgent-b buys 4 obj-1.\nAgent-a buys 5 obj-1.\nAgent-c gives 8 obj-1 to agent-b.\nAgent-c loses all their obj-1.\nAgent-a buys 5 obj-0.\nAgent-a buys 6 obj-1.\nAgent-c buys 9 obj-1.\nAgent-a buys 4 obj-0.\nAgent-a gives all their obj-1 to agent-c.\nAgent-a buys 10 obj-1.\nAgent-a loses 3 obj-1.\nAgent-a gives 2 obj-0 to agent-b.\nAgent-c loses 2 obj-1.\nAgent-a loses 16 obj-0.\nAgent-a gives 10 obj-0 to agent-c.\n",
+        "label-syn": {
+            "a": {
+                "0": 4,
+                "1": 7
+            },
+            "b": {
+                "0": 2,
+                "1": 27
+            },
+            "c": {
+                "0": 11,
+                "1": 18
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 4,
+                "obj-1": 7
+            },
+            "b": {
+                "obj-0": 2,
+                "obj-1": 27
+            },
+            "c": {
+                "obj-0": 11,
+                "obj-1": 18
+            }
+        }
+    },
+    "26": {
+        "syn": "a0=2; a1=3\nb0=0; b1=3\nc0=0; c1=5\nb1 += 10\nb1 += 4\nc0 += 9\nb0 += 2\nb0 += 1\na1 += 13\nb1 -= 13\nb0 += c0\nc0 -= c0\nb0 -= b0\na1 -= 10\na0 -= 1\nc1 += 3\na0 += 7\nc1 += 7\nc1 += 10\nb0 += 5\na0 -= 5\nb0 += 2\na0 -= 2\nb1 += 5\nb0 += 7\nb0 += 2\na1 -= 2\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 2 obj-0, 3 obj-1.\nAgent-b has 0 obj-0, 3 obj-1.\nAgent-c has 0 obj-0, 5 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b buys 10 obj-1.\nAgent-b buys 4 obj-1.\nAgent-c buys 9 obj-0.\nAgent-b buys 2 obj-0.\nAgent-b buys 1 obj-0.\nAgent-b gives 13 obj-1 to agent-a.\nAgent-c gives all their obj-0 to agent-b.\nAgent-b loses all their obj-0.\nAgent-a loses 10 obj-1.\nAgent-a loses 1 obj-0.\nAgent-c buys 3 obj-1.\nAgent-a buys 7 obj-0.\nAgent-c buys 7 obj-1.\nAgent-c buys 10 obj-1.\nAgent-a gives 5 obj-0 to agent-b.\nAgent-a gives 2 obj-0 to agent-b.\nAgent-b buys 5 obj-1.\nAgent-b buys 7 obj-0.\nAgent-b buys 2 obj-0.\nAgent-a loses 2 obj-1.\n",
+        "label-syn": {
+            "a": {
+                "0": 1,
+                "1": 4
+            },
+            "b": {
+                "0": 16,
+                "1": 9
+            },
+            "c": {
+                "0": 0,
+                "1": 25
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 1,
+                "obj-1": 4
+            },
+            "b": {
+                "obj-0": 16,
+                "obj-1": 9
+            },
+            "c": {
+                "obj-0": 0,
+                "obj-1": 25
+            }
+        }
+    },
+    "27": {
+        "syn": "a0=7; a1=7\nb0=5; b1=6\nc0=5; c1=3\nc1 += 4\nc1 += 4\na1 -= 4\nc0 += 3\nb0 -= 3\na1 -= 2\nb1 -= 4\nc0 -= 1\nc1 -= c1\na1 += b1\nb1 -= b1\nb1 += 4\nb1 += 1\na1 -= 1\nb1 -= 2\nb1 += 6\nc0 += 10\nc0 += 8\nc0 += 10\na1 += 5\nb1 -= 5\na0 -= 4\nc0 += 1\nb1 += 9\nb0 -= 1\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 7 obj-0, 7 obj-1.\nAgent-b has 5 obj-0, 6 obj-1.\nAgent-c has 5 obj-0, 3 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-c buys 4 obj-1.\nAgent-a gives 4 obj-1 to agent-c.\nAgent-b gives 3 obj-0 to agent-c.\nAgent-a loses 2 obj-1.\nAgent-b loses 4 obj-1.\nAgent-c loses 1 obj-0.\nAgent-c loses all their obj-1.\nAgent-b gives all their obj-1 to agent-a.\nAgent-b buys 4 obj-1.\nAgent-a gives 1 obj-1 to agent-b.\nAgent-b loses 2 obj-1.\nAgent-b buys 6 obj-1.\nAgent-c buys 10 obj-0.\nAgent-c buys 8 obj-0.\nAgent-c buys 10 obj-0.\nAgent-b gives 5 obj-1 to agent-a.\nAgent-a loses 4 obj-0.\nAgent-c buys 1 obj-0.\nAgent-b buys 9 obj-1.\nAgent-b loses 1 obj-0.\n",
+        "label-syn": {
+            "a": {
+                "0": 3,
+                "1": 7
+            },
+            "b": {
+                "0": 1,
+                "1": 13
+            },
+            "c": {
+                "0": 36,
+                "1": 0
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 3,
+                "obj-1": 7
+            },
+            "b": {
+                "obj-0": 1,
+                "obj-1": 13
+            },
+            "c": {
+                "obj-0": 36,
                 "obj-1": 0
+            }
+        }
+    },
+    "28": {
+        "syn": "a0=9; a1=5\nb0=0; b1=3\nc0=2; c1=6\nb1 += 9\nb1 += 5\nb0 += 1\nc0 -= 1\nb1 += 5\nb0 += c0\nc0 -= c0\nb1 -= 13\na0 += 10\nc0 += 1\nb0 -= 1\nb0 -= b0\nc0 -= c0\nc0 += 9\nc1 += 4\nc1 -= 6\nc1 -= c1\nc1 += 1\na0 += 2\na1 -= a1\na1 += 8\na1 += 6\na1 -= 7\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 9 obj-0, 5 obj-1.\nAgent-b has 0 obj-0, 3 obj-1.\nAgent-c has 2 obj-0, 6 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b buys 9 obj-1.\nAgent-b buys 5 obj-1.\nAgent-c gives 1 obj-0 to agent-b.\nAgent-b buys 5 obj-1.\nAgent-c gives all their obj-0 to agent-b.\nAgent-b loses 13 obj-1.\nAgent-a buys 10 obj-0.\nAgent-b gives 1 obj-0 to agent-c.\nAgent-b loses all their obj-0.\nAgent-c loses all their obj-0.\nAgent-c buys 9 obj-0.\nAgent-c buys 4 obj-1.\nAgent-c loses 6 obj-1.\nAgent-c loses all their obj-1.\nAgent-c buys 1 obj-1.\nAgent-a buys 2 obj-0.\nAgent-a loses all their obj-1.\nAgent-a buys 8 obj-1.\nAgent-a buys 6 obj-1.\nAgent-a loses 7 obj-1.\n",
+        "label-syn": {
+            "a": {
+                "0": 21,
+                "1": 7
+            },
+            "b": {
+                "0": 0,
+                "1": 9
+            },
+            "c": {
+                "0": 9,
+                "1": 1
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 21,
+                "obj-1": 7
+            },
+            "b": {
+                "obj-0": 0,
+                "obj-1": 9
+            },
+            "c": {
+                "obj-0": 9,
+                "obj-1": 1
+            }
+        }
+    },
+    "29": {
+        "syn": "a0=0; a1=2\nb0=6; b1=6\nc0=7; c1=6\nc1 += b1\nb1 -= b1\nb0 += 7\nb0 += 4\nb1 += 4\nb0 -= 6\nc0 += 9\nc0 += 4\nb0 += 2\nc0 -= 2\na1 += 2\nb1 += 4\nc1 -= 4\na0 += 3\na1 -= 1\na0 += 1\nb0 -= 1\nc0 -= 12\nb1 += a1\na1 -= a1\nc1 += 7\nb1 -= 7\na0 += c0\nc0 -= c0\nc0 += 5\nc1 += 5\na1 += 9\n",
+        "nat": "There are 3 agents, ['a', 'b', 'c']. Each of them has 2 items, ['obj-0', 'obj-1'].\nHere is the initial quantity of each object per agent.\n\nAgent-a has 0 obj-0, 2 obj-1.\nAgent-b has 6 obj-0, 6 obj-1.\nAgent-c has 7 obj-0, 6 obj-1.\n\nHere's the list of potential interactions between agents.\nAn agent can give a quantity of one their objects to another agent. \nIn that case, they lose that quantity of that object and the other agent increases theirs'.\nAn agent can lose some or all of their objects. In that case, they lose that quantity of that object.\nAn agent can buy some quantity of an object. In that case, they increase the quantity of that object.\nHere's a list of interactions between the agents.\nAgent-b gives all their obj-1 to agent-c.\nAgent-b buys 7 obj-0.\nAgent-b buys 4 obj-0.\nAgent-b buys 4 obj-1.\nAgent-b loses 6 obj-0.\nAgent-c buys 9 obj-0.\nAgent-c buys 4 obj-0.\nAgent-c gives 2 obj-0 to agent-b.\nAgent-a buys 2 obj-1.\nAgent-c gives 4 obj-1 to agent-b.\nAgent-a buys 3 obj-0.\nAgent-a loses 1 obj-1.\nAgent-b gives 1 obj-0 to agent-a.\nAgent-c loses 12 obj-0.\nAgent-a gives all their obj-1 to agent-b.\nAgent-b gives 7 obj-1 to agent-c.\nAgent-c gives all their obj-0 to agent-a.\nAgent-c buys 5 obj-0.\nAgent-c buys 5 obj-1.\nAgent-a buys 9 obj-1.\n",
+        "label-syn": {
+            "a": {
+                "0": 10,
+                "1": 9
+            },
+            "b": {
+                "0": 12,
+                "1": 4
+            },
+            "c": {
+                "0": 5,
+                "1": 20
+            }
+        },
+        "label-nat": {
+            "a": {
+                "obj-0": 10,
+                "obj-1": 9
+            },
+            "b": {
+                "obj-0": 12,
+                "obj-1": 4
+            },
+            "c": {
+                "obj-0": 5,
+                "obj-1": 20
             }
         }
     }

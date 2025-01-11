@@ -1,0 +1,182 @@
+{
+    "0": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\t\tfor _ in range(4):\n\t\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_4])",
+        "label-syn": {
+            "sum([n_0, n_1, n_4])": 68
+        }
+    },
+    "1": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\t\tfor _ in range(5):\n\t\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_3])",
+        "label-syn": {
+            "sum([n_0, n_1, n_3])": 84
+        }
+    },
+    "2": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\tfor _ in range(3):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "label-syn": {
+            "sum([n_0, n_3, n_4])": 64
+        }
+    },
+    "3": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\t\tfor _ in range(3):\n\t\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_3])",
+        "label-syn": {
+            "sum([n_0, n_1, n_3])": 130
+        }
+    },
+    "4": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_3])",
+        "label-syn": {
+            "sum([n_0, n_2, n_3])": 105
+        }
+    },
+    "5": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_4])",
+        "label-syn": {
+            "sum([n_1, n_2, n_4])": 63
+        }
+    },
+    "6": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\nfor _ in range(4):\n\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_3, n_4])",
+        "label-syn": {
+            "sum([n_1, n_3, n_4])": 68
+        }
+    },
+    "7": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\nfor _ in range(3):\n\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_2, n_3, n_4])",
+        "label-syn": {
+            "sum([n_2, n_3, n_4])": 51
+        }
+    },
+    "8": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_4])",
+        "label-syn": {
+            "sum([n_0, n_2, n_4])": 124
+        }
+    },
+    "9": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\t\tfor _ in range(5):\n\t\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_3])",
+        "label-syn": {
+            "sum([n_0, n_1, n_3])": 80
+        }
+    },
+    "10": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\t\tfor _ in range(3):\n\t\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_4])",
+        "label-syn": {
+            "sum([n_0, n_1, n_4])": 95
+        }
+    },
+    "11": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_4])",
+        "label-syn": {
+            "sum([n_1, n_2, n_4])": 93
+        }
+    },
+    "12": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "label-syn": {
+            "sum([n_0, n_3, n_4])": 78
+        }
+    },
+    "13": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_3])",
+        "label-syn": {
+            "sum([n_1, n_2, n_3])": 95
+        }
+    },
+    "14": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\tfor _ in range(3):\n\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_3, n_4])",
+        "label-syn": {
+            "sum([n_1, n_3, n_4])": 65
+        }
+    },
+    "15": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_3])",
+        "label-syn": {
+            "sum([n_0, n_2, n_3])": 48
+        }
+    },
+    "16": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\nfor _ in range(4):\n\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_2, n_3, n_4])",
+        "label-syn": {
+            "sum([n_2, n_3, n_4])": 84
+        }
+    },
+    "17": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\t\tfor _ in range(3):\n\t\t\tn_2 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_3 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_2])",
+        "label-syn": {
+            "sum([n_0, n_1, n_2])": 105
+        }
+    },
+    "18": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "label-syn": {
+            "sum([n_0, n_3, n_4])": 155
+        }
+    },
+    "19": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_3, n_4])",
+        "label-syn": {
+            "sum([n_1, n_3, n_4])": 78
+        }
+    },
+    "20": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\t\tfor _ in range(3):\n\t\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_4])",
+        "label-syn": {
+            "sum([n_0, n_1, n_4])": 64
+        }
+    },
+    "21": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\t\tfor _ in range(3):\n\t\t\tn_2 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_3 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_2])",
+        "label-syn": {
+            "sum([n_0, n_1, n_2])": 63
+        }
+    },
+    "22": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_4])",
+        "label-syn": {
+            "sum([n_1, n_2, n_4])": 63
+        }
+    },
+    "23": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_3])",
+        "label-syn": {
+            "sum([n_1, n_2, n_3])": 155
+        }
+    },
+    "24": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\t\tfor _ in range(5):\n\t\t\tn_2 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_3 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_1, n_2])",
+        "label-syn": {
+            "sum([n_0, n_1, n_2])": 100
+        }
+    },
+    "25": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\nresult = sum([n_0, n_3, n_4])",
+        "label-syn": {
+            "sum([n_0, n_3, n_4])": 125
+        }
+    },
+    "26": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_3, n_4])",
+        "label-syn": {
+            "sum([n_1, n_3, n_4])": 63
+        }
+    },
+    "27": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_4 += 1\nresult = sum([n_0, n_2, n_3])",
+        "label-syn": {
+            "sum([n_0, n_2, n_3])": 125
+        }
+    },
+    "28": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_4 += 1\nresult = sum([n_1, n_2, n_3])",
+        "label-syn": {
+            "sum([n_1, n_2, n_3])": 155
+        }
+    },
+    "29": {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\nresult = sum([n_1, n_3, n_4])",
+        "label-syn": {
+            "sum([n_1, n_3, n_4])": 105
+        }
+    }
+}
