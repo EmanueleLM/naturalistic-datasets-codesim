@@ -19,21 +19,30 @@ _OPERATIONS_DICT = {
     "put": "Put {content} into Box {box1_num}."
 }
 
+_SYN_DICT = {
+    "move": "{from_prep}.remove({content})\n{to_prep}.add({content})\n",
+    "remove": "{from_prep}.remove({content})\n",
+    "put": "{to_prep}.add({content})\n"
+}
+
 _OPERATIONS_DICT_ALT = {
     "move": "Pick up {content} {from_prep} Container {box1_num} and place {content_pronoun} into Container {box2_num}.",
     "remove": "Take {content} out of Container {box1_num}.",
     "put": "Place {content} inside Container {box1_num}.",
 }
 
+g_set_map = {}
+
 _ALT_BOX_NOUN = "Container"
+_SYN_NOUN = "x"
 
 _MODIFIERS = ["big", "small", "blue", "green", "red", "yellow"]
 
-_SPLITS_PROP = {"train": 0.45, "dev": 0.1, "test": 0.45}
+_SPLITS_PROP = {"train": 0.33, "dev": 0.33, "test": 0.34}
 
 
 class WorldState:
-    """
+    """f
     A class representing a world state.
     """
     
@@ -166,10 +175,6 @@ class WorldState:
 
     def empty_box(self, box):
         raise NotImplementedError
-        # if len(self.boxes[box]) < 1:
-        #    raise Exception(f"Box {box} is already empty!")
-        # self.void.update(self.boxes[box])
-        # self.boxes[box].clear()
 
     @staticmethod
     def sample_initial_world_state(
@@ -206,7 +211,7 @@ class WorldState:
             s = self._describe_box(
                 box, individual=True, alt_description=alt_description, box_noun=box_noun
             )
-            return s[0].upper() + s[1:]
+            return s.capitalize()
         else:
             s = ", ".join(
                 [
@@ -219,7 +224,19 @@ class WorldState:
                     for b in range(self.num_boxes)
                 ]
             )
-            return s[0].upper() + s[1:] + "."
+            return s.capitalize() + "."
+        
+    def syn_state_description(self, box=None):
+        if box is not None:
+            return self._syn_describe_box(box)
+        else:
+            s = "".join(
+                [
+                    self._syn_describe_box(b)
+                    for b in range(self.num_boxes)
+                ]
+            )
+            return s
 
     def _describe_box(
         self, box, individual=True, alt_description=False, box_noun="Box"
@@ -245,15 +262,21 @@ class WorldState:
                 return f"the {list(self.boxes[box])[0]} is in {box_noun} {box_name}{final_char}"
             else:
                 return f"{box_noun} {box_name} contains the {list(self.boxes[box])[0]}{final_char}"
-
-            # return f"{first_char}he {box_name} box contains the {list(self.boxes[box])[0]}{final_char}"
         else:
             box_contents = " and ".join([f"the {c}" for c in sorted(self.boxes[box])])
             if alt_description:
                 return f"{box_contents} are in {box_noun} {box_name}{final_char}"
             else:
                 return f"{box_noun} {box_name} contains {box_contents}{final_char}"
-            # return f"{first_char}he {box_name} box contains {box_contents}{final_char}"
+            
+    def _syn_describe_box(
+            self, box
+    ):
+        """Gives a code description of the content in the box"""
+        if len(self.boxes[box]) == 0:
+            return f"{_SYN_NOUN}{box}" + " = { }\n"
+        else:
+            return f"{_SYN_NOUN}{box}" + f" = { {', '.join(self.boxes[box])} }\n"
 
     def __eq__(self, o):
         for box1, box2 in zip(self.boxes, o.boxes):
@@ -459,6 +482,19 @@ def describe_operation(
     )
     return op_str[0].upper() + op_str[1:]
 
+def syn_describe_operation(
+    op, box1, box2, contents):
+    """
+    Describe operation based on operation type, box 1, box 2 (optional)
+    and the contents that should be added/removed/moved (optional).
+    """
+    s = _SYN_DICT[op]
+    content_str = ", ".join([str(g_set_map[x]) for x in sorted(contents)])
+    box1_num = _SYN_NOUN + str(box1)
+    box2_num = _SYN_NOUN + str(box2)
+
+    return s.format(content=content_str, from_prep=box1_num, to_prep=box2_num)
+
 
 def example_to_t5(ex, zero_shot=False, modifier_map=None, pragmatic=False):
     """ 
@@ -500,7 +536,7 @@ def example_to_t5(ex, zero_shot=False, modifier_map=None, pragmatic=False):
             + "."
             + last_sent.replace("is empty", "<extra_id_0> .")
         )
-        masked_content = "<extra_id_0> is empty"
+        masked_content = {}
     else:
         start = last_sent.index("contains")
         if zero_shot:
@@ -508,17 +544,17 @@ def example_to_t5(ex, zero_shot=False, modifier_map=None, pragmatic=False):
         masked_sentence = (
             ".".join(sentences[0:-2]) + "." + last_sent[0:start] + "<extra_id_0> ."
         )
-        masked_content = "<extra_id_0> " + last_sent[start:]
+        masked_content = last_sent[start:]
 
     return {
-        "sentence": ".".join(sentences).lstrip(),
-        "sentence_masked": masked_sentence.lstrip(),
-        "masked_content": masked_content.lstrip(),
+        "nat": ".".join(sentences[:-2]).lstrip(),
+        # "sentence_masked": masked_sentence.lstrip(), # remove this part!
+        "label_nat": last_sent.lstrip(),
     }
 
 
 def sample_operation_sequences(
-    world_state,
+    world_state: WorldState,
     operations,
     box_names,
     num_operations,
@@ -541,21 +577,21 @@ def sample_operation_sequences(
         alt_operation_sequence: A list of alternatively phrased operations.
     """
     operation_sequence = []
-    world_states = []
-
-    if generate_alternative_forms:
-        alt_operation_sequences = []
+    syn_sequence = []
+    world_states: list[WorldState] = []
 
     # Convert initial world state into naturalistic language
     # and append to operation_sequence
     world_states.append(copy.deepcopy(world_state))
-    operation_sequence.append(world_state.state_description())
     if generate_alternative_forms:
-        alt_operation_sequences.append(
+        operation_sequence.append(
             world_state.state_description(
                 box=None, alt_description=True, box_noun=_ALT_BOX_NOUN
             )
         )
+    else:
+        operation_sequence.append(world_state.state_description())
+
     for _ in range(num_operations):
         op = None
         box1 = None
@@ -619,24 +655,18 @@ def sample_operation_sequences(
                 continue
 
         world_states.append(copy.deepcopy(world_state))
-        operation_sequence.append(
-            describe_operation(op, box1, box2, contents, all_contents=all_contents)
-        )
+        alt_description = False
         if generate_alternative_forms:
-            alt_operation_sequences.append(
-                describe_operation(
-                    op,
-                    box1,
-                    box2,
-                    contents,
-                    alt_description=True,
-                    all_contents=all_contents,
-                )
-            )
+            alt_description = True
+        operation_sequence.append(
+            describe_operation(op, box1, box2, contents, alt_description=alt_description, all_contents=all_contents)
+        )
 
-    if generate_alternative_forms:
-        return operation_sequence, world_states, alt_operation_sequences
-    return operation_sequence, world_states, None
+        syn_sequence.append(
+            syn_describe_operation(op, box1, box2, contents)
+        )
+
+    return operation_sequence, world_states, syn_sequence
 
 
 def check_state_signature(state, state_signature_set, max_items_per_box=9):
@@ -774,6 +804,22 @@ def pragmatify(state, operation, modifier_map):
     else:
         return operation
 
+def syn_pragmatify(state, operation, modifier_map):
+    """Remove modifies from operation if pragmatically unncessary.
+
+    Args:
+        state (WorldState): A WorldState
+        operation (str): A description of the operation.
+        modifier_map (dict): A map from unmodified to modified object names.
+
+    Raises:
+        ValueError: Raised if operation is unknown / described in unknown format.
+
+    Returns:
+        str: "Pragmatified" operation description.
+    """
+    pass
+
 
 def main(args):
     """
@@ -787,6 +833,12 @@ def main(args):
     np.random.seed(args.seed)
 
     objects_set = load_objects_from_csv(args.object_vocabulary_file)
+    
+    idx = 0
+    for element in objects_set:
+        global g_set_map
+        g_set_map[element] = idx
+        idx += 1
 
     if args.disjoint_object_vocabulary_file is not None:
         obj_map = disjoint_object_map(objects_set, args.disjoint_object_vocabulary_file)
@@ -818,7 +870,7 @@ def main(args):
             (
                 operation_sequence,
                 world_states,
-                operation_sequence_alt,
+                syn_sequence,
             ) = sample_operation_sequences(
                 initial_world_state,
                 operations,
@@ -828,7 +880,7 @@ def main(args):
                 all_contents_operation=args.all_contents_operation,
             )
             sampled_sequences.append(
-                (world_states, operation_sequence, operation_sequence_alt)
+                (world_states, operation_sequence, syn_sequence)
             )
 
         print(
@@ -872,7 +924,7 @@ def main(args):
         count_num = {split: 0 for split in splits_size}
         os.makedirs(args.output_dir, exist_ok=True)
         out_files = {
-            split: open(os.path.join(args.output_dir, f"{split}-t5.jsonl"), "w")
+            split: open(os.path.join(args.output_dir, f"{split}.jsonl"), "w")
             for split in splits_size
         }
         num_operations = {
@@ -885,7 +937,7 @@ def main(args):
         # Save to file
         num_obj_per_box_counts = Counter()
 
-        for i, (states, ops, ops_alt) in enumerate(sampled_sequences):
+        for i, (states, ops, syn_ops) in enumerate(sampled_sequences):
             # check for exact duplicate
             if states[0] in existing_states:
                 print("Skipped exact duplicate of initial state!")
@@ -920,18 +972,19 @@ def main(args):
             box_noun = "Box"
             alt_descriptions = args.alternative_forms in ["always", split]
             if alt_descriptions:
-                ops = ops_alt
                 box_noun = _ALT_BOX_NOUN
             numops = [0 for _ in range(args.num_boxes)]
             numops_by_type = [
                 {t: 0 for t in _OPERATIONS_DICT.keys()} for _ in range(args.num_boxes)
             ]
-            for j, (state, op) in enumerate(zip(states, ops)):
+            for j, (state, op, syn_op) in enumerate(zip(states, ops, syn_ops)):
                 if j > num_operations[split]:
                     break
 
                 if j > 0 and pragmatic:
                     op = pragmatify(prev_state, op, modifier_map)
+
+                print(op, syn_op)
 
                 prefix += " " + op
                 op_type = op.split()[0].lower()
@@ -961,18 +1014,10 @@ def main(args):
                         modifier_map=modifier_map,
                         pragmatic=pragmatic,
                     )
-                    if "contains" in out_d["masked_content"] or (
-                        state.zero_shot and "nothing" not in out_d["masked_content"]
-                    ):
-                        num_objs = out_d["masked_content"].count(" and ") + 1
-                    else:
-                        num_objs = 0
 
-                    num_obj_per_box_counts[num_objs] += 1
-
-                    out_d["sample_id"] = i
-                    out_d["numops"] = numops[box]
-                    out_d["numops_by_op"] = numops_by_type[box]
+                    # out_d["sample_id"] = i
+                    # out_d["numops"] = numops[box]
+                    # out_d["numops_by_op"] = numops_by_type[box]
                     out_f.write(json.dumps(out_d) + "\n")
                 prev_state = state
 
@@ -997,13 +1042,8 @@ def main(args):
 
     print(f"Saved outputs to {args.output_dir}.")
 
-    if not args.rarify:
-        print("Distribution of num objects per box:")
-        for k in sorted(num_obj_per_box_counts.keys()):
-            print(k, num_obj_per_box_counts[k])
 
-
-if __name__ == "__main__":
+def real_main():
     args = parse_args()
 
     # pragmatify currently not compatible with alternative formulations
@@ -1015,3 +1055,6 @@ if __name__ == "__main__":
 
     #    test(args)
     main(args)
+
+if __name__ == "__main__":
+    real_main()
