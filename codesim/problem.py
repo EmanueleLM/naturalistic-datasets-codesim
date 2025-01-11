@@ -411,15 +411,66 @@ class Loops(Problem):
     
 class Sort(Problem):
     def __init__(self, 
-                 n_objects:int):
+                 n_vars:int,
+                 ascending:bool=True):
         
         super().__init__(name='Sort')
-        pass
+        assert n_vars > 1
+        self.n_vars = n_vars
+        self.ascending = ascending
+        self.data = {}
+        self.idx = 0
+        self.basepath = "./data/Sort/"
         
-    def generate_data(n:int, a:int, o:int, cp:int) -> dict:
-        pass 
+    def reset(self, n_vars:int=None, ascending:bool=None) -> None:
+        self.n_ops = (n_vars if n_vars is not None else self.n_vars)
+        self.ascending = (ascending if ascending is not None else self.ascending)
+        self.data = {}
+        self.idx = 0
+            
+    def generate_data(self, n_programs:int=1) -> dict:
+        for idx in range(self.idx+n_programs):
+            syn, nat, gt_syn, gt_nat = self.__accumulate()
+            self.data[idx] = {
+                'syn': syn,
+                'nat': nat,
+                'label-syn': gt_syn,
+                'label-nat': gt_nat
+            }
+        self.idx += n_programs
+            
+    def to_file(self, suffix:str="") -> None:
+        os.makedirs(self.basepath, exist_ok=True)
+        filename = f"n_vars-{self.n_vars}_ascending-{self.ascending}"
+        filename += ".json" if suffix == "" else f"_{suffix}.json"
+        path = self.basepath + filename
+        try:
+            json.dump(self.data, open(path, 'w'), indent=4)
+        except Exception as e:
+            raise ValueError(e)
         
-    def to_file(self) -> None:
-        pass
-    
+    def __accumulate(self) -> dict:
+        """
+        Creates a list of n unique numbers and asks the position of the k-greatest/smallest.
+        """
+        weights = random.sample(range(self.n_vars*10), self.n_vars)
+        var2val = {f"obj-{i}":w for i,w in enumerate(weights)}
+        val2var = {v:k for k,v in var2val.items()}
+        prompt = f"""One has the following {self.n_vars} objects: {list(var2val)}.\n
+This is the weight of each object in Kg: {var2val}.\n
+"""
+        program = f"""Here's a list of numbers. {list(var2val.values())}\n
+Sort them in {('ascending' if self.ascending else 'descending')} with the following algorithm:
+@algorithm@
+"""
+        k = random.randint(0, self.n_vars-1)
+        weights.sort(reverse=not(self.ascending))
+        gt_syn = {'position': k,
+                'label': weights[k],
+                'ascending': self.ascending}
+        gt_nat = {'position': k, 
+                  'label': val2var[gt_syn['label']],
+                  'ascending': self.ascending}
+                  
+        return program, prompt, gt_syn, gt_nat
         

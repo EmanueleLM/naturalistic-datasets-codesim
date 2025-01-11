@@ -1,0 +1,422 @@
+{
+    "0": {
+        "syn": "Here's a list of numbers. [20, 90, 74, 99, 7, 94, 43, 38, 57, 95]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 20, 'obj-1': 90, 'obj-2': 74, 'obj-3': 99, 'obj-4': 7, 'obj-5': 94, 'obj-6': 43, 'obj-7': 38, 'obj-8': 57, 'obj-9': 95}.\n\n",
+        "label-syn": {
+            "k": 5,
+            "label": 74,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 5,
+            "label": "obj-2",
+            "ascending": true
+        }
+    },
+    "1": {
+        "syn": "Here's a list of numbers. [41, 45, 3, 68, 27, 49, 30, 0, 56, 51]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 41, 'obj-1': 45, 'obj-2': 3, 'obj-3': 68, 'obj-4': 27, 'obj-5': 49, 'obj-6': 30, 'obj-7': 0, 'obj-8': 56, 'obj-9': 51}.\n\n",
+        "label-syn": {
+            "k": 3,
+            "label": 30,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 3,
+            "label": "obj-6",
+            "ascending": true
+        }
+    },
+    "2": {
+        "syn": "Here's a list of numbers. [38, 76, 47, 86, 40, 64, 33, 88, 31, 5]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 38, 'obj-1': 76, 'obj-2': 47, 'obj-3': 86, 'obj-4': 40, 'obj-5': 64, 'obj-6': 33, 'obj-7': 88, 'obj-8': 31, 'obj-9': 5}.\n\n",
+        "label-syn": {
+            "k": 2,
+            "label": 33,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 2,
+            "label": "obj-6",
+            "ascending": true
+        }
+    },
+    "3": {
+        "syn": "Here's a list of numbers. [27, 73, 18, 97, 55, 92, 24, 90, 54, 68]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 27, 'obj-1': 73, 'obj-2': 18, 'obj-3': 97, 'obj-4': 55, 'obj-5': 92, 'obj-6': 24, 'obj-7': 90, 'obj-8': 54, 'obj-9': 68}.\n\n",
+        "label-syn": {
+            "k": 6,
+            "label": 73,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 6,
+            "label": "obj-1",
+            "ascending": true
+        }
+    },
+    "4": {
+        "syn": "Here's a list of numbers. [36, 6, 84, 33, 57, 22, 85, 8, 42, 63]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 36, 'obj-1': 6, 'obj-2': 84, 'obj-3': 33, 'obj-4': 57, 'obj-5': 22, 'obj-6': 85, 'obj-7': 8, 'obj-8': 42, 'obj-9': 63}.\n\n",
+        "label-syn": {
+            "k": 2,
+            "label": 22,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 2,
+            "label": "obj-5",
+            "ascending": true
+        }
+    },
+    "5": {
+        "syn": "Here's a list of numbers. [89, 34, 13, 78, 6, 18, 97, 95, 92, 12]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 89, 'obj-1': 34, 'obj-2': 13, 'obj-3': 78, 'obj-4': 6, 'obj-5': 18, 'obj-6': 97, 'obj-7': 95, 'obj-8': 92, 'obj-9': 12}.\n\n",
+        "label-syn": {
+            "k": 8,
+            "label": 95,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 8,
+            "label": "obj-7",
+            "ascending": true
+        }
+    },
+    "6": {
+        "syn": "Here's a list of numbers. [10, 5, 70, 83, 12, 79, 61, 60, 4, 19]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 10, 'obj-1': 5, 'obj-2': 70, 'obj-3': 83, 'obj-4': 12, 'obj-5': 79, 'obj-6': 61, 'obj-7': 60, 'obj-8': 4, 'obj-9': 19}.\n\n",
+        "label-syn": {
+            "k": 7,
+            "label": 70,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 7,
+            "label": "obj-2",
+            "ascending": true
+        }
+    },
+    "7": {
+        "syn": "Here's a list of numbers. [84, 29, 9, 52, 0, 95, 65, 16, 44, 43]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 84, 'obj-1': 29, 'obj-2': 9, 'obj-3': 52, 'obj-4': 0, 'obj-5': 95, 'obj-6': 65, 'obj-7': 16, 'obj-8': 44, 'obj-9': 43}.\n\n",
+        "label-syn": {
+            "k": 9,
+            "label": 95,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 9,
+            "label": "obj-5",
+            "ascending": true
+        }
+    },
+    "8": {
+        "syn": "Here's a list of numbers. [39, 57, 15, 65, 60, 90, 44, 98, 42, 8]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 39, 'obj-1': 57, 'obj-2': 15, 'obj-3': 65, 'obj-4': 60, 'obj-5': 90, 'obj-6': 44, 'obj-7': 98, 'obj-8': 42, 'obj-9': 8}.\n\n",
+        "label-syn": {
+            "k": 0,
+            "label": 8,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 0,
+            "label": "obj-9",
+            "ascending": true
+        }
+    },
+    "9": {
+        "syn": "Here's a list of numbers. [30, 46, 67, 79, 14, 97, 71, 60, 28, 63]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 30, 'obj-1': 46, 'obj-2': 67, 'obj-3': 79, 'obj-4': 14, 'obj-5': 97, 'obj-6': 71, 'obj-7': 60, 'obj-8': 28, 'obj-9': 63}.\n\n",
+        "label-syn": {
+            "k": 7,
+            "label": 71,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 7,
+            "label": "obj-6",
+            "ascending": true
+        }
+    },
+    "10": {
+        "syn": "Here's a list of numbers. [6, 52, 12, 90, 34, 91, 49, 53, 39, 22]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 6, 'obj-1': 52, 'obj-2': 12, 'obj-3': 90, 'obj-4': 34, 'obj-5': 91, 'obj-6': 49, 'obj-7': 53, 'obj-8': 39, 'obj-9': 22}.\n\n",
+        "label-syn": {
+            "k": 4,
+            "label": 39,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 4,
+            "label": "obj-8",
+            "ascending": true
+        }
+    },
+    "11": {
+        "syn": "Here's a list of numbers. [3, 79, 13, 9, 88, 65, 6, 61, 45, 8]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 3, 'obj-1': 79, 'obj-2': 13, 'obj-3': 9, 'obj-4': 88, 'obj-5': 65, 'obj-6': 6, 'obj-7': 61, 'obj-8': 45, 'obj-9': 8}.\n\n",
+        "label-syn": {
+            "k": 5,
+            "label": 45,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 5,
+            "label": "obj-8",
+            "ascending": true
+        }
+    },
+    "12": {
+        "syn": "Here's a list of numbers. [62, 53, 75, 28, 38, 3, 43, 7, 88, 11]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 62, 'obj-1': 53, 'obj-2': 75, 'obj-3': 28, 'obj-4': 38, 'obj-5': 3, 'obj-6': 43, 'obj-7': 7, 'obj-8': 88, 'obj-9': 11}.\n\n",
+        "label-syn": {
+            "k": 0,
+            "label": 3,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 0,
+            "label": "obj-5",
+            "ascending": true
+        }
+    },
+    "13": {
+        "syn": "Here's a list of numbers. [96, 81, 38, 37, 45, 22, 91, 14, 62, 4]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 96, 'obj-1': 81, 'obj-2': 38, 'obj-3': 37, 'obj-4': 45, 'obj-5': 22, 'obj-6': 91, 'obj-7': 14, 'obj-8': 62, 'obj-9': 4}.\n\n",
+        "label-syn": {
+            "k": 5,
+            "label": 45,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 5,
+            "label": "obj-4",
+            "ascending": true
+        }
+    },
+    "14": {
+        "syn": "Here's a list of numbers. [22, 98, 39, 16, 7, 19, 79, 71, 64, 53]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 22, 'obj-1': 98, 'obj-2': 39, 'obj-3': 16, 'obj-4': 7, 'obj-5': 19, 'obj-6': 79, 'obj-7': 71, 'obj-8': 64, 'obj-9': 53}.\n\n",
+        "label-syn": {
+            "k": 5,
+            "label": 53,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 5,
+            "label": "obj-9",
+            "ascending": true
+        }
+    },
+    "15": {
+        "syn": "Here's a list of numbers. [66, 12, 55, 33, 6, 48, 86, 40, 17, 38]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 66, 'obj-1': 12, 'obj-2': 55, 'obj-3': 33, 'obj-4': 6, 'obj-5': 48, 'obj-6': 86, 'obj-7': 40, 'obj-8': 17, 'obj-9': 38}.\n\n",
+        "label-syn": {
+            "k": 8,
+            "label": 66,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 8,
+            "label": "obj-0",
+            "ascending": true
+        }
+    },
+    "16": {
+        "syn": "Here's a list of numbers. [33, 13, 67, 49, 20, 76, 40, 46, 86, 88]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 33, 'obj-1': 13, 'obj-2': 67, 'obj-3': 49, 'obj-4': 20, 'obj-5': 76, 'obj-6': 40, 'obj-7': 46, 'obj-8': 86, 'obj-9': 88}.\n\n",
+        "label-syn": {
+            "k": 0,
+            "label": 13,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 0,
+            "label": "obj-1",
+            "ascending": true
+        }
+    },
+    "17": {
+        "syn": "Here's a list of numbers. [60, 70, 48, 2, 90, 77, 14, 26, 8, 16]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 60, 'obj-1': 70, 'obj-2': 48, 'obj-3': 2, 'obj-4': 90, 'obj-5': 77, 'obj-6': 14, 'obj-7': 26, 'obj-8': 8, 'obj-9': 16}.\n\n",
+        "label-syn": {
+            "k": 1,
+            "label": 8,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 1,
+            "label": "obj-8",
+            "ascending": true
+        }
+    },
+    "18": {
+        "syn": "Here's a list of numbers. [89, 53, 83, 18, 16, 63, 9, 88, 60, 46]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 89, 'obj-1': 53, 'obj-2': 83, 'obj-3': 18, 'obj-4': 16, 'obj-5': 63, 'obj-6': 9, 'obj-7': 88, 'obj-8': 60, 'obj-9': 46}.\n\n",
+        "label-syn": {
+            "k": 6,
+            "label": 63,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 6,
+            "label": "obj-5",
+            "ascending": true
+        }
+    },
+    "19": {
+        "syn": "Here's a list of numbers. [48, 12, 51, 22, 54, 67, 60, 74, 34, 55]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 48, 'obj-1': 12, 'obj-2': 51, 'obj-3': 22, 'obj-4': 54, 'obj-5': 67, 'obj-6': 60, 'obj-7': 74, 'obj-8': 34, 'obj-9': 55}.\n\n",
+        "label-syn": {
+            "k": 6,
+            "label": 55,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 6,
+            "label": "obj-9",
+            "ascending": true
+        }
+    },
+    "20": {
+        "syn": "Here's a list of numbers. [99, 33, 85, 22, 73, 87, 98, 6, 0, 18]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 99, 'obj-1': 33, 'obj-2': 85, 'obj-3': 22, 'obj-4': 73, 'obj-5': 87, 'obj-6': 98, 'obj-7': 6, 'obj-8': 0, 'obj-9': 18}.\n\n",
+        "label-syn": {
+            "k": 4,
+            "label": 33,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 4,
+            "label": "obj-1",
+            "ascending": true
+        }
+    },
+    "21": {
+        "syn": "Here's a list of numbers. [53, 47, 98, 85, 70, 78, 88, 56, 48, 97]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 53, 'obj-1': 47, 'obj-2': 98, 'obj-3': 85, 'obj-4': 70, 'obj-5': 78, 'obj-6': 88, 'obj-7': 56, 'obj-8': 48, 'obj-9': 97}.\n\n",
+        "label-syn": {
+            "k": 7,
+            "label": 88,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 7,
+            "label": "obj-6",
+            "ascending": true
+        }
+    },
+    "22": {
+        "syn": "Here's a list of numbers. [31, 22, 41, 30, 19, 14, 77, 26, 38, 68]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 31, 'obj-1': 22, 'obj-2': 41, 'obj-3': 30, 'obj-4': 19, 'obj-5': 14, 'obj-6': 77, 'obj-7': 26, 'obj-8': 38, 'obj-9': 68}.\n\n",
+        "label-syn": {
+            "k": 0,
+            "label": 14,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 0,
+            "label": "obj-5",
+            "ascending": true
+        }
+    },
+    "23": {
+        "syn": "Here's a list of numbers. [2, 23, 41, 88, 30, 48, 32, 45, 50, 99]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 2, 'obj-1': 23, 'obj-2': 41, 'obj-3': 88, 'obj-4': 30, 'obj-5': 48, 'obj-6': 32, 'obj-7': 45, 'obj-8': 50, 'obj-9': 99}.\n\n",
+        "label-syn": {
+            "k": 3,
+            "label": 32,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 3,
+            "label": "obj-6",
+            "ascending": true
+        }
+    },
+    "24": {
+        "syn": "Here's a list of numbers. [53, 60, 70, 31, 51, 81, 18, 49, 93, 90]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 53, 'obj-1': 60, 'obj-2': 70, 'obj-3': 31, 'obj-4': 51, 'obj-5': 81, 'obj-6': 18, 'obj-7': 49, 'obj-8': 93, 'obj-9': 90}.\n\n",
+        "label-syn": {
+            "k": 1,
+            "label": 31,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 1,
+            "label": "obj-3",
+            "ascending": true
+        }
+    },
+    "25": {
+        "syn": "Here's a list of numbers. [21, 11, 41, 73, 26, 65, 40, 20, 96, 31]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 21, 'obj-1': 11, 'obj-2': 41, 'obj-3': 73, 'obj-4': 26, 'obj-5': 65, 'obj-6': 40, 'obj-7': 20, 'obj-8': 96, 'obj-9': 31}.\n\n",
+        "label-syn": {
+            "k": 8,
+            "label": 73,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 8,
+            "label": "obj-3",
+            "ascending": true
+        }
+    },
+    "26": {
+        "syn": "Here's a list of numbers. [80, 10, 83, 41, 33, 82, 96, 49, 68, 67]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 80, 'obj-1': 10, 'obj-2': 83, 'obj-3': 41, 'obj-4': 33, 'obj-5': 82, 'obj-6': 96, 'obj-7': 49, 'obj-8': 68, 'obj-9': 67}.\n\n",
+        "label-syn": {
+            "k": 3,
+            "label": 49,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 3,
+            "label": "obj-7",
+            "ascending": true
+        }
+    },
+    "27": {
+        "syn": "Here's a list of numbers. [74, 63, 44, 45, 48, 59, 32, 10, 1, 51]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 74, 'obj-1': 63, 'obj-2': 44, 'obj-3': 45, 'obj-4': 48, 'obj-5': 59, 'obj-6': 32, 'obj-7': 10, 'obj-8': 1, 'obj-9': 51}.\n\n",
+        "label-syn": {
+            "k": 0,
+            "label": 1,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 0,
+            "label": "obj-8",
+            "ascending": true
+        }
+    },
+    "28": {
+        "syn": "Here's a list of numbers. [35, 46, 72, 8, 10, 83, 57, 73, 21, 77]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 35, 'obj-1': 46, 'obj-2': 72, 'obj-3': 8, 'obj-4': 10, 'obj-5': 83, 'obj-6': 57, 'obj-7': 73, 'obj-8': 21, 'obj-9': 77}.\n\n",
+        "label-syn": {
+            "k": 2,
+            "label": 21,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 2,
+            "label": "obj-8",
+            "ascending": true
+        }
+    },
+    "29": {
+        "syn": "Here's a list of numbers. [72, 47, 50, 71, 82, 36, 56, 4, 24, 62]\n\nSort them in ascending with the following algorithm:\n@algorithm@\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 72, 'obj-1': 47, 'obj-2': 50, 'obj-3': 71, 'obj-4': 82, 'obj-5': 36, 'obj-6': 56, 'obj-7': 4, 'obj-8': 24, 'obj-9': 62}.\n\n",
+        "label-syn": {
+            "k": 5,
+            "label": 56,
+            "ascending": true
+        },
+        "label-nat": {
+            "k": 5,
+            "label": "obj-6",
+            "ascending": true
+        }
+    }
+}
