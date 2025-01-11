@@ -184,17 +184,6 @@ class CriticalPath(Problem):
         self.critical_path = len_critical_path
         self.basepath = "./data/CriticalPath/"
         
-    def generate_data(self, n_programs:int=1) -> dict:
-        for idx in range(self.idx+n_programs):
-            syn, nat, gt_syn, gt_nat = self._accumulate()
-            self.data[idx] = {
-                'syn': syn,
-                'nat': nat,
-                'label-syn': gt_syn,
-                'label-nat': gt_nat
-            }
-        self.idx += n_programs
-        
     def reset(self, n_ops:int=None, n_vars:int=None, len_critical_path:int=None) -> None:
         super().reset()
         self.n_ops = (n_ops if n_ops is not None else self.n_ops)
