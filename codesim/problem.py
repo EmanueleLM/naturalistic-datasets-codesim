@@ -401,12 +401,11 @@ class Loops(Problem):
                 prompt += f"There are {k} {nat_noisy_objects[ptr_noisy_nat]} in {nat_objects[ptr_nat-1]}.\n"
                 ptr_noisy_nat += 1
         
-        program += f"result = sum({[f'n_{i}' for i in set(set_c).difference(set_nc)]})".replace("'", "")
-        
         # Generate the ground truth label
         exec(program)
-        gt_syn = {f"sum({[f'n_{i}' for i in set(set_c).difference(set_nc)]})".replace("'", ""): eval("result")}
-        gt_nat = {f"obj-{set_c[-1]} in obj-gen": eval("result")}
+        gt = eval(f"n_{set_c[-1]}")
+        gt_syn = {f"n_{set_c[-1]}": gt}
+        gt_nat = {f"obj-{set_c[-1]} in obj-gen": gt}
         
         return program, prompt, gt_syn, gt_nat
     
