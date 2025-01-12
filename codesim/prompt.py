@@ -9,68 +9,63 @@ class System:
     
 @dataclass 
 class StraightLine:
-    user_cot = """
+    user_cot = """{prefix} 
 {problem}
-
 {question}
-
 Think step by step and provide the answer between <answer></answer> tags.
 For example, reply with <answer>1</answer> if the answer is 1.
 """
     
-    questions = ["What is the value of {varname} at the end of the computation?"]
+    questions_syn = ["What is the value of {varname} at the end of the computation?"]
+    questions_nat = ["How many {varname} does agent {agentname} has at the end?"]
     
 @dataclass 
 class CriticalPath:
-    user_cot = """
+    user_cot = """{prefix}
 {problem}
-
 {question}
-
-Think step by step and provide the answer between <answer></answer> tags.
-For example, reply with <answer>[1, 0, 3]</answer> if the value of the goods is respectively 1, 0, and 3.
-Provide the values in the order they are given at the beginning.
+Think step by step and provide the numerical answer between <answer></answer> tags.
+For example, reply with <answer>1</answer> if the answer is 1.
 """
     
-    questions = ["What is the number of {varnames} {agents} have the end of the computation?"]
-
+    questions_syn = ["What is the value of {varname} at the end of the computation?"]
+    questions_nat = ["How many {varname} does {agentname} has at the end?"]
+    
 @dataclass 
 class ParallelPaths:
-    user_cot = """
+    user_cot = """{prefix}
 {problem}
-
 {question}
-
-TODO
+Think step by step and provide the answer as a list of integers between <answer></answer> tags.
+For example, reply with <answer>[3, 5, 1]</answer>.
 """
     
-    questions = ["TODO"]
+    questions_syn = ["What is the value of {varnames} at the end of the computation? Report them in the order they were declared."]
+    questions_nat = ["How many objects does each agent have at the end? Report them in the order they were declared."]
+
     
 @dataclass 
 class Loops:
-    user_cot = """
+    user_cot = """{prefix}
 {problem}
-
 {question}
-
-TODO
+Think step by step and provide the numerical answer between <answer></answer> tags.
+For example, reply with <answer>1</answer> if the answer is 1.
 """
     
-    questions = ["TODO"]
+    questions_syn = ["What is the value of {varnames} at the end of the computation?"]
+    questions_nat = ["How many {varname} are in a {varname_origin}?"]
 
   
 @dataclass 
 class Sort:
-    user_cot = """{name} has the following objects: {objects}.
-Each object has the following weight: {weights}.
-{name} wants to sort the objects in ascending order of weight.
-
+    user_cot = """{prefix}
+{problem}
 {question}
-
-Think step by step and provide the answer between <answer></answer> tags.
-For example, if the object to order are 'shoes', 'mugs' and 'bananas', and their weight is respectively 5, 1 and 7,
-reply with <answer>['mugs', 'shoes', 'banana']</answer>.
+Think step by step and provide the numerical answer between <answer></answer> tags.
+For example, reply with <answer>1</answer> if the answer is 1.
 """
     
-    questions = ["How will {name} sort the objects in the correct order?"]
+    questions_nat = ["What is the value of {k}-th {biggest_smallest} object?"]
+    questions_syn = ["What is the value of {k}-th most {heavy} object?"]
     

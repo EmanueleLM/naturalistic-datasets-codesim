@@ -162,7 +162,10 @@ Here's a list of interactions between the agents.
             # print(program)
             
         # Generate the syn and naturalistic labels
-        gt_syn = agents
+        gt_syn = {}
+        for ag in agents:
+            for idx in agents[ag]:
+                gt_syn[f"{ag}{idx}"] = agents[ag][idx]
         gt_nat = {ag: {f"obj-{k}":v for k,v in agents[ag].items()} for ag in agents}
 
         return Sample(syn=program, nat=prompt, label_syn=gt_syn, label_nat=gt_nat)
