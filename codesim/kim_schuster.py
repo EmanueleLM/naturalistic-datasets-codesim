@@ -6,7 +6,9 @@ import json
 import os
 import re
 import numpy as np
+from .my_types import Sample
 
+from pydantic.json import pydantic_encoder
 from numpy.random import poisson
 
 from collections import Counter
@@ -22,7 +24,7 @@ _OPERATIONS_DICT = {
 _SYN_DICT = {
     "move": "{from_prep}.remove({content})\n{to_prep}.add({content})\n",
     "remove": "{from_prep}.remove({content})\n",
-    "put": "{to_prep}.add({content})\n"
+    "put": "{from_prep}.add({content})\n"
 }
 
 _OPERATIONS_DICT_ALT = {
@@ -274,9 +276,9 @@ class WorldState:
     ):
         """Gives a code description of the content in the box"""
         if len(self.boxes[box]) == 0:
-            return f"{_SYN_NOUN}{box}" + " = { }\n"
+            return f"{_SYN_NOUN}{box}" + " = set()\n"
         else:
-            return f"{_SYN_NOUN}{box}" + f" = { {', '.join(self.boxes[box])} }\n"
+            return f"{_SYN_NOUN}{box}" + " = {" + f"{', '.join(str(g_set_map[x]) for x in self.boxes[box])}" + "}\n"
 
     def __eq__(self, o):
         for box1, box2 in zip(self.boxes, o.boxes):
@@ -292,6 +294,26 @@ class WorldState:
 
         return hash(tuple(sub_hashes))
 
+    def syn_representation(self, box=None):
+        """ Returns a dictionary of all the contents of the boxes in the world state """
+        if box is None:
+            return {
+                x: list([g_set_map[y] for y in self.boxes[x]]) for x in range(self.num_boxes)
+            }
+        else:
+            return {
+                box: list([g_set_map[y] for y in self.boxes[box]]) 
+            }
+    def representation(self, box=None):
+        """ Returns a dictionary of all the contents of the boxes in the world state """
+        if box is None:
+            return {
+                x: list(self.boxes[x]) for x in range(self.num_boxes)
+            }
+        else:
+            return {
+                box: list(self.boxes[box])
+            }
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -491,7 +513,9 @@ def syn_describe_operation(
     s = _SYN_DICT[op]
     content_str = ", ".join([str(g_set_map[x]) for x in sorted(contents)])
     box1_num = _SYN_NOUN + str(box1)
-    box2_num = _SYN_NOUN + str(box2)
+    box2_num = None
+    if box2 is not None:
+        box2_num = _SYN_NOUN + str(box2)
 
     return s.format(content=content_str, from_prep=box1_num, to_prep=box2_num)
 
@@ -549,7 +573,6 @@ def example_to_t5(ex, zero_shot=False, modifier_map=None, pragmatic=False):
     return {
         "nat": ".".join(sentences[:-2]).lstrip(),
         # "sentence_masked": masked_sentence.lstrip(), # remove this part!
-        "label_nat": last_sent.lstrip(),
     }
 
 
@@ -591,6 +614,7 @@ def sample_operation_sequences(
         )
     else:
         operation_sequence.append(world_state.state_description())
+    syn_sequence.append(world_state.syn_state_description())
 
     for _ in range(num_operations):
         op = None
@@ -923,8 +947,13 @@ def main(args):
 
         count_num = {split: 0 for split in splits_size}
         os.makedirs(args.output_dir, exist_ok=True)
-        out_files = {
-            split: open(os.path.join(args.output_dir, f"{split}.jsonl"), "w")
+        # out_files = {
+        #     split: open(os.path.join(args.output_dir, f"{split}.jsonl"), "w")
+        #     for split in splits_size
+        # }
+
+        out_dirs = {
+            split: []
             for split in splits_size
         }
         num_operations = {
@@ -954,7 +983,7 @@ def main(args):
                 ):
                     count_num[split] = count_num[split] + 1
                     existing_states.add(states[0])
-                    out_f = out_files[split]
+                    out_dir = out_dirs[split]
                     write_example = True
                     break
 
@@ -968,6 +997,7 @@ def main(args):
                 modifier_map = make_modifier_map(objects_set, pragmatic=pragmatic)
 
             prefix = ""
+            syn_prefix = ""
             prev_state = None
             box_noun = "Box"
             alt_descriptions = args.alternative_forms in ["always", split]
@@ -978,15 +1008,17 @@ def main(args):
                 {t: 0 for t in _OPERATIONS_DICT.keys()} for _ in range(args.num_boxes)
             ]
             for j, (state, op, syn_op) in enumerate(zip(states, ops, syn_ops)):
+                state: WorldState = state
                 if j > num_operations[split]:
                     break
 
                 if j > 0 and pragmatic:
                     op = pragmatify(prev_state, op, modifier_map)
 
-                print(op, syn_op)
+                # print(op, syn_op)
 
                 prefix += " " + op
+                syn_prefix += syn_op
                 op_type = op.split()[0].lower()
                 if prev_state is not None and op_type not in numops_by_type[0]:
                     if op_type in ["pick", "take", "place"]:  # alternative forms
@@ -1014,15 +1046,22 @@ def main(args):
                         modifier_map=modifier_map,
                         pragmatic=pragmatic,
                     )
+                    out_d["label_nat"] = state.representation(box)
+                    out_d["syn"] = syn_prefix
+                    out_d["label_syn"] = state.syn_representation(box)
 
                     # out_d["sample_id"] = i
                     # out_d["numops"] = numops[box]
                     # out_d["numops_by_op"] = numops_by_type[box]
-                    out_f.write(json.dumps(out_d) + "\n")
+                    out_dir.append(Sample(**out_d))
+                    # out_f.write(json.dumps(out_d) + "\n")
                 prev_state = state
 
+        i = 1
         for split, size in splits_size.items():
-            out_files[split].close()
+            with open(f"data/boxes/batch-{i}.json", "w") as f:
+                json.dump(out_dirs[split], f, indent=4, default=pydantic_encoder)
+            i+=1
             assert count_num[split] == size, (split, count_num[split], size)
 
     if args.disjoint_object_vocabulary_file is not None:
