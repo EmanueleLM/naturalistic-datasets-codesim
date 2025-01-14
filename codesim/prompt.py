@@ -53,7 +53,7 @@ Think step by step and provide the numerical answer between <answer></answer> ta
 For example, reply with <answer>1</answer> if the answer is 1.
 """
     
-    questions_syn = ["What is the value of {varnames} at the end of the computation?"]
+    questions_syn = ["What is the value of {varname} at the end of the computation?"]
     questions_nat = ["How many {varname} are in a {varname_origin}?"]
 
   
@@ -66,6 +66,6 @@ Think step by step and provide the numerical answer between <answer></answer> ta
 For example, reply with <answer>1</answer> if the answer is 1.
 """
     
-    questions_nat = ["What is the value of {k}-th {biggest_smallest} object?"]
     questions_syn = ["What is the value of {k}-th most {heavy} object?"]
+    questions_nat = ["What is the value of {k}-th {biggest_smallest} object?"]
     
