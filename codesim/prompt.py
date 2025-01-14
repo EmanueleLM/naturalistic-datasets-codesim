@@ -41,7 +41,7 @@ For example, reply with <answer>[3, 5, 1]</answer>.
 """
     
     questions_syn = ["What is the value of {varnames} at the end of the computation? Report them in the order they were declared."]
-    questions_nat = ["How many objects does each agent have at the end? Report them in the order they were declared."]
+    questions_nat = ["How many {varnames} do agents {agentnames} have at the end? Report them in a flattent list and in the order they were declared."]
 
     
 @dataclass 
