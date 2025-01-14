@@ -8,6 +8,19 @@ class System:
     ]
     
 @dataclass 
+class Boxes:
+    user_cot = """{prefix}
+{problem}
+{question}
+Think step by step and provide the answer between <answer></answer> tags.
+For example, reply with <answer>1, 3, something</answer> if the answer is 1, 3, something.
+"""
+    
+    questions_syn = ["What is the content of {varname} at the end of the computation?"]
+    questions_nat = ["What is the content of {varname} at the end?"]
+    
+
+@dataclass 
 class StraightLine:
     user_cot = """{prefix}
 {problem}
