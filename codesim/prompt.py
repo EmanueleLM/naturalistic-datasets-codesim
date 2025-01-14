@@ -9,7 +9,7 @@ class System:
     
 @dataclass 
 class StraightLine:
-    user_cot = """{prefix} 
+    user_cot = """{prefix}
 {problem}
 {question}
 Think step by step and provide the answer between <answer></answer> tags.
@@ -29,7 +29,7 @@ For example, reply with <answer>1</answer> if the answer is 1.
 """
     
     questions_syn = ["What is the value of {varname} at the end of the computation?"]
-    questions_nat = ["How many {varname} does {agentname} has at the end?"]
+    questions_nat = ["How much money does {agentname} has at the end?"]
     
 @dataclass 
 class ParallelPaths:
