@@ -1,4 +1,5 @@
 config.json
+config.py
 config-azure.json
 
 # Byte-compiled / optimized / DLL files

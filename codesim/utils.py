@@ -84,21 +84,21 @@ def _query_model_handle_errors(prompts: list[str],
 
     return description
 
-def queryLLM(prompt, config, model, **kwargs):
+def queryLLM(prompt, model, **kwargs):
+    from . import config
     global f_query
 
-    with open(config) as jfile:
-        jdata = json.load(jfile)
-        response = None
-        try:
-            # print(f"Querying {model}. Available models: {[m for m in f_query.keys()]}.")
-            # print()
-            response = f_query[model](prompt, jdata[model], **kwargs)
-        except Exception as inst:
-            # print exception info
-            print(type(inst))    # the exception instance
-            print(f"[error] Querying model {model} has failed. Error: {inst}")
-            raise inst
+    jdata = config.config
+    response = None
+    try:
+        # print(f"Querying {model}. Available models: {[m for m in f_query.keys()]}.")
+        # print()
+        response = f_query[model](prompt, jdata[model], **kwargs)
+    except Exception as inst:
+        # print exception info
+        print(type(inst))    # the exception instance
+        print(f"[error] Querying model {model} has failed. Error: {inst}")
+        raise inst
 
     return response
 
