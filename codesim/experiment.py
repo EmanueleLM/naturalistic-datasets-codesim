@@ -89,6 +89,7 @@ def main():
     print(f"Objects Sampled: {g_object_map}")
 
     for dataset_path in dataset_list:
+        print("Running experiment for", dataset_path)
         # Load the dataset as json
         samples = []
         with open(dataset_path, 'r') as f:
