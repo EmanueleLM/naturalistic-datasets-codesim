@@ -53,7 +53,7 @@ def main():
     parser = argparse.ArgumentParser(description="Start experiments for the CodeSimulation project.")
     parser.add_argument('-o', '--operation', choices=['kim-schuster', 'critical-path', 'parallel-paths', 'straight-line', 'nested-loop', 'sorting'], 
                         help='Type of operation to perform')
-    parser.add_argument('-d', '--dataset_path', type=str, help='Path of the dataset')
+    parser.add_argument('-d', '--dataset_idx', default=-1,type=int, help='Index for the path of the dataset: -1 for all datasets')
     parser.add_argument('-m', '--model', type=str, help='Model to use for the experiment')
     parser.add_argument('--wandb', action='store_true', help='Use wandb for logging, if not, use default txt file')
 
@@ -65,74 +65,104 @@ def main():
         wandb.init(project="codesim",
             config= {
                 "operation": args.operation,
-                "dataset_path": args.dataset_path,
+                "dataset_idx": args.dataset_idx,
                 "model": args.model
             }
         )
 
+    op_type: OperationType = OperationType(args.operation)
+    dataset_base = get_dataset_path(op_type)
+    dataset_list = []
+    for dataset in os.listdir(dataset_base):
+        dataset_list.append(os.path.join(dataset_base, dataset))
+    dataset_list = sorted(dataset_list)
+
+    if len(dataset_list) < args.dataset_idx:
+        raise ValueError("Could node load dataset of the given index")
+    elif args.dataset_idx >= 0:
+        dataset_list = [dataset_list[args.dataset_idx]]
+
     print(f"Operation: {args.operation}")
-    print(f"Dataset Path: {args.dataset_path}")
+    print(f"Dataset Path: {args.dataset_idx}")
 
     load_and_sample_objects()
     print(f"Objects Sampled: {g_object_map}")
 
-    op_type: OperationType = OperationType(args.operation)
-    # Load the dataset as json
-    samples = []
-    with open(args.dataset_path, 'r') as f:
-        allfile = f.read()
-        jsondata = json.loads(allfile)
+    for dataset_path in dataset_list:
+        # Load the dataset as json
+        samples = []
+        with open(dataset_path, 'r') as f:
+            allfile = f.read()
+            jsondata = json.loads(allfile)
 
-        for sample in jsondata:
-            # print(sample)
-            samples.append(Sample(**sample))
-            break
+            for sample in jsondata:
+                # print(sample)
+                samples.append(Sample(**sample))
+                break
 
-    # print(samples[0])
-    # send_request(samples[0])
+        # print(samples[0])
+        # send_request(samples[0])
 
-    # print(format_query(samples[0], op_type))
-    accuracy_nat, accuracy_syn = experiment(samples, args.model, op_type)
+        # print(format_query(samples[0], op_type))
+        accuracy_nat, accuracy_syn = experiment(samples, args.model, op_type)
 
-    if g_has_wandb:
-        wandb.log({"accuracy_nat": accuracy_nat, "accuracy_syn": accuracy_syn})
-    # Log everything at the end
+        if g_has_wandb:
+            wandb.log({"accuracy_nat": accuracy_nat, "accuracy_syn": accuracy_syn})
+        # Log everything at the end
 
-    if g_has_wandb:
-        nat_table = wandb.Table(columns=["prompt", "label", "response", "full_response", "is_correct"])
-        for log in g_nat_logs:
-            nat_table.add_data(*log.model_dump().values())
-            
-        artifact = wandb.Artifact(f"nat-{args.operation}-{args.model}", type="dataset")
-        artifact.add(nat_table, "results-nat")
+        if g_has_wandb:
+            nat_table = wandb.Table(columns=["prompt", "label", "response", "full_response", "is_correct"])
+            for log in g_nat_logs:
+                nat_table.add_data(*log.model_dump().values())
+                
+            artifact = wandb.Artifact(f"nat-{args.operation}-{args.model}", type="dataset")
+            artifact.add(nat_table, "results-nat")
 
-        syn_table = wandb.Table(columns=["prompt", "label", "response", "full_response", "is_correct"])
-        for log in g_syn_logs:
-            syn_table.add_data(*log.model_dump().values())
-        artifact_syn = wandb.Artifact(f"syn-{args.operation}-{args.model}", type="dataset")
-        artifact_syn.add(syn_table, "results-syn")
-        wandb.log_artifact(artifact)
-        wandb.log_artifact(artifact_syn)
+            syn_table = wandb.Table(columns=["prompt", "label", "response", "full_response", "is_correct"])
+            for log in g_syn_logs:
+                syn_table.add_data(*log.model_dump().values())
+            artifact_syn = wandb.Artifact(f"syn-{args.operation}-{args.model}", type="dataset")
+            artifact_syn.add(syn_table, "results-syn")
+            wandb.log_artifact(artifact)
+            wandb.log_artifact(artifact_syn)
 
-    # write to the logs
-    os.makedirs("logs", exist_ok=True)
-    # date in yy-mm-dd-hh-mm
-    date = datetime.datetime.now().strftime("%mM-%dD-%Hh-%Mm")
-    with open(f"logs/{args.operation}-{args.model}-{date}.txt", 'w') as f:
-        f.write("Natural Logs\n")
-        json.dump(g_nat_logs, f, default=pydantic_encoder)
-        f.write("\n")
-        f.write(f"Accuracy: {accuracy_nat}")
-        f.write("\n")
-        f.write("Synthetic Logs\n")
-        json.dump(g_syn_logs, f, default=pydantic_encoder)
-        f.write("\n")
-        f.write(f"Accuracy: {accuracy_syn}")
-        f.write("\n")
+        # write to the logs
+        os.makedirs("logs", exist_ok=True)
+        # date in yy-mm-dd-hh-mm
+        date = datetime.datetime.now().strftime("%mM-%dD-%Hh-%Mm%Ss")
+        with open(f"logs/{args.operation}-{args.model}-{date}.txt", 'w') as f:
+            f.write("Natural Logs\n")
+            json.dump(g_nat_logs, f, default=pydantic_encoder)
+            f.write("\n")
+            f.write(f"Accuracy: {accuracy_nat}")
+            f.write("\n")
+            f.write("Synthetic Logs\n")
+            json.dump(g_syn_logs, f, default=pydantic_encoder)
+            f.write("\n")
+            f.write(f"Accuracy: {accuracy_syn}")
+            f.write("\n")
 
-    # close wandb
-    if g_has_wandb:
-        wandb.finish()
+        # close wandb
+        if g_has_wandb:
+            wandb.finish()
+
+def get_dataset_path(operation: OperationType):
+    base = "./data"
+    match operation:
+        case OperationType.kim_schuster:
+            return f"{base}/boxes"
+        case OperationType.critical_path:
+            return f"{base}/CriticalPath"
+        case OperationType.parallel_paths:
+            return f"{base}/ParllelPaths"
+        case OperationType.straight_line:
+            return f"{base}/StraightLine"
+        case OperationType.nested_loop:
+            return f"{base}/Loops"
+        case OperationType.sorting:
+            return f"{base}/Sort"
+        case _:
+            raise ValueError("Operation Type not supported")
 
 def load_and_sample_objects():
     global g_object_map
