@@ -214,16 +214,15 @@ class CriticalPath(Problem):
         v_ind = int(v//2)
         
         prompt = f"""There are {v} agents, {[f'a{i}' for i in range(v)]}. 
-Each of them has either a credit, which we represent as a negative amount of money other agents owe him,
-or a debit, i.e., a positive quantity of money he ows to the other agents. 
-Here is the amount of credit/debit each agent has: {'; '.join([f'a{i}={random.randint(-10, 10)}' for i in range(v)])}.
-Here's the list of potential interactions between agents.
-An agent can borrow money from another agent. 
-In that case, the first agent increases his total amount while the other decreases it of the same quantity.
-An agent can loan some of his money. 
-In that case, the first agent decreases his total amount while the other increases it of the same quantity.
-An agent can increase his debit by buying things. In that case, he is the only one affected.
-Here's a list of real interactions between the agents.
+Each of them has either a credit or a debit with the bank. 
+A debit is a negative amount of money he has; a debit is a positive quantity of money he has.
+Here is the amount of money each agent has: {'; '.join([f'a{i}={random.randint(-10, 10)}' for i in range(v)])}.
+The agents can exchange quantities of debit or credit among them. 
+An agent can borrow his whole debit from another agent. 
+In that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.
+An agent can loan his whole debit to another agent. 
+In that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.
+Here's a list of interactions between the agents.
 """
 
         program = ''
