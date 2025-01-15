@@ -4,3 +4,4 @@ pydantic
 tiktoken==0.8.1
 backoff==2.2.1
 transformers==4.48.0
+wandb==0.18.7

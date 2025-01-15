@@ -11,11 +11,15 @@ You should support 5 types of operations
 You also get the path of the dataset as an argument.
 """
 
+import datetime
 import json
 import argparse
 import random
 import csv
 from pydantic import BaseModel
+import os
+import wandb
+from pydantic.json import pydantic_encoder
 from . import utils
 
 from .my_types import Sample, OperationType
@@ -24,18 +28,47 @@ from . import prompt
 # Used to map obj-1 and similars to a string.
 g_object_map = dict()
 
+# Tables used to store the logs of the system.
+g_has_wandb = False
+g_nat_logs = None
+g_syn_logs = None
+# init wandb tables
+
 class PromptAndCheck(BaseModel):
     prompt: str
     answer: str
 
+class LogInfo(BaseModel):
+    prompt: str
+    label: str
+    response: str
+    full_response: str
+    is_correct: bool
+
 def main():
+    global g_nat_logs
+    global g_syn_logs
+    global g_has_wandb
+
     parser = argparse.ArgumentParser(description="Start experiments for the CodeSimulation project.")
     parser.add_argument('-o', '--operation', choices=['kim-schuster', 'critical-path', 'parallel-paths', 'straight-line', 'nested-loop', 'sorting'], 
                         help='Type of operation to perform')
     parser.add_argument('-d', '--dataset_path', type=str, help='Path of the dataset')
     parser.add_argument('-m', '--model', type=str, help='Model to use for the experiment')
+    parser.add_argument('--wandb', action='store_true', help='Use wandb for logging, if not, use default txt file')
 
     args = parser.parse_args()
+    g_has_wandb = args.wandb
+    g_syn_logs = []
+    g_nat_logs = []
+    if g_has_wandb:
+        wandb.init(project="codesim",
+            config= {
+                "operation": args.operation,
+                "dataset_path": args.dataset_path,
+                "model": args.model
+            }
+        )
 
     print(f"Operation: {args.operation}")
     print(f"Dataset Path: {args.dataset_path}")
@@ -59,7 +92,47 @@ def main():
     # send_request(samples[0])
 
     # print(format_query(samples[0], op_type))
-    experiment(samples, args.model, op_type)
+    accuracy_nat, accuracy_syn = experiment(samples, args.model, op_type)
+
+    if g_has_wandb:
+        wandb.log({"accuracy_nat": accuracy_nat, "accuracy_syn": accuracy_syn})
+    # Log everything at the end
+
+    if g_has_wandb:
+        nat_table = wandb.Table(columns=["prompt", "label", "response", "full_response", "is_correct"])
+        for log in g_nat_logs:
+            nat_table.add_data(*log.model_dump().values())
+            
+        artifact = wandb.Artifact(f"nat-{args.operation}-{args.model}", type="dataset")
+        artifact.add(nat_table, "results-nat")
+
+        syn_table = wandb.Table(columns=["prompt", "label", "response", "full_response", "is_correct"])
+        for log in g_syn_logs:
+            syn_table.add_data(*log.model_dump().values())
+        artifact_syn = wandb.Artifact(f"syn-{args.operation}-{args.model}", type="dataset")
+        artifact_syn.add(syn_table, "results-syn")
+        wandb.log_artifact(artifact)
+        wandb.log_artifact(artifact_syn)
+
+    # write to the logs
+    os.makedirs("logs", exist_ok=True)
+    # date in yy-mm-dd-hh-mm
+    date = datetime.datetime.now().strftime("%mM-%dD-%Hh-%Mm")
+    with open(f"logs/{args.operation}-{args.model}-{date}.txt", 'w') as f:
+        f.write("Natural Logs\n")
+        json.dump(g_nat_logs, f, default=pydantic_encoder)
+        f.write("\n")
+        f.write(f"Accuracy: {accuracy_nat}")
+        f.write("\n")
+        f.write("Synthetic Logs\n")
+        json.dump(g_syn_logs, f, default=pydantic_encoder)
+        f.write("\n")
+        f.write(f"Accuracy: {accuracy_syn}")
+        f.write("\n")
+
+    # close wandb
+    if g_has_wandb:
+        wandb.finish()
 
 def load_and_sample_objects():
     global g_object_map
@@ -79,23 +152,47 @@ def load_and_sample_objects():
 
 
 def experiment(samples: list[Sample], model: str, op_type: OperationType):
+    global g_nat_logs
+    global g_syn_logs
+
     correct_nat = 0
     correct_syn = 0
     for sample in samples:
         query_syn, query_nat = format_query(sample, op_type)
-        print(query_syn)
-        print(query_nat)
-        result = get_answer(query_syn.prompt, model)
-        if result == query_syn.answer:
+        # print(query_syn)
+        # print(query_nat)
+        syn_result, syn_whole_answer = get_answer(query_syn.prompt, model)
+        if syn_result == query_syn.answer:
             correct_syn += 1
 
-        result = get_answer(query_nat.prompt, model)
-        if result == query_nat.answer:
+        nat_result, nat_whole_answer = get_answer(query_nat.prompt, model)
+        if nat_result == query_nat.answer:
             correct_nat += 1
 
+        # Log All
+        syn_log = LogInfo(
+            prompt=query_syn.prompt,
+            label=query_syn.answer,
+            response=syn_result,
+            full_response=syn_whole_answer,
+            is_correct=syn_result == query_syn.answer
+        )
+
+        nat_log = LogInfo(
+            prompt=query_nat.prompt,
+            label=query_nat.answer,
+            response=nat_result,
+            full_response=nat_whole_answer,
+            is_correct=nat_result == query_nat.answer
+        )
+
+        g_syn_logs.append(syn_log)
+        g_nat_logs.append(nat_log)
 
     print(f"Correct Natural: {correct_nat}/{len(samples)}")
     print(f"Correct Syntax: {correct_syn}/{len(samples)}")
+
+    return correct_nat/len(samples), correct_syn/len(samples)
 
 def substitute_objects(string: str, prefix="obj-"):
     for i in g_object_map:
@@ -225,7 +322,7 @@ def get_answer(prompt: str, model: str):
     if start == -1 or end == -1:
         return ""
 
-    return answer[start+8:end]
+    return answer[start+8:end], answer
 
 if __name__ == "__main__":
     main()
