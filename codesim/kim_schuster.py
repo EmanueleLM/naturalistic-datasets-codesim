@@ -1059,7 +1059,7 @@ def main(args):
 
         i = 1
         for split, size in splits_size.items():
-            with open(f"data/boxes/batch-{i}.json", "w") as f:
+            with open(f"data/boxes/num_boxes-{initial_world_state.num_boxes}-max_items_per_box-{initial_world_state.max_items_per_box}-batch-{i}.json", "w") as f:
                 json.dump(out_dirs[split], f, indent=4, default=pydantic_encoder)
             i+=1
             assert count_num[split] == size, (split, count_num[split], size)
