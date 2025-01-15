@@ -1,373 +1,9 @@
 [
     {
-        "syn": "Here's a list of numbers. [49, 28, 19, 18, 5]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 49, 'obj-1': 28, 'obj-2': 19, 'obj-3': 18, 'obj-4': 5}.\n\n",
-        "label_syn": {
-            "position": 4,
-            "label": 5,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 4,
-            "label": "obj-4",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [16, 39, 26, 14, 48]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 16, 'obj-1': 39, 'obj-2': 26, 'obj-3': 14, 'obj-4': 48}.\n\n",
-        "label_syn": {
-            "position": 1,
-            "label": 39,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 1,
-            "label": "obj-1",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [9, 16, 13, 12, 43]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 9, 'obj-1': 16, 'obj-2': 13, 'obj-3': 12, 'obj-4': 43}.\n\n",
-        "label_syn": {
-            "position": 1,
-            "label": 16,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 1,
-            "label": "obj-1",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [26, 9, 28, 46, 32]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 26, 'obj-1': 9, 'obj-2': 28, 'obj-3': 46, 'obj-4': 32}.\n\n",
-        "label_syn": {
-            "position": 4,
-            "label": 9,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 4,
-            "label": "obj-1",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [44, 36, 32, 48, 39]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 44, 'obj-1': 36, 'obj-2': 32, 'obj-3': 48, 'obj-4': 39}.\n\n",
-        "label_syn": {
-            "position": 2,
-            "label": 39,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 2,
-            "label": "obj-4",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [6, 8, 32, 25, 26]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 6, 'obj-1': 8, 'obj-2': 32, 'obj-3': 25, 'obj-4': 26}.\n\n",
+        "syn": "Here's a list of numbers. x = [22, 20, 1, 34, 15]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 22, 'obj-1': 20, 'obj-2': 1, 'obj-3': 34, 'obj-4': 15}.\n\n",
         "label_syn": {
             "position": 0,
-            "label": 32,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 0,
-            "label": "obj-2",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [46, 20, 2, 3, 40]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 46, 'obj-1': 20, 'obj-2': 2, 'obj-3': 3, 'obj-4': 40}.\n\n",
-        "label_syn": {
-            "position": 2,
-            "label": 20,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 2,
-            "label": "obj-1",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [13, 14, 39, 35, 43]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 13, 'obj-1': 14, 'obj-2': 39, 'obj-3': 35, 'obj-4': 43}.\n\n",
-        "label_syn": {
-            "position": 1,
-            "label": 39,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 1,
-            "label": "obj-2",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [28, 6, 22, 8, 1]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 28, 'obj-1': 6, 'obj-2': 22, 'obj-3': 8, 'obj-4': 1}.\n\n",
-        "label_syn": {
-            "position": 4,
-            "label": 1,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 4,
-            "label": "obj-4",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [38, 39, 4, 31, 13]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 38, 'obj-1': 39, 'obj-2': 4, 'obj-3': 31, 'obj-4': 13}.\n\n",
-        "label_syn": {
-            "position": 1,
-            "label": 38,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 1,
-            "label": "obj-0",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [30, 32, 18, 22, 20]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 30, 'obj-1': 32, 'obj-2': 18, 'obj-3': 22, 'obj-4': 20}.\n\n",
-        "label_syn": {
-            "position": 4,
-            "label": 18,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 4,
-            "label": "obj-2",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [7, 30, 24, 47, 0]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 7, 'obj-1': 30, 'obj-2': 24, 'obj-3': 47, 'obj-4': 0}.\n\n",
-        "label_syn": {
-            "position": 4,
-            "label": 0,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 4,
-            "label": "obj-4",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [25, 7, 38, 48, 23]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 25, 'obj-1': 7, 'obj-2': 38, 'obj-3': 48, 'obj-4': 23}.\n\n",
-        "label_syn": {
-            "position": 2,
-            "label": 25,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 2,
-            "label": "obj-0",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [31, 27, 42, 24, 4]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 31, 'obj-1': 27, 'obj-2': 42, 'obj-3': 24, 'obj-4': 4}.\n\n",
-        "label_syn": {
-            "position": 0,
-            "label": 42,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 0,
-            "label": "obj-2",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [44, 36, 1, 20, 42]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 44, 'obj-1': 36, 'obj-2': 1, 'obj-3': 20, 'obj-4': 42}.\n\n",
-        "label_syn": {
-            "position": 4,
-            "label": 1,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 4,
-            "label": "obj-2",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [39, 46, 22, 27, 10]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 39, 'obj-1': 46, 'obj-2': 22, 'obj-3': 27, 'obj-4': 10}.\n\n",
-        "label_syn": {
-            "position": 4,
-            "label": 10,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 4,
-            "label": "obj-4",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [16, 26, 19, 2, 45]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 16, 'obj-1': 26, 'obj-2': 19, 'obj-3': 2, 'obj-4': 45}.\n\n",
-        "label_syn": {
-            "position": 4,
-            "label": 2,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 4,
-            "label": "obj-3",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [40, 6, 22, 36, 1]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 40, 'obj-1': 6, 'obj-2': 22, 'obj-3': 36, 'obj-4': 1}.\n\n",
-        "label_syn": {
-            "position": 2,
-            "label": 22,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 2,
-            "label": "obj-2",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [38, 13, 42, 26, 1]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 38, 'obj-1': 13, 'obj-2': 42, 'obj-3': 26, 'obj-4': 1}.\n\n",
-        "label_syn": {
-            "position": 4,
-            "label": 1,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 4,
-            "label": "obj-4",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [15, 37, 47, 43, 45]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 15, 'obj-1': 37, 'obj-2': 47, 'obj-3': 43, 'obj-4': 45}.\n\n",
-        "label_syn": {
-            "position": 0,
-            "label": 47,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 0,
-            "label": "obj-2",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [23, 18, 1, 40, 16]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 23, 'obj-1': 18, 'obj-2': 1, 'obj-3': 40, 'obj-4': 16}.\n\n",
-        "label_syn": {
-            "position": 3,
-            "label": 16,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 3,
-            "label": "obj-4",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [24, 31, 18, 8, 14]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 24, 'obj-1': 31, 'obj-2': 18, 'obj-3': 8, 'obj-4': 14}.\n\n",
-        "label_syn": {
-            "position": 3,
-            "label": 14,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 3,
-            "label": "obj-4",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [31, 16, 38, 24, 14]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 31, 'obj-1': 16, 'obj-2': 38, 'obj-3': 24, 'obj-4': 14}.\n\n",
-        "label_syn": {
-            "position": 1,
-            "label": 31,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 1,
-            "label": "obj-0",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [14, 35, 37, 3, 7]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 14, 'obj-1': 35, 'obj-2': 37, 'obj-3': 3, 'obj-4': 7}.\n\n",
-        "label_syn": {
-            "position": 4,
-            "label": 3,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 4,
-            "label": "obj-3",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [49, 12, 42, 47, 3]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 49, 'obj-1': 12, 'obj-2': 42, 'obj-3': 47, 'obj-4': 3}.\n\n",
-        "label_syn": {
-            "position": 2,
-            "label": 42,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 2,
-            "label": "obj-2",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [33, 15, 7, 41, 48]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 33, 'obj-1': 15, 'obj-2': 7, 'obj-3': 41, 'obj-4': 48}.\n\n",
-        "label_syn": {
-            "position": 0,
-            "label": 48,
-            "ascending": false
-        },
-        "label_nat": {
-            "position": 0,
-            "label": "obj-4",
-            "ascending": false
-        }
-    },
-    {
-        "syn": "Here's a list of numbers. [22, 10, 21, 34, 45]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 22, 'obj-1': 10, 'obj-2': 21, 'obj-3': 34, 'obj-4': 45}.\n\n",
-        "label_syn": {
-            "position": 1,
             "label": 34,
             "ascending": false
         },
@@ -378,44 +14,408 @@
         }
     },
     {
-        "syn": "Here's a list of numbers. [28, 13, 23, 24, 30]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 28, 'obj-1': 13, 'obj-2': 23, 'obj-3': 24, 'obj-4': 30}.\n\n",
+        "syn": "Here's a list of numbers. x = [36, 48, 14, 30, 34]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 36, 'obj-1': 48, 'obj-2': 14, 'obj-3': 30, 'obj-4': 34}.\n\n",
         "label_syn": {
-            "position": 3,
-            "label": 23,
+            "position": 0,
+            "label": 48,
             "ascending": false
         },
         "label_nat": {
-            "position": 3,
+            "position": 1,
+            "label": "obj-1",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [48, 43, 39, 2, 23]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 48, 'obj-1': 43, 'obj-2': 39, 'obj-3': 2, 'obj-4': 23}.\n\n",
+        "label_syn": {
+            "position": 0,
+            "label": 48,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 1,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [17, 45, 38, 25, 37]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 17, 'obj-1': 45, 'obj-2': 38, 'obj-3': 25, 'obj-4': 37}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 38,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 2,
             "label": "obj-2",
             "ascending": false
         }
     },
     {
-        "syn": "Here's a list of numbers. [13, 42, 40, 46, 37]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 13, 'obj-1': 42, 'obj-2': 40, 'obj-3': 46, 'obj-4': 37}.\n\n",
+        "syn": "Here's a list of numbers. x = [5, 13, 26, 27, 11]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 5, 'obj-1': 13, 'obj-2': 26, 'obj-3': 27, 'obj-4': 11}.\n\n",
         "label_syn": {
-            "position": 0,
-            "label": 46,
+            "position": 3,
+            "label": 11,
             "ascending": false
         },
         "label_nat": {
+            "position": 4,
+            "label": "obj-4",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [29, 4, 22, 6, 10]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 29, 'obj-1': 4, 'obj-2': 22, 'obj-3': 6, 'obj-4': 10}.\n\n",
+        "label_syn": {
             "position": 0,
+            "label": 29,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 1,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [36, 14, 46, 5, 9]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 36, 'obj-1': 14, 'obj-2': 46, 'obj-3': 5, 'obj-4': 9}.\n\n",
+        "label_syn": {
+            "position": 3,
+            "label": 9,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 4,
+            "label": "obj-4",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [9, 0, 40, 1, 25]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 9, 'obj-1': 0, 'obj-2': 40, 'obj-3': 1, 'obj-4': 25}.\n\n",
+        "label_syn": {
+            "position": 4,
+            "label": 0,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 5,
+            "label": "obj-1",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [31, 19, 0, 6, 43]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 31, 'obj-1': 19, 'obj-2': 0, 'obj-3': 6, 'obj-4': 43}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 31,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 2,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [42, 14, 34, 35, 18]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 42, 'obj-1': 14, 'obj-2': 34, 'obj-3': 35, 'obj-4': 18}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 35,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 2,
             "label": "obj-3",
             "ascending": false
         }
     },
     {
-        "syn": "Here's a list of numbers. [6, 19, 11, 16, 4]\n\nSimulate the following algorithm with the list of numbers as input.\n:\ndef f(v):\nfor n in range(len(v) - 1, 0, -1):\n    condition = False  \n    for i in range(n):\n        if v[i] > v[i + 1]:\n            v[i], v[i + 1] = v[i + 1], v[i]\n            condition = True\n    if not condition:\n        break\n",
-        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 6, 'obj-1': 19, 'obj-2': 11, 'obj-3': 16, 'obj-4': 4}.\n\n",
+        "syn": "Here's a list of numbers. x = [6, 14, 48, 41, 38]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 6, 'obj-1': 14, 'obj-2': 48, 'obj-3': 41, 'obj-4': 38}.\n\n",
+        "label_syn": {
+            "position": 3,
+            "label": 14,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 4,
+            "label": "obj-1",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [7, 16, 1, 38, 37]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 7, 'obj-1': 16, 'obj-2': 1, 'obj-3': 38, 'obj-4': 37}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 37,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 2,
+            "label": "obj-4",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [44, 6, 5, 34, 8]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 44, 'obj-1': 6, 'obj-2': 5, 'obj-3': 34, 'obj-4': 8}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 34,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 2,
+            "label": "obj-3",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [28, 20, 36, 42, 29]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 28, 'obj-1': 20, 'obj-2': 36, 'obj-3': 42, 'obj-4': 29}.\n\n",
+        "label_syn": {
+            "position": 0,
+            "label": 42,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 1,
+            "label": "obj-3",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [31, 48, 39, 19, 16]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 31, 'obj-1': 48, 'obj-2': 39, 'obj-3': 19, 'obj-4': 16}.\n\n",
         "label_syn": {
             "position": 2,
-            "label": 11,
+            "label": 31,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [8, 10, 42, 39, 19]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 8, 'obj-1': 10, 'obj-2': 42, 'obj-3': 39, 'obj-4': 19}.\n\n",
+        "label_syn": {
+            "position": 0,
+            "label": 42,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 1,
+            "label": "obj-2",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [43, 45, 46, 26, 29]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 43, 'obj-1': 45, 'obj-2': 46, 'obj-3': 26, 'obj-4': 29}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 43,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [45, 35, 39, 15, 26]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 45, 'obj-1': 35, 'obj-2': 39, 'obj-3': 15, 'obj-4': 26}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 35,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-1",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [34, 6, 44, 28, 16]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 34, 'obj-1': 6, 'obj-2': 44, 'obj-3': 28, 'obj-4': 16}.\n\n",
+        "label_syn": {
+            "position": 4,
+            "label": 6,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 5,
+            "label": "obj-1",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [25, 19, 47, 3, 31]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 25, 'obj-1': 19, 'obj-2': 47, 'obj-3': 3, 'obj-4': 31}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 31,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 2,
+            "label": "obj-4",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [7, 18, 39, 43, 3]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 7, 'obj-1': 18, 'obj-2': 39, 'obj-3': 43, 'obj-4': 3}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 39,
             "ascending": false
         },
         "label_nat": {
             "position": 2,
             "label": "obj-2",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [9, 30, 15, 0, 47]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 9, 'obj-1': 30, 'obj-2': 15, 'obj-3': 0, 'obj-4': 47}.\n\n",
+        "label_syn": {
+            "position": 0,
+            "label": 47,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 1,
+            "label": "obj-4",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [38, 15, 21, 26, 10]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 38, 'obj-1': 15, 'obj-2': 21, 'obj-3': 26, 'obj-4': 10}.\n\n",
+        "label_syn": {
+            "position": 4,
+            "label": 10,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 5,
+            "label": "obj-4",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [2, 3, 46, 32, 27]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 2, 'obj-1': 3, 'obj-2': 46, 'obj-3': 32, 'obj-4': 27}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 27,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-4",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [1, 30, 29, 14, 11]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 1, 'obj-1': 30, 'obj-2': 29, 'obj-3': 14, 'obj-4': 11}.\n\n",
+        "label_syn": {
+            "position": 0,
+            "label": 30,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 1,
+            "label": "obj-1",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [37, 1, 38, 31, 22]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 37, 'obj-1': 1, 'obj-2': 38, 'obj-3': 31, 'obj-4': 22}.\n\n",
+        "label_syn": {
+            "position": 0,
+            "label": 38,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 1,
+            "label": "obj-2",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [19, 8, 11, 23, 34]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 19, 'obj-1': 8, 'obj-2': 11, 'obj-3': 23, 'obj-4': 34}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 19,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [18, 48, 13, 47, 31]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 18, 'obj-1': 48, 'obj-2': 13, 'obj-3': 47, 'obj-4': 31}.\n\n",
+        "label_syn": {
+            "position": 3,
+            "label": 18,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 4,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [6, 30, 22, 38, 35]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 6, 'obj-1': 30, 'obj-2': 22, 'obj-3': 38, 'obj-4': 35}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 30,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-1",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [25, 7, 32, 20, 35]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 5 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4'].\n\nThis is the weight of each object in Kg: {'obj-0': 25, 'obj-1': 7, 'obj-2': 32, 'obj-3': 20, 'obj-4': 35}.\n\n",
+        "label_syn": {
+            "position": 3,
+            "label": 20,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 4,
+            "label": "obj-3",
             "ascending": false
         }
     }

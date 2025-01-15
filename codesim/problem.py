@@ -390,6 +390,15 @@ class Sort(Problem):
         self.n_vars = n_vars
         self.ascending = ascending
         self.basepath = "./data/Sort/"
+        self.algorithm = """def f(v):
+    for n in range(len(v) - 1, 0, -1):
+        condition = False  
+        for i in range(n):
+            if v[i] {condition} v[i + 1]:
+                v[i], v[i + 1] = v[i + 1], v[i]
+                condition = True
+        if not condition:
+            break"""
         
     def reset(self, n_vars:int=None, ascending:bool=None) -> None:
         super().reset()
@@ -413,19 +422,20 @@ class Sort(Problem):
         prompt = f"""One has the following {self.n_vars} objects: {list(var2val)}.\n
 This is the weight of each object in Kg: {var2val}.\n
 """
-        program = f"""Here's a list of numbers. {list(var2val.values())}\n
-Sort them in {('ascending' if self.ascending else 'descending')} with the following algorithm:
-@algorithm@
+        program = f"""Here's a list of numbers. x = {list(var2val.values())}\n
+Simulate the following algorithm with the list of numbers as input:\n
+{self.algorithm.format(condition='>' if self.ascending else '<')}
 """
         k = random.randint(0, self.n_vars-1)
         weights.sort(reverse=not(self.ascending))
         gt_syn = {'position': k,
                 'label': weights[k],
                 'ascending': self.ascending}
-        gt_nat = {'position': k, 
-                  'label': val2var[gt_syn['label']],
+        gt_nat = {'position': k+1, 
+                  'label': val2var[weights[k]],
                   'ascending': self.ascending}
                   
         sample = Sample(syn=program, nat=prompt, label_syn=gt_syn, label_nat=gt_nat)
         return sample
+        
         

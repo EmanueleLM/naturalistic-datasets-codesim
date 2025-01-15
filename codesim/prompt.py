@@ -79,6 +79,6 @@ Think step by step and provide the numerical answer between <answer></answer> ta
 For example, reply with <answer>1</answer> if the answer is 1.
 """
     
-    questions_syn = ["What is the value of {k}-th most {heavy} object?"]
+    questions_syn = ["When the function terminates, what is the value of the x[{k}]?"]
     questions_nat = ["What is the value of {k}-th {biggest_smallest} object?"]
     
