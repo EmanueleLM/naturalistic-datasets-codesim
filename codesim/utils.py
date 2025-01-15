@@ -279,6 +279,25 @@ def querygpt(prompt, jdata):
                                                 )
     return completion.choices[0].message.content
 
+def queryllamasambanova(prompt, jdata):
+    
+    model_name = jdata['name']
+    api_key = jdata['key']
+
+    client = openai.OpenAI(
+        api_key=api_key,
+        base_url="https://api.sambanova.ai/v1",
+    )
+
+    response = client.chat.completions.create(
+        model=model_name,
+        messages=[{"role":"system","content":"You are a helpful assistant"},{"role":"user","content":prompt}],
+        temperature =  0.1,
+        top_p = 0.1
+    )
+
+    return response.choices[0].message.content
+
 class CostClass(BaseModel):
     prompt_tokens: int
     completion_tokens: int
