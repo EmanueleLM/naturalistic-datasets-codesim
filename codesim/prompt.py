@@ -12,8 +12,8 @@ class Boxes:
     user_cot = """{prefix}
 {problem}
 {question}
-Think step by step and provide the answer between <answer></answer> tags.
-For example, reply with <answer>1, 3, something</answer> if the answer is 1, 3, something.
+Think step by step and provide the answer in a list and between <answer></answer> tags.
+For example, reply with <answer>{example_answer}</answer>.
 """
     
     questions_syn = ["What is the content of {varname} at the end of the computation?"]
