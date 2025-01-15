@@ -1,0 +1,302 @@
+[
+    {
+        "syn": "a0=2; a1=-5; a2=8; a3=6; a4=0; a5=-4\na5 += a4\na5 -= a3\na4 -= a5\na4 += a4\na5 -= a4\na5 += a5\na3 += a4\na3 -= a4\na3 += a4\na3 -= a5\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=1; a1=10; a2=9; a3=-10; a4=0; a5=4.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na4 borrows all the money a5 has.\na3 loans all his money to a5.\na5 loans all his money to a4.\na4 borrows all the money a4 has.\na4 loans all his money to a5.\na5 borrows all the money a5 has.\na4 borrows all the money a3 has.\na4 loans all his money to a3.\na4 borrows all the money a3 has.\na5 loans all his money to a3.\n",
+        "label_syn": {
+            "a5": -60
+        },
+        "label_nat": {
+            "a5": -60
+        }
+    },
+    {
+        "syn": "a0=-5; a1=0; a2=-2; a3=-7; a4=4; a5=6\na3 -= a5\na4 += a4\na5 -= a3\na5 -= a3\na5 += a5\na4 -= a5\na5 += a5\na5 -= a4\na3 += a3\na4 += a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=2; a1=-1; a2=-7; a3=7; a4=-2; a5=3.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na5 loans all his money to a3.\na4 borrows all the money a4 has.\na3 loans all his money to a5.\na3 loans all his money to a5.\na5 borrows all the money a5 has.\na5 loans all his money to a4.\na5 borrows all the money a5 has.\na4 loans all his money to a5.\na3 borrows all the money a3 has.\na3 borrows all the money a4 has.\n",
+        "label_syn": {
+            "a5": 184
+        },
+        "label_nat": {
+            "a5": 184
+        }
+    },
+    {
+        "syn": "a0=7; a1=-7; a2=4; a3=3; a4=5; a5=-1\na3 += a5\na4 -= a3\na4 += a5\na4 -= a3\na5 += a5\na3 += a4\na5 -= a4\na4 -= a3\na3 += a3\na3 += a5\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=3; a1=-1; a2=-1; a3=8; a4=-7; a5=-5.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na5 borrows all the money a3 has.\na3 loans all his money to a4.\na5 borrows all the money a4 has.\na3 loans all his money to a4.\na5 borrows all the money a5 has.\na4 borrows all the money a3 has.\na4 loans all his money to a5.\na3 loans all his money to a4.\na3 borrows all the money a3 has.\na5 borrows all the money a3 has.\n",
+        "label_syn": {
+            "a5": -2
+        },
+        "label_nat": {
+            "a5": -2
+        }
+    },
+    {
+        "syn": "a0=3; a1=6; a2=9; a3=-9; a4=5; a5=-9\na4 += a4\na5 += a3\na3 += a5\na4 += a5\na4 += a3\na5 -= a4\na3 -= a5\na5 += a5\na5 -= a3\na5 -= a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=-8; a1=-9; a2=-6; a3=6; a4=5; a5=-7.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na4 borrows all the money a4 has.\na3 borrows all the money a5 has.\na5 borrows all the money a3 has.\na5 borrows all the money a4 has.\na3 borrows all the money a4 has.\na4 loans all his money to a5.\na5 loans all his money to a3.\na5 borrows all the money a5 has.\na3 loans all his money to a5.\na3 loans all his money to a5.\n",
+        "label_syn": {
+            "a5": 122
+        },
+        "label_nat": {
+            "a5": 122
+        }
+    },
+    {
+        "syn": "a0=1; a1=6; a2=-4; a3=-9; a4=-8; a5=-6\na4 += a3\na5 -= a4\na5 += a3\na5 += a3\na4 -= a5\na3 -= a5\na5 += a5\na5 += a5\na5 -= a4\na5 -= a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=-6; a1=2; a2=-2; a3=9; a4=-5; a5=0.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na3 borrows all the money a4 has.\na4 loans all his money to a5.\na3 borrows all the money a5 has.\na3 borrows all the money a5 has.\na5 loans all his money to a4.\na5 loans all his money to a3.\na5 borrows all the money a5 has.\na5 borrows all the money a5 has.\na4 loans all his money to a5.\na3 loans all his money to a5.\n",
+        "label_syn": {
+            "a5": -16
+        },
+        "label_nat": {
+            "a5": -16
+        }
+    },
+    {
+        "syn": "a0=3; a1=4; a2=-10; a3=-1; a4=9; a5=-6\na3 += a5\na5 -= a3\na3 -= a4\na4 += a4\na5 -= a4\na5 -= a4\na4 -= a5\na3 -= a5\na5 -= a3\na5 -= a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=-5; a1=7; a2=4; a3=6; a4=6; a5=8.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na5 borrows all the money a3 has.\na3 loans all his money to a5.\na4 loans all his money to a3.\na4 borrows all the money a4 has.\na4 loans all his money to a5.\na4 loans all his money to a5.\na5 loans all his money to a4.\na5 loans all his money to a3.\na3 loans all his money to a5.\na3 loans all his money to a5.\n",
+        "label_syn": {
+            "a5": -73
+        },
+        "label_nat": {
+            "a5": -73
+        }
+    },
+    {
+        "syn": "a0=-4; a1=5; a2=4; a3=10; a4=-8; a5=-10\na4 -= a5\na3 -= a5\na5 += a5\na3 += a3\na5 -= a3\na5 -= a4\na5 += a3\na5 -= a3\na3 -= a4\na3 -= a5\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=1; a1=9; a2=3; a3=9; a4=-3; a5=5.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na5 loans all his money to a4.\na5 loans all his money to a3.\na5 borrows all the money a5 has.\na3 borrows all the money a3 has.\na3 loans all his money to a5.\na4 loans all his money to a5.\na3 borrows all the money a5 has.\na3 loans all his money to a5.\na4 loans all his money to a3.\na5 loans all his money to a3.\n",
+        "label_syn": {
+            "a5": -62
+        },
+        "label_nat": {
+            "a5": -62
+        }
+    },
+    {
+        "syn": "a0=-2; a1=8; a2=4; a3=7; a4=-1; a5=-10\na4 -= a3\na5 -= a3\na5 -= a4\na4 += a5\na3 -= a5\na3 -= a4\na5 += a5\na4 -= a3\na3 -= a4\na3 -= a4\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=7; a1=0; a2=-10; a3=-10; a4=-8; a5=10.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na3 loans all his money to a4.\na3 loans all his money to a5.\na4 loans all his money to a5.\na5 borrows all the money a4 has.\na5 loans all his money to a3.\na4 loans all his money to a3.\na5 borrows all the money a5 has.\na3 loans all his money to a4.\na4 loans all his money to a3.\na4 loans all his money to a3.\n",
+        "label_syn": {
+            "a5": -18
+        },
+        "label_nat": {
+            "a5": -18
+        }
+    },
+    {
+        "syn": "a0=2; a1=2; a2=4; a3=-2; a4=0; a5=-10\na3 += a5\na5 -= a4\na4 += a4\na3 -= a4\na5 += a4\na5 += a4\na5 += a5\na3 += a3\na4 += a5\na3 += a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=1; a1=-8; a2=-9; a3=7; a4=-3; a5=8.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na5 borrows all the money a3 has.\na4 loans all his money to a5.\na4 borrows all the money a4 has.\na4 loans all his money to a3.\na4 borrows all the money a5 has.\na4 borrows all the money a5 has.\na5 borrows all the money a5 has.\na3 borrows all the money a3 has.\na5 borrows all the money a4 has.\na3 borrows all the money a3 has.\n",
+        "label_syn": {
+            "a5": -20
+        },
+        "label_nat": {
+            "a5": -20
+        }
+    },
+    {
+        "syn": "a0=-4; a1=0; a2=-4; a3=4; a4=9; a5=5\na3 += a3\na5 += a4\na5 += a3\na4 -= a3\na5 -= a3\na5 += a5\na3 += a5\na5 -= a3\na4 -= a3\na3 -= a5\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=-9; a1=-3; a2=-7; a3=-5; a4=2; a5=3.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na3 borrows all the money a3 has.\na4 borrows all the money a5 has.\na3 borrows all the money a5 has.\na3 loans all his money to a4.\na3 loans all his money to a5.\na5 borrows all the money a5 has.\na5 borrows all the money a3 has.\na3 loans all his money to a5.\na3 loans all his money to a4.\na5 loans all his money to a3.\n",
+        "label_syn": {
+            "a5": -8
+        },
+        "label_nat": {
+            "a5": -8
+        }
+    },
+    {
+        "syn": "a0=-4; a1=-2; a2=8; a3=-2; a4=8; a5=1\na4 += a5\na5 -= a4\na5 += a4\na5 += a4\na4 -= a3\na4 += a4\na5 -= a3\na5 += a5\na3 += a5\na4 += a4\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=4; a1=5; a2=-9; a3=2; a4=1; a5=-9.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na5 borrows all the money a4 has.\na4 loans all his money to a5.\na4 borrows all the money a5 has.\na4 borrows all the money a5 has.\na3 loans all his money to a4.\na4 borrows all the money a4 has.\na3 loans all his money to a5.\na5 borrows all the money a5 has.\na5 borrows all the money a3 has.\na4 borrows all the money a4 has.\n",
+        "label_syn": {
+            "a5": 24
+        },
+        "label_nat": {
+            "a5": 24
+        }
+    },
+    {
+        "syn": "a0=3; a1=3; a2=1; a3=8; a4=-1; a5=-7\na4 -= a5\na4 -= a5\na4 -= a5\na3 += a4\na5 += a5\na3 -= a4\na4 -= a3\na5 += a5\na4 -= a3\na5 += a5\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=10; a1=5; a2=-6; a3=4; a4=-7; a5=5.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na5 loans all his money to a4.\na5 loans all his money to a4.\na5 loans all his money to a4.\na4 borrows all the money a3 has.\na5 borrows all the money a5 has.\na4 loans all his money to a3.\na3 loans all his money to a4.\na5 borrows all the money a5 has.\na3 loans all his money to a4.\na5 borrows all the money a5 has.\n",
+        "label_syn": {
+            "a5": -56
+        },
+        "label_nat": {
+            "a5": -56
+        }
+    },
+    {
+        "syn": "a0=0; a1=0; a2=-10; a3=-8; a4=2; a5=6\na5 += a4\na4 += a3\na4 += a4\na4 += a4\na5 += a4\na5 += a5\na3 -= a4\na5 += a5\na3 += a5\na4 += a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=4; a1=-8; a2=-9; a3=-4; a4=-10; a5=7.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na4 borrows all the money a5 has.\na3 borrows all the money a4 has.\na4 borrows all the money a4 has.\na4 borrows all the money a4 has.\na4 borrows all the money a5 has.\na5 borrows all the money a5 has.\na4 loans all his money to a3.\na5 borrows all the money a5 has.\na5 borrows all the money a3 has.\na3 borrows all the money a4 has.\n",
+        "label_syn": {
+            "a5": -64
+        },
+        "label_nat": {
+            "a5": -64
+        }
+    },
+    {
+        "syn": "a0=1; a1=2; a2=0; a3=6; a4=1; a5=1\na4 += a5\na3 += a4\na3 += a3\na5 += a3\na5 += a3\na5 -= a4\na4 -= a5\na4 += a3\na5 -= a4\na3 += a4\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=-4; a1=4; a2=6; a3=-6; a4=-2; a5=-9.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na5 borrows all the money a4 has.\na4 borrows all the money a3 has.\na3 borrows all the money a3 has.\na3 borrows all the money a5 has.\na3 borrows all the money a5 has.\na4 loans all his money to a5.\na5 loans all his money to a4.\na3 borrows all the money a4 has.\na4 loans all his money to a5.\na4 borrows all the money a3 has.\n",
+        "label_syn": {
+            "a5": 44
+        },
+        "label_nat": {
+            "a5": 44
+        }
+    },
+    {
+        "syn": "a0=2; a1=8; a2=-7; a3=4; a4=-9; a5=-8\na4 -= a3\na4 -= a5\na3 -= a5\na3 += a3\na3 -= a4\na5 += a3\na5 += a4\na5 += a3\na4 += a5\na5 += a5\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=6; a1=5; a2=4; a3=-1; a4=6; a5=8.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na3 loans all his money to a4.\na5 loans all his money to a4.\na5 loans all his money to a3.\na3 borrows all the money a3 has.\na4 loans all his money to a3.\na3 borrows all the money a5 has.\na4 borrows all the money a5 has.\na3 borrows all the money a5 has.\na5 borrows all the money a4 has.\na5 borrows all the money a5 has.\n",
+        "label_syn": {
+            "a5": 90
+        },
+        "label_nat": {
+            "a5": 90
+        }
+    },
+    {
+        "syn": "a0=-8; a1=10; a2=10; a3=5; a4=4; a5=2\na3 += a5\na4 += a5\na4 += a3\na5 -= a4\na3 -= a5\na3 -= a4\na3 += a3\na5 += a4\na5 += a5\na3 += a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=-5; a1=8; a2=-2; a3=-2; a4=-10; a5=3.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na5 borrows all the money a3 has.\na5 borrows all the money a4 has.\na3 borrows all the money a4 has.\na4 loans all his money to a5.\na5 loans all his money to a3.\na4 loans all his money to a3.\na3 borrows all the money a3 has.\na4 borrows all the money a5 has.\na5 borrows all the money a5 has.\na3 borrows all the money a3 has.\n",
+        "label_syn": {
+            "a5": 4
+        },
+        "label_nat": {
+            "a5": 4
+        }
+    },
+    {
+        "syn": "a0=-6; a1=8; a2=1; a3=-1; a4=-10; a5=3\na3 -= a4\na5 += a5\na5 += a5\na5 -= a4\na3 += a5\na5 -= a4\na5 += a4\na3 += a4\na4 += a5\na3 += a5\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=-10; a1=5; a2=-4; a3=-7; a4=-6; a5=3.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na4 loans all his money to a3.\na5 borrows all the money a5 has.\na5 borrows all the money a5 has.\na4 loans all his money to a5.\na5 borrows all the money a3 has.\na4 loans all his money to a5.\na4 borrows all the money a5 has.\na4 borrows all the money a3 has.\na5 borrows all the money a4 has.\na5 borrows all the money a3 has.\n",
+        "label_syn": {
+            "a5": 22
+        },
+        "label_nat": {
+            "a5": 22
+        }
+    },
+    {
+        "syn": "a0=8; a1=3; a2=3; a3=-8; a4=-7; a5=7\na4 -= a5\na5 -= a4\na4 += a3\na5 -= a3\na5 += a3\na3 -= a4\na5 -= a3\na4 -= a5\na5 += a4\na4 -= a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=10; a1=0; a2=5; a3=3; a4=-4; a5=-7.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na5 loans all his money to a4.\na4 loans all his money to a5.\na3 borrows all the money a4 has.\na3 loans all his money to a5.\na3 borrows all the money a5 has.\na4 loans all his money to a3.\na3 loans all his money to a5.\na5 loans all his money to a4.\na4 borrows all the money a5 has.\na3 loans all his money to a4.\n",
+        "label_syn": {
+            "a5": -22
+        },
+        "label_nat": {
+            "a5": -22
+        }
+    },
+    {
+        "syn": "a0=-7; a1=-3; a2=7; a3=8; a4=8; a5=-4\na4 -= a3\na5 += a3\na5 += a4\na3 += a3\na5 += a5\na5 += a4\na5 -= a3\na5 += a5\na5 += a4\na4 += a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=6; a1=10; a2=-5; a3=9; a4=-1; a5=10.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na3 loans all his money to a4.\na3 borrows all the money a5 has.\na4 borrows all the money a5 has.\na3 borrows all the money a3 has.\na5 borrows all the money a5 has.\na4 borrows all the money a5 has.\na3 loans all his money to a5.\na5 borrows all the money a5 has.\na4 borrows all the money a5 has.\na3 borrows all the money a4 has.\n",
+        "label_syn": {
+            "a5": -16
+        },
+        "label_nat": {
+            "a5": -16
+        }
+    },
+    {
+        "syn": "a0=4; a1=3; a2=7; a3=10; a4=-7; a5=5\na3 += a3\na3 -= a5\na5 -= a3\na5 += a3\na5 += a5\na3 += a4\na5 -= a3\na5 -= a3\na5 -= a4\na5 += a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=-8; a1=9; a2=10; a3=-7; a4=7; a5=-10.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na3 borrows all the money a3 has.\na5 loans all his money to a3.\na3 loans all his money to a5.\na3 borrows all the money a5 has.\na5 borrows all the money a5 has.\na4 borrows all the money a3 has.\na3 loans all his money to a5.\na3 loans all his money to a5.\na4 loans all his money to a5.\na3 borrows all the money a5 has.\n",
+        "label_syn": {
+            "a5": 9
+        },
+        "label_nat": {
+            "a5": 9
+        }
+    },
+    {
+        "syn": "a0=-10; a1=-9; a2=1; a3=5; a4=4; a5=2\na5 += a3\na5 += a3\na3 += a3\na5 -= a4\na3 -= a4\na5 -= a4\na5 -= a3\na4 -= a3\na4 -= a5\na3 -= a5\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=1; a1=10; a2=3; a3=9; a4=6; a5=-3.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na3 borrows all the money a5 has.\na3 borrows all the money a5 has.\na3 borrows all the money a3 has.\na4 loans all his money to a5.\na4 loans all his money to a3.\na4 loans all his money to a5.\na3 loans all his money to a5.\na3 loans all his money to a4.\na5 loans all his money to a4.\na5 loans all his money to a3.\n",
+        "label_syn": {
+            "a5": -2
+        },
+        "label_nat": {
+            "a5": -2
+        }
+    },
+    {
+        "syn": "a0=-7; a1=8; a2=4; a3=4; a4=2; a5=7\na3 += a4\na5 += a5\na5 -= a4\na4 -= a3\na5 -= a4\na5 += a3\na5 -= a3\na5 += a4\na5 += a4\na3 += a4\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=-1; a1=5; a2=10; a3=3; a4=0; a5=7.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na4 borrows all the money a3 has.\na5 borrows all the money a5 has.\na4 loans all his money to a5.\na3 loans all his money to a4.\na4 loans all his money to a5.\na3 borrows all the money a5 has.\na3 loans all his money to a5.\na4 borrows all the money a5 has.\na4 borrows all the money a5 has.\na4 borrows all the money a3 has.\n",
+        "label_syn": {
+            "a5": 8
+        },
+        "label_nat": {
+            "a5": 8
+        }
+    },
+    {
+        "syn": "a0=-9; a1=1; a2=-8; a3=-9; a4=3; a5=-2\na4 += a4\na5 -= a3\na3 -= a5\na5 += a3\na4 += a4\na5 -= a3\na3 += a3\na5 -= a3\na5 += a3\na3 += a4\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=2; a1=5; a2=2; a3=0; a4=-9; a5=2.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na4 borrows all the money a4 has.\na3 loans all his money to a5.\na5 loans all his money to a3.\na3 borrows all the money a5 has.\na4 borrows all the money a4 has.\na3 loans all his money to a5.\na3 borrows all the money a3 has.\na3 loans all his money to a5.\na3 borrows all the money a5 has.\na4 borrows all the money a3 has.\n",
+        "label_syn": {
+            "a5": 7
+        },
+        "label_nat": {
+            "a5": 7
+        }
+    },
+    {
+        "syn": "a0=-8; a1=-2; a2=-6; a3=3; a4=8; a5=10\na3 -= a4\na4 += a3\na4 -= a5\na5 -= a4\na5 += a3\na5 += a5\na4 += a4\na5 += a5\na5 -= a4\na4 += a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=0; a1=9; a2=3; a3=6; a4=10; a5=4.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na4 loans all his money to a3.\na3 borrows all the money a4 has.\na5 loans all his money to a4.\na4 loans all his money to a5.\na3 borrows all the money a5 has.\na5 borrows all the money a5 has.\na4 borrows all the money a4 has.\na5 borrows all the money a5 has.\na4 loans all his money to a5.\na3 borrows all the money a4 has.\n",
+        "label_syn": {
+            "a5": 62
+        },
+        "label_nat": {
+            "a5": 62
+        }
+    },
+    {
+        "syn": "a0=-10; a1=-10; a2=-1; a3=-3; a4=-1; a5=-9\na4 += a3\na4 -= a3\na5 += a4\na5 -= a3\na5 -= a3\na5 += a5\na4 += a5\na4 += a5\na5 -= a3\na5 += a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=9; a1=-6; a2=0; a3=-7; a4=8; a5=-4.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na3 borrows all the money a4 has.\na3 loans all his money to a4.\na4 borrows all the money a5 has.\na3 loans all his money to a5.\na3 loans all his money to a5.\na5 borrows all the money a5 has.\na5 borrows all the money a4 has.\na5 borrows all the money a4 has.\na3 loans all his money to a5.\na3 borrows all the money a5 has.\n",
+        "label_syn": {
+            "a5": -8
+        },
+        "label_nat": {
+            "a5": -8
+        }
+    },
+    {
+        "syn": "a0=2; a1=5; a2=8; a3=1; a4=7; a5=-5\na3 += a4\na5 -= a3\na5 -= a4\na4 += a5\na3 -= a4\na4 -= a3\na5 -= a4\na4 += a5\na5 += a4\na5 -= a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=8; a1=-10; a2=9; a3=-5; a4=7; a5=4.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na4 borrows all the money a3 has.\na3 loans all his money to a5.\na4 loans all his money to a5.\na5 borrows all the money a4 has.\na4 loans all his money to a3.\na3 loans all his money to a4.\na4 loans all his money to a5.\na5 borrows all the money a4 has.\na4 borrows all the money a5 has.\na3 loans all his money to a5.\n",
+        "label_syn": {
+            "a5": -27
+        },
+        "label_nat": {
+            "a5": -27
+        }
+    },
+    {
+        "syn": "a0=-9; a1=10; a2=-6; a3=3; a4=3; a5=-10\na5 -= a3\na3 += a4\na3 += a5\na5 += a5\na4 += a5\na5 -= a3\na4 += a4\na4 += a3\na3 -= a4\na4 -= a3\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=-7; a1=-9; a2=3; a3=-7; a4=-9; a5=-8.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na3 loans all his money to a5.\na4 borrows all the money a3 has.\na5 borrows all the money a3 has.\na5 borrows all the money a5 has.\na5 borrows all the money a4 has.\na3 loans all his money to a5.\na4 borrows all the money a4 has.\na3 borrows all the money a4 has.\na4 loans all his money to a3.\na3 loans all his money to a4.\n",
+        "label_syn": {
+            "a5": -19
+        },
+        "label_nat": {
+            "a5": -19
+        }
+    },
+    {
+        "syn": "a0=4; a1=-1; a2=10; a3=1; a4=-1; a5=-9\na5 += a4\na4 -= a3\na5 += a5\na5 += a5\na5 -= a3\na3 += a5\na3 -= a5\na3 -= a5\na4 -= a3\na4 -= a5\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=-10; a1=3; a2=6; a3=5; a4=-10; a5=-1.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na4 borrows all the money a5 has.\na3 loans all his money to a4.\na5 borrows all the money a5 has.\na5 borrows all the money a5 has.\na3 loans all his money to a5.\na5 borrows all the money a3 has.\na5 loans all his money to a3.\na5 loans all his money to a3.\na3 loans all his money to a4.\na5 loans all his money to a4.\n",
+        "label_syn": {
+            "a5": -41
+        },
+        "label_nat": {
+            "a5": -41
+        }
+    },
+    {
+        "syn": "a0=-3; a1=9; a2=-10; a3=2; a4=2; a5=8\na4 += a3\na5 -= a4\na3 -= a5\na3 += a3\na5 += a3\na3 -= a4\na5 -= a4\na5 += a4\na5 -= a4\na3 += a4\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=6; a1=10; a2=-3; a3=4; a4=2; a5=-6.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na3 borrows all the money a4 has.\na4 loans all his money to a5.\na5 loans all his money to a3.\na3 borrows all the money a3 has.\na3 borrows all the money a5 has.\na4 loans all his money to a3.\na4 loans all his money to a5.\na4 borrows all the money a5 has.\na4 loans all his money to a5.\na4 borrows all the money a3 has.\n",
+        "label_syn": {
+            "a5": -4
+        },
+        "label_nat": {
+            "a5": -4
+        }
+    },
+    {
+        "syn": "a0=-2; a1=6; a2=-4; a3=-9; a4=10; a5=-4\na4 -= a5\na5 += a3\na3 += a3\na5 += a3\na5 += a3\na5 -= a4\na5 -= a3\na3 -= a5\na3 += a5\na5 += a4\n",
+        "nat": "There are 6 agents, ['a0', 'a1', 'a2', 'a3', 'a4', 'a5']. \nEach of them has either a credit or a debit with the bank. \nA debit is a negative amount of money he has; a debit is a positive quantity of money he has.\nHere is the amount of money each agent has: a0=-8; a1=7; a2=7; a3=8; a4=-6; a5=-2.\nThe agents can exchange quantities of debit or credit among them. \nAn agent can borrow his whole debit from another agent. \nIn that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nAn agent can loan his whole debit to another agent. \nIn that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.\nHere's a list of interactions between the agents.\na5 loans all his money to a4.\na3 borrows all the money a5 has.\na3 borrows all the money a3 has.\na3 borrows all the money a5 has.\na3 borrows all the money a5 has.\na4 loans all his money to a5.\na3 loans all his money to a5.\na5 loans all his money to a3.\na5 borrows all the money a3 has.\na4 borrows all the money a5 has.\n",
+        "label_syn": {
+            "a5": -31
+        },
+        "label_nat": {
+            "a5": -31
+        }
+    }
+]
