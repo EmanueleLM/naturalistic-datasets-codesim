@@ -12,8 +12,8 @@ class Boxes:
     user_cot = """{prefix}
 {problem}
 {question}
-Think step by step and provide the answer between <answer></answer> tags.
-For example, reply with <answer>1, 3, something</answer> if the answer is 1, 3, something.
+Think step by step and provide the answer in a list and between <answer></answer> tags.
+For example, reply with <answer>{example_answer}</answer>.
 """
     
     questions_syn = ["What is the content of {varname} at the end of the computation?"]
@@ -79,6 +79,6 @@ Think step by step and provide the numerical answer between <answer></answer> ta
 For example, reply with <answer>1</answer> if the answer is 1.
 """
     
-    questions_syn = ["What is the value of {k}-th most {heavy} object?"]
+    questions_syn = ["When the function terminates, what is the value of the x[{k}]?"]
     questions_nat = ["What is the value of {k}-th {biggest_smallest} object?"]
     

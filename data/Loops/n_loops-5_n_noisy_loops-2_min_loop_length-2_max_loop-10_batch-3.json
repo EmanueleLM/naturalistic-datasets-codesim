@@ -1,47 +1,107 @@
 [
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(2):\n\tn_0 += 1\nfor _ in range(4):\n\tn_1 += 1\n\tfor _ in range(10):\n\t\tn_2 += 1\n\tfor _ in range(3):\n\t\tn_3 += 1\n\t\tfor _ in range(3):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 2 nobj-0 in obj-gen.\nThere are 4 obj-1 in obj-gen.\nThere are 10 nobj-2 in obj-1.\nThere are 3 obj-3 in obj-1.\nThere are 3 obj-4 in obj-3.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(9):\n\tn_0 += 1\nfor _ in range(6):\n\tn_1 += 1\nfor _ in range(4):\n\tn_2 += 1\n\tfor _ in range(8):\n\t\tn_3 += 1\n\t\tfor _ in range(9):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 9 nobj-0 in obj-gen.\nThere are 6 nobj-1 in obj-gen.\nThere are 4 obj-2 in obj-gen.\nThere are 8 obj-3 in obj-2.\nThere are 9 obj-4 in obj-3.\n",
         "label_syn": {
-            "n_4": 36
+            "n_4": 288
         },
         "label_nat": {
-            "obj-4 in obj-gen": 36
+            "obj-4 in obj-gen": 288
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\nfor _ in range(4):\n\tn_1 += 1\nfor _ in range(9):\n\tn_2 += 1\n\tfor _ in range(7):\n\t\tn_3 += 1\n\t\tfor _ in range(8):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 4 nobj-0 in obj-gen.\nThere are 4 nobj-1 in obj-gen.\nThere are 9 obj-2 in obj-gen.\nThere are 7 obj-3 in obj-2.\nThere are 8 obj-4 in obj-3.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(8):\n\tn_0 += 1\n\tfor _ in range(7):\n\t\tn_1 += 1\n\t\tfor _ in range(7):\n\t\t\tn_2 += 1\n\t\t\tfor _ in range(10):\n\t\t\t\tn_3 += 1\n\t\t\tfor _ in range(2):\n\t\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 8 obj-0 in obj-gen.\nThere are 7 obj-1 in obj-0.\nThere are 7 obj-2 in obj-1.\nThere are 10 nobj-4 in obj-2.\nThere are 2 nobj-3 in obj-2.\n",
         "label_syn": {
-            "n_4": 504
+            "n_4": 784
         },
         "label_nat": {
-            "obj-4 in obj-gen": 504
+            "obj-4 in obj-gen": 784
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(8):\n\tn_0 += 1\nfor _ in range(8):\n\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(9):\n\t\t\tn_3 += 1\n\t\tfor _ in range(9):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 8 nobj-0 in obj-gen.\nThere are 8 obj-1 in obj-gen.\nThere are 3 obj-2 in obj-1.\nThere are 9 nobj-3 in obj-2.\nThere are 9 obj-4 in obj-2.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(10):\n\tn_0 += 1\nfor _ in range(10):\n\tn_1 += 1\nfor _ in range(2):\n\tn_2 += 1\n\tfor _ in range(9):\n\t\tn_3 += 1\n\t\tfor _ in range(9):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 10 nobj-0 in obj-gen.\nThere are 10 nobj-1 in obj-gen.\nThere are 2 obj-2 in obj-gen.\nThere are 9 obj-3 in obj-2.\nThere are 9 obj-4 in obj-3.\n",
         "label_syn": {
-            "n_4": 216
+            "n_4": 162
         },
         "label_nat": {
-            "obj-4 in obj-gen": 216
+            "obj-4 in obj-gen": 162
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\nfor _ in range(7):\n\tn_1 += 1\n\tfor _ in range(2):\n\t\tn_2 += 1\n\tfor _ in range(7):\n\t\tn_3 += 1\n\t\tfor _ in range(8):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 4 nobj-2 in obj-gen.\nThere are 7 obj-1 in obj-gen.\nThere are 2 nobj-0 in obj-1.\nThere are 7 obj-3 in obj-1.\nThere are 8 obj-4 in obj-3.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(6):\n\tn_0 += 1\n\tfor _ in range(9):\n\t\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 6 obj-0 in obj-gen.\nThere are 9 nobj-1 in obj-0.\nThere are 5 obj-2 in obj-0.\nThere are 4 obj-3 in obj-2.\nThere are 5 nobj-4 in obj-3.\n",
         "label_syn": {
-            "n_4": 392
+            "n_4": 600
         },
         "label_nat": {
-            "obj-4 in obj-gen": 392
+            "obj-4 in obj-gen": 600
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(6):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\nfor _ in range(6):\n\tn_2 += 1\n\tfor _ in range(6):\n\t\tn_3 += 1\n\t\tfor _ in range(10):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 6 nobj-0 in obj-gen.\nThere are 3 nobj-1 in obj-gen.\nThere are 6 obj-2 in obj-gen.\nThere are 6 obj-3 in obj-2.\nThere are 10 obj-4 in obj-3.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\nfor _ in range(9):\n\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\t\tfor _ in range(9):\n\t\t\tn_3 += 1\n\t\tfor _ in range(2):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 4 nobj-0 in obj-gen.\nThere are 9 obj-1 in obj-gen.\nThere are 4 obj-2 in obj-1.\nThere are 9 nobj-3 in obj-2.\nThere are 2 obj-4 in obj-2.\n",
+        "label_syn": {
+            "n_4": 72
+        },
+        "label_nat": {
+            "obj-4 in obj-gen": 72
+        }
+    },
+    {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(2):\n\tn_0 += 1\nfor _ in range(7):\n\tn_1 += 1\nfor _ in range(6):\n\tn_2 += 1\n\tfor _ in range(6):\n\t\tn_3 += 1\n\t\tfor _ in range(8):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 2 nobj-1 in obj-gen.\nThere are 7 nobj-0 in obj-gen.\nThere are 6 obj-2 in obj-gen.\nThere are 6 obj-3 in obj-2.\nThere are 8 obj-4 in obj-3.\n",
+        "label_syn": {
+            "n_4": 288
+        },
+        "label_nat": {
+            "obj-4 in obj-gen": 288
+        }
+    },
+    {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(10):\n\tn_1 += 1\nfor _ in range(4):\n\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 3 nobj-1 in obj-gen.\nThere are 10 nobj-0 in obj-gen.\nThere are 4 obj-2 in obj-gen.\nThere are 5 obj-3 in obj-2.\nThere are 5 obj-4 in obj-3.\n",
+        "label_syn": {
+            "n_4": 100
+        },
+        "label_nat": {
+            "obj-4 in obj-gen": 100
+        }
+    },
+    {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(7):\n\tn_0 += 1\nfor _ in range(2):\n\tn_1 += 1\nfor _ in range(5):\n\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(8):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 7 nobj-1 in obj-gen.\nThere are 2 nobj-0 in obj-gen.\nThere are 5 obj-2 in obj-gen.\nThere are 4 obj-3 in obj-2.\nThere are 8 obj-4 in obj-3.\n",
+        "label_syn": {
+            "n_4": 160
+        },
+        "label_nat": {
+            "obj-4 in obj-gen": 160
+        }
+    },
+    {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(10):\n\tn_0 += 1\n\tfor _ in range(6):\n\t\tn_1 += 1\n\t\tfor _ in range(4):\n\t\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 10 obj-0 in obj-gen.\nThere are 6 obj-1 in obj-0.\nThere are 4 nobj-4 in obj-1.\nThere are 4 obj-3 in obj-1.\nThere are 4 nobj-2 in obj-3.\n",
+        "label_syn": {
+            "n_4": 960
+        },
+        "label_nat": {
+            "obj-4 in obj-gen": 960
+        }
+    },
+    {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(6):\n\tn_0 += 1\n\tfor _ in range(7):\n\t\tn_1 += 1\n\t\tfor _ in range(8):\n\t\t\tn_2 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_3 += 1\n\t\t\tfor _ in range(6):\n\t\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 6 obj-0 in obj-gen.\nThere are 7 obj-1 in obj-0.\nThere are 8 obj-2 in obj-1.\nThere are 3 nobj-4 in obj-2.\nThere are 6 nobj-3 in obj-2.\n",
+        "label_syn": {
+            "n_4": 2016
+        },
+        "label_nat": {
+            "obj-4 in obj-gen": 2016
+        }
+    },
+    {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(9):\n\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\tfor _ in range(10):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 3 nobj-0 in obj-gen.\nThere are 9 obj-1 in obj-gen.\nThere are 4 nobj-2 in obj-1.\nThere are 10 obj-3 in obj-1.\nThere are 4 obj-4 in obj-3.\n",
         "label_syn": {
             "n_4": 360
         },
@@ -50,68 +110,28 @@
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(10):\n\tn_0 += 1\nfor _ in range(8):\n\tn_1 += 1\n\tfor _ in range(9):\n\t\tn_2 += 1\n\t\tfor _ in range(7):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 10 nobj-0 in obj-gen.\nThere are 8 obj-1 in obj-gen.\nThere are 9 obj-2 in obj-1.\nThere are 7 obj-3 in obj-2.\nThere are 3 nobj-4 in obj-3.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(6):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\n\tfor _ in range(2):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(10):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 6 nobj-0 in obj-gen.\nThere are 5 obj-1 in obj-gen.\nThere are 2 nobj-2 in obj-1.\nThere are 5 obj-3 in obj-1.\nThere are 10 obj-4 in obj-3.\n",
         "label_syn": {
-            "n_4": 1512
+            "n_4": 250
         },
         "label_nat": {
-            "obj-4 in obj-gen": 1512
+            "obj-4 in obj-gen": 250
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(8):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\t\tfor _ in range(3):\n\t\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\tfor _ in range(8):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 8 obj-0 in obj-gen.\nThere are 3 obj-1 in obj-0.\nThere are 3 nobj-2 in obj-1.\nThere are 5 nobj-3 in obj-1.\nThere are 8 obj-4 in obj-1.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(7):\n\tn_0 += 1\n\tfor _ in range(8):\n\t\tn_1 += 1\n\tfor _ in range(10):\n\t\tn_2 += 1\n\t\tfor _ in range(9):\n\t\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 7 obj-0 in obj-gen.\nThere are 8 nobj-1 in obj-0.\nThere are 10 obj-2 in obj-0.\nThere are 9 nobj-3 in obj-2.\nThere are 4 obj-4 in obj-2.\n",
         "label_syn": {
-            "n_4": 192
+            "n_4": 280
         },
         "label_nat": {
-            "obj-4 in obj-gen": 192
+            "obj-4 in obj-gen": 280
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(8):\n\tn_0 += 1\n\tfor _ in range(2):\n\t\tn_1 += 1\n\t\tfor _ in range(9):\n\t\t\tn_2 += 1\n\t\tfor _ in range(8):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(9):\n\t\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 8 obj-0 in obj-gen.\nThere are 2 obj-1 in obj-0.\nThere are 9 nobj-2 in obj-1.\nThere are 8 obj-3 in obj-1.\nThere are 9 nobj-4 in obj-3.\n",
-        "label_syn": {
-            "n_4": 1152
-        },
-        "label_nat": {
-            "obj-4 in obj-gen": 1152
-        }
-    },
-    {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(2):\n\t\tn_2 += 1\n\t\tfor _ in range(7):\n\t\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 5 nobj-3 in obj-gen.\nThere are 3 obj-1 in obj-gen.\nThere are 2 obj-2 in obj-1.\nThere are 7 nobj-0 in obj-2.\nThere are 5 obj-4 in obj-2.\n",
-        "label_syn": {
-            "n_4": 30
-        },
-        "label_nat": {
-            "obj-4 in obj-gen": 30
-        }
-    },
-    {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(7):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(2):\n\t\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 5 obj-0 in obj-gen.\nThere are 3 nobj-4 in obj-0.\nThere are 7 obj-2 in obj-0.\nThere are 5 obj-3 in obj-2.\nThere are 2 nobj-1 in obj-3.\n",
-        "label_syn": {
-            "n_4": 350
-        },
-        "label_nat": {
-            "obj-4 in obj-gen": 350
-        }
-    },
-    {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(10):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\t\tfor _ in range(9):\n\t\t\tn_2 += 1\n\t\tfor _ in range(9):\n\t\t\tn_3 += 1\n\t\tfor _ in range(7):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 10 obj-0 in obj-gen.\nThere are 5 obj-1 in obj-0.\nThere are 9 nobj-3 in obj-1.\nThere are 9 nobj-2 in obj-1.\nThere are 7 obj-4 in obj-1.\n",
-        "label_syn": {
-            "n_4": 350
-        },
-        "label_nat": {
-            "obj-4 in obj-gen": 350
-        }
-    },
-    {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(7):\n\t\tn_1 += 1\n\tfor _ in range(9):\n\t\tn_2 += 1\n\tfor _ in range(3):\n\t\tn_3 += 1\n\t\tfor _ in range(10):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 4 obj-0 in obj-gen.\nThere are 7 nobj-1 in obj-0.\nThere are 9 nobj-2 in obj-0.\nThere are 3 obj-3 in obj-0.\nThere are 10 obj-4 in obj-3.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(10):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(7):\n\t\tn_2 += 1\n\tfor _ in range(5):\n\t\tn_3 += 1\n\t\tfor _ in range(8):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 10 nobj-2 in obj-gen.\nThere are 3 obj-1 in obj-gen.\nThere are 7 nobj-0 in obj-1.\nThere are 5 obj-3 in obj-1.\nThere are 8 obj-4 in obj-3.\n",
         "label_syn": {
             "n_4": 120
         },
@@ -120,78 +140,18 @@
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(6):\n\tn_0 += 1\n\tfor _ in range(7):\n\t\tn_1 += 1\n\t\tfor _ in range(6):\n\t\t\tn_2 += 1\n\t\t\tfor _ in range(8):\n\t\t\t\tn_3 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 6 obj-0 in obj-gen.\nThere are 7 obj-1 in obj-0.\nThere are 6 obj-2 in obj-1.\nThere are 8 nobj-3 in obj-2.\nThere are 5 nobj-4 in obj-2.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(10):\n\tn_0 += 1\n\tfor _ in range(7):\n\t\tn_1 += 1\n\tfor _ in range(7):\n\t\tn_2 += 1\n\t\tfor _ in range(6):\n\t\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 10 obj-0 in obj-gen.\nThere are 7 nobj-3 in obj-0.\nThere are 7 obj-2 in obj-0.\nThere are 6 nobj-1 in obj-2.\nThere are 4 obj-4 in obj-2.\n",
         "label_syn": {
-            "n_4": 1260
+            "n_4": 280
         },
         "label_nat": {
-            "obj-4 in obj-gen": 1260
+            "obj-4 in obj-gen": 280
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(9):\n\tn_0 += 1\nfor _ in range(9):\n\tn_1 += 1\n\tfor _ in range(8):\n\t\tn_2 += 1\n\t\tfor _ in range(7):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(9):\n\t\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 9 nobj-4 in obj-gen.\nThere are 9 obj-1 in obj-gen.\nThere are 8 obj-2 in obj-1.\nThere are 7 obj-3 in obj-2.\nThere are 9 nobj-0 in obj-3.\n",
-        "label_syn": {
-            "n_4": 4536
-        },
-        "label_nat": {
-            "obj-4 in obj-gen": 4536
-        }
-    },
-    {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(7):\n\tn_0 += 1\n\tfor _ in range(2):\n\t\tn_1 += 1\n\t\tfor _ in range(3):\n\t\t\tn_2 += 1\n\t\t\tfor _ in range(5):\n\t\t\t\tn_3 += 1\n\t\t\tfor _ in range(10):\n\t\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 7 obj-0 in obj-gen.\nThere are 2 obj-1 in obj-0.\nThere are 3 obj-2 in obj-1.\nThere are 5 nobj-3 in obj-2.\nThere are 10 nobj-4 in obj-2.\n",
-        "label_syn": {
-            "n_4": 420
-        },
-        "label_nat": {
-            "obj-4 in obj-gen": 420
-        }
-    },
-    {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(8):\n\tn_0 += 1\nfor _ in range(4):\n\tn_1 += 1\n\tfor _ in range(8):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\tfor _ in range(6):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 8 nobj-3 in obj-gen.\nThere are 4 obj-1 in obj-gen.\nThere are 8 obj-2 in obj-1.\nThere are 3 nobj-0 in obj-2.\nThere are 6 obj-4 in obj-2.\n",
-        "label_syn": {
-            "n_4": 192
-        },
-        "label_nat": {
-            "obj-4 in obj-gen": 192
-        }
-    },
-    {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(2):\n\tn_0 += 1\nfor _ in range(10):\n\tn_1 += 1\nfor _ in range(9):\n\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(6):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 2 nobj-0 in obj-gen.\nThere are 10 nobj-1 in obj-gen.\nThere are 9 obj-2 in obj-gen.\nThere are 4 obj-3 in obj-2.\nThere are 6 obj-4 in obj-3.\n",
-        "label_syn": {
-            "n_4": 216
-        },
-        "label_nat": {
-            "obj-4 in obj-gen": 216
-        }
-    },
-    {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(2):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(8):\n\t\tn_2 += 1\n\t\tfor _ in range(7):\n\t\t\tn_3 += 1\n\t\tfor _ in range(8):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 2 obj-0 in obj-gen.\nThere are 4 nobj-1 in obj-0.\nThere are 8 obj-2 in obj-0.\nThere are 7 nobj-3 in obj-2.\nThere are 8 obj-4 in obj-2.\n",
-        "label_syn": {
-            "n_4": 128
-        },
-        "label_nat": {
-            "obj-4 in obj-gen": 128
-        }
-    },
-    {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(4):\n\t\tn_1 += 1\n\tfor _ in range(9):\n\t\tn_2 += 1\n\t\tfor _ in range(8):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(6):\n\t\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 3 obj-0 in obj-gen.\nThere are 4 nobj-4 in obj-0.\nThere are 9 obj-2 in obj-0.\nThere are 8 obj-3 in obj-2.\nThere are 6 nobj-1 in obj-3.\n",
-        "label_syn": {
-            "n_4": 1296
-        },
-        "label_nat": {
-            "obj-4 in obj-gen": 1296
-        }
-    },
-    {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(10):\n\tn_0 += 1\nfor _ in range(9):\n\tn_1 += 1\n\tfor _ in range(9):\n\t\tn_2 += 1\n\t\tfor _ in range(6):\n\t\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 10 nobj-0 in obj-gen.\nThere are 9 obj-1 in obj-gen.\nThere are 9 obj-2 in obj-1.\nThere are 6 nobj-3 in obj-2.\nThere are 4 obj-4 in obj-2.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(6):\n\tn_0 += 1\n\tfor _ in range(9):\n\t\tn_1 += 1\n\t\tfor _ in range(3):\n\t\t\tn_2 += 1\n\t\tfor _ in range(6):\n\t\t\tn_3 += 1\n\t\tfor _ in range(6):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 6 obj-0 in obj-gen.\nThere are 9 obj-1 in obj-0.\nThere are 3 nobj-3 in obj-1.\nThere are 6 nobj-2 in obj-1.\nThere are 6 obj-4 in obj-1.\n",
         "label_syn": {
             "n_4": 324
         },
@@ -200,103 +160,143 @@
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(10):\n\tn_0 += 1\n\tfor _ in range(2):\n\t\tn_1 += 1\n\tfor _ in range(3):\n\t\tn_2 += 1\n\t\tfor _ in range(8):\n\t\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 10 obj-0 in obj-gen.\nThere are 2 nobj-3 in obj-0.\nThere are 3 obj-2 in obj-0.\nThere are 8 nobj-1 in obj-2.\nThere are 5 obj-4 in obj-2.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\nfor _ in range(5):\n\tn_1 += 1\nfor _ in range(3):\n\tn_2 += 1\n\tfor _ in range(3):\n\t\tn_3 += 1\n\t\tfor _ in range(9):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 3 nobj-0 in obj-gen.\nThere are 5 nobj-1 in obj-gen.\nThere are 3 obj-2 in obj-gen.\nThere are 3 obj-3 in obj-2.\nThere are 9 obj-4 in obj-3.\n",
         "label_syn": {
-            "n_4": 150
+            "n_4": 81
         },
         "label_nat": {
-            "obj-4 in obj-gen": 150
+            "obj-4 in obj-gen": 81
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(7):\n\t\tn_1 += 1\n\tfor _ in range(7):\n\t\tn_2 += 1\n\t\tfor _ in range(10):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(10):\n\t\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 3 obj-0 in obj-gen.\nThere are 7 nobj-4 in obj-0.\nThere are 7 obj-2 in obj-0.\nThere are 10 obj-3 in obj-2.\nThere are 10 nobj-1 in obj-3.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(5):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(6):\n\t\tn_2 += 1\n\tfor _ in range(10):\n\t\tn_3 += 1\n\t\tfor _ in range(6):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 5 obj-0 in obj-gen.\nThere are 3 nobj-2 in obj-0.\nThere are 6 nobj-1 in obj-0.\nThere are 10 obj-3 in obj-0.\nThere are 6 obj-4 in obj-3.\n",
         "label_syn": {
-            "n_4": 2100
+            "n_4": 300
         },
         "label_nat": {
-            "obj-4 in obj-gen": 2100
+            "obj-4 in obj-gen": 300
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(3):\n\tn_0 += 1\n\tfor _ in range(10):\n\t\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\tfor _ in range(2):\n\t\tn_3 += 1\n\t\tfor _ in range(2):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 3 obj-0 in obj-gen.\nThere are 10 nobj-2 in obj-0.\nThere are 5 nobj-1 in obj-0.\nThere are 2 obj-3 in obj-0.\nThere are 2 obj-4 in obj-3.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(6):\n\tn_0 += 1\n\tfor _ in range(8):\n\t\tn_1 += 1\n\t\tfor _ in range(4):\n\t\t\tn_2 += 1\n\t\tfor _ in range(7):\n\t\t\tn_3 += 1\n\t\tfor _ in range(8):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 6 obj-0 in obj-gen.\nThere are 8 obj-1 in obj-0.\nThere are 4 nobj-3 in obj-1.\nThere are 7 nobj-2 in obj-1.\nThere are 8 obj-4 in obj-1.\n",
         "label_syn": {
-            "n_4": 12
+            "n_4": 384
         },
         "label_nat": {
-            "obj-4 in obj-gen": 12
+            "obj-4 in obj-gen": 384
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(8):\n\tn_0 += 1\n\tfor _ in range(2):\n\t\tn_1 += 1\n\t\tfor _ in range(4):\n\t\t\tn_2 += 1\n\t\tfor _ in range(8):\n\t\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 8 obj-0 in obj-gen.\nThere are 2 obj-1 in obj-0.\nThere are 4 nobj-3 in obj-1.\nThere are 8 nobj-2 in obj-1.\nThere are 4 obj-4 in obj-1.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(8):\n\tn_0 += 1\n\tfor _ in range(9):\n\t\tn_1 += 1\n\tfor _ in range(2):\n\t\tn_2 += 1\n\t\tfor _ in range(9):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 8 obj-0 in obj-gen.\nThere are 9 nobj-4 in obj-0.\nThere are 2 obj-2 in obj-0.\nThere are 9 obj-3 in obj-2.\nThere are 4 nobj-1 in obj-3.\n",
         "label_syn": {
-            "n_4": 64
+            "n_4": 576
         },
         "label_nat": {
-            "obj-4 in obj-gen": 64
+            "obj-4 in obj-gen": 576
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(9):\n\tn_0 += 1\n\tfor _ in range(6):\n\t\tn_1 += 1\n\t\tfor _ in range(2):\n\t\t\tn_2 += 1\n\t\t\tfor _ in range(6):\n\t\t\t\tn_3 += 1\n\t\t\tfor _ in range(4):\n\t\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 9 obj-0 in obj-gen.\nThere are 6 obj-1 in obj-0.\nThere are 2 obj-2 in obj-1.\nThere are 6 nobj-4 in obj-2.\nThere are 4 nobj-3 in obj-2.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(6):\n\tn_0 += 1\n\tfor _ in range(9):\n\t\tn_1 += 1\n\t\tfor _ in range(10):\n\t\t\tn_2 += 1\n\t\tfor _ in range(7):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(7):\n\t\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 6 obj-0 in obj-gen.\nThere are 9 obj-1 in obj-0.\nThere are 10 nobj-4 in obj-1.\nThere are 7 obj-3 in obj-1.\nThere are 7 nobj-2 in obj-3.\n",
         "label_syn": {
-            "n_4": 432
+            "n_4": 2646
         },
         "label_nat": {
-            "obj-4 in obj-gen": 432
+            "obj-4 in obj-gen": 2646
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(10):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(2):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(7):\n\t\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 10 obj-0 in obj-gen.\nThere are 3 nobj-1 in obj-0.\nThere are 2 obj-2 in obj-0.\nThere are 3 obj-3 in obj-2.\nThere are 7 nobj-4 in obj-3.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(9):\n\tn_0 += 1\nfor _ in range(9):\n\tn_1 += 1\n\tfor _ in range(2):\n\t\tn_2 += 1\n\tfor _ in range(3):\n\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 9 nobj-2 in obj-gen.\nThere are 9 obj-1 in obj-gen.\nThere are 2 nobj-0 in obj-1.\nThere are 3 obj-3 in obj-1.\nThere are 5 obj-4 in obj-3.\n",
         "label_syn": {
-            "n_4": 420
+            "n_4": 135
         },
         "label_nat": {
-            "obj-4 in obj-gen": 420
+            "obj-4 in obj-gen": 135
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(7):\n\tn_0 += 1\n\tfor _ in range(5):\n\t\tn_1 += 1\n\tfor _ in range(9):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\tfor _ in range(2):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 7 obj-0 in obj-gen.\nThere are 5 nobj-1 in obj-0.\nThere are 9 obj-2 in obj-0.\nThere are 4 nobj-3 in obj-2.\nThere are 2 obj-4 in obj-2.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(6):\n\tn_0 += 1\nfor _ in range(8):\n\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(10):\n\t\t\tn_3 += 1\n\t\tfor _ in range(6):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 6 nobj-3 in obj-gen.\nThere are 8 obj-1 in obj-gen.\nThere are 5 obj-2 in obj-1.\nThere are 10 nobj-0 in obj-2.\nThere are 6 obj-4 in obj-2.\n",
         "label_syn": {
-            "n_4": 126
+            "n_4": 240
         },
         "label_nat": {
-            "obj-4 in obj-gen": 126
+            "obj-4 in obj-gen": 240
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(6):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(9):\n\t\tn_2 += 1\n\tfor _ in range(4):\n\t\tn_3 += 1\n\t\tfor _ in range(5):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 6 nobj-2 in obj-gen.\nThere are 3 obj-1 in obj-gen.\nThere are 9 nobj-0 in obj-1.\nThere are 4 obj-3 in obj-1.\nThere are 5 obj-4 in obj-3.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(2):\n\tn_0 += 1\nfor _ in range(3):\n\tn_1 += 1\n\tfor _ in range(4):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\tfor _ in range(9):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 2 nobj-3 in obj-gen.\nThere are 3 obj-1 in obj-gen.\nThere are 4 obj-2 in obj-1.\nThere are 4 nobj-0 in obj-2.\nThere are 9 obj-4 in obj-2.\n",
         "label_syn": {
-            "n_4": 60
+            "n_4": 108
         },
         "label_nat": {
-            "obj-4 in obj-gen": 60
+            "obj-4 in obj-gen": 108
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(6):\n\tn_0 += 1\n\tfor _ in range(10):\n\t\tn_1 += 1\n\tfor _ in range(9):\n\t\tn_2 += 1\n\t\tfor _ in range(2):\n\t\t\tn_3 += 1\n\t\tfor _ in range(7):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 6 obj-0 in obj-gen.\nThere are 10 nobj-1 in obj-0.\nThere are 9 obj-2 in obj-0.\nThere are 2 nobj-3 in obj-2.\nThere are 7 obj-4 in obj-2.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(9):\n\tn_0 += 1\n\tfor _ in range(10):\n\t\tn_1 += 1\n\t\tfor _ in range(4):\n\t\t\tn_2 += 1\n\t\tfor _ in range(9):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(10):\n\t\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 9 obj-0 in obj-gen.\nThere are 10 obj-1 in obj-0.\nThere are 4 nobj-4 in obj-1.\nThere are 9 obj-3 in obj-1.\nThere are 10 nobj-2 in obj-3.\n",
         "label_syn": {
-            "n_4": 378
+            "n_4": 8100
         },
         "label_nat": {
-            "obj-4 in obj-gen": 378
+            "obj-4 in obj-gen": 8100
         }
     },
     {
-        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(2):\n\tn_0 += 1\n\tfor _ in range(3):\n\t\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\tfor _ in range(7):\n\t\tn_3 += 1\n\t\tfor _ in range(4):\n\t\t\tn_4 += 1\n",
-        "nat": "Here's a situation.\nThere are 2 obj-0 in obj-gen.\nThere are 3 nobj-1 in obj-0.\nThere are 5 nobj-2 in obj-0.\nThere are 7 obj-3 in obj-0.\nThere are 4 obj-4 in obj-3.\n",
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(9):\n\tn_0 += 1\nfor _ in range(10):\n\tn_1 += 1\nfor _ in range(3):\n\tn_2 += 1\n\tfor _ in range(7):\n\t\tn_3 += 1\n\t\tfor _ in range(9):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 9 nobj-0 in obj-gen.\nThere are 10 nobj-1 in obj-gen.\nThere are 3 obj-2 in obj-gen.\nThere are 7 obj-3 in obj-2.\nThere are 9 obj-4 in obj-3.\n",
         "label_syn": {
-            "n_4": 56
+            "n_4": 189
         },
         "label_nat": {
-            "obj-4 in obj-gen": 56
+            "obj-4 in obj-gen": 189
+        }
+    },
+    {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(8):\n\tn_0 += 1\n\tfor _ in range(6):\n\t\tn_1 += 1\n\tfor _ in range(5):\n\t\tn_2 += 1\n\t\tfor _ in range(3):\n\t\t\tn_3 += 1\n\t\tfor _ in range(9):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 8 obj-0 in obj-gen.\nThere are 6 nobj-1 in obj-0.\nThere are 5 obj-2 in obj-0.\nThere are 3 nobj-3 in obj-2.\nThere are 9 obj-4 in obj-2.\n",
+        "label_syn": {
+            "n_4": 360
+        },
+        "label_nat": {
+            "obj-4 in obj-gen": 360
+        }
+    },
+    {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(4):\n\tn_0 += 1\n\tfor _ in range(9):\n\t\tn_1 += 1\n\tfor _ in range(2):\n\t\tn_2 += 1\n\t\tfor _ in range(5):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(3):\n\t\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 4 obj-0 in obj-gen.\nThere are 9 nobj-1 in obj-0.\nThere are 2 obj-2 in obj-0.\nThere are 5 obj-3 in obj-2.\nThere are 3 nobj-4 in obj-3.\n",
+        "label_syn": {
+            "n_4": 120
+        },
+        "label_nat": {
+            "obj-4 in obj-gen": 120
+        }
+    },
+    {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(8):\n\tn_0 += 1\n\tfor _ in range(8):\n\t\tn_1 += 1\n\t\tfor _ in range(10):\n\t\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\t\tfor _ in range(6):\n\t\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 8 obj-0 in obj-gen.\nThere are 8 obj-1 in obj-0.\nThere are 10 nobj-2 in obj-1.\nThere are 4 obj-3 in obj-1.\nThere are 6 nobj-4 in obj-3.\n",
+        "label_syn": {
+            "n_4": 1536
+        },
+        "label_nat": {
+            "obj-4 in obj-gen": 1536
+        }
+    },
+    {
+        "syn": "n_0=0; n_1=0; n_2=0; n_3=0; n_4=0\nfor _ in range(6):\n\tn_0 += 1\nfor _ in range(10):\n\tn_1 += 1\n\tfor _ in range(8):\n\t\tn_2 += 1\n\t\tfor _ in range(4):\n\t\t\tn_3 += 1\n\t\tfor _ in range(10):\n\t\t\tn_4 += 1\n",
+        "nat": "Here's a situation.\nThere are 6 nobj-3 in obj-gen.\nThere are 10 obj-1 in obj-gen.\nThere are 8 obj-2 in obj-1.\nThere are 4 nobj-0 in obj-2.\nThere are 10 obj-4 in obj-2.\n",
+        "label_syn": {
+            "n_4": 800
+        },
+        "label_nat": {
+            "obj-4 in obj-gen": 800
         }
     }
 ]
