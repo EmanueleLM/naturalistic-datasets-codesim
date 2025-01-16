@@ -128,10 +128,11 @@ def main():
             wandb.log_artifact(artifact_syn)
 
         # write to the logs
-        os.makedirs("logs", exist_ok=True)
+        basedir = os.path.join("logs", args.operation)
+        os.makedirs(basedir, exist_ok=True)
         # date in yy-mm-dd-hh-mm
         date = datetime.datetime.now().strftime("%mM-%dD-%Hh-%Mm%Ss")
-        with open(f"logs/{args.operation}-{args.model}-{date}.txt", 'w') as f:
+        with open(f"{basedir}/{os.path.basename(dataset_path)}-{args.model}-{date}.txt", 'w') as f:
             f.write("Natural Logs\n")
             json.dump(g_nat_logs, f, default=pydantic_encoder)
             f.write("\n")
@@ -155,7 +156,7 @@ def get_dataset_path(operation: OperationType):
         case OperationType.critical_path:
             return f"{base}/CriticalPath"
         case OperationType.parallel_paths:
-            return f"{base}/ParllelPaths"
+            return f"{base}/ParallelPaths"
         case OperationType.straight_line:
             return f"{base}/StraightLine"
         case OperationType.nested_loop:
@@ -177,6 +178,7 @@ def load_and_sample_objects():
         for row in reader:
             sample_freq[row[0]] = int(row[1])
 
+    random.seed(12) # so that is always the same
     # k is choosen arbitrarily, but we need the maximum number of objects anyways.
     sampled_objects = random.choices(list(sample_freq.keys()), k=10, weights=list(sample_freq.values()))
     g_object_map = {i: obj for i, obj in enumerate(sampled_objects)}
@@ -190,8 +192,9 @@ def experiment(samples: list[Sample], model: str, op_type: OperationType):
     correct_syn = 0
     for sample in samples:
         query_syn, query_nat = format_query(sample, op_type)
-        # print(query_syn)
-        # print(query_nat)
+        # print(query_syn.prompt)
+        # print(query_nat.prompt)
+        # print("Synthetic Answer:", query_syn.answer)
         syn_result, syn_whole_answer = get_answer(query_syn.prompt, model)
         if syn_result == query_syn.answer:
             correct_syn += 1
@@ -280,8 +283,8 @@ def format_query(sample: Sample, op_type: OperationType) -> tuple[PromptAndCheck
                                                             problem=sample.nat,
                                                             question=question)
             
-            return (PromptAndCheck(prompt=prompt_syn, answer=sample.label_syn[var_name]),
-                    PromptAndCheck(prompt=prompt_nat, answer=sample.label_nat[agent_name]))
+            return (PromptAndCheck(prompt=prompt_syn, answer=str(sample.label_syn[var_name])),
+                    PromptAndCheck(prompt=prompt_nat, answer=str(sample.label_nat[agent_name])))
 
         case OperationType.parallel_paths:
             var_names = list(sample.label_syn.keys())
@@ -297,9 +300,9 @@ def format_query(sample: Sample, op_type: OperationType) -> tuple[PromptAndCheck
             prompt_nat = prompt.ParallelPaths.user_cot.format(prefix="",
                                                             problem=sample.nat,
                                                             question=question)
-            
-            return (PromptAndCheck(prompt=prompt_syn, answer=f"{', '.join([str(x) for x in sample.label_syn.values()])}"),
-                    PromptAndCheck(prompt=prompt_nat, answer=f"{', '.join([str(x) for x in sample.label_nat.values()])}"))
+            prompt_nat = substitute_objects(prompt_nat)
+            return (PromptAndCheck(prompt=prompt_syn, answer=f"[{', '.join([str(x) for x in sample.label_syn.values()])}]"),
+                    PromptAndCheck(prompt=prompt_nat, answer=f"[{', '.join([str(x) for x in sample.label_nat.values()])}]"))
 
         case OperationType.nested_loop:
             # TODO: bisogna ancora fare il sampling degli oggetti naturali qui.
@@ -315,9 +318,9 @@ def format_query(sample: Sample, op_type: OperationType) -> tuple[PromptAndCheck
             prompt_nat = prompt.Loops.user_cot.format(prefix="",
                                                     problem=sample.nat,
                                                     question=question)
-            
-            return (PromptAndCheck(prompt=prompt_syn, answer=sample.label_syn[first_key]),
-                    PromptAndCheck(prompt=prompt_nat, answer=sample.label_nat[key_val]))
+            # no sense to substitute for nested loop, not all are containers.
+            return (PromptAndCheck(prompt=prompt_syn, answer=str(sample.label_syn[first_key])),
+                    PromptAndCheck(prompt=prompt_nat, answer=str(sample.label_nat[key_val])))
 
         case OperationType.sorting:
             position = sample.label_syn["position"]
@@ -327,15 +330,14 @@ def format_query(sample: Sample, op_type: OperationType) -> tuple[PromptAndCheck
                                                     problem=sample.syn,
                                                     question=question)
             
-            agent_name = random.choice(list(sample.label_nat.keys()))
-            object_name = random.choice(list(sample.label_nat[agent_name].keys()))
-            question = prompt.Sort.questions_nat[0].format(k=position, biggest_smallest= "biggest" if ascending else "smallest")
+            position = sample.label_nat["position"]
+            question = prompt.Sort.questions_nat[0].format(k=position, biggest_smallest= "most light" if ascending else "most heavy")
             prompt_nat = prompt.Sort.user_cot.format(prefix="",
                                                     problem=sample.nat,
                                                     question=question)
-            
-            return (PromptAndCheck(prompt=prompt_syn, answer=sample.label_syn["label"]),
-                    PromptAndCheck(prompt=prompt_nat, answer=sample.label_nat["label"]))
+            prompt_nat = substitute_objects(prompt_nat)
+            return (PromptAndCheck(prompt=prompt_syn, answer=str(sample.label_syn["label"])),
+                    PromptAndCheck(prompt=prompt_nat, answer=str(sample.label_syn["label"]))) # we keep the weight anyways
 
         case _:
             raise ValueError("Operation Type not supported")
