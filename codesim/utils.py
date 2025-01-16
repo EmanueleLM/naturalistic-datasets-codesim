@@ -455,5 +455,6 @@ f_query = {
     'llama-3-8B-chat':queryllamachat,
     'gemma-2B':querygemma,
     'gemma-7B':querygemma,
-    'gpt-3.5-instruct': queryinstruct
+    'gpt-3.5-instruct': queryinstruct,
+    'sambanova-llama': queryllamasambanova
 }

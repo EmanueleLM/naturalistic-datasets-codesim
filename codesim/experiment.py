@@ -20,6 +20,7 @@ from pydantic import BaseModel
 import os
 import wandb
 from pydantic.json import pydantic_encoder
+import backoff
 from . import utils
 
 from .my_types import Sample, OperationType
@@ -343,6 +344,7 @@ def format_query(sample: Sample, op_type: OperationType) -> tuple[PromptAndCheck
             raise ValueError("Operation Type not supported")
 
 def get_answer(prompt: str, model: str):
+    @backoff.on_exception(backoff.expo, Exception, max_time=600)
     def query_engine(prompt: str):
         return utils.queryLLM(prompt, model)
 
