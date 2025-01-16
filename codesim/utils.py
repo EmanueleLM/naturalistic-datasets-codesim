@@ -268,7 +268,11 @@ def querygpt(prompt, jdata):
     """
 
     model_name = jdata['name']
-    client = openai.Client(api_key=jdata['key'])
+    
+    if "api_base" in jdata:
+        client = openai.Client(api_key=jdata['key'], base_url=jdata['api_base'])
+    else:
+        client = openai.Client(api_key=jdata['key'])
 
     completion = client.chat.completions.create(
                                                 model = model_name,
