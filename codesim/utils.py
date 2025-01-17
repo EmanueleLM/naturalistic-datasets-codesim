@@ -10,6 +10,7 @@ import transformers
 # from groq import Groq
 from functools import partial
 import numpy as np
+from openai import AzureOpenAI  
 
 
 __encoder = tiktoken.encoding_for_model("gpt-3.5-turbo")
@@ -396,10 +397,11 @@ def querygptazure(prompt, jdata, temperature=0., n=1, stop=None):
     """
     GPT-4 Azure endpoint required (stored locally)
     """
-    openai.api_type = jdata['api_type']
-    openai.base_url = jdata['api_base']
-    openai.api_version = jdata['api_version']
-    openai.api_key = jdata['key']
+    client = AzureOpenAI(  
+        azure_endpoint=jdata['api_base'],  
+        api_key=jdata['key'],  
+        api_version="2024-05-01-preview",
+    )
     model_name = jdata['name']
 
     # message_text = [{"role":"system","content":"You are an AI assistant that helps people find information."}, \
@@ -409,7 +411,7 @@ def querygptazure(prompt, jdata, temperature=0., n=1, stop=None):
 
     outputs = []
     try: 
-        completion = openai.chat.completions.create(
+        completion = client.chat.completions.create(
                                                     model=model_name,
                                                     messages = message_text,
                                                     temperature=temperature,
@@ -427,15 +429,15 @@ def querygptazure(prompt, jdata, temperature=0., n=1, stop=None):
             outputs.append("error")
         return outputs
 
-    for completion in completion["choices"]:
+    for completion in completion.choices:
         try:
-            outputs.append(completion["message"]["content"])
+            outputs.append(completion.message.content)
         except KeyError:
             print("Completion filtered by Azure")
             outputs.append("error")
     # outputs.extend([choice["message"]["content"] for choice in completion["choices"]])
 
-    track_costs(model_name+"-new", completion, 0.0015, 0.002) # This should be upper bound cost
+    # track_costs(model_name+"-new", completion, 0.0015, 0.002) # This should be upper bound cost
     if len(outputs) == 1:  # backwards compatibility
         return outputs[0]
     else:
@@ -448,6 +450,7 @@ f_query = {
     'gpt-3.5-azure-chat': querygptazurechat,
     'gpt-4':querygpt, 
     'gpt-4-azure': querygptazure,
+    'gpt-4-azurex': querygptazure,
     'gpt-4-azure-chat': querygptazurechat,
     # 'llama2-70B':queryllama2,
     'llama-13B':queryllama,

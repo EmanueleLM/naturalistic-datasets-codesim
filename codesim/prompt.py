@@ -13,7 +13,7 @@ class Boxes:
 {problem}
 {question}
 Think step by step and provide the answer in a list and between <answer></answer> tags.
-For example, reply with <answer>{example_answer}</answer>.
+For example, reply with <answer>something</answer>.
 """
     
     questions_syn = ["What is the content of {varname} at the end of the computation?"]

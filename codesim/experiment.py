@@ -17,6 +17,7 @@ import argparse
 import random
 import csv
 from pydantic import BaseModel
+import pandas as pd
 import os
 import wandb
 from pydantic.json import pydantic_encoder
@@ -60,16 +61,6 @@ def main():
 
     args = parser.parse_args()
     g_has_wandb = args.wandb
-    g_syn_logs = []
-    g_nat_logs = []
-    if g_has_wandb:
-        wandb.init(project="codesim",
-            config= {
-                "operation": args.operation,
-                "dataset_idx": args.dataset_idx,
-                "model": args.model
-            }
-        )
 
     op_type: OperationType = OperationType(args.operation)
     dataset_base = get_dataset_path(op_type)
@@ -90,6 +81,18 @@ def main():
     print(f"Objects Sampled: {g_object_map}")
 
     for dataset_path in dataset_list:
+        g_syn_logs = []
+        g_nat_logs = []
+        if g_has_wandb:
+            wandb.init(project="codesim",
+                config= {
+                    "operation": args.operation,
+                    "dataset_idx": args.dataset_idx,
+                    "dataset_path": os.path.basename(dataset_path),
+                    "model": args.model
+                }
+            )
+            
         print("Running experiment for", dataset_path)
         # Load the dataset as json
         samples = []
@@ -107,7 +110,8 @@ def main():
 
         # print(format_query(samples[0], op_type))
         accuracy_nat, accuracy_syn = experiment(samples, args.model, op_type)
-
+        save_results(accuracy_nat, accuracy_syn, args, os.path.basename(dataset_path))
+        
         if g_has_wandb:
             wandb.log({"accuracy_nat": accuracy_nat, "accuracy_syn": accuracy_syn})
         # Log everything at the end
@@ -149,6 +153,35 @@ def main():
         if g_has_wandb:
             wandb.finish()
 
+def save_results(accuracy_nat, accuracy_syn, args, dataset_name):
+    basedir = os.path.join("results", args.operation)
+    os.makedirs(basedir, exist_ok=True)
+    
+    filename = f"{basedir}/{args.model}.csv"
+    curr_date = datetime.datetime.now().strftime("%mM-%dD-%Hh-%Mm%Ss")
+    # check if the file exists
+    if os.path.exists(filename):
+        df = pd.read_csv(filename)
+        new_result = {
+            "accuracy_nat": accuracy_nat, 
+            "accuracy_syn": accuracy_syn, 
+            "date": curr_date,
+            "dataset": dataset_name
+        }
+        df = df.append(new_result, ignore_index=True)
+        # order by dataset name and then date
+        df = df.sort_values(by=["dataset", "date"])
+        df.to_csv(filename, index=False)
+    else:    
+        df = pd.DataFrame([{
+            "accuracy_nat": accuracy_nat, 
+            "accuracy_syn": accuracy_syn, 
+            "date": curr_date,
+            "dataset": dataset_name
+        }])
+        df.to_csv(filename, index=False)
+        
+
 def get_dataset_path(operation: OperationType):
     base = "./data"
     match operation:
@@ -184,6 +217,23 @@ def load_and_sample_objects():
     sampled_objects = random.choices(list(sample_freq.keys()), k=10, weights=list(sample_freq.values()))
     g_object_map = {i: obj for i, obj in enumerate(sampled_objects)}
 
+def compare_answers(answer: str, label: str, op_type):
+    match op_type:
+        case OperationType.kim_schuster:
+            if label == "":
+                return answer == "[]" or answer == "empty" or answer == "{}"
+            
+            answer = answer.lower()
+            # remove parantesis if present
+            if answer[0] in ["(", "[", "{"]:
+                answer = answer[1:-1]
+            
+            answer_list = answer.split(", ")
+            label_list = label.split(", ")
+            return set(answer_list) == set(label_list)
+            
+        case _:
+            return answer == label
 
 def experiment(samples: list[Sample], model: str, op_type: OperationType):
     global g_nat_logs
@@ -193,15 +243,15 @@ def experiment(samples: list[Sample], model: str, op_type: OperationType):
     correct_syn = 0
     for sample in samples:
         query_syn, query_nat = format_query(sample, op_type)
-        # print(query_syn.prompt)
-        # print(query_nat.prompt)
-        # print("Synthetic Answer:", query_syn.answer)
+        print(query_syn.prompt)
+        print(query_nat.prompt)
+        print("Synthetic Answer:", query_syn.answer, query_nat.answer)
         syn_result, syn_whole_answer = get_answer(query_syn.prompt, model)
-        if syn_result == query_syn.answer:
+        if compare_answers(syn_result, query_syn.answer, op_type):
             correct_syn += 1
 
         nat_result, nat_whole_answer = get_answer(query_nat.prompt, model)
-        if nat_result == query_nat.answer:
+        if compare_answers(nat_result, query_nat.answer, op_type):
             correct_nat += 1
 
         # Log All
@@ -240,8 +290,8 @@ def format_query(sample: Sample, op_type: OperationType) -> tuple[PromptAndCheck
         case OperationType.kim_schuster:
             first_key = list(sample.label_syn.keys())[0]
             question = prompt.Boxes.questions_syn[0].format(varname=f"x{first_key}")
-            prompt_syn = prompt.Boxes.user_cot.format(prefix="Here's some code:", 
-                                            problem=sample.syn, 
+            prompt_syn = prompt.Boxes.user_cot.format(prefix="Here's some code:",
+                                            problem=sample.syn,
                                             question=question)
 
             first_key = list(sample.label_nat.keys())[0]
@@ -303,7 +353,7 @@ def format_query(sample: Sample, op_type: OperationType) -> tuple[PromptAndCheck
                                                             question=question)
             prompt_nat = substitute_objects(prompt_nat)
             return (PromptAndCheck(prompt=prompt_syn, answer=f"[{', '.join([str(x) for x in sample.label_syn.values()])}]"),
-                    PromptAndCheck(prompt=prompt_nat, answer=f"[{', '.join([str(x) for x in sample.label_nat.values()])}]"))
+                    PromptAndCheck(prompt=prompt_nat, answer=f"[{', '.join([str(value) for key in sample.label_nat for value in sample.label_nat[key].values()])}]"))  # flatten everything and only get numbers
 
         case OperationType.nested_loop:
             # TODO: bisogna ancora fare il sampling degli oggetti naturali qui.
@@ -349,7 +399,7 @@ def get_answer(prompt: str, model: str):
         return utils.queryLLM(prompt, model)
 
     answer = query_engine(prompt)
-    print(answer)
+    # print(answer)
     # now extract content in between the last occurrence of answer tags
     start = answer.rfind("<answer>")
     end = answer.rfind("</answer>")
