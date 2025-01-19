@@ -1,5 +1,5 @@
 
-for model in 'kim-schuster' 'critical-path' 'parallel-paths' 'straight-line' 'nested-loop' 'sorting'
+for model in 'kim-schuster'  'parallel-paths' 'straight-line' 'nested-loop' 'sorting' # 'critical-path'
 do
     python3 -m codesim.experiment \
         --model sambanova-llama  \

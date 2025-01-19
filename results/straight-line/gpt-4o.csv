@@ -1,0 +1,4 @@
+accuracy_nat,accuracy_syn,date,dataset
+1.0,1.0,01M-18D-01h-33m05s,n_ops-10_n_vars-3_n_instances-2_batch-1.json
+1.0,1.0,01M-18D-01h-37m17s,n_ops-10_n_vars-3_n_instances-2_batch-2.json
+1.0,1.0,01M-18D-01h-41m30s,n_ops-10_n_vars-3_n_instances-2_batch-3.json

@@ -1,0 +1,4 @@
+accuracy_nat,accuracy_syn,date,dataset
+0.9264069264069263,0.924963924963925,01M-17D-20h-31m50s,num_boxes-7-max_items_per_box-3-batch-1.json
+0.9466089466089466,0.9033189033189032,01M-17D-23h-18m15s,num_boxes-7-max_items_per_box-3-batch-2.json
+0.9324675324675324,0.912987012987013,01M-18D-02h-23m19s,num_boxes-7-max_items_per_box-3-batch-3.json

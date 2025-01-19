@@ -56,6 +56,7 @@ def main():
     parser.add_argument('-o', '--operation', choices=['kim-schuster', 'critical-path', 'parallel-paths', 'straight-line', 'nested-loop', 'sorting'], 
                         help='Type of operation to perform')
     parser.add_argument('-d', '--dataset_idx', default=-1,type=int, help='Index for the path of the dataset: -1 for all datasets')
+    parser.add_argument("--dataset_path", type=str, help="Path to the dataset", default="")
     parser.add_argument('-m', '--model', type=str, help='Model to use for the experiment')
     parser.add_argument('--wandb', action='store_true', help='Use wandb for logging, if not, use default txt file')
 
@@ -73,6 +74,11 @@ def main():
         raise ValueError("Could node load dataset of the given index")
     elif args.dataset_idx >= 0:
         dataset_list = [dataset_list[args.dataset_idx]]
+    
+    if args.dataset_path is not None:
+        print("Overwriting dataset list with the given path")
+        dataset_list = [args.dataset_path]
+        dataset_base = os.path.dirname(args.dataset_path)
 
     print(f"Operation: {args.operation}")
     print(f"Dataset Path: {args.dataset_idx}")
@@ -103,7 +109,7 @@ def main():
             for sample in jsondata:
                 # print(sample)
                 samples.append(Sample(**sample))
-                break
+                # break
 
         # print(samples[0])
         # send_request(samples[0])
@@ -168,7 +174,7 @@ def save_results(accuracy_nat, accuracy_syn, args, dataset_name):
             "date": curr_date,
             "dataset": dataset_name
         }
-        df = df.append(new_result, ignore_index=True)
+        df = pd.concat([df, pd.DataFrame([new_result])], ignore_index=True)
         # order by dataset name and then date
         df = df.sort_values(by=["dataset", "date"])
         df.to_csv(filename, index=False)
@@ -243,9 +249,9 @@ def experiment(samples: list[Sample], model: str, op_type: OperationType):
     correct_syn = 0
     for sample in samples:
         query_syn, query_nat = format_query(sample, op_type)
-        print(query_syn.prompt)
-        print(query_nat.prompt)
-        print("Synthetic Answer:", query_syn.answer, query_nat.answer)
+        # print(query_syn.prompt)
+        # print(query_nat.prompt)
+        # print("Synthetic Answer:", query_syn.answer, query_nat.answer)
         syn_result, syn_whole_answer = get_answer(query_syn.prompt, model)
         if compare_answers(syn_result, query_syn.answer, op_type):
             correct_syn += 1

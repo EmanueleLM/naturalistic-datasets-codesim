@@ -1,0 +1,2 @@
+accuracy_nat,accuracy_syn,date,dataset
+0.4,0.6666666666666666,01M-18D-07h-10m25s,n_loops-10_n_noisy_loops-5_min_loop_length-2_max_loop-10_batch-1.json

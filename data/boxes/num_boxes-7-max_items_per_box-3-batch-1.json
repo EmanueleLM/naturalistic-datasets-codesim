@@ -1,5 +1,23 @@
 [
     {
+        "syn": "x0 = {20}\nx1 = {41, 10}\nx2 = {86}\nx3 = {51}\nx4 = set()\nx5 = {3}\nx6 = {57}\nx3.remove(51)\nx5.remove(3)\nx0.add(3)\nx2.add(11)\nx6.remove(57)\nx2.add(57)\nx2.remove(86, 57, 11)\nx6.add(86, 57, 11)\nx6.remove(11)\nx2.add(11)\nx0.remove(3)\nx1.add(3)\nx1.remove(41, 10, 3)\nx6.add(14)\nx0.add(96)\n",
+        "nat": "Box 0 contains the disk, box 1 contains the boot and the chemical, box 2 contains the bread, box 3 contains the bag, box 4 is empty, box 5 contains the plate, box 6 contains the cigarette. Remove the bag from Box 3. Move the plate from Box 5 to Box 0. Put the crown into Box 2. Move the cigarette from Box 6 to Box 2. Move the bread and the cigarette and the crown from Box 2 to Box 6. Move the crown from Box 6 to Box 2. Move the plate from Box 0 to Box 1. Remove the boot and the chemical and the plate from Box 1. Put the cup into Box 6. Put the shoe into Box 0",
+        "label_syn": {
+            "6": [
+                57,
+                14,
+                86
+            ]
+        },
+        "label_nat": {
+            "6": [
+                "cigarette",
+                "cup",
+                "bread"
+            ]
+        }
+    },
+    {
         "syn": "x0 = {31}\nx1 = {38}\nx2 = {20, 12}\nx3 = {34}\nx4 = {89, 28}\nx5 = {16}\nx6 = {2}\n",
         "nat": "Box 0 contains the brain, box 1 contains the suit, box 2 contains the block and the disk, box 3 contains the creature, box 4 contains the ball and the coat, box 5 contains the magazine, box 6 contains the jacket",
         "label_syn": {
@@ -9405,24 +9423,6 @@
         },
         "label_nat": {
             "5": []
-        }
-    },
-    {
-        "syn": "x0 = {20}\nx1 = {41, 10}\nx2 = {86}\nx3 = {51}\nx4 = set()\nx5 = {3}\nx6 = {57}\nx3.remove(51)\nx5.remove(3)\nx0.add(3)\nx2.add(11)\nx6.remove(57)\nx2.add(57)\nx2.remove(86, 57, 11)\nx6.add(86, 57, 11)\nx6.remove(11)\nx2.add(11)\nx0.remove(3)\nx1.add(3)\nx1.remove(41, 10, 3)\nx6.add(14)\nx0.add(96)\n",
-        "nat": "Box 0 contains the disk, box 1 contains the boot and the chemical, box 2 contains the bread, box 3 contains the bag, box 4 is empty, box 5 contains the plate, box 6 contains the cigarette. Remove the bag from Box 3. Move the plate from Box 5 to Box 0. Put the crown into Box 2. Move the cigarette from Box 6 to Box 2. Move the bread and the cigarette and the crown from Box 2 to Box 6. Move the crown from Box 6 to Box 2. Move the plate from Box 0 to Box 1. Remove the boot and the chemical and the plate from Box 1. Put the cup into Box 6. Put the shoe into Box 0",
-        "label_syn": {
-            "6": [
-                57,
-                14,
-                86
-            ]
-        },
-        "label_nat": {
-            "6": [
-                "cigarette",
-                "cup",
-                "bread"
-            ]
         }
     }
 ]

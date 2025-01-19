@@ -1,0 +1,6 @@
+accuracy_nat,accuracy_syn,date,dataset
+0.948051948051948,0.8210678210678211,01M-17D-18h-52m40s,num_boxes-7-max_items_per_box-3-batch-1.json
+0.9581529581529582,0.8917748917748918,01M-17D-20h-07m26s,num_boxes-7-max_items_per_box-3-batch-2.json
+0.9493506493506494,0.8766233766233766,01M-17D-21h-31m10s,num_boxes-7-max_items_per_box-3-batch-3.json
+0.9163059163059164,0.8672438672438673,01M-17D-22h-47m44s,num_boxes-7-max_items_per_box-4-batch-1.json
+0.9336219336219336,0.8917748917748918,01M-18D-00h-01m10s,num_boxes-7-max_items_per_box-4-batch-2.json
