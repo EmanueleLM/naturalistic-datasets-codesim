@@ -214,14 +214,11 @@ class CriticalPath(Problem):
         v_ind = int(v//2)
         
         prompt = f"""There are {v} agents, {[f'a{i}' for i in range(v)]}. 
-Each of them has either a credit or a debit with the bank. 
-A debit is a negative amount of money he has; a debit is a positive quantity of money he has.
+Each of them has either a positive or a negative amount of money. If it is positve, it is a credit; if it is negative, it is a debit.
 Here is the amount of money each agent has: {'; '.join([f'a{i}={random.randint(-10, 10)}' for i in range(v)])}.
-The agents can exchange quantities of debit or credit among them. 
-An agent can borrow his whole debit from another agent. 
-In that case, the first agent decreases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.
-An agent can loan his whole debit to another agent. 
-In that case, the first agent increases his total amount of money by the total amount of money the second agent has; the money of the other agent does not change.
+The agents can exchange quantities of debit or credit among them. Here's the two possibilities:
+1) An agent doubles the amount of credit (positive) or debit (negative) another agent has. The first agent loses the quantity the other agent had, while the second agent dounbles his credit or debit.
+2) An agent gets all the credit (positive) or debit (negative) another agent has. The second agent has then zero money.
 Here's a list of interactions between the agents.
 """
 
@@ -281,13 +278,16 @@ Here's a list of interactions between the agents.
                         
             # Nat prompt 
             if '-' in op:
-                prompt += f"{src} loans all his money to {dst}.\n"
+                prompt += f"{src} doubles the amount of credit (positive) or debit (negative) {dst} has. {src} decreases or increases their amount of money accordingly\n"
             else:
-                prompt += f"{src} borrows all the money {dst} has.\n"
+                prompt += f"{src} gets all the credit (positive) or debit (negative) {dst} has. {dst} has no money now.\n"
                 
-            line = line.replace('@1@', dst).replace('@2@', src)
+            # TODO: integrate this code to the final version
+            line_1 = line.replace('@1@', src).replace('@2@', dst)
+            line_2 = (f"{dst} = 0" if '+' in op else f"{dst} *= 2")
+                
+            program += line_1 + '\n' + line_2 + '\n'
             # print(f"{i}: {line}")
-            program += line + '\n'
             
         # Compute the ground truth
         exec(program)
