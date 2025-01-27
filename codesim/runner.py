@@ -5,6 +5,7 @@ This file's responsibility is to restart the experiments when they are not runni
 import argparse
 import os
 import datetime
+from time import sleep
 import pandas as pd
 
 from .my_types import Sample, OperationType
@@ -17,8 +18,8 @@ def main():
     parser.add_argument('-m', '--model', type=str, help='Model to use for the experiment')
     parser.add_argument('--wandb', action='store_true', help='Use wandb for logging, if not, use default txt file')
 
+    
     args = parser.parse_args()
-
     op_type: OperationType = OperationType(args.operation)
     dataset_base = get_dataset_path(op_type)
     dataset_list = []
@@ -34,10 +35,12 @@ def main():
 
         print(f"Running {dataset_name}...")
         i = 0
-        while i < 5:
-            os.system(f"python -m codesim.experiment -o {args.operation} -m {args.model} --dataset_path {args.dataset_path} {'--wandb' if args.wandb else ''}")
+        while i < 1:
+            os.system(f"python3 -m codesim.experiment -o {args.operation} -m {args.model} --dataset_path {dataset} {'--wandb' if args.wandb else ''}")
             if check_results(args, dataset_name):
                 break
+            # allow to kill the main program
+            sleep(2)
             i += 1
             print(f"Failed to run {dataset_name}... Trying again...")
         else:
@@ -60,4 +63,4 @@ def check_results(args, dataset_name):
 
 if __name__ == "__main__":
     # test if works
-    
+    main()

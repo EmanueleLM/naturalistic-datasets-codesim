@@ -1,0 +1,422 @@
+[
+    {
+        "syn": "Here's a list of numbers. x = [171, 155, 245, 260, 104, 264, 78, 126, 269, 216, 139, 72, 86, 211, 227, 58, 25, 9, 134, 122, 18, 8, 103, 34, 163, 209, 289, 263, 165, 3]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 171, 'obj-1': 155, 'obj-2': 245, 'obj-3': 260, 'obj-4': 104, 'obj-5': 264, 'obj-6': 78, 'obj-7': 126, 'obj-8': 269, 'obj-9': 216, 'obj-10': 139, 'obj-11': 72, 'obj-12': 86, 'obj-13': 211, 'obj-14': 227, 'obj-15': 58, 'obj-16': 25, 'obj-17': 9, 'obj-18': 134, 'obj-19': 122, 'obj-20': 18, 'obj-21': 8, 'obj-22': 103, 'obj-23': 34, 'obj-24': 163, 'obj-25': 209, 'obj-26': 289, 'obj-27': 263, 'obj-28': 165, 'obj-29': 3}.\n\n",
+        "label_syn": {
+            "position": 7,
+            "label": 72,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 8,
+            "label": "obj-11",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [178, 92, 121, 12, 157, 280, 99, 39, 67, 131, 60, 208, 13, 78, 238, 212, 228, 109, 143, 188, 122, 153, 283, 145, 165, 244, 168, 294, 132, 75]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 178, 'obj-1': 92, 'obj-2': 121, 'obj-3': 12, 'obj-4': 157, 'obj-5': 280, 'obj-6': 99, 'obj-7': 39, 'obj-8': 67, 'obj-9': 131, 'obj-10': 60, 'obj-11': 208, 'obj-12': 13, 'obj-13': 78, 'obj-14': 238, 'obj-15': 212, 'obj-16': 228, 'obj-17': 109, 'obj-18': 143, 'obj-19': 188, 'obj-20': 122, 'obj-21': 153, 'obj-22': 283, 'obj-23': 145, 'obj-24': 165, 'obj-25': 244, 'obj-26': 168, 'obj-27': 294, 'obj-28': 132, 'obj-29': 75}.\n\n",
+        "label_syn": {
+            "position": 20,
+            "label": 178,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 21,
+            "label": "obj-0",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [233, 118, 18, 28, 160, 240, 219, 114, 149, 40, 30, 169, 208, 236, 145, 43, 131, 157, 184, 244, 83, 185, 102, 218, 94, 265, 101, 214, 54, 163]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 233, 'obj-1': 118, 'obj-2': 18, 'obj-3': 28, 'obj-4': 160, 'obj-5': 240, 'obj-6': 219, 'obj-7': 114, 'obj-8': 149, 'obj-9': 40, 'obj-10': 30, 'obj-11': 169, 'obj-12': 208, 'obj-13': 236, 'obj-14': 145, 'obj-15': 43, 'obj-16': 131, 'obj-17': 157, 'obj-18': 184, 'obj-19': 244, 'obj-20': 83, 'obj-21': 185, 'obj-22': 102, 'obj-23': 218, 'obj-24': 94, 'obj-25': 265, 'obj-26': 101, 'obj-27': 214, 'obj-28': 54, 'obj-29': 163}.\n\n",
+        "label_syn": {
+            "position": 21,
+            "label": 208,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 22,
+            "label": "obj-12",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [163, 123, 86, 79, 170, 5, 158, 26, 147, 89, 68, 78, 85, 104, 242, 211, 98, 112, 10, 144, 128, 247, 173, 261, 284, 210, 130, 13, 161, 277]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 163, 'obj-1': 123, 'obj-2': 86, 'obj-3': 79, 'obj-4': 170, 'obj-5': 5, 'obj-6': 158, 'obj-7': 26, 'obj-8': 147, 'obj-9': 89, 'obj-10': 68, 'obj-11': 78, 'obj-12': 85, 'obj-13': 104, 'obj-14': 242, 'obj-15': 211, 'obj-16': 98, 'obj-17': 112, 'obj-18': 10, 'obj-19': 144, 'obj-20': 128, 'obj-21': 247, 'obj-22': 173, 'obj-23': 261, 'obj-24': 284, 'obj-25': 210, 'obj-26': 130, 'obj-27': 13, 'obj-28': 161, 'obj-29': 277}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 10,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 2,
+            "label": "obj-18",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [7, 141, 228, 47, 270, 152, 231, 219, 104, 247, 273, 3, 51, 92, 19, 150, 72, 120, 265, 291, 263, 246, 39, 230, 183, 122, 280, 223, 70, 57]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 7, 'obj-1': 141, 'obj-2': 228, 'obj-3': 47, 'obj-4': 270, 'obj-5': 152, 'obj-6': 231, 'obj-7': 219, 'obj-8': 104, 'obj-9': 247, 'obj-10': 273, 'obj-11': 3, 'obj-12': 51, 'obj-13': 92, 'obj-14': 19, 'obj-15': 150, 'obj-16': 72, 'obj-17': 120, 'obj-18': 265, 'obj-19': 291, 'obj-20': 263, 'obj-21': 246, 'obj-22': 39, 'obj-23': 230, 'obj-24': 183, 'obj-25': 122, 'obj-26': 280, 'obj-27': 223, 'obj-28': 70, 'obj-29': 57}.\n\n",
+        "label_syn": {
+            "position": 22,
+            "label": 246,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 23,
+            "label": "obj-21",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [16, 181, 171, 122, 250, 284, 20, 84, 182, 79, 43, 7, 134, 146, 272, 176, 112, 6, 216, 156, 225, 98, 198, 213, 110, 227, 77, 232, 73, 274]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 16, 'obj-1': 181, 'obj-2': 171, 'obj-3': 122, 'obj-4': 250, 'obj-5': 284, 'obj-6': 20, 'obj-7': 84, 'obj-8': 182, 'obj-9': 79, 'obj-10': 43, 'obj-11': 7, 'obj-12': 134, 'obj-13': 146, 'obj-14': 272, 'obj-15': 176, 'obj-16': 112, 'obj-17': 6, 'obj-18': 216, 'obj-19': 156, 'obj-20': 225, 'obj-21': 98, 'obj-22': 198, 'obj-23': 213, 'obj-24': 110, 'obj-25': 227, 'obj-26': 77, 'obj-27': 232, 'obj-28': 73, 'obj-29': 274}.\n\n",
+        "label_syn": {
+            "position": 9,
+            "label": 98,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 10,
+            "label": "obj-21",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [298, 187, 193, 22, 8, 65, 245, 265, 257, 49, 117, 54, 232, 2, 297, 161, 218, 230, 211, 127, 250, 45, 166, 118, 23, 33, 51, 219, 240, 71]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 298, 'obj-1': 187, 'obj-2': 193, 'obj-3': 22, 'obj-4': 8, 'obj-5': 65, 'obj-6': 245, 'obj-7': 265, 'obj-8': 257, 'obj-9': 49, 'obj-10': 117, 'obj-11': 54, 'obj-12': 232, 'obj-13': 2, 'obj-14': 297, 'obj-15': 161, 'obj-16': 218, 'obj-17': 230, 'obj-18': 211, 'obj-19': 127, 'obj-20': 250, 'obj-21': 45, 'obj-22': 166, 'obj-23': 118, 'obj-24': 23, 'obj-25': 33, 'obj-26': 51, 'obj-27': 219, 'obj-28': 240, 'obj-29': 71}.\n\n",
+        "label_syn": {
+            "position": 4,
+            "label": 33,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 5,
+            "label": "obj-25",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [225, 187, 153, 230, 96, 179, 33, 48, 129, 200, 241, 131, 247, 236, 228, 28, 26, 107, 142, 267, 291, 30, 2, 60, 141, 108, 252, 102, 162, 277]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 225, 'obj-1': 187, 'obj-2': 153, 'obj-3': 230, 'obj-4': 96, 'obj-5': 179, 'obj-6': 33, 'obj-7': 48, 'obj-8': 129, 'obj-9': 200, 'obj-10': 241, 'obj-11': 131, 'obj-12': 247, 'obj-13': 236, 'obj-14': 228, 'obj-15': 28, 'obj-16': 26, 'obj-17': 107, 'obj-18': 142, 'obj-19': 267, 'obj-20': 291, 'obj-21': 30, 'obj-22': 2, 'obj-23': 60, 'obj-24': 141, 'obj-25': 108, 'obj-26': 252, 'obj-27': 102, 'obj-28': 162, 'obj-29': 277}.\n\n",
+        "label_syn": {
+            "position": 6,
+            "label": 60,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 7,
+            "label": "obj-23",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [42, 38, 138, 235, 136, 119, 102, 232, 34, 187, 15, 289, 60, 161, 276, 120, 87, 134, 131, 254, 219, 5, 75, 231, 191, 96, 50, 216, 95, 94]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 42, 'obj-1': 38, 'obj-2': 138, 'obj-3': 235, 'obj-4': 136, 'obj-5': 119, 'obj-6': 102, 'obj-7': 232, 'obj-8': 34, 'obj-9': 187, 'obj-10': 15, 'obj-11': 289, 'obj-12': 60, 'obj-13': 161, 'obj-14': 276, 'obj-15': 120, 'obj-16': 87, 'obj-17': 134, 'obj-18': 131, 'obj-19': 254, 'obj-20': 219, 'obj-21': 5, 'obj-22': 75, 'obj-23': 231, 'obj-24': 191, 'obj-25': 96, 'obj-26': 50, 'obj-27': 216, 'obj-28': 95, 'obj-29': 94}.\n\n",
+        "label_syn": {
+            "position": 15,
+            "label": 131,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 16,
+            "label": "obj-18",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [190, 297, 213, 16, 147, 286, 161, 9, 290, 159, 244, 6, 187, 228, 81, 262, 249, 270, 128, 160, 39, 183, 40, 162, 193, 205, 208, 292, 137, 229]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 190, 'obj-1': 297, 'obj-2': 213, 'obj-3': 16, 'obj-4': 147, 'obj-5': 286, 'obj-6': 161, 'obj-7': 9, 'obj-8': 290, 'obj-9': 159, 'obj-10': 244, 'obj-11': 6, 'obj-12': 187, 'obj-13': 228, 'obj-14': 81, 'obj-15': 262, 'obj-16': 249, 'obj-17': 270, 'obj-18': 128, 'obj-19': 160, 'obj-20': 39, 'obj-21': 183, 'obj-22': 40, 'obj-23': 162, 'obj-24': 193, 'obj-25': 205, 'obj-26': 208, 'obj-27': 292, 'obj-28': 137, 'obj-29': 229}.\n\n",
+        "label_syn": {
+            "position": 8,
+            "label": 147,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 9,
+            "label": "obj-4",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [206, 269, 22, 113, 203, 53, 261, 17, 176, 208, 66, 220, 11, 233, 151, 243, 249, 100, 63, 86, 105, 74, 31, 96, 259, 51, 275, 141, 136, 231]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 206, 'obj-1': 269, 'obj-2': 22, 'obj-3': 113, 'obj-4': 203, 'obj-5': 53, 'obj-6': 261, 'obj-7': 17, 'obj-8': 176, 'obj-9': 208, 'obj-10': 66, 'obj-11': 220, 'obj-12': 11, 'obj-13': 233, 'obj-14': 151, 'obj-15': 243, 'obj-16': 249, 'obj-17': 100, 'obj-18': 63, 'obj-19': 86, 'obj-20': 105, 'obj-21': 74, 'obj-22': 31, 'obj-23': 96, 'obj-24': 259, 'obj-25': 51, 'obj-26': 275, 'obj-27': 141, 'obj-28': 136, 'obj-29': 231}.\n\n",
+        "label_syn": {
+            "position": 27,
+            "label": 261,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 28,
+            "label": "obj-6",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [151, 68, 140, 0, 12, 7, 237, 241, 223, 143, 99, 267, 286, 56, 18, 228, 31, 100, 277, 129, 26, 217, 102, 47, 30, 261, 176, 4, 119, 293]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 151, 'obj-1': 68, 'obj-2': 140, 'obj-3': 0, 'obj-4': 12, 'obj-5': 7, 'obj-6': 237, 'obj-7': 241, 'obj-8': 223, 'obj-9': 143, 'obj-10': 99, 'obj-11': 267, 'obj-12': 286, 'obj-13': 56, 'obj-14': 18, 'obj-15': 228, 'obj-16': 31, 'obj-17': 100, 'obj-18': 277, 'obj-19': 129, 'obj-20': 26, 'obj-21': 217, 'obj-22': 102, 'obj-23': 47, 'obj-24': 30, 'obj-25': 261, 'obj-26': 176, 'obj-27': 4, 'obj-28': 119, 'obj-29': 293}.\n\n",
+        "label_syn": {
+            "position": 11,
+            "label": 99,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 12,
+            "label": "obj-10",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [175, 50, 149, 92, 104, 49, 196, 57, 170, 288, 184, 197, 65, 118, 146, 255, 244, 276, 271, 38, 88, 24, 231, 246, 203, 267, 139, 145, 162, 105]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 175, 'obj-1': 50, 'obj-2': 149, 'obj-3': 92, 'obj-4': 104, 'obj-5': 49, 'obj-6': 196, 'obj-7': 57, 'obj-8': 170, 'obj-9': 288, 'obj-10': 184, 'obj-11': 197, 'obj-12': 65, 'obj-13': 118, 'obj-14': 146, 'obj-15': 255, 'obj-16': 244, 'obj-17': 276, 'obj-18': 271, 'obj-19': 38, 'obj-20': 88, 'obj-21': 24, 'obj-22': 231, 'obj-23': 246, 'obj-24': 203, 'obj-25': 267, 'obj-26': 139, 'obj-27': 145, 'obj-28': 162, 'obj-29': 105}.\n\n",
+        "label_syn": {
+            "position": 15,
+            "label": 162,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 16,
+            "label": "obj-28",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [66, 120, 233, 35, 288, 170, 279, 242, 259, 106, 20, 162, 269, 228, 155, 36, 295, 12, 26, 204, 94, 47, 104, 163, 239, 141, 252, 251, 205, 4]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 66, 'obj-1': 120, 'obj-2': 233, 'obj-3': 35, 'obj-4': 288, 'obj-5': 170, 'obj-6': 279, 'obj-7': 242, 'obj-8': 259, 'obj-9': 106, 'obj-10': 20, 'obj-11': 162, 'obj-12': 269, 'obj-13': 228, 'obj-14': 155, 'obj-15': 36, 'obj-16': 295, 'obj-17': 12, 'obj-18': 26, 'obj-19': 204, 'obj-20': 94, 'obj-21': 47, 'obj-22': 104, 'obj-23': 163, 'obj-24': 239, 'obj-25': 141, 'obj-26': 252, 'obj-27': 251, 'obj-28': 205, 'obj-29': 4}.\n\n",
+        "label_syn": {
+            "position": 5,
+            "label": 36,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 6,
+            "label": "obj-15",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [73, 160, 108, 294, 231, 27, 120, 176, 291, 43, 196, 214, 172, 226, 299, 95, 252, 234, 131, 114, 170, 201, 146, 1, 241, 189, 264, 137, 285, 225]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 73, 'obj-1': 160, 'obj-2': 108, 'obj-3': 294, 'obj-4': 231, 'obj-5': 27, 'obj-6': 120, 'obj-7': 176, 'obj-8': 291, 'obj-9': 43, 'obj-10': 196, 'obj-11': 214, 'obj-12': 172, 'obj-13': 226, 'obj-14': 299, 'obj-15': 95, 'obj-16': 252, 'obj-17': 234, 'obj-18': 131, 'obj-19': 114, 'obj-20': 170, 'obj-21': 201, 'obj-22': 146, 'obj-23': 1, 'obj-24': 241, 'obj-25': 189, 'obj-26': 264, 'obj-27': 137, 'obj-28': 285, 'obj-29': 225}.\n\n",
+        "label_syn": {
+            "position": 23,
+            "label": 241,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 24,
+            "label": "obj-24",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [207, 283, 136, 189, 219, 132, 149, 165, 112, 209, 228, 292, 193, 115, 39, 286, 179, 241, 29, 98, 271, 248, 54, 94, 69, 20, 87, 144, 159, 223]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 207, 'obj-1': 283, 'obj-2': 136, 'obj-3': 189, 'obj-4': 219, 'obj-5': 132, 'obj-6': 149, 'obj-7': 165, 'obj-8': 112, 'obj-9': 209, 'obj-10': 228, 'obj-11': 292, 'obj-12': 193, 'obj-13': 115, 'obj-14': 39, 'obj-15': 286, 'obj-16': 179, 'obj-17': 241, 'obj-18': 29, 'obj-19': 98, 'obj-20': 271, 'obj-21': 248, 'obj-22': 54, 'obj-23': 94, 'obj-24': 69, 'obj-25': 20, 'obj-26': 87, 'obj-27': 144, 'obj-28': 159, 'obj-29': 223}.\n\n",
+        "label_syn": {
+            "position": 18,
+            "label": 193,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 19,
+            "label": "obj-12",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [73, 26, 260, 115, 107, 150, 287, 11, 276, 146, 39, 203, 55, 264, 229, 272, 180, 40, 144, 18, 197, 207, 286, 123, 97, 80, 191, 202, 258, 117]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 73, 'obj-1': 26, 'obj-2': 260, 'obj-3': 115, 'obj-4': 107, 'obj-5': 150, 'obj-6': 287, 'obj-7': 11, 'obj-8': 276, 'obj-9': 146, 'obj-10': 39, 'obj-11': 203, 'obj-12': 55, 'obj-13': 264, 'obj-14': 229, 'obj-15': 272, 'obj-16': 180, 'obj-17': 40, 'obj-18': 144, 'obj-19': 18, 'obj-20': 197, 'obj-21': 207, 'obj-22': 286, 'obj-23': 123, 'obj-24': 97, 'obj-25': 80, 'obj-26': 191, 'obj-27': 202, 'obj-28': 258, 'obj-29': 117}.\n\n",
+        "label_syn": {
+            "position": 9,
+            "label": 107,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 10,
+            "label": "obj-4",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [196, 68, 11, 250, 138, 173, 197, 191, 115, 267, 257, 182, 83, 35, 13, 260, 291, 70, 101, 119, 144, 74, 192, 195, 252, 51, 238, 59, 185, 233]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 196, 'obj-1': 68, 'obj-2': 11, 'obj-3': 250, 'obj-4': 138, 'obj-5': 173, 'obj-6': 197, 'obj-7': 191, 'obj-8': 115, 'obj-9': 267, 'obj-10': 257, 'obj-11': 182, 'obj-12': 83, 'obj-13': 35, 'obj-14': 13, 'obj-15': 260, 'obj-16': 291, 'obj-17': 70, 'obj-18': 101, 'obj-19': 119, 'obj-20': 144, 'obj-21': 74, 'obj-22': 192, 'obj-23': 195, 'obj-24': 252, 'obj-25': 51, 'obj-26': 238, 'obj-27': 59, 'obj-28': 185, 'obj-29': 233}.\n\n",
+        "label_syn": {
+            "position": 17,
+            "label": 191,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 18,
+            "label": "obj-7",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [66, 38, 15, 134, 142, 82, 25, 163, 194, 92, 95, 151, 205, 67, 97, 209, 37, 130, 30, 32, 139, 225, 261, 33, 169, 217, 297, 28, 119, 114]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 66, 'obj-1': 38, 'obj-2': 15, 'obj-3': 134, 'obj-4': 142, 'obj-5': 82, 'obj-6': 25, 'obj-7': 163, 'obj-8': 194, 'obj-9': 92, 'obj-10': 95, 'obj-11': 151, 'obj-12': 205, 'obj-13': 67, 'obj-14': 97, 'obj-15': 209, 'obj-16': 37, 'obj-17': 130, 'obj-18': 30, 'obj-19': 32, 'obj-20': 139, 'obj-21': 225, 'obj-22': 261, 'obj-23': 33, 'obj-24': 169, 'obj-25': 217, 'obj-26': 297, 'obj-27': 28, 'obj-28': 119, 'obj-29': 114}.\n\n",
+        "label_syn": {
+            "position": 0,
+            "label": 15,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 1,
+            "label": "obj-2",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [25, 71, 173, 278, 42, 115, 256, 107, 263, 46, 5, 225, 16, 137, 286, 142, 279, 298, 77, 208, 145, 288, 102, 69, 269, 224, 196, 285, 217, 232]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 25, 'obj-1': 71, 'obj-2': 173, 'obj-3': 278, 'obj-4': 42, 'obj-5': 115, 'obj-6': 256, 'obj-7': 107, 'obj-8': 263, 'obj-9': 46, 'obj-10': 5, 'obj-11': 225, 'obj-12': 16, 'obj-13': 137, 'obj-14': 286, 'obj-15': 142, 'obj-16': 279, 'obj-17': 298, 'obj-18': 77, 'obj-19': 208, 'obj-20': 145, 'obj-21': 288, 'obj-22': 102, 'obj-23': 69, 'obj-24': 269, 'obj-25': 224, 'obj-26': 196, 'obj-27': 285, 'obj-28': 217, 'obj-29': 232}.\n\n",
+        "label_syn": {
+            "position": 4,
+            "label": 46,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 5,
+            "label": "obj-9",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [296, 164, 209, 195, 247, 28, 89, 13, 130, 80, 136, 110, 113, 135, 70, 93, 103, 189, 141, 187, 61, 8, 211, 250, 132, 62, 208, 218, 263, 137]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 296, 'obj-1': 164, 'obj-2': 209, 'obj-3': 195, 'obj-4': 247, 'obj-5': 28, 'obj-6': 89, 'obj-7': 13, 'obj-8': 130, 'obj-9': 80, 'obj-10': 136, 'obj-11': 110, 'obj-12': 113, 'obj-13': 135, 'obj-14': 70, 'obj-15': 93, 'obj-16': 103, 'obj-17': 189, 'obj-18': 141, 'obj-19': 187, 'obj-20': 61, 'obj-21': 8, 'obj-22': 211, 'obj-23': 250, 'obj-24': 132, 'obj-25': 62, 'obj-26': 208, 'obj-27': 218, 'obj-28': 263, 'obj-29': 137}.\n\n",
+        "label_syn": {
+            "position": 28,
+            "label": 263,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 29,
+            "label": "obj-28",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [139, 199, 62, 298, 196, 257, 194, 220, 252, 285, 253, 256, 293, 229, 115, 238, 207, 202, 69, 66, 4, 47, 278, 2, 122, 159, 103, 77, 59, 141]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 139, 'obj-1': 199, 'obj-2': 62, 'obj-3': 298, 'obj-4': 196, 'obj-5': 257, 'obj-6': 194, 'obj-7': 220, 'obj-8': 252, 'obj-9': 285, 'obj-10': 253, 'obj-11': 256, 'obj-12': 293, 'obj-13': 229, 'obj-14': 115, 'obj-15': 238, 'obj-16': 207, 'obj-17': 202, 'obj-18': 69, 'obj-19': 66, 'obj-20': 4, 'obj-21': 47, 'obj-22': 278, 'obj-23': 2, 'obj-24': 122, 'obj-25': 159, 'obj-26': 103, 'obj-27': 77, 'obj-28': 59, 'obj-29': 141}.\n\n",
+        "label_syn": {
+            "position": 11,
+            "label": 139,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 12,
+            "label": "obj-0",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [129, 99, 284, 276, 277, 89, 48, 19, 175, 158, 280, 210, 173, 69, 146, 77, 32, 262, 203, 82, 22, 244, 131, 171, 36, 178, 106, 79, 27, 115]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 129, 'obj-1': 99, 'obj-2': 284, 'obj-3': 276, 'obj-4': 277, 'obj-5': 89, 'obj-6': 48, 'obj-7': 19, 'obj-8': 175, 'obj-9': 158, 'obj-10': 280, 'obj-11': 210, 'obj-12': 173, 'obj-13': 69, 'obj-14': 146, 'obj-15': 77, 'obj-16': 32, 'obj-17': 262, 'obj-18': 203, 'obj-19': 82, 'obj-20': 22, 'obj-21': 244, 'obj-22': 131, 'obj-23': 171, 'obj-24': 36, 'obj-25': 178, 'obj-26': 106, 'obj-27': 79, 'obj-28': 27, 'obj-29': 115}.\n\n",
+        "label_syn": {
+            "position": 16,
+            "label": 146,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 17,
+            "label": "obj-14",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [1, 83, 134, 260, 155, 45, 59, 113, 117, 111, 151, 232, 141, 61, 285, 269, 142, 41, 25, 40, 67, 241, 168, 263, 177, 21, 32, 194, 150, 192]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 1, 'obj-1': 83, 'obj-2': 134, 'obj-3': 260, 'obj-4': 155, 'obj-5': 45, 'obj-6': 59, 'obj-7': 113, 'obj-8': 117, 'obj-9': 111, 'obj-10': 151, 'obj-11': 232, 'obj-12': 141, 'obj-13': 61, 'obj-14': 285, 'obj-15': 269, 'obj-16': 142, 'obj-17': 41, 'obj-18': 25, 'obj-19': 40, 'obj-20': 67, 'obj-21': 241, 'obj-22': 168, 'obj-23': 263, 'obj-24': 177, 'obj-25': 21, 'obj-26': 32, 'obj-27': 194, 'obj-28': 150, 'obj-29': 192}.\n\n",
+        "label_syn": {
+            "position": 12,
+            "label": 113,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 13,
+            "label": "obj-7",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [221, 201, 99, 273, 134, 225, 183, 237, 209, 250, 70, 242, 172, 109, 125, 130, 222, 7, 230, 143, 204, 272, 52, 265, 155, 200, 241, 121, 25, 103]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 221, 'obj-1': 201, 'obj-2': 99, 'obj-3': 273, 'obj-4': 134, 'obj-5': 225, 'obj-6': 183, 'obj-7': 237, 'obj-8': 209, 'obj-9': 250, 'obj-10': 70, 'obj-11': 242, 'obj-12': 172, 'obj-13': 109, 'obj-14': 125, 'obj-15': 130, 'obj-16': 222, 'obj-17': 7, 'obj-18': 230, 'obj-19': 143, 'obj-20': 204, 'obj-21': 272, 'obj-22': 52, 'obj-23': 265, 'obj-24': 155, 'obj-25': 200, 'obj-26': 241, 'obj-27': 121, 'obj-28': 25, 'obj-29': 103}.\n\n",
+        "label_syn": {
+            "position": 22,
+            "label": 230,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 23,
+            "label": "obj-18",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [93, 223, 79, 176, 70, 97, 119, 10, 48, 289, 212, 290, 49, 4, 234, 6, 169, 56, 244, 33, 50, 37, 134, 72, 32, 291, 190, 259, 229, 268]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 93, 'obj-1': 223, 'obj-2': 79, 'obj-3': 176, 'obj-4': 70, 'obj-5': 97, 'obj-6': 119, 'obj-7': 10, 'obj-8': 48, 'obj-9': 289, 'obj-10': 212, 'obj-11': 290, 'obj-12': 49, 'obj-13': 4, 'obj-14': 234, 'obj-15': 6, 'obj-16': 169, 'obj-17': 56, 'obj-18': 244, 'obj-19': 33, 'obj-20': 50, 'obj-21': 37, 'obj-22': 134, 'obj-23': 72, 'obj-24': 32, 'obj-25': 291, 'obj-26': 190, 'obj-27': 259, 'obj-28': 229, 'obj-29': 268}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 6,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 2,
+            "label": "obj-15",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [26, 277, 222, 54, 96, 274, 206, 168, 134, 46, 155, 132, 209, 115, 33, 75, 261, 156, 229, 216, 91, 192, 125, 162, 151, 144, 28, 258, 102, 140]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 26, 'obj-1': 277, 'obj-2': 222, 'obj-3': 54, 'obj-4': 96, 'obj-5': 274, 'obj-6': 206, 'obj-7': 168, 'obj-8': 134, 'obj-9': 46, 'obj-10': 155, 'obj-11': 132, 'obj-12': 209, 'obj-13': 115, 'obj-14': 33, 'obj-15': 75, 'obj-16': 261, 'obj-17': 156, 'obj-18': 229, 'obj-19': 216, 'obj-20': 91, 'obj-21': 192, 'obj-22': 125, 'obj-23': 162, 'obj-24': 151, 'obj-25': 144, 'obj-26': 28, 'obj-27': 258, 'obj-28': 102, 'obj-29': 140}.\n\n",
+        "label_syn": {
+            "position": 22,
+            "label": 209,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 23,
+            "label": "obj-12",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [191, 44, 101, 167, 215, 72, 179, 189, 221, 296, 59, 168, 105, 83, 233, 49, 202, 102, 295, 21, 277, 128, 1, 247, 262, 41, 219, 275, 250, 140]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 191, 'obj-1': 44, 'obj-2': 101, 'obj-3': 167, 'obj-4': 215, 'obj-5': 72, 'obj-6': 179, 'obj-7': 189, 'obj-8': 221, 'obj-9': 296, 'obj-10': 59, 'obj-11': 168, 'obj-12': 105, 'obj-13': 83, 'obj-14': 233, 'obj-15': 49, 'obj-16': 202, 'obj-17': 102, 'obj-18': 295, 'obj-19': 21, 'obj-20': 277, 'obj-21': 128, 'obj-22': 1, 'obj-23': 247, 'obj-24': 262, 'obj-25': 41, 'obj-26': 219, 'obj-27': 275, 'obj-28': 250, 'obj-29': 140}.\n\n",
+        "label_syn": {
+            "position": 13,
+            "label": 167,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 14,
+            "label": "obj-3",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [7, 119, 178, 118, 117, 138, 40, 60, 74, 197, 24, 253, 28, 276, 249, 26, 57, 81, 121, 195, 110, 101, 127, 227, 96, 283, 162, 238, 13, 216]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 7, 'obj-1': 119, 'obj-2': 178, 'obj-3': 118, 'obj-4': 117, 'obj-5': 138, 'obj-6': 40, 'obj-7': 60, 'obj-8': 74, 'obj-9': 197, 'obj-10': 24, 'obj-11': 253, 'obj-12': 28, 'obj-13': 276, 'obj-14': 249, 'obj-15': 26, 'obj-16': 57, 'obj-17': 81, 'obj-18': 121, 'obj-19': 195, 'obj-20': 110, 'obj-21': 101, 'obj-22': 127, 'obj-23': 227, 'obj-24': 96, 'obj-25': 283, 'obj-26': 162, 'obj-27': 238, 'obj-28': 13, 'obj-29': 216}.\n\n",
+        "label_syn": {
+            "position": 12,
+            "label": 110,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 13,
+            "label": "obj-20",
+            "ascending": true
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [182, 223, 225, 46, 42, 111, 43, 212, 35, 166, 236, 299, 288, 249, 181, 178, 208, 217, 227, 255, 228, 143, 123, 49, 233, 180, 157, 121, 52, 146]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(arr):\n    n = len(arr)\n    for j in range(1, n):\n        val = arr[j]\n        i = j - 1\n        while i >= 0 and val < arr[i]:\n            arr[i + 1] = arr[i]\n            i -= 1\n        arr[i + 1] = val\n    return arr\n",
+        "nat": "One has the following 30 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19', 'obj-20', 'obj-21', 'obj-22', 'obj-23', 'obj-24', 'obj-25', 'obj-26', 'obj-27', 'obj-28', 'obj-29'].\n\nThis is the weight of each object in Kg: {'obj-0': 182, 'obj-1': 223, 'obj-2': 225, 'obj-3': 46, 'obj-4': 42, 'obj-5': 111, 'obj-6': 43, 'obj-7': 212, 'obj-8': 35, 'obj-9': 166, 'obj-10': 236, 'obj-11': 299, 'obj-12': 288, 'obj-13': 249, 'obj-14': 181, 'obj-15': 178, 'obj-16': 208, 'obj-17': 217, 'obj-18': 227, 'obj-19': 255, 'obj-20': 228, 'obj-21': 143, 'obj-22': 123, 'obj-23': 49, 'obj-24': 233, 'obj-25': 180, 'obj-26': 157, 'obj-27': 121, 'obj-28': 52, 'obj-29': 146}.\n\n",
+        "label_syn": {
+            "position": 7,
+            "label": 121,
+            "ascending": true
+        },
+        "label_nat": {
+            "position": 8,
+            "label": "obj-27",
+            "ascending": true
+        }
+    }
+]

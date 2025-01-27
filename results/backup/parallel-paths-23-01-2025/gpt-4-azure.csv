@@ -1,0 +1,16 @@
+accuracy_nat,accuracy_syn,date,dataset
+0.4,0.4666666666666667,01M-18D-04h-38m53s,n_ops-10_n_vars-3_n_instances-2_batch-1.json
+0.3333333333333333,0.5666666666666667,01M-18D-04h-46m39s,n_ops-10_n_vars-3_n_instances-2_batch-2.json
+0.2666666666666666,0.4333333333333333,01M-18D-04h-54m27s,n_ops-10_n_vars-3_n_instances-2_batch-3.json
+0.4666666666666667,0.0,01M-20D-21h-12m12s,n_ops-20_n_vars-3_n_instances-2_batch-1.json
+0.5666666666666667,0.0333333333333333,01M-20D-21h-22m47s,n_ops-20_n_vars-3_n_instances-2_batch-2.json
+0.4,0.0666666666666666,01M-20D-21h-31m59s,n_ops-20_n_vars-3_n_instances-2_batch-3.json
+0.6333333333333333,0.0,01M-20D-21h-42m00s,n_ops-30_n_vars-3_n_instances-2_batch-1.json
+0.5,0.0333333333333333,01M-20D-21h-51m31s,n_ops-30_n_vars-3_n_instances-2_batch-2.json
+0.4666666666666667,0.0,01M-20D-22h-01m43s,n_ops-30_n_vars-3_n_instances-2_batch-3.json
+0.0666666666666666,0.0,01M-20D-22h-12m11s,n_ops-40_n_vars-3_n_instances-2_batch-1.json
+0.0666666666666666,0.0,01M-20D-22h-21m06s,n_ops-40_n_vars-3_n_instances-2_batch-2.json
+0.0666666666666666,0.0,01M-20D-22h-30m36s,n_ops-40_n_vars-3_n_instances-2_batch-3.json
+0.0333333333333333,0.0,01M-20D-22h-39m52s,n_ops-50_n_vars-3_n_instances-2_batch-1.json
+0.0,0.0,01M-20D-22h-50m43s,n_ops-50_n_vars-3_n_instances-2_batch-2.json
+0.0,0.0,01M-20D-22h-50m43s,n_ops-50_n_vars-3_n_instances-2_batch-3.json

@@ -1,9 +1,5 @@
 
-for model in 'kim-schuster' 'parallel-paths' 'straight-line' 'nested-loop' 'sorting' # 'critical-path'
+for operation in 'straight-line' 'critical-path' 'parallel-paths' 'nested-loop' 'sorting' 'kim-schuster'
 do
-    python3 -m codesim.runner \
-        --model gpt-4-azure  \
-        --operation $operation --wandb
+    python3 -m codesim.runner --model gpt-4o --operation $operation --wandb
 done
-
-# python3 -m codesim.experiment --model gpt-4-azure --operation parallel-paths

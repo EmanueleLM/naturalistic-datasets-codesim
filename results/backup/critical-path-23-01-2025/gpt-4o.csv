@@ -1,0 +1,16 @@
+accuracy_nat,accuracy_syn,date,dataset
+0.2333333333333333,1.0,01M-21D-06h-18m10s,n_ops-10_n_vars-6_len_critical_path-5_batch-1.json
+0.4666666666666667,1.0,01M-21D-06h-27m58s,n_ops-10_n_vars-6_len_critical_path-5_batch-2.json
+0.4,1.0,01M-21D-06h-38m02s,n_ops-10_n_vars-6_len_critical_path-5_batch-3.json
+0.3333333333333333,0.7,01M-21D-06h-53m52s,n_ops-20_n_vars-6_len_critical_path-5_batch-1.json
+0.3666666666666666,0.7,01M-21D-07h-12m02s,n_ops-20_n_vars-6_len_critical_path-5_batch-2.json
+0.3,0.7,01M-21D-07h-24m20s,n_ops-20_n_vars-6_len_critical_path-5_batch-3.json
+0.3666666666666666,0.0333333333333333,01M-21D-07h-38m49s,n_ops-30_n_vars-6_len_critical_path-5_batch-1.json
+0.1333333333333333,0.0,01M-21D-08h-01m18s,n_ops-30_n_vars-6_len_critical_path-5_batch-2.json
+0.2666666666666666,0.0,01M-21D-08h-19m25s,n_ops-30_n_vars-6_len_critical_path-5_batch-3.json
+0.0333333333333333,0.0333333333333333,01M-21D-08h-37m24s,n_ops-40_n_vars-6_len_critical_path-5_batch-1.json
+0.0333333333333333,0.0,01M-21D-08h-54m39s,n_ops-40_n_vars-6_len_critical_path-5_batch-2.json
+0.0666666666666666,0.0,01M-21D-09h-12m10s,n_ops-40_n_vars-6_len_critical_path-5_batch-3.json
+0.0,0.0,01M-21D-09h-31m38s,n_ops-50_n_vars-6_len_critical_path-5_batch-1.json
+0.0666666666666666,0.0,01M-21D-09h-51m02s,n_ops-50_n_vars-6_len_critical_path-5_batch-2.json
+0.03333333333333333,0.03333333333333333,01M-21D-10h-07m34s,n_ops-50_n_vars-6_len_critical_path-5_batch-3.json

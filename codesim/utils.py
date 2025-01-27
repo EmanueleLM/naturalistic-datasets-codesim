@@ -294,12 +294,15 @@ def queryllamasambanova(prompt, jdata):
         base_url="https://api.sambanova.ai/v1",
     )
 
-    response = client.chat.completions.create(
-        model=model_name,
-        messages=[{"role":"system","content":"You are a helpful assistant"},{"role":"user","content":prompt}],
-        temperature =  0.1,
-        top_p = 0.1
-    )
+    try:
+        response = client.chat.completions.create(
+            model=model_name,
+            messages=[{"role":"system","content":"You are a helpful assistant"},{"role":"user","content":prompt}],
+            temperature =  0.1,
+            top_p = 0.1
+        )
+    except Exception as e:
+        raise e
 
     return response.choices[0].message.content
 
@@ -382,15 +385,17 @@ def querygptazurechat(prompt, jdata):
     except openai.APIError as e:
         print(e)
         print("Azure filtered this request: ", prompt)
-        return "error"
+        # return "error"
+        raise e
     
     track_costs(model_name+"chat", completion, 0.0015, 0.002) # This should be upper bound cost
 
     try:
         completion = completion['choices'][0]['message']['content']
-    except KeyError:
+    except KeyError as e:
         print("Completion filtered by Azure")
-        completion = "error"
+        # completion = "error"
+        raise e
     return completion
 
 def querygptazure(prompt, jdata, temperature=0., n=1, stop=None):
@@ -424,17 +429,18 @@ def querygptazure(prompt, jdata, temperature=0., n=1, stop=None):
     except openai.APIError as e:
         print(e)
         print("content filtered")
-
-        for i in range(n):
-            outputs.append("error")
-        return outputs
+        raise e
+        # for i in range(n):
+        #     outputs.append("error")
+        # return outputs
 
     for completion in completion.choices:
         try:
             outputs.append(completion.message.content)
-        except KeyError:
+        except KeyError as e:
             print("Completion filtered by Azure")
-            outputs.append("error")
+            # outputs.append("error")
+            raise e
     # outputs.extend([choice["message"]["content"] for choice in completion["choices"]])
 
     # track_costs(model_name+"-new", completion, 0.0015, 0.002) # This should be upper bound cost

@@ -1,0 +1,422 @@
+[
+    {
+        "syn": "Here's a list of numbers. x = [74, 4, 31, 2, 1, 85, 59, 97, 57, 20]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 74, 'obj-1': 4, 'obj-2': 31, 'obj-3': 2, 'obj-4': 1, 'obj-5': 85, 'obj-6': 59, 'obj-7': 97, 'obj-8': 57, 'obj-9': 20}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 85,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 2,
+            "label": "obj-5",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [85, 79, 86, 93, 25, 70, 66, 58, 82, 10]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 85, 'obj-1': 79, 'obj-2': 86, 'obj-3': 93, 'obj-4': 25, 'obj-5': 70, 'obj-6': 66, 'obj-7': 58, 'obj-8': 82, 'obj-9': 10}.\n\n",
+        "label_syn": {
+            "position": 6,
+            "label": 66,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 7,
+            "label": "obj-6",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [26, 14, 21, 60, 61, 11, 2, 62, 96, 40]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 26, 'obj-1': 14, 'obj-2': 21, 'obj-3': 60, 'obj-4': 61, 'obj-5': 11, 'obj-6': 2, 'obj-7': 62, 'obj-8': 96, 'obj-9': 40}.\n\n",
+        "label_syn": {
+            "position": 5,
+            "label": 26,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 6,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [57, 46, 14, 84, 53, 88, 81, 89, 16, 10]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 57, 'obj-1': 46, 'obj-2': 14, 'obj-3': 84, 'obj-4': 53, 'obj-5': 88, 'obj-6': 81, 'obj-7': 89, 'obj-8': 16, 'obj-9': 10}.\n\n",
+        "label_syn": {
+            "position": 6,
+            "label": 46,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 7,
+            "label": "obj-1",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [75, 18, 29, 36, 82, 50, 58, 16, 35, 13]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 75, 'obj-1': 18, 'obj-2': 29, 'obj-3': 36, 'obj-4': 82, 'obj-5': 50, 'obj-6': 58, 'obj-7': 16, 'obj-8': 35, 'obj-9': 13}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 58,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-6",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [90, 93, 63, 15, 65, 27, 5, 55, 11, 41]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 90, 'obj-1': 93, 'obj-2': 63, 'obj-3': 15, 'obj-4': 65, 'obj-5': 27, 'obj-6': 5, 'obj-7': 55, 'obj-8': 11, 'obj-9': 41}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 65,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-4",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [81, 88, 82, 34, 23, 55, 76, 90, 18, 49]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 81, 'obj-1': 88, 'obj-2': 82, 'obj-3': 34, 'obj-4': 23, 'obj-5': 55, 'obj-6': 76, 'obj-7': 90, 'obj-8': 18, 'obj-9': 49}.\n\n",
+        "label_syn": {
+            "position": 8,
+            "label": 23,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 9,
+            "label": "obj-4",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [27, 58, 70, 82, 35, 52, 99, 43, 40, 93]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 27, 'obj-1': 58, 'obj-2': 70, 'obj-3': 82, 'obj-4': 35, 'obj-5': 52, 'obj-6': 99, 'obj-7': 43, 'obj-8': 40, 'obj-9': 93}.\n\n",
+        "label_syn": {
+            "position": 5,
+            "label": 52,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 6,
+            "label": "obj-5",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [64, 20, 36, 85, 42, 13, 92, 72, 82, 94]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 64, 'obj-1': 20, 'obj-2': 36, 'obj-3': 85, 'obj-4': 42, 'obj-5': 13, 'obj-6': 92, 'obj-7': 72, 'obj-8': 82, 'obj-9': 94}.\n\n",
+        "label_syn": {
+            "position": 9,
+            "label": 13,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 10,
+            "label": "obj-5",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [84, 4, 80, 9, 22, 18, 31, 19, 32, 57]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 84, 'obj-1': 4, 'obj-2': 80, 'obj-3': 9, 'obj-4': 22, 'obj-5': 18, 'obj-6': 31, 'obj-7': 19, 'obj-8': 32, 'obj-9': 57}.\n\n",
+        "label_syn": {
+            "position": 0,
+            "label": 84,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 1,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [0, 17, 84, 4, 31, 21, 7, 74, 50, 15]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 0, 'obj-1': 17, 'obj-2': 84, 'obj-3': 4, 'obj-4': 31, 'obj-5': 21, 'obj-6': 7, 'obj-7': 74, 'obj-8': 50, 'obj-9': 15}.\n\n",
+        "label_syn": {
+            "position": 0,
+            "label": 84,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 1,
+            "label": "obj-2",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [72, 57, 45, 32, 35, 77, 87, 1, 89, 94]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 72, 'obj-1': 57, 'obj-2': 45, 'obj-3': 32, 'obj-4': 35, 'obj-5': 77, 'obj-6': 87, 'obj-7': 1, 'obj-8': 89, 'obj-9': 94}.\n\n",
+        "label_syn": {
+            "position": 5,
+            "label": 57,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 6,
+            "label": "obj-1",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [2, 62, 90, 75, 78, 35, 15, 14, 28, 17]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 2, 'obj-1': 62, 'obj-2': 90, 'obj-3': 75, 'obj-4': 78, 'obj-5': 35, 'obj-6': 15, 'obj-7': 14, 'obj-8': 28, 'obj-9': 17}.\n\n",
+        "label_syn": {
+            "position": 9,
+            "label": 2,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 10,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [11, 18, 96, 16, 29, 2, 69, 21, 0, 50]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 11, 'obj-1': 18, 'obj-2': 96, 'obj-3': 16, 'obj-4': 29, 'obj-5': 2, 'obj-6': 69, 'obj-7': 21, 'obj-8': 0, 'obj-9': 50}.\n\n",
+        "label_syn": {
+            "position": 3,
+            "label": 29,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 4,
+            "label": "obj-4",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [78, 23, 58, 72, 73, 66, 91, 27, 36, 99]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 78, 'obj-1': 23, 'obj-2': 58, 'obj-3': 72, 'obj-4': 73, 'obj-5': 66, 'obj-6': 91, 'obj-7': 27, 'obj-8': 36, 'obj-9': 99}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 78,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [50, 48, 35, 55, 15, 13, 86, 25, 70, 91]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 50, 'obj-1': 48, 'obj-2': 35, 'obj-3': 55, 'obj-4': 15, 'obj-5': 13, 'obj-6': 86, 'obj-7': 25, 'obj-8': 70, 'obj-9': 91}.\n\n",
+        "label_syn": {
+            "position": 8,
+            "label": 15,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 9,
+            "label": "obj-4",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [67, 95, 52, 49, 62, 12, 55, 35, 99, 80]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 67, 'obj-1': 95, 'obj-2': 52, 'obj-3': 49, 'obj-4': 62, 'obj-5': 12, 'obj-6': 55, 'obj-7': 35, 'obj-8': 99, 'obj-9': 80}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 80,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-9",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [64, 34, 25, 95, 56, 13, 15, 28, 2, 71]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 64, 'obj-1': 34, 'obj-2': 25, 'obj-3': 95, 'obj-4': 56, 'obj-5': 13, 'obj-6': 15, 'obj-7': 28, 'obj-8': 2, 'obj-9': 71}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 64,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [75, 26, 16, 55, 25, 14, 42, 21, 99, 82]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 75, 'obj-1': 26, 'obj-2': 16, 'obj-3': 55, 'obj-4': 25, 'obj-5': 14, 'obj-6': 42, 'obj-7': 21, 'obj-8': 99, 'obj-9': 82}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 82,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 2,
+            "label": "obj-9",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [64, 11, 4, 61, 2, 16, 14, 39, 91, 82]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 64, 'obj-1': 11, 'obj-2': 4, 'obj-3': 61, 'obj-4': 2, 'obj-5': 16, 'obj-6': 14, 'obj-7': 39, 'obj-8': 91, 'obj-9': 82}.\n\n",
+        "label_syn": {
+            "position": 8,
+            "label": 4,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 9,
+            "label": "obj-2",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [78, 17, 86, 9, 92, 15, 69, 18, 91, 76]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 78, 'obj-1': 17, 'obj-2': 86, 'obj-3': 9, 'obj-4': 92, 'obj-5': 15, 'obj-6': 69, 'obj-7': 18, 'obj-8': 91, 'obj-9': 76}.\n\n",
+        "label_syn": {
+            "position": 7,
+            "label": 17,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 8,
+            "label": "obj-1",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [53, 32, 54, 62, 99, 95, 27, 34, 57, 40]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 53, 'obj-1': 32, 'obj-2': 54, 'obj-3': 62, 'obj-4': 99, 'obj-5': 95, 'obj-6': 27, 'obj-7': 34, 'obj-8': 57, 'obj-9': 40}.\n\n",
+        "label_syn": {
+            "position": 3,
+            "label": 57,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 4,
+            "label": "obj-8",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [84, 88, 78, 74, 89, 56, 40, 57, 68, 92]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 84, 'obj-1': 88, 'obj-2': 78, 'obj-3': 74, 'obj-4': 89, 'obj-5': 56, 'obj-6': 40, 'obj-7': 57, 'obj-8': 68, 'obj-9': 92}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 88,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-1",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [15, 47, 51, 17, 76, 79, 44, 61, 54, 35]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 15, 'obj-1': 47, 'obj-2': 51, 'obj-3': 17, 'obj-4': 76, 'obj-5': 79, 'obj-6': 44, 'obj-7': 61, 'obj-8': 54, 'obj-9': 35}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 76,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 2,
+            "label": "obj-4",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [72, 89, 93, 46, 67, 47, 45, 97, 6, 84]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 72, 'obj-1': 89, 'obj-2': 93, 'obj-3': 46, 'obj-4': 67, 'obj-5': 47, 'obj-6': 45, 'obj-7': 97, 'obj-8': 6, 'obj-9': 84}.\n\n",
+        "label_syn": {
+            "position": 3,
+            "label": 84,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 4,
+            "label": "obj-9",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [76, 46, 54, 36, 32, 77, 65, 49, 4, 98]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 76, 'obj-1': 46, 'obj-2': 54, 'obj-3': 36, 'obj-4': 32, 'obj-5': 77, 'obj-6': 65, 'obj-7': 49, 'obj-8': 4, 'obj-9': 98}.\n\n",
+        "label_syn": {
+            "position": 3,
+            "label": 65,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 4,
+            "label": "obj-6",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [81, 52, 37, 65, 80, 28, 40, 92, 33, 34]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 81, 'obj-1': 52, 'obj-2': 37, 'obj-3': 65, 'obj-4': 80, 'obj-5': 28, 'obj-6': 40, 'obj-7': 92, 'obj-8': 33, 'obj-9': 34}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 81,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 2,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [0, 57, 28, 15, 90, 10, 63, 68, 48, 84]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 0, 'obj-1': 57, 'obj-2': 28, 'obj-3': 15, 'obj-4': 90, 'obj-5': 10, 'obj-6': 63, 'obj-7': 68, 'obj-8': 48, 'obj-9': 84}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 68,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-7",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [52, 2, 84, 91, 94, 68, 76, 99, 39, 22]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 52, 'obj-1': 2, 'obj-2': 84, 'obj-3': 91, 'obj-4': 94, 'obj-5': 68, 'obj-6': 76, 'obj-7': 99, 'obj-8': 39, 'obj-9': 22}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 91,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-3",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [3, 80, 22, 20, 57, 83, 45, 84, 44, 29]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 10 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9'].\n\nThis is the weight of each object in Kg: {'obj-0': 3, 'obj-1': 80, 'obj-2': 22, 'obj-3': 20, 'obj-4': 57, 'obj-5': 83, 'obj-6': 45, 'obj-7': 84, 'obj-8': 44, 'obj-9': 29}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 80,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-1",
+            "ascending": false
+        }
+    }
+]

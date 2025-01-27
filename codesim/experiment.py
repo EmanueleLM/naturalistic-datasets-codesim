@@ -56,7 +56,7 @@ def main():
     parser.add_argument('-o', '--operation', choices=['kim-schuster', 'critical-path', 'parallel-paths', 'straight-line', 'nested-loop', 'sorting'], 
                         help='Type of operation to perform')
     parser.add_argument('-d', '--dataset_idx', default=-1,type=int, help='Index for the path of the dataset: -1 for all datasets')
-    parser.add_argument("--dataset_path", type=str, help="Path to the dataset", default="")
+    parser.add_argument("--dataset_path", type=str, help="Path to the dataset", default=None)
     parser.add_argument('-m', '--model', type=str, help='Model to use for the experiment')
     parser.add_argument('--wandb', action='store_true', help='Use wandb for logging, if not, use default txt file')
 
@@ -67,7 +67,8 @@ def main():
     dataset_base = get_dataset_path(op_type)
     dataset_list = []
     for dataset in os.listdir(dataset_base):
-        dataset_list.append(os.path.join(dataset_base, dataset))
+        if ".json" in dataset:
+            dataset_list.append(os.path.join(dataset_base, dataset))
     dataset_list = sorted(dataset_list)
 
     if len(dataset_list) < args.dataset_idx:
@@ -411,7 +412,7 @@ def get_answer(prompt: str, model: str):
     end = answer.rfind("</answer>")
     
     if start == -1 or end == -1:
-        return ""
+        return "", answer
 
     return answer[start+8:end], answer
 

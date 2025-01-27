@@ -390,15 +390,16 @@ class Sort(Problem):
         self.n_vars = n_vars
         self.ascending = ascending
         self.basepath = "./data/Sort/"
-        self.algorithm = """def f(v):
-    for n in range(len(v) - 1, 0, -1):
-        condition = False  
-        for i in range(n):
-            if v[i] {condition} v[i + 1]:
-                v[i], v[i + 1] = v[i + 1], v[i]
-                condition = True
-        if not condition:
-            break"""
+        self.algorithm = """def f(arr):
+    n = len(arr)
+    for j in range(1, n):
+        val = arr[j]
+        i = j - 1
+        while i >= 0 and val {condition} arr[i]:
+            arr[i + 1] = arr[i]
+            i -= 1
+        arr[i + 1] = val
+    return arr"""
         
     def reset(self, n_vars:int=None, ascending:bool=None) -> None:
         super().reset()
@@ -424,8 +425,8 @@ This is the weight of each object in Kg: {var2val}.\n
 """
         program = f"""Here's a list of numbers. x = {list(var2val.values())}\n
 Simulate the following algorithm with the list of numbers as input:\n
-{self.algorithm.format(condition='>' if self.ascending else '<')}
-"""
+{self.algorithm.format(condition='<' if self.ascending else '>')}
+"""  # revert condition is bubble-sort, i.e., condition='>' if self.ascending else '<'
         k = random.randint(0, self.n_vars-1)
         weights.sort(reverse=not(self.ascending))
         gt_syn = {'position': k,

@@ -6,8 +6,12 @@ accuracy_nat,accuracy_syn,date,dataset
 0.5122655122655123,0.9956709956709956,01M-18D-15h-28m58s,num_boxes-7-max_items_per_box-4-batch-2.json
 0.5935064935064935,0.9974025974025974,01M-18D-20h-17m55s,num_boxes-7-max_items_per_box-4-batch-3.json
 0.6291486291486291,0.9985569985569984,01M-19D-00h-36m39s,num_boxes-7-max_items_per_box-5-batch-1.json
+0.6623376623376623,0.9985569985569985,01M-27D-14h-44m39s,num_boxes-7-max_items_per_box-5-batch-1.json
 0.5714285714285714,0.9971139971139972,01M-19D-04h-55m39s,num_boxes-7-max_items_per_box-5-batch-2.json
 0.5675324675324676,0.9935064935064936,01M-19D-09h-33m05s,num_boxes-7-max_items_per_box-5-batch-3.json
 0.5670995670995671,0.9985569985569984,01M-19D-13h-30m51s,num_boxes-7-max_items_per_box-6-batch-1.json
 0.5598845598845599,0.9985569985569984,01M-19D-17h-03m20s,num_boxes-7-max_items_per_box-6-batch-2.json
 0.6194805194805195,0.9961038961038962,01M-19D-20h-59m35s,num_boxes-7-max_items_per_box-6-batch-3.json
+0.4617604617604617,0.9927849927849928,01M-20D-00h-35m07s,num_boxes-7-max_items_per_box-7-batch-1.json
+0.5425685425685426,1.0,01M-20D-04h-02m33s,num_boxes-7-max_items_per_box-7-batch-2.json
+0.5753246753246753,0.9948051948051948,01M-20D-07h-54m51s,num_boxes-7-max_items_per_box-7-batch-3.json

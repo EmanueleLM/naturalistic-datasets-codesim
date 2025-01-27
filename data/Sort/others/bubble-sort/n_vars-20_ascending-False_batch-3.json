@@ -1,0 +1,422 @@
+[
+    {
+        "syn": "Here's a list of numbers. x = [131, 198, 123, 124, 74, 2, 16, 49, 148, 98, 118, 34, 56, 25, 113, 121, 174, 78, 130, 109]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 131, 'obj-1': 198, 'obj-2': 123, 'obj-3': 124, 'obj-4': 74, 'obj-5': 2, 'obj-6': 16, 'obj-7': 49, 'obj-8': 148, 'obj-9': 98, 'obj-10': 118, 'obj-11': 34, 'obj-12': 56, 'obj-13': 25, 'obj-14': 113, 'obj-15': 121, 'obj-16': 174, 'obj-17': 78, 'obj-18': 130, 'obj-19': 109}.\n\n",
+        "label_syn": {
+            "position": 5,
+            "label": 124,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 6,
+            "label": "obj-3",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [168, 137, 56, 98, 21, 52, 34, 122, 46, 20, 150, 149, 9, 165, 132, 23, 179, 190, 89, 195]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 168, 'obj-1': 137, 'obj-2': 56, 'obj-3': 98, 'obj-4': 21, 'obj-5': 52, 'obj-6': 34, 'obj-7': 122, 'obj-8': 46, 'obj-9': 20, 'obj-10': 150, 'obj-11': 149, 'obj-12': 9, 'obj-13': 165, 'obj-14': 132, 'obj-15': 23, 'obj-16': 179, 'obj-17': 190, 'obj-18': 89, 'obj-19': 195}.\n\n",
+        "label_syn": {
+            "position": 3,
+            "label": 168,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 4,
+            "label": "obj-0",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [167, 54, 72, 7, 48, 179, 141, 110, 97, 161, 36, 62, 176, 6, 114, 196, 21, 165, 191, 107]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 167, 'obj-1': 54, 'obj-2': 72, 'obj-3': 7, 'obj-4': 48, 'obj-5': 179, 'obj-6': 141, 'obj-7': 110, 'obj-8': 97, 'obj-9': 161, 'obj-10': 36, 'obj-11': 62, 'obj-12': 176, 'obj-13': 6, 'obj-14': 114, 'obj-15': 196, 'obj-16': 21, 'obj-17': 165, 'obj-18': 191, 'obj-19': 107}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 179,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-5",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [78, 17, 144, 2, 67, 191, 79, 161, 27, 40, 30, 14, 160, 185, 166, 124, 69, 195, 84, 57]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 78, 'obj-1': 17, 'obj-2': 144, 'obj-3': 2, 'obj-4': 67, 'obj-5': 191, 'obj-6': 79, 'obj-7': 161, 'obj-8': 27, 'obj-9': 40, 'obj-10': 30, 'obj-11': 14, 'obj-12': 160, 'obj-13': 185, 'obj-14': 166, 'obj-15': 124, 'obj-16': 69, 'obj-17': 195, 'obj-18': 84, 'obj-19': 57}.\n\n",
+        "label_syn": {
+            "position": 14,
+            "label": 40,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 15,
+            "label": "obj-9",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [105, 79, 51, 6, 112, 163, 160, 97, 31, 131, 53, 99, 186, 29, 169, 15, 87, 149, 74, 17]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 105, 'obj-1': 79, 'obj-2': 51, 'obj-3': 6, 'obj-4': 112, 'obj-5': 163, 'obj-6': 160, 'obj-7': 97, 'obj-8': 31, 'obj-9': 131, 'obj-10': 53, 'obj-11': 99, 'obj-12': 186, 'obj-13': 29, 'obj-14': 169, 'obj-15': 15, 'obj-16': 87, 'obj-17': 149, 'obj-18': 74, 'obj-19': 17}.\n\n",
+        "label_syn": {
+            "position": 0,
+            "label": 186,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 1,
+            "label": "obj-12",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [17, 97, 136, 124, 86, 30, 96, 182, 83, 41, 19, 106, 4, 34, 154, 114, 62, 33, 9, 183]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 17, 'obj-1': 97, 'obj-2': 136, 'obj-3': 124, 'obj-4': 86, 'obj-5': 30, 'obj-6': 96, 'obj-7': 182, 'obj-8': 83, 'obj-9': 41, 'obj-10': 19, 'obj-11': 106, 'obj-12': 4, 'obj-13': 34, 'obj-14': 154, 'obj-15': 114, 'obj-16': 62, 'obj-17': 33, 'obj-18': 9, 'obj-19': 183}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 154,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-14",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [191, 136, 67, 46, 75, 40, 69, 23, 117, 82, 174, 73, 196, 116, 79, 50, 38, 105, 45, 110]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 191, 'obj-1': 136, 'obj-2': 67, 'obj-3': 46, 'obj-4': 75, 'obj-5': 40, 'obj-6': 69, 'obj-7': 23, 'obj-8': 117, 'obj-9': 82, 'obj-10': 174, 'obj-11': 73, 'obj-12': 196, 'obj-13': 116, 'obj-14': 79, 'obj-15': 50, 'obj-16': 38, 'obj-17': 105, 'obj-18': 45, 'obj-19': 110}.\n\n",
+        "label_syn": {
+            "position": 3,
+            "label": 136,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 4,
+            "label": "obj-1",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [178, 136, 175, 102, 94, 173, 150, 21, 5, 167, 103, 39, 75, 199, 43, 144, 146, 32, 117, 86]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 178, 'obj-1': 136, 'obj-2': 175, 'obj-3': 102, 'obj-4': 94, 'obj-5': 173, 'obj-6': 150, 'obj-7': 21, 'obj-8': 5, 'obj-9': 167, 'obj-10': 103, 'obj-11': 39, 'obj-12': 75, 'obj-13': 199, 'obj-14': 43, 'obj-15': 144, 'obj-16': 146, 'obj-17': 32, 'obj-18': 117, 'obj-19': 86}.\n\n",
+        "label_syn": {
+            "position": 7,
+            "label": 144,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 8,
+            "label": "obj-15",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [123, 174, 153, 147, 163, 15, 83, 171, 193, 110, 139, 199, 103, 28, 158, 53, 105, 32, 114, 18]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 123, 'obj-1': 174, 'obj-2': 153, 'obj-3': 147, 'obj-4': 163, 'obj-5': 15, 'obj-6': 83, 'obj-7': 171, 'obj-8': 193, 'obj-9': 110, 'obj-10': 139, 'obj-11': 199, 'obj-12': 103, 'obj-13': 28, 'obj-14': 158, 'obj-15': 53, 'obj-16': 105, 'obj-17': 32, 'obj-18': 114, 'obj-19': 18}.\n\n",
+        "label_syn": {
+            "position": 7,
+            "label": 147,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 8,
+            "label": "obj-3",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [107, 34, 98, 12, 97, 176, 50, 49, 166, 93, 163, 177, 17, 148, 79, 112, 114, 99, 191, 25]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 107, 'obj-1': 34, 'obj-2': 98, 'obj-3': 12, 'obj-4': 97, 'obj-5': 176, 'obj-6': 50, 'obj-7': 49, 'obj-8': 166, 'obj-9': 93, 'obj-10': 163, 'obj-11': 177, 'obj-12': 17, 'obj-13': 148, 'obj-14': 79, 'obj-15': 112, 'obj-16': 114, 'obj-17': 99, 'obj-18': 191, 'obj-19': 25}.\n\n",
+        "label_syn": {
+            "position": 4,
+            "label": 163,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 5,
+            "label": "obj-10",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [181, 60, 134, 17, 157, 137, 61, 192, 92, 4, 13, 58, 107, 154, 100, 146, 54, 195, 74, 102]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 181, 'obj-1': 60, 'obj-2': 134, 'obj-3': 17, 'obj-4': 157, 'obj-5': 137, 'obj-6': 61, 'obj-7': 192, 'obj-8': 92, 'obj-9': 4, 'obj-10': 13, 'obj-11': 58, 'obj-12': 107, 'obj-13': 154, 'obj-14': 100, 'obj-15': 146, 'obj-16': 54, 'obj-17': 195, 'obj-18': 74, 'obj-19': 102}.\n\n",
+        "label_syn": {
+            "position": 9,
+            "label": 102,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 10,
+            "label": "obj-19",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [143, 172, 108, 184, 90, 198, 80, 127, 125, 135, 50, 81, 74, 60, 191, 91, 144, 141, 89, 193]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 143, 'obj-1': 172, 'obj-2': 108, 'obj-3': 184, 'obj-4': 90, 'obj-5': 198, 'obj-6': 80, 'obj-7': 127, 'obj-8': 125, 'obj-9': 135, 'obj-10': 50, 'obj-11': 81, 'obj-12': 74, 'obj-13': 60, 'obj-14': 191, 'obj-15': 91, 'obj-16': 144, 'obj-17': 141, 'obj-18': 89, 'obj-19': 193}.\n\n",
+        "label_syn": {
+            "position": 12,
+            "label": 91,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 13,
+            "label": "obj-15",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [137, 151, 101, 158, 134, 81, 65, 103, 153, 4, 115, 91, 180, 161, 88, 194, 10, 38, 23, 181]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 137, 'obj-1': 151, 'obj-2': 101, 'obj-3': 158, 'obj-4': 134, 'obj-5': 81, 'obj-6': 65, 'obj-7': 103, 'obj-8': 153, 'obj-9': 4, 'obj-10': 115, 'obj-11': 91, 'obj-12': 180, 'obj-13': 161, 'obj-14': 88, 'obj-15': 194, 'obj-16': 10, 'obj-17': 38, 'obj-18': 23, 'obj-19': 181}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 181,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 2,
+            "label": "obj-19",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [76, 116, 106, 65, 66, 198, 118, 82, 125, 5, 54, 18, 150, 149, 30, 64, 73, 55, 135, 21]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 76, 'obj-1': 116, 'obj-2': 106, 'obj-3': 65, 'obj-4': 66, 'obj-5': 198, 'obj-6': 118, 'obj-7': 82, 'obj-8': 125, 'obj-9': 5, 'obj-10': 54, 'obj-11': 18, 'obj-12': 150, 'obj-13': 149, 'obj-14': 30, 'obj-15': 64, 'obj-16': 73, 'obj-17': 55, 'obj-18': 135, 'obj-19': 21}.\n\n",
+        "label_syn": {
+            "position": 2,
+            "label": 149,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 3,
+            "label": "obj-13",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [186, 22, 90, 150, 117, 16, 159, 53, 97, 7, 8, 140, 31, 154, 50, 61, 168, 59, 161, 192]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 186, 'obj-1': 22, 'obj-2': 90, 'obj-3': 150, 'obj-4': 117, 'obj-5': 16, 'obj-6': 159, 'obj-7': 53, 'obj-8': 97, 'obj-9': 7, 'obj-10': 8, 'obj-11': 140, 'obj-12': 31, 'obj-13': 154, 'obj-14': 50, 'obj-15': 61, 'obj-16': 168, 'obj-17': 59, 'obj-18': 161, 'obj-19': 192}.\n\n",
+        "label_syn": {
+            "position": 13,
+            "label": 53,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 14,
+            "label": "obj-7",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [92, 183, 46, 163, 114, 69, 158, 186, 20, 130, 45, 156, 149, 168, 157, 128, 8, 63, 25, 36]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 92, 'obj-1': 183, 'obj-2': 46, 'obj-3': 163, 'obj-4': 114, 'obj-5': 69, 'obj-6': 158, 'obj-7': 186, 'obj-8': 20, 'obj-9': 130, 'obj-10': 45, 'obj-11': 156, 'obj-12': 149, 'obj-13': 168, 'obj-14': 157, 'obj-15': 128, 'obj-16': 8, 'obj-17': 63, 'obj-18': 25, 'obj-19': 36}.\n\n",
+        "label_syn": {
+            "position": 5,
+            "label": 157,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 6,
+            "label": "obj-14",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [46, 15, 146, 108, 176, 13, 12, 171, 78, 147, 116, 74, 60, 43, 129, 35, 192, 133, 111, 106]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 46, 'obj-1': 15, 'obj-2': 146, 'obj-3': 108, 'obj-4': 176, 'obj-5': 13, 'obj-6': 12, 'obj-7': 171, 'obj-8': 78, 'obj-9': 147, 'obj-10': 116, 'obj-11': 74, 'obj-12': 60, 'obj-13': 43, 'obj-14': 129, 'obj-15': 35, 'obj-16': 192, 'obj-17': 133, 'obj-18': 111, 'obj-19': 106}.\n\n",
+        "label_syn": {
+            "position": 18,
+            "label": 13,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 19,
+            "label": "obj-5",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [60, 116, 126, 7, 144, 69, 13, 26, 3, 14, 17, 43, 9, 155, 44, 61, 25, 64, 98, 122]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 60, 'obj-1': 116, 'obj-2': 126, 'obj-3': 7, 'obj-4': 144, 'obj-5': 69, 'obj-6': 13, 'obj-7': 26, 'obj-8': 3, 'obj-9': 14, 'obj-10': 17, 'obj-11': 43, 'obj-12': 9, 'obj-13': 155, 'obj-14': 44, 'obj-15': 61, 'obj-16': 25, 'obj-17': 64, 'obj-18': 98, 'obj-19': 122}.\n\n",
+        "label_syn": {
+            "position": 15,
+            "label": 14,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 16,
+            "label": "obj-9",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [32, 54, 53, 130, 90, 99, 176, 35, 119, 121, 94, 124, 167, 27, 92, 40, 135, 159, 78, 52]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 32, 'obj-1': 54, 'obj-2': 53, 'obj-3': 130, 'obj-4': 90, 'obj-5': 99, 'obj-6': 176, 'obj-7': 35, 'obj-8': 119, 'obj-9': 121, 'obj-10': 94, 'obj-11': 124, 'obj-12': 167, 'obj-13': 27, 'obj-14': 92, 'obj-15': 40, 'obj-16': 135, 'obj-17': 159, 'obj-18': 78, 'obj-19': 52}.\n\n",
+        "label_syn": {
+            "position": 8,
+            "label": 99,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 9,
+            "label": "obj-5",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [56, 117, 31, 76, 187, 70, 48, 156, 163, 0, 134, 24, 20, 102, 126, 32, 195, 150, 152, 39]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 56, 'obj-1': 117, 'obj-2': 31, 'obj-3': 76, 'obj-4': 187, 'obj-5': 70, 'obj-6': 48, 'obj-7': 156, 'obj-8': 163, 'obj-9': 0, 'obj-10': 134, 'obj-11': 24, 'obj-12': 20, 'obj-13': 102, 'obj-14': 126, 'obj-15': 32, 'obj-16': 195, 'obj-17': 150, 'obj-18': 152, 'obj-19': 39}.\n\n",
+        "label_syn": {
+            "position": 15,
+            "label": 32,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 16,
+            "label": "obj-15",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [53, 98, 19, 45, 30, 107, 140, 38, 115, 47, 5, 8, 145, 194, 191, 199, 181, 42, 70, 9]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 53, 'obj-1': 98, 'obj-2': 19, 'obj-3': 45, 'obj-4': 30, 'obj-5': 107, 'obj-6': 140, 'obj-7': 38, 'obj-8': 115, 'obj-9': 47, 'obj-10': 5, 'obj-11': 8, 'obj-12': 145, 'obj-13': 194, 'obj-14': 191, 'obj-15': 199, 'obj-16': 181, 'obj-17': 42, 'obj-18': 70, 'obj-19': 9}.\n\n",
+        "label_syn": {
+            "position": 16,
+            "label": 19,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 17,
+            "label": "obj-2",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [68, 77, 171, 49, 2, 141, 137, 24, 98, 51, 79, 93, 25, 89, 161, 53, 54, 84, 62, 69]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 68, 'obj-1': 77, 'obj-2': 171, 'obj-3': 49, 'obj-4': 2, 'obj-5': 141, 'obj-6': 137, 'obj-7': 24, 'obj-8': 98, 'obj-9': 51, 'obj-10': 79, 'obj-11': 93, 'obj-12': 25, 'obj-13': 89, 'obj-14': 161, 'obj-15': 53, 'obj-16': 54, 'obj-17': 84, 'obj-18': 62, 'obj-19': 69}.\n\n",
+        "label_syn": {
+            "position": 15,
+            "label": 51,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 16,
+            "label": "obj-9",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [174, 116, 21, 197, 122, 185, 52, 108, 130, 123, 137, 66, 98, 69, 188, 35, 63, 107, 119, 151]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 174, 'obj-1': 116, 'obj-2': 21, 'obj-3': 197, 'obj-4': 122, 'obj-5': 185, 'obj-6': 52, 'obj-7': 108, 'obj-8': 130, 'obj-9': 123, 'obj-10': 137, 'obj-11': 66, 'obj-12': 98, 'obj-13': 69, 'obj-14': 188, 'obj-15': 35, 'obj-16': 63, 'obj-17': 107, 'obj-18': 119, 'obj-19': 151}.\n\n",
+        "label_syn": {
+            "position": 6,
+            "label": 130,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 7,
+            "label": "obj-8",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [147, 177, 199, 24, 82, 166, 149, 30, 128, 163, 162, 32, 190, 42, 189, 87, 105, 115, 139, 62]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 147, 'obj-1': 177, 'obj-2': 199, 'obj-3': 24, 'obj-4': 82, 'obj-5': 166, 'obj-6': 149, 'obj-7': 30, 'obj-8': 128, 'obj-9': 163, 'obj-10': 162, 'obj-11': 32, 'obj-12': 190, 'obj-13': 42, 'obj-14': 189, 'obj-15': 87, 'obj-16': 105, 'obj-17': 115, 'obj-18': 139, 'obj-19': 62}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 190,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 2,
+            "label": "obj-12",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [19, 121, 72, 166, 23, 143, 141, 82, 73, 162, 131, 95, 97, 56, 66, 17, 134, 99, 79, 21]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 19, 'obj-1': 121, 'obj-2': 72, 'obj-3': 166, 'obj-4': 23, 'obj-5': 143, 'obj-6': 141, 'obj-7': 82, 'obj-8': 73, 'obj-9': 162, 'obj-10': 131, 'obj-11': 95, 'obj-12': 97, 'obj-13': 56, 'obj-14': 66, 'obj-15': 17, 'obj-16': 134, 'obj-17': 99, 'obj-18': 79, 'obj-19': 21}.\n\n",
+        "label_syn": {
+            "position": 0,
+            "label": 166,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 1,
+            "label": "obj-3",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [27, 3, 35, 21, 112, 32, 15, 16, 54, 153, 59, 1, 8, 69, 184, 134, 83, 179, 199, 34]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 27, 'obj-1': 3, 'obj-2': 35, 'obj-3': 21, 'obj-4': 112, 'obj-5': 32, 'obj-6': 15, 'obj-7': 16, 'obj-8': 54, 'obj-9': 153, 'obj-10': 59, 'obj-11': 1, 'obj-12': 8, 'obj-13': 69, 'obj-14': 184, 'obj-15': 134, 'obj-16': 83, 'obj-17': 179, 'obj-18': 199, 'obj-19': 34}.\n\n",
+        "label_syn": {
+            "position": 0,
+            "label": 199,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 1,
+            "label": "obj-18",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [40, 78, 117, 160, 74, 69, 121, 12, 159, 46, 39, 166, 94, 144, 4, 30, 120, 140, 42, 58]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 40, 'obj-1': 78, 'obj-2': 117, 'obj-3': 160, 'obj-4': 74, 'obj-5': 69, 'obj-6': 121, 'obj-7': 12, 'obj-8': 159, 'obj-9': 46, 'obj-10': 39, 'obj-11': 166, 'obj-12': 94, 'obj-13': 144, 'obj-14': 4, 'obj-15': 30, 'obj-16': 120, 'obj-17': 140, 'obj-18': 42, 'obj-19': 58}.\n\n",
+        "label_syn": {
+            "position": 1,
+            "label": 160,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 2,
+            "label": "obj-3",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [11, 170, 177, 113, 181, 62, 5, 24, 10, 105, 110, 194, 114, 161, 127, 182, 69, 166, 79, 4]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 11, 'obj-1': 170, 'obj-2': 177, 'obj-3': 113, 'obj-4': 181, 'obj-5': 62, 'obj-6': 5, 'obj-7': 24, 'obj-8': 10, 'obj-9': 105, 'obj-10': 110, 'obj-11': 194, 'obj-12': 114, 'obj-13': 161, 'obj-14': 127, 'obj-15': 182, 'obj-16': 69, 'obj-17': 166, 'obj-18': 79, 'obj-19': 4}.\n\n",
+        "label_syn": {
+            "position": 14,
+            "label": 62,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 15,
+            "label": "obj-5",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [7, 129, 37, 141, 120, 59, 72, 158, 163, 142, 62, 119, 36, 100, 123, 31, 98, 52, 89, 88]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 7, 'obj-1': 129, 'obj-2': 37, 'obj-3': 141, 'obj-4': 120, 'obj-5': 59, 'obj-6': 72, 'obj-7': 158, 'obj-8': 163, 'obj-9': 142, 'obj-10': 62, 'obj-11': 119, 'obj-12': 36, 'obj-13': 100, 'obj-14': 123, 'obj-15': 31, 'obj-16': 98, 'obj-17': 52, 'obj-18': 89, 'obj-19': 88}.\n\n",
+        "label_syn": {
+            "position": 13,
+            "label": 62,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 14,
+            "label": "obj-10",
+            "ascending": false
+        }
+    },
+    {
+        "syn": "Here's a list of numbers. x = [170, 15, 14, 92, 140, 155, 110, 18, 73, 38, 20, 167, 85, 54, 173, 113, 168, 184, 95, 159]\n\nSimulate the following algorithm with the list of numbers as input:\n\ndef f(v):\n    for n in range(len(v) - 1, 0, -1):\n        condition = False  \n        for i in range(n):\n            if v[i] < v[i + 1]:\n                v[i], v[i + 1] = v[i + 1], v[i]\n                condition = True\n        if not condition:\n            break\n",
+        "nat": "One has the following 20 objects: ['obj-0', 'obj-1', 'obj-2', 'obj-3', 'obj-4', 'obj-5', 'obj-6', 'obj-7', 'obj-8', 'obj-9', 'obj-10', 'obj-11', 'obj-12', 'obj-13', 'obj-14', 'obj-15', 'obj-16', 'obj-17', 'obj-18', 'obj-19'].\n\nThis is the weight of each object in Kg: {'obj-0': 170, 'obj-1': 15, 'obj-2': 14, 'obj-3': 92, 'obj-4': 140, 'obj-5': 155, 'obj-6': 110, 'obj-7': 18, 'obj-8': 73, 'obj-9': 38, 'obj-10': 20, 'obj-11': 167, 'obj-12': 85, 'obj-13': 54, 'obj-14': 173, 'obj-15': 113, 'obj-16': 168, 'obj-17': 184, 'obj-18': 95, 'obj-19': 159}.\n\n",
+        "label_syn": {
+            "position": 3,
+            "label": 168,
+            "ascending": false
+        },
+        "label_nat": {
+            "position": 4,
+            "label": "obj-16",
+            "ascending": false
+        }
+    }
+]
