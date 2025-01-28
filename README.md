@@ -34,7 +34,7 @@ config = {
 
 Next, you can run all the experiments by simply opening a terminal:
 ```sh ./script/<MODEL>.sh```
-Where <MODEL> is either 'gpt-4', 'gpt-4o', or 'llama'. We suggest to use tmux or screen to handle each session.
+, where `<MODEL>` is either 'gpt-4', 'gpt-4o', or 'llama'. We suggest to use tmux or screen to handle each session.
 
 ### Inspect the logs
 Unzip the `logs.zip` file. The uncompressed size is around ~250BM.
